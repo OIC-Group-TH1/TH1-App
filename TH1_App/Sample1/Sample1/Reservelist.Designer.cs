@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.ReservelistBack_button = new System.Windows.Forms.Button();
-            this.ReservelistTop_button = new System.Windows.Forms.Button();
             this.Reservelist_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Reservelist_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Reservelist_Smoke = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,6 +37,9 @@
             this.Reservelist_Tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Reservelist_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Reservelist_Reserve = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.ReservelistBack_button = new System.Windows.Forms.Button();
+            this.ReservelistTop_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,31 +60,6 @@
             this.dataGridView1.RowTemplate.Height = 21;
             this.dataGridView1.Size = new System.Drawing.Size(593, 183);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(33, 49);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 19);
-            this.dateTimePicker1.TabIndex = 1;
-            // 
-            // ReservelistBack_button
-            // 
-            this.ReservelistBack_button.Location = new System.Drawing.Point(45, 316);
-            this.ReservelistBack_button.Name = "ReservelistBack_button";
-            this.ReservelistBack_button.Size = new System.Drawing.Size(91, 31);
-            this.ReservelistBack_button.TabIndex = 2;
-            this.ReservelistBack_button.Text = "戻る";
-            this.ReservelistBack_button.UseVisualStyleBackColor = true;
-            // 
-            // ReservelistTop_button
-            // 
-            this.ReservelistTop_button.Location = new System.Drawing.Point(483, 316);
-            this.ReservelistTop_button.Name = "ReservelistTop_button";
-            this.ReservelistTop_button.Size = new System.Drawing.Size(91, 31);
-            this.ReservelistTop_button.TabIndex = 3;
-            this.ReservelistTop_button.Text = "TOPへ";
-            this.ReservelistTop_button.UseVisualStyleBackColor = true;
             // 
             // Reservelist_No
             // 
@@ -131,6 +106,31 @@
             this.Reservelist_Reserve.Name = "Reservelist_Reserve";
             this.Reservelist_Reserve.Width = 80;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(33, 49);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 19);
+            this.dateTimePicker1.TabIndex = 1;
+            // 
+            // ReservelistBack_button
+            // 
+            this.ReservelistBack_button.Location = new System.Drawing.Point(45, 316);
+            this.ReservelistBack_button.Name = "ReservelistBack_button";
+            this.ReservelistBack_button.Size = new System.Drawing.Size(91, 31);
+            this.ReservelistBack_button.TabIndex = 2;
+            this.ReservelistBack_button.Text = "戻る";
+            this.ReservelistBack_button.UseVisualStyleBackColor = true;
+            // 
+            // ReservelistTop_button
+            // 
+            this.ReservelistTop_button.Location = new System.Drawing.Point(483, 316);
+            this.ReservelistTop_button.Name = "ReservelistTop_button";
+            this.ReservelistTop_button.Size = new System.Drawing.Size(91, 31);
+            this.ReservelistTop_button.TabIndex = 3;
+            this.ReservelistTop_button.Text = "TOPへ";
+            this.ReservelistTop_button.UseVisualStyleBackColor = true;
+            // 
             // reservelist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -141,7 +141,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "reservelist";
-            this.Text = "Reservelist";
+            this.Text = "6";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
