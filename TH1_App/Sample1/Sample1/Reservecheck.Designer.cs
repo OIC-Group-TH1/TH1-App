@@ -33,7 +33,7 @@
             this.ReservecheckPost_label = new System.Windows.Forms.Label();
             this.ReservecheckTel_label = new System.Windows.Forms.Label();
             this.ReservecheckSex_label = new System.Windows.Forms.Label();
-            this.CustomerentryKana_label = new System.Windows.Forms.Label();
+            this.ReservecheckKana_label = new System.Windows.Forms.Label();
             this.ReservecheckName_label = new System.Windows.Forms.Label();
             this.Reservecheck_Note = new System.Windows.Forms.Label();
             this.Reservecheck_Address = new System.Windows.Forms.Label();
@@ -57,6 +57,8 @@
             this.Reservecheck_Smoke = new System.Windows.Forms.Label();
             this.Reservecheck_Number = new System.Windows.Forms.Label();
             this.Reservecheck_Value = new System.Windows.Forms.Label();
+            this.ReservecheckDate_label = new System.Windows.Forms.Label();
+            this.Reservecheck_Date = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ReservecheckNote_label
@@ -104,15 +106,15 @@
             this.ReservecheckSex_label.TabIndex = 9;
             this.ReservecheckSex_label.Text = "性別";
             // 
-            // CustomerentryKana_label
+            // ReservecheckKana_label
             // 
-            this.CustomerentryKana_label.AutoSize = true;
-            this.CustomerentryKana_label.Location = new System.Drawing.Point(255, 82);
-            this.CustomerentryKana_label.Name = "CustomerentryKana_label";
-            this.CustomerentryKana_label.Size = new System.Drawing.Size(43, 12);
-            this.CustomerentryKana_label.TabIndex = 8;
-            this.CustomerentryKana_label.Text = "ふりがな";
-            this.CustomerentryKana_label.Click += new System.EventHandler(this.CustomerentryKana_label2_Click);
+            this.ReservecheckKana_label.AutoSize = true;
+            this.ReservecheckKana_label.Location = new System.Drawing.Point(255, 82);
+            this.ReservecheckKana_label.Name = "ReservecheckKana_label";
+            this.ReservecheckKana_label.Size = new System.Drawing.Size(43, 12);
+            this.ReservecheckKana_label.TabIndex = 8;
+            this.ReservecheckKana_label.Text = "ふりがな";
+            this.ReservecheckKana_label.Click += new System.EventHandler(this.CustomerentryKana_label2_Click);
             // 
             // ReservecheckName_label
             // 
@@ -189,7 +191,7 @@
             // ReservecheckNo_label
             // 
             this.ReservecheckNo_label.AutoSize = true;
-            this.ReservecheckNo_label.Location = new System.Drawing.Point(31, 40);
+            this.ReservecheckNo_label.Location = new System.Drawing.Point(43, 82);
             this.ReservecheckNo_label.Name = "ReservecheckNo_label";
             this.ReservecheckNo_label.Size = new System.Drawing.Size(43, 12);
             this.ReservecheckNo_label.TabIndex = 28;
@@ -198,7 +200,7 @@
             // ReservecheckType_label
             // 
             this.ReservecheckType_label.AutoSize = true;
-            this.ReservecheckType_label.Location = new System.Drawing.Point(31, 82);
+            this.ReservecheckType_label.Location = new System.Drawing.Point(43, 124);
             this.ReservecheckType_label.Name = "ReservecheckType_label";
             this.ReservecheckType_label.Size = new System.Drawing.Size(63, 12);
             this.ReservecheckType_label.TabIndex = 29;
@@ -207,7 +209,7 @@
             // ReservecheckSmoke_label
             // 
             this.ReservecheckSmoke_label.AutoSize = true;
-            this.ReservecheckSmoke_label.Location = new System.Drawing.Point(31, 124);
+            this.ReservecheckSmoke_label.Location = new System.Drawing.Point(43, 166);
             this.ReservecheckSmoke_label.Name = "ReservecheckSmoke_label";
             this.ReservecheckSmoke_label.Size = new System.Drawing.Size(31, 12);
             this.ReservecheckSmoke_label.TabIndex = 30;
@@ -216,7 +218,7 @@
             // ReservecheckNumber_label
             // 
             this.ReservecheckNumber_label.AutoSize = true;
-            this.ReservecheckNumber_label.Location = new System.Drawing.Point(31, 168);
+            this.ReservecheckNumber_label.Location = new System.Drawing.Point(43, 210);
             this.ReservecheckNumber_label.Name = "ReservecheckNumber_label";
             this.ReservecheckNumber_label.Size = new System.Drawing.Size(53, 12);
             this.ReservecheckNumber_label.TabIndex = 31;
@@ -225,7 +227,7 @@
             // ReservecheckValue_label
             // 
             this.ReservecheckValue_label.AutoSize = true;
-            this.ReservecheckValue_label.Location = new System.Drawing.Point(31, 214);
+            this.ReservecheckValue_label.Location = new System.Drawing.Point(43, 256);
             this.ReservecheckValue_label.Name = "ReservecheckValue_label";
             this.ReservecheckValue_label.Size = new System.Drawing.Size(29, 12);
             this.ReservecheckValue_label.TabIndex = 32;
@@ -279,7 +281,7 @@
             // Reservecheck_No
             // 
             this.Reservecheck_No.AutoSize = true;
-            this.Reservecheck_No.Location = new System.Drawing.Point(144, 40);
+            this.Reservecheck_No.Location = new System.Drawing.Point(156, 82);
             this.Reservecheck_No.Name = "Reservecheck_No";
             this.Reservecheck_No.Size = new System.Drawing.Size(35, 12);
             this.Reservecheck_No.TabIndex = 38;
@@ -288,7 +290,7 @@
             // Reservecheck_Type
             // 
             this.Reservecheck_Type.AutoSize = true;
-            this.Reservecheck_Type.Location = new System.Drawing.Point(144, 82);
+            this.Reservecheck_Type.Location = new System.Drawing.Point(156, 124);
             this.Reservecheck_Type.Name = "Reservecheck_Type";
             this.Reservecheck_Type.Size = new System.Drawing.Size(35, 12);
             this.Reservecheck_Type.TabIndex = 39;
@@ -297,7 +299,7 @@
             // Reservecheck_Smoke
             // 
             this.Reservecheck_Smoke.AutoSize = true;
-            this.Reservecheck_Smoke.Location = new System.Drawing.Point(144, 124);
+            this.Reservecheck_Smoke.Location = new System.Drawing.Point(156, 166);
             this.Reservecheck_Smoke.Name = "Reservecheck_Smoke";
             this.Reservecheck_Smoke.Size = new System.Drawing.Size(35, 12);
             this.Reservecheck_Smoke.TabIndex = 40;
@@ -306,7 +308,7 @@
             // Reservecheck_Number
             // 
             this.Reservecheck_Number.AutoSize = true;
-            this.Reservecheck_Number.Location = new System.Drawing.Point(144, 168);
+            this.Reservecheck_Number.Location = new System.Drawing.Point(156, 210);
             this.Reservecheck_Number.Name = "Reservecheck_Number";
             this.Reservecheck_Number.Size = new System.Drawing.Size(35, 12);
             this.Reservecheck_Number.TabIndex = 41;
@@ -315,17 +317,37 @@
             // Reservecheck_Value
             // 
             this.Reservecheck_Value.AutoSize = true;
-            this.Reservecheck_Value.Location = new System.Drawing.Point(144, 214);
+            this.Reservecheck_Value.Location = new System.Drawing.Point(156, 256);
             this.Reservecheck_Value.Name = "Reservecheck_Value";
             this.Reservecheck_Value.Size = new System.Drawing.Size(35, 12);
             this.Reservecheck_Value.TabIndex = 42;
             this.Reservecheck_Value.Text = "label5";
+            // 
+            // ReservecheckDate_label
+            // 
+            this.ReservecheckDate_label.AutoSize = true;
+            this.ReservecheckDate_label.Location = new System.Drawing.Point(43, 40);
+            this.ReservecheckDate_label.Name = "ReservecheckDate_label";
+            this.ReservecheckDate_label.Size = new System.Drawing.Size(29, 12);
+            this.ReservecheckDate_label.TabIndex = 43;
+            this.ReservecheckDate_label.Text = "日付";
+            // 
+            // Reservecheck_Date
+            // 
+            this.Reservecheck_Date.AutoSize = true;
+            this.Reservecheck_Date.Location = new System.Drawing.Point(156, 40);
+            this.Reservecheck_Date.Name = "Reservecheck_Date";
+            this.Reservecheck_Date.Size = new System.Drawing.Size(35, 12);
+            this.Reservecheck_Date.TabIndex = 44;
+            this.Reservecheck_Date.Text = "label1";
             // 
             // Reservecheck
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(513, 505);
+            this.Controls.Add(this.Reservecheck_Date);
+            this.Controls.Add(this.ReservecheckDate_label);
             this.Controls.Add(this.Reservecheck_Value);
             this.Controls.Add(this.Reservecheck_Number);
             this.Controls.Add(this.Reservecheck_Smoke);
@@ -353,7 +375,7 @@
             this.Controls.Add(this.ReservecheckPost_label);
             this.Controls.Add(this.ReservecheckTel_label);
             this.Controls.Add(this.ReservecheckSex_label);
-            this.Controls.Add(this.CustomerentryKana_label);
+            this.Controls.Add(this.ReservecheckKana_label);
             this.Controls.Add(this.ReservecheckName_label);
             this.Name = "Reservecheck";
             this.Text = "Reservecheck";
@@ -369,7 +391,7 @@
         private System.Windows.Forms.Label ReservecheckPost_label;
         private System.Windows.Forms.Label ReservecheckTel_label;
         private System.Windows.Forms.Label ReservecheckSex_label;
-        private System.Windows.Forms.Label CustomerentryKana_label;
+        private System.Windows.Forms.Label ReservecheckKana_label;
         private System.Windows.Forms.Label ReservecheckName_label;
         private System.Windows.Forms.Label Reservecheck_Note;
         private System.Windows.Forms.Label Reservecheck_Address;
@@ -393,5 +415,7 @@
         private System.Windows.Forms.Label Reservecheck_Smoke;
         private System.Windows.Forms.Label Reservecheck_Number;
         private System.Windows.Forms.Label Reservecheck_Value;
+        private System.Windows.Forms.Label ReservecheckDate_label;
+        private System.Windows.Forms.Label Reservecheck_Date;
     }
 }
