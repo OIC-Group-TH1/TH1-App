@@ -36,12 +36,12 @@
             this.Customerlist_Tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Customerlist_Post = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Customerlist_Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Customerlist_Search = new System.Windows.Forms.Button();
-            this.Customerlist_entry = new System.Windows.Forms.Button();
+            this.CustomerlistSearch_button = new System.Windows.Forms.Button();
+            this.CustomerlistEntry_button = new System.Windows.Forms.Button();
             this.CustomerlistBack_button = new System.Windows.Forms.Button();
             this.CustomerlistTop_button = new System.Windows.Forms.Button();
-            this.Customerlist_label1 = new System.Windows.Forms.Label();
-            this.Customerlist_label2 = new System.Windows.Forms.Label();
+            this.CustomerlistName_label = new System.Windows.Forms.Label();
+            this.CustomerlistTel_label = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -101,24 +101,24 @@
             this.Customerlist_Address.HeaderText = "住所";
             this.Customerlist_Address.Name = "Customerlist_Address";
             // 
-            // Customerlist_Search
+            // CustomerlistSearch_button
             // 
-            this.Customerlist_Search.Location = new System.Drawing.Point(345, 364);
-            this.Customerlist_Search.Name = "Customerlist_Search";
-            this.Customerlist_Search.Size = new System.Drawing.Size(75, 23);
-            this.Customerlist_Search.TabIndex = 1;
-            this.Customerlist_Search.Text = "検索";
-            this.Customerlist_Search.UseVisualStyleBackColor = true;
+            this.CustomerlistSearch_button.Location = new System.Drawing.Point(345, 364);
+            this.CustomerlistSearch_button.Name = "CustomerlistSearch_button";
+            this.CustomerlistSearch_button.Size = new System.Drawing.Size(75, 23);
+            this.CustomerlistSearch_button.TabIndex = 1;
+            this.CustomerlistSearch_button.Text = "検索";
+            this.CustomerlistSearch_button.UseVisualStyleBackColor = true;
             // 
-            // Customerlist_entry
+            // CustomerlistEntry_button
             // 
-            this.Customerlist_entry.Location = new System.Drawing.Point(484, 364);
-            this.Customerlist_entry.Name = "Customerlist_entry";
-            this.Customerlist_entry.Size = new System.Drawing.Size(75, 23);
-            this.Customerlist_entry.TabIndex = 2;
-            this.Customerlist_entry.Text = "新規登録";
-            this.Customerlist_entry.UseVisualStyleBackColor = true;
-            this.Customerlist_entry.Click += new System.EventHandler(this.button2_Click);
+            this.CustomerlistEntry_button.Location = new System.Drawing.Point(484, 364);
+            this.CustomerlistEntry_button.Name = "CustomerlistEntry_button";
+            this.CustomerlistEntry_button.Size = new System.Drawing.Size(75, 23);
+            this.CustomerlistEntry_button.TabIndex = 2;
+            this.CustomerlistEntry_button.Text = "新規登録";
+            this.CustomerlistEntry_button.UseVisualStyleBackColor = true;
+            this.CustomerlistEntry_button.Click += new System.EventHandler(this.button2_Click);
             // 
             // CustomerlistBack_button
             // 
@@ -138,24 +138,24 @@
             this.CustomerlistTop_button.Text = "Topへ";
             this.CustomerlistTop_button.UseVisualStyleBackColor = true;
             // 
-            // Customerlist_label1
+            // CustomerlistName_label
             // 
-            this.Customerlist_label1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Customerlist_label1.Location = new System.Drawing.Point(57, 326);
-            this.Customerlist_label1.Name = "Customerlist_label1";
-            this.Customerlist_label1.Size = new System.Drawing.Size(100, 23);
-            this.Customerlist_label1.TabIndex = 5;
-            this.Customerlist_label1.Text = "名前";
-            this.Customerlist_label1.Click += new System.EventHandler(this.label1_Click);
+            this.CustomerlistName_label.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.CustomerlistName_label.Location = new System.Drawing.Point(57, 326);
+            this.CustomerlistName_label.Name = "CustomerlistName_label";
+            this.CustomerlistName_label.Size = new System.Drawing.Size(100, 23);
+            this.CustomerlistName_label.TabIndex = 5;
+            this.CustomerlistName_label.Text = "名前";
+            this.CustomerlistName_label.Click += new System.EventHandler(this.label1_Click);
             // 
-            // Customerlist_label2
+            // CustomerlistTel_label
             // 
-            this.Customerlist_label2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Customerlist_label2.Location = new System.Drawing.Point(57, 363);
-            this.Customerlist_label2.Name = "Customerlist_label2";
-            this.Customerlist_label2.Size = new System.Drawing.Size(100, 23);
-            this.Customerlist_label2.TabIndex = 6;
-            this.Customerlist_label2.Text = "電話番号";
+            this.CustomerlistTel_label.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.CustomerlistTel_label.Location = new System.Drawing.Point(57, 363);
+            this.CustomerlistTel_label.Name = "CustomerlistTel_label";
+            this.CustomerlistTel_label.Size = new System.Drawing.Size(100, 23);
+            this.CustomerlistTel_label.TabIndex = 6;
+            this.CustomerlistTel_label.Text = "電話番号";
             // 
             // textBox1
             // 
@@ -178,12 +178,12 @@
             this.ClientSize = new System.Drawing.Size(672, 489);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.Customerlist_label2);
-            this.Controls.Add(this.Customerlist_label1);
+            this.Controls.Add(this.CustomerlistTel_label);
+            this.Controls.Add(this.CustomerlistName_label);
             this.Controls.Add(this.CustomerlistTop_button);
             this.Controls.Add(this.CustomerlistBack_button);
-            this.Controls.Add(this.Customerlist_entry);
-            this.Controls.Add(this.Customerlist_Search);
+            this.Controls.Add(this.CustomerlistEntry_button);
+            this.Controls.Add(this.CustomerlistSearch_button);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Customerlist";
             this.Text = "Customerlist";
@@ -203,12 +203,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_Tel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_Post;
         private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_Address;
-        private System.Windows.Forms.Button Customerlist_Search;
-        private System.Windows.Forms.Button Customerlist_entry;
+        private System.Windows.Forms.Button CustomerlistSearch_button;
+        private System.Windows.Forms.Button CustomerlistEntry_button;
         private System.Windows.Forms.Button CustomerlistBack_button;
         private System.Windows.Forms.Button CustomerlistTop_button;
-        private System.Windows.Forms.Label Customerlist_label1;
-        private System.Windows.Forms.Label Customerlist_label2;
+        private System.Windows.Forms.Label CustomerlistName_label;
+        private System.Windows.Forms.Label CustomerlistTel_label;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
     }

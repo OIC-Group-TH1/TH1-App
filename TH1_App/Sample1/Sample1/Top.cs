@@ -18,8 +18,10 @@ namespace Sample1
 
         private void Yoyaku_button_Click(object sender, EventArgs e)
         {
-            Calendar c = new Calendar();
-            c.Show();
+            Calendar C = new Calendar();           
+            C.Show();
+            this.Visible = false;
+
         }
     }
 }

@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CustomerentryName_label1 = new System.Windows.Forms.Label();
-            this.CustomerentryKana_label2 = new System.Windows.Forms.Label();
-            this.CustomerentrySex_label3 = new System.Windows.Forms.Label();
-            this.CustomerentryTel_label4 = new System.Windows.Forms.Label();
-            this.CustomerentryPost_label5 = new System.Windows.Forms.Label();
-            this.CustomerentryAddress_label6 = new System.Windows.Forms.Label();
-            this.CustomerentryNote_label7 = new System.Windows.Forms.Label();
+            this.CustomerentryName_label = new System.Windows.Forms.Label();
+            this.CustomerentryKana_label = new System.Windows.Forms.Label();
+            this.CustomerentrySex_label = new System.Windows.Forms.Label();
+            this.CustomerentryTel_label = new System.Windows.Forms.Label();
+            this.CustomerentryPost_label = new System.Windows.Forms.Label();
+            this.CustomerentryAddress_label = new System.Windows.Forms.Label();
+            this.CustomerentryNote_label = new System.Windows.Forms.Label();
             this.Customerentry_Name = new System.Windows.Forms.TextBox();
             this.Customerentry_Kana = new System.Windows.Forms.TextBox();
             this.Customerentry_Sex = new System.Windows.Forms.TextBox();
@@ -47,68 +47,68 @@
             this.CustomerentryTop_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // CustomerentryName_label1
+            // CustomerentryName_label
             // 
-            this.CustomerentryName_label1.AutoSize = true;
-            this.CustomerentryName_label1.Location = new System.Drawing.Point(24, 64);
-            this.CustomerentryName_label1.Name = "CustomerentryName_label1";
-            this.CustomerentryName_label1.Size = new System.Drawing.Size(29, 12);
-            this.CustomerentryName_label1.TabIndex = 0;
-            this.CustomerentryName_label1.Text = "名前";
+            this.CustomerentryName_label.AutoSize = true;
+            this.CustomerentryName_label.Location = new System.Drawing.Point(24, 64);
+            this.CustomerentryName_label.Name = "CustomerentryName_label";
+            this.CustomerentryName_label.Size = new System.Drawing.Size(29, 12);
+            this.CustomerentryName_label.TabIndex = 0;
+            this.CustomerentryName_label.Text = "名前";
             // 
-            // CustomerentryKana_label2
+            // CustomerentryKana_label
             // 
-            this.CustomerentryKana_label2.AutoSize = true;
-            this.CustomerentryKana_label2.Location = new System.Drawing.Point(24, 106);
-            this.CustomerentryKana_label2.Name = "CustomerentryKana_label2";
-            this.CustomerentryKana_label2.Size = new System.Drawing.Size(43, 12);
-            this.CustomerentryKana_label2.TabIndex = 1;
-            this.CustomerentryKana_label2.Text = "ふりがな";
+            this.CustomerentryKana_label.AutoSize = true;
+            this.CustomerentryKana_label.Location = new System.Drawing.Point(24, 106);
+            this.CustomerentryKana_label.Name = "CustomerentryKana_label";
+            this.CustomerentryKana_label.Size = new System.Drawing.Size(43, 12);
+            this.CustomerentryKana_label.TabIndex = 1;
+            this.CustomerentryKana_label.Text = "ふりがな";
             // 
-            // CustomerentrySex_label3
+            // CustomerentrySex_label
             // 
-            this.CustomerentrySex_label3.AutoSize = true;
-            this.CustomerentrySex_label3.Location = new System.Drawing.Point(24, 148);
-            this.CustomerentrySex_label3.Name = "CustomerentrySex_label3";
-            this.CustomerentrySex_label3.Size = new System.Drawing.Size(29, 12);
-            this.CustomerentrySex_label3.TabIndex = 2;
-            this.CustomerentrySex_label3.Text = "性別";
+            this.CustomerentrySex_label.AutoSize = true;
+            this.CustomerentrySex_label.Location = new System.Drawing.Point(24, 148);
+            this.CustomerentrySex_label.Name = "CustomerentrySex_label";
+            this.CustomerentrySex_label.Size = new System.Drawing.Size(29, 12);
+            this.CustomerentrySex_label.TabIndex = 2;
+            this.CustomerentrySex_label.Text = "性別";
             // 
-            // CustomerentryTel_label4
+            // CustomerentryTel_label
             // 
-            this.CustomerentryTel_label4.AutoSize = true;
-            this.CustomerentryTel_label4.Location = new System.Drawing.Point(24, 192);
-            this.CustomerentryTel_label4.Name = "CustomerentryTel_label4";
-            this.CustomerentryTel_label4.Size = new System.Drawing.Size(53, 12);
-            this.CustomerentryTel_label4.TabIndex = 3;
-            this.CustomerentryTel_label4.Text = "電話番号";
+            this.CustomerentryTel_label.AutoSize = true;
+            this.CustomerentryTel_label.Location = new System.Drawing.Point(24, 192);
+            this.CustomerentryTel_label.Name = "CustomerentryTel_label";
+            this.CustomerentryTel_label.Size = new System.Drawing.Size(53, 12);
+            this.CustomerentryTel_label.TabIndex = 3;
+            this.CustomerentryTel_label.Text = "電話番号";
             // 
-            // CustomerentryPost_label5
+            // CustomerentryPost_label
             // 
-            this.CustomerentryPost_label5.AutoSize = true;
-            this.CustomerentryPost_label5.Location = new System.Drawing.Point(24, 238);
-            this.CustomerentryPost_label5.Name = "CustomerentryPost_label5";
-            this.CustomerentryPost_label5.Size = new System.Drawing.Size(53, 12);
-            this.CustomerentryPost_label5.TabIndex = 4;
-            this.CustomerentryPost_label5.Text = "郵便番号";
+            this.CustomerentryPost_label.AutoSize = true;
+            this.CustomerentryPost_label.Location = new System.Drawing.Point(24, 238);
+            this.CustomerentryPost_label.Name = "CustomerentryPost_label";
+            this.CustomerentryPost_label.Size = new System.Drawing.Size(53, 12);
+            this.CustomerentryPost_label.TabIndex = 4;
+            this.CustomerentryPost_label.Text = "郵便番号";
             // 
-            // CustomerentryAddress_label6
+            // CustomerentryAddress_label
             // 
-            this.CustomerentryAddress_label6.AutoSize = true;
-            this.CustomerentryAddress_label6.Location = new System.Drawing.Point(24, 285);
-            this.CustomerentryAddress_label6.Name = "CustomerentryAddress_label6";
-            this.CustomerentryAddress_label6.Size = new System.Drawing.Size(29, 12);
-            this.CustomerentryAddress_label6.TabIndex = 5;
-            this.CustomerentryAddress_label6.Text = "住所";
+            this.CustomerentryAddress_label.AutoSize = true;
+            this.CustomerentryAddress_label.Location = new System.Drawing.Point(24, 285);
+            this.CustomerentryAddress_label.Name = "CustomerentryAddress_label";
+            this.CustomerentryAddress_label.Size = new System.Drawing.Size(29, 12);
+            this.CustomerentryAddress_label.TabIndex = 5;
+            this.CustomerentryAddress_label.Text = "住所";
             // 
-            // CustomerentryNote_label7
+            // CustomerentryNote_label
             // 
-            this.CustomerentryNote_label7.AutoSize = true;
-            this.CustomerentryNote_label7.Location = new System.Drawing.Point(24, 329);
-            this.CustomerentryNote_label7.Name = "CustomerentryNote_label7";
-            this.CustomerentryNote_label7.Size = new System.Drawing.Size(29, 12);
-            this.CustomerentryNote_label7.TabIndex = 6;
-            this.CustomerentryNote_label7.Text = "備考";
+            this.CustomerentryNote_label.AutoSize = true;
+            this.CustomerentryNote_label.Location = new System.Drawing.Point(24, 329);
+            this.CustomerentryNote_label.Name = "CustomerentryNote_label";
+            this.CustomerentryNote_label.Size = new System.Drawing.Size(29, 12);
+            this.CustomerentryNote_label.TabIndex = 6;
+            this.CustomerentryNote_label.Text = "備考";
             // 
             // Customerentry_Name
             // 
@@ -201,13 +201,13 @@
             this.Controls.Add(this.Customerentry_Sex);
             this.Controls.Add(this.Customerentry_Kana);
             this.Controls.Add(this.Customerentry_Name);
-            this.Controls.Add(this.CustomerentryNote_label7);
-            this.Controls.Add(this.CustomerentryAddress_label6);
-            this.Controls.Add(this.CustomerentryPost_label5);
-            this.Controls.Add(this.CustomerentryTel_label4);
-            this.Controls.Add(this.CustomerentrySex_label3);
-            this.Controls.Add(this.CustomerentryKana_label2);
-            this.Controls.Add(this.CustomerentryName_label1);
+            this.Controls.Add(this.CustomerentryNote_label);
+            this.Controls.Add(this.CustomerentryAddress_label);
+            this.Controls.Add(this.CustomerentryPost_label);
+            this.Controls.Add(this.CustomerentryTel_label);
+            this.Controls.Add(this.CustomerentrySex_label);
+            this.Controls.Add(this.CustomerentryKana_label);
+            this.Controls.Add(this.CustomerentryName_label);
             this.Name = "Customerentry";
             this.Text = "Customerentry";
             this.ResumeLayout(false);
@@ -217,13 +217,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label CustomerentryName_label1;
-        private System.Windows.Forms.Label CustomerentryKana_label2;
-        private System.Windows.Forms.Label CustomerentrySex_label3;
-        private System.Windows.Forms.Label CustomerentryTel_label4;
-        private System.Windows.Forms.Label CustomerentryPost_label5;
-        private System.Windows.Forms.Label CustomerentryAddress_label6;
-        private System.Windows.Forms.Label CustomerentryNote_label7;
+        private System.Windows.Forms.Label CustomerentryName_label;
+        private System.Windows.Forms.Label CustomerentryKana_label;
+        private System.Windows.Forms.Label CustomerentrySex_label;
+        private System.Windows.Forms.Label CustomerentryTel_label;
+        private System.Windows.Forms.Label CustomerentryPost_label;
+        private System.Windows.Forms.Label CustomerentryAddress_label;
+        private System.Windows.Forms.Label CustomerentryNote_label;
         private System.Windows.Forms.TextBox Customerentry_Name;
         private System.Windows.Forms.TextBox Customerentry_Kana;
         private System.Windows.Forms.TextBox Customerentry_Sex;

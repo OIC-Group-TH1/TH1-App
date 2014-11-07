@@ -9,12 +9,11 @@ using System.Windows.Forms;
 
 namespace Sample1
 {
-    public partial class Customerecheck : Form
+    public partial class Customerchange : Form
     {
-        public Customerecheck()
+        public Customerchange()
         {
             InitializeComponent();
         }
-
     }
 }

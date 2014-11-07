@@ -45,7 +45,7 @@
             this.CalendarTop_button.Name = "CalendarTop_button";
             this.CalendarTop_button.Size = new System.Drawing.Size(91, 29);
             this.CalendarTop_button.TabIndex = 1;
-            this.CalendarTop_button.Text = "TOPへ";
+            this.CalendarTop_button.Text = "Topへ";
             this.CalendarTop_button.UseVisualStyleBackColor = true;
             this.CalendarTop_button.Click += new System.EventHandler(this.CalendarTop_button_Click);
             // 

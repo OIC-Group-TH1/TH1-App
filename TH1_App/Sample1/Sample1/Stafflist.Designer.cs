@@ -149,6 +149,7 @@
             this.StafflistTop_button.TabIndex = 4;
             this.StafflistTop_button.Text = "Topへ";
             this.StafflistTop_button.UseVisualStyleBackColor = true;
+            this.StafflistTop_button.Click += new System.EventHandler(this.StafflistTop_button_Click);
             // 
             // Stafflist
             // 

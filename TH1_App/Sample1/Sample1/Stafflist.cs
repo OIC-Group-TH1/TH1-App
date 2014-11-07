@@ -15,5 +15,12 @@ namespace Sample1
         {
             InitializeComponent();
         }
+
+        private void StafflistTop_button_Click(object sender, EventArgs e)
+        {
+            Top_page TP = new Top_page();
+            TP.Visible = true;
+            this.Close();
+        }
     }
 }

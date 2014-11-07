@@ -18,10 +18,9 @@ namespace Sample1
 
         private void CalendarTop_button_Click(object sender, EventArgs e)
         {
-            Top_page T = new Top_page();
-            T.Show();
-
-            Application.OpenForms["Form2"].Close();
+            Top_page TP = new Top_page();
+            TP.Visible = true;
+            this.Close();
         }
     }
 }

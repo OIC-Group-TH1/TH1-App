@@ -59,11 +59,23 @@
     <Compile Include="Accountscheck.Designer.cs">
       <DependentUpon>Accountscheck.cs</DependentUpon>
     </Compile>
+    <Compile Include="Custchangecheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custchangecheck.Designer.cs">
+      <DependentUpon>Custchangecheck.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customerchange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customerchange.Designer.cs">
+      <DependentUpon>Customerchange.cs</DependentUpon>
     </Compile>
     <Compile Include="Customerecheck.cs">
       <SubType>Form</SubType>
@@ -151,8 +163,14 @@
     <EmbeddedResource Include="Accountscheck.resx">
       <DependentUpon>Accountscheck.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Custchangecheck.resx">
+      <DependentUpon>Custchangecheck.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customerchange.resx">
+      <DependentUpon>Customerchange.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customerecheck.resx">
       <DependentUpon>Customerecheck.cs</DependentUpon>
