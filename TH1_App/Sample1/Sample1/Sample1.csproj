@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{39548347-5D90-4E49-BFF9-AF18D2E90E49}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sample1</RootNamespace>
+    <AssemblyName>Sample1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounts.Designer.cs">
+      <DependentUpon>Accounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accountscheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accountscheck.Designer.cs">
+      <DependentUpon>Accountscheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customerecheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customerecheck.Designer.cs">
+      <DependentUpon>Customerecheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customerentry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customerentry.Designer.cs">
+      <DependentUpon>Customerentry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customerlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customerlist.Designer.cs">
+      <DependentUpon>Customerlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IOcheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IOcheck.Designer.cs">
+      <DependentUpon>IOcheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IOchecklist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IOchecklist.Designer.cs">
+      <DependentUpon>IOchecklist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservecheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservecheck.Designer.cs">
+      <DependentUpon>Reservecheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservelist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservelist.Designer.cs">
+      <DependentUpon>Reservelist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staffchange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staffchange.Designer.cs">
+      <DependentUpon>Staffchange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staffcheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staffcheck.Designer.cs">
+      <DependentUpon>Staffcheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staffentry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staffentry.Designer.cs">
+      <DependentUpon>Staffentry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stafflist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stafflist.Designer.cs">
+      <DependentUpon>Stafflist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Top.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Top.Designer.cs">
+      <DependentUpon>Top.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calendar.Designer.cs">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Accounts.resx">
+      <DependentUpon>Accounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accountscheck.resx">
+      <DependentUpon>Accountscheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customerecheck.resx">
+      <DependentUpon>Customerecheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customerentry.resx">
+      <DependentUpon>Customerentry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customerlist.resx">
+      <DependentUpon>Customerlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IOcheck.resx">
+      <DependentUpon>IOcheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IOchecklist.resx">
+      <DependentUpon>IOchecklist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservecheck.resx">
+      <DependentUpon>Reservecheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservelist.resx">
+      <DependentUpon>Reservelist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staffchange.resx">
+      <DependentUpon>Staffchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staffcheck.resx">
+      <DependentUpon>Staffcheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staffentry.resx">
+      <DependentUpon>Staffentry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stafflist.resx">
+      <DependentUpon>Stafflist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Top.resx">
+      <DependentUpon>Top.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
