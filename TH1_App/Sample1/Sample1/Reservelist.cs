@@ -18,7 +18,9 @@ namespace Sample1
 
         private void ReservelistBack_button_Click(object sender, EventArgs e)
         {
-            
+            Calendar Back = new Calendar();
+            Back.Visible = true;
+            this.Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -33,7 +35,15 @@ namespace Sample1
 
         private void reservelist_Load(object sender, EventArgs e)
         {
+
             dateTimePicker1.Value = new DateTime(2001, 10, 20);
+        }
+
+        private void ReservelistTop_button_Click(object sender, EventArgs e)
+        {
+            Top_page Top = new Top_page();
+            Top.Show();
+            this.Close();
         }
     }
 }

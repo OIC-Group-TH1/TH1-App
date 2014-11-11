@@ -40,6 +40,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.ReservelistBack_button = new System.Windows.Forms.Button();
             this.ReservelistTop_button = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,12 +134,23 @@
             this.ReservelistTop_button.TabIndex = 3;
             this.ReservelistTop_button.Text = "Topへ";
             this.ReservelistTop_button.UseVisualStyleBackColor = true;
+            this.ReservelistTop_button.Click += new System.EventHandler(this.ReservelistTop_button_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(297, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 12);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "label1";
             // 
             // reservelist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 425);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ReservelistTop_button);
             this.Controls.Add(this.ReservelistBack_button);
             this.Controls.Add(this.dateTimePicker1);
@@ -148,6 +160,7 @@
             this.Load += new System.EventHandler(this.reservelist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -165,5 +178,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Reservelist_Tel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Reservelist_Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn Reservelist_Reserve;
+        private System.Windows.Forms.Label label1;
     }
 }

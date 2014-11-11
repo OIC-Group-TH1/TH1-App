@@ -15,5 +15,12 @@ namespace Sample1
         {
             InitializeComponent();
         }
+
+        private void CustomerchangeBack_button_Click(object sender, EventArgs e)
+        {
+            Customerlist Back = new Customerlist();
+            Back.Visible = true;
+            this.Close();
+        }
     }
 }
