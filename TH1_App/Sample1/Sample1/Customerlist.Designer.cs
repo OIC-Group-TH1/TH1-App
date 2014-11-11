@@ -118,7 +118,7 @@
             this.CustomerlistEntry_button.TabIndex = 2;
             this.CustomerlistEntry_button.Text = "新規登録";
             this.CustomerlistEntry_button.UseVisualStyleBackColor = true;
-            this.CustomerlistEntry_button.Click += new System.EventHandler(this.button2_Click);
+           
             // 
             // CustomerlistBack_button
             // 
@@ -137,6 +137,7 @@
             this.CustomerlistTop_button.TabIndex = 4;
             this.CustomerlistTop_button.Text = "Topへ";
             this.CustomerlistTop_button.UseVisualStyleBackColor = true;
+            this.CustomerlistTop_button.Click += new System.EventHandler(this.CustomerlistTop_button_Click);
             // 
             // CustomerlistName_label
             // 
@@ -146,7 +147,7 @@
             this.CustomerlistName_label.Size = new System.Drawing.Size(100, 23);
             this.CustomerlistName_label.TabIndex = 5;
             this.CustomerlistName_label.Text = "名前";
-            this.CustomerlistName_label.Click += new System.EventHandler(this.label1_Click);
+          
             // 
             // CustomerlistTel_label
             // 

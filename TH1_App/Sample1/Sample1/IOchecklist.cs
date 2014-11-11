@@ -15,5 +15,12 @@ namespace Sample1
         {
             InitializeComponent();
         }
+
+        private void IOchecklistTop_button_Click(object sender, EventArgs e)
+        {
+            Top_page Top = new Top_page();
+            Top.Visible = true;
+            this.Close();
+        }
     }
 }

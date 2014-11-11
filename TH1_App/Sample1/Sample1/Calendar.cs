@@ -18,8 +18,8 @@ namespace Sample1
 
         private void CalendarTop_button_Click(object sender, EventArgs e)
         {
-            Top_page TP = new Top_page();
-            TP.Visible = true;
+            Top_page Top = new Top_page();
+            Top.Show();
             this.Close();
         }
     }

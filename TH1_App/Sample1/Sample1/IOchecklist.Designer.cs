@@ -113,6 +113,7 @@
             this.IOchecklistTop_button.TabIndex = 2;
             this.IOchecklistTop_button.Text = "Topへ";
             this.IOchecklistTop_button.UseVisualStyleBackColor = true;
+            this.IOchecklistTop_button.Click += new System.EventHandler(this.IOchecklistTop_button_Click);
             // 
             // IOchecklist
             // 

@@ -16,14 +16,12 @@ namespace Sample1
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+        private void CustomerlistTop_button_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            Top_page Top = new Top_page();
+            Top.Visible = true;
+            this.Close();
         }
     }
 }

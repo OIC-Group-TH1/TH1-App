@@ -121,6 +121,7 @@
             this.ReservelistBack_button.TabIndex = 2;
             this.ReservelistBack_button.Text = "戻る";
             this.ReservelistBack_button.UseVisualStyleBackColor = true;
+            this.ReservelistBack_button.Click += new System.EventHandler(this.ReservelistBack_button_Click);
             // 
             // ReservelistTop_button
             // 

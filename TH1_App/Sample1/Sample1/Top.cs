@@ -18,10 +18,31 @@ namespace Sample1
 
         private void Yoyaku_button_Click(object sender, EventArgs e)
         {
-            Calendar C = new Calendar();           
-            C.Show();
-            this.Visible = false;
+            Calendar Cal = new Calendar();
+            Cal.Show();
+            this.Visible = false;           
 
+        }
+
+        private void Kokyaku_button_Click(object sender, EventArgs e)
+        {
+            Customerlist Cust = new Customerlist();
+            Cust.Show();
+            this.Visible = false;
+        }
+
+        private void Room_button_Click(object sender, EventArgs e)
+        {
+            IOchecklist IO = new IOchecklist();
+            IO.Show();
+            this.Visible = false;
+        }
+
+        private void Syain_button_Click(object sender, EventArgs e)
+        {
+            Stafflist Staff = new Stafflist();
+            Staff.Show();
+            this.Visible = false;
         }
     }
 }
