@@ -22,5 +22,12 @@ namespace Sample1
             Top.Visible = true;
             this.Close();
         }
+
+        private void StafflistEntry_button_Click(object sender, EventArgs e)
+        {
+            Staffentry Sentry = new Staffentry();
+            Sentry.Show();
+            this.Visible = false;
+        }
     }
 }

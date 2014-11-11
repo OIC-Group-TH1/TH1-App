@@ -20,5 +20,14 @@ namespace Sample1
         {
 
         }
+
+        private void StaffentryBack_button_Click(object sender, EventArgs e)
+        {
+            Stafflist Back = new Stafflist();
+            Back.Visible = true;
+            this.Close();
+
+
+        }
     }
 }

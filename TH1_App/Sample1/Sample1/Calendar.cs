@@ -10,7 +10,13 @@ using System.Windows.Forms;
 namespace Sample1
 {
     public partial class Calendar : Form
+
+        
+
+
     {
+
+        
         public Calendar()
         {
             InitializeComponent();
@@ -21,6 +27,15 @@ namespace Sample1
             Top_page Top = new Top_page();
             Top.Show();
             this.Close();
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            String Today = this.monthCalendar1.SelectionRange.Start.ToString();
+            reservelist Rlist = new reservelist();
+            Rlist.Show();
+            
+            
         }
     }
 }

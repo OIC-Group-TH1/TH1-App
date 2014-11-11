@@ -176,6 +176,7 @@
             this.CustomerentryBack_button.TabIndex = 15;
             this.CustomerentryBack_button.Text = "戻る";
             this.CustomerentryBack_button.UseVisualStyleBackColor = true;
+            this.CustomerentryBack_button.Click += new System.EventHandler(this.CustomerentryBack_button_Click);
             // 
             // CustomerentryTop_button
             // 
@@ -185,6 +186,7 @@
             this.CustomerentryTop_button.TabIndex = 16;
             this.CustomerentryTop_button.Text = "Topへ";
             this.CustomerentryTop_button.UseVisualStyleBackColor = true;
+            this.CustomerentryTop_button.Click += new System.EventHandler(this.CustomerentryTop_button_Click);
             // 
             // Customerentry
             // 

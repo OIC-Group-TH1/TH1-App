@@ -15,5 +15,19 @@ namespace Sample1
         {
             InitializeComponent();
         }
+
+        private void CustomerentryBack_button_Click(object sender, EventArgs e)
+        {
+            Customerlist Back = new Customerlist();
+            Back.Visible = true;
+            this.Close();
+        }
+
+        private void CustomerentryTop_button_Click(object sender, EventArgs e)
+        {
+            Top_page Top = new Top_page();
+            Top.Visible = true;
+            this.Close();
+        }
     }
 }

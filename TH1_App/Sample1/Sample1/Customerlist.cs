@@ -23,5 +23,13 @@ namespace Sample1
             Top.Visible = true;
             this.Close();
         }
+
+        private void CustomerlistEntry_button_Click(object sender, EventArgs e)
+        {
+            Customerentry Centry = new Customerentry();
+            Centry.Show();
+            this.Visible = false;
+
+        }
     }
 }

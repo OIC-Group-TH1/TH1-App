@@ -122,6 +122,7 @@
             this.StafflistEntry_button.TabIndex = 1;
             this.StafflistEntry_button.Text = "登録";
             this.StafflistEntry_button.UseVisualStyleBackColor = true;
+            this.StafflistEntry_button.Click += new System.EventHandler(this.StafflistEntry_button_Click);
             // 
             // StafflistChange_button
             // 

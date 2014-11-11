@@ -158,6 +158,7 @@
             this.StaffentryBack_button.TabIndex = 13;
             this.StaffentryBack_button.Text = "戻る";
             this.StaffentryBack_button.UseVisualStyleBackColor = true;
+            this.StaffentryBack_button.Click += new System.EventHandler(this.StaffentryBack_button_Click);
             // 
             // Staffentry
             // 
