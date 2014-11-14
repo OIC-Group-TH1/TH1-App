@@ -27,17 +27,6 @@ namespace Sample1
             Back.Visible = true;
             this.Close();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void reservelist_Load(object sender, EventArgs e)
         {
             dateTimePicker1.Value = new DateTime();
