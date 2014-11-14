@@ -10,13 +10,7 @@ using System.Windows.Forms;
 namespace Sample1
 {
     public partial class Calendar : Form
-
-        
-
-
     {
-
-        
         public Calendar()
         {
             InitializeComponent();
@@ -31,8 +25,9 @@ namespace Sample1
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
+            //クリックした日付を代入
             String Today = this.monthCalendar1.SelectionRange.Start.ToString();
-            reservelist Rlist = new reservelist();
+            reservelist Rlist = new reservelist(Today);
             Rlist.Show();
             
             

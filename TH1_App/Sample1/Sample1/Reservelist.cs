@@ -15,6 +15,11 @@ namespace Sample1
         {
             InitializeComponent();
         }
+        public reservelist(string str)
+        {
+            InitializeComponent();
+            dateTimePicker1.Text = str;
+        }
 
         private void ReservelistBack_button_Click(object sender, EventArgs e)
         {
@@ -33,7 +38,8 @@ namespace Sample1
 
         private void reservelist_Load(object sender, EventArgs e)
         {
-            dateTimePicker1.Value = new DateTime(2001, 10, 20);
+            
+            dateTimePicker1.Value = new DateTime();
         }
     }
 }
