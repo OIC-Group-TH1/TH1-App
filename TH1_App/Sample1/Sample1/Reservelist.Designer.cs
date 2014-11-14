@@ -59,9 +59,9 @@
             this.dataGridView1.Location = new System.Drawing.Point(22, 87);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(593, 183);
+            this.dataGridView1.Size = new System.Drawing.Size(702, 183);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // Reservelist_No
             // 
@@ -114,7 +114,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 19);
             this.dateTimePicker1.TabIndex = 1;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // ReservelistBack_button
             // 
@@ -149,7 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 425);
+            this.ClientSize = new System.Drawing.Size(752, 425);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ReservelistTop_button);
             this.Controls.Add(this.ReservelistBack_button);
@@ -170,6 +169,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button ReservelistBack_button;
         private System.Windows.Forms.Button ReservelistTop_button;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Reservelist_No;
         private System.Windows.Forms.DataGridViewTextBoxColumn Reservelist_Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn Reservelist_Smoke;
@@ -178,6 +178,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Reservelist_Tel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Reservelist_Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn Reservelist_Reserve;
-        private System.Windows.Forms.Label label1;
     }
 }

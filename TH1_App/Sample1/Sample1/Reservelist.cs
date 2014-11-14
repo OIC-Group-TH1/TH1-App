@@ -28,19 +28,10 @@ namespace Sample1
             this.Close();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void reservelist_Load(object sender, EventArgs e)
         {
-            dateTimePicker1.Value = new DateTime();
+            this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.MultiSelect = false;
         }
 
         private void ReservelistTop_button_Click(object sender, EventArgs e)
@@ -48,6 +39,22 @@ namespace Sample1
             Top_page Top = new Top_page();
             Top.Show();
             this.Close();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.CurrentRow.Cells[3].Value == null)
+            {
+                Customerlist Clist = new Customerlist();
+                Clist.Show();
+                this.Visible = false;
+            }
+           else if (dataGridView1.CurrentRow.Cells[3].Value != null)
+           {
+               Reservecheck Rcheck = new Reservecheck();
+               Rcheck.Show();
+               this.Visible = false;
+           }
         }
     }
 }

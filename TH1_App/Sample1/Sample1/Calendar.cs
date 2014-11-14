@@ -30,9 +30,6 @@ namespace Sample1
             reservelist Rlist = new reservelist(Today);
             Rlist.Show();
             this.Visible = false;
-
-            
-            
         }
     }
 }
