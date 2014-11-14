@@ -175,6 +175,7 @@
             this.CustomerchangeBack_button.TabIndex = 46;
             this.CustomerchangeBack_button.Text = "戻る";
             this.CustomerchangeBack_button.UseVisualStyleBackColor = true;
+            this.CustomerchangeBack_button.Click += new System.EventHandler(this.CustomerchangeBack_button_Click);
             // 
             // Customerchange
             // 

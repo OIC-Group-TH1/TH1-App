@@ -65,5 +65,12 @@ namespace Sample1
         {
 
         }
+
+        private void CusomerChange_button_Click(object sender, EventArgs e)
+        {
+            Customerchange Cchange = new Customerchange();
+            Cchange.Show();
+            this.Visible = false;
+        }
     }
 }

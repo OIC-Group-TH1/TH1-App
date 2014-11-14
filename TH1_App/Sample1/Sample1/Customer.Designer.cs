@@ -181,6 +181,7 @@
             this.CusomerChange_button.TabIndex = 38;
             this.CusomerChange_button.Text = "変更する";
             this.CusomerChange_button.UseVisualStyleBackColor = true;
+            this.CusomerChange_button.Click += new System.EventHandler(this.CusomerChange_button_Click);
             // 
             // CustomerBack_button
             // 
