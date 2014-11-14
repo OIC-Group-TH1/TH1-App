@@ -29,7 +29,7 @@ namespace Sample1
             String Today = this.monthCalendar1.SelectionRange.Start.ToString();
             reservelist Rlist = new reservelist(Today);
             Rlist.Show();
-            this.Visible = false;
+            this.Close();
         }
     }
 }

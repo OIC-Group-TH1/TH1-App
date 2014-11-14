@@ -27,7 +27,7 @@ namespace Sample1
         {
             Staffentry Sentry = new Staffentry();
             Sentry.Show();
-            this.Visible = false;
+            this.Close();
         }
     }
 }

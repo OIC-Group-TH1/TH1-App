@@ -70,7 +70,14 @@ namespace Sample1
         {
             Customerchange Cchange = new Customerchange();
             Cchange.Show();
-            this.Visible = false;
+            this.Close();
+        }
+
+        private void CustomerBack_button_Click(object sender, EventArgs e)
+        {
+            Customerlist Cchange = new Customerlist();
+            Cchange.Show();
+            this.Close();
         }
     }
 }

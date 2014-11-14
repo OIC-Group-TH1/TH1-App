@@ -191,6 +191,7 @@
             this.CustomerBack_button.TabIndex = 39;
             this.CustomerBack_button.Text = "戻る";
             this.CustomerBack_button.UseVisualStyleBackColor = true;
+            this.CustomerBack_button.Click += new System.EventHandler(this.CustomerBack_button_Click);
             // 
             // CustomerReserve_button
             // 

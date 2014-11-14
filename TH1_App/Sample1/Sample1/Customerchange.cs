@@ -18,8 +18,8 @@ namespace Sample1
 
         private void CustomerchangeBack_button_Click(object sender, EventArgs e)
         {
-            Customerlist Back = new Customerlist();
-            Back.Visible = true;
+            Customer Back = new Customer();
+            Back.Show();
             this.Close();
         }
     }
