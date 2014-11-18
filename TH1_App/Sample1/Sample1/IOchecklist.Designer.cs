@@ -58,6 +58,7 @@
             this.dataGridView1.RowTemplate.Height = 21;
             this.dataGridView1.Size = new System.Drawing.Size(665, 167);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // IOchecklist_No
             // 
@@ -124,6 +125,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "IOchecklist";
             this.Text = "IOchecklist";
+            this.Load += new System.EventHandler(this.IOchecklist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

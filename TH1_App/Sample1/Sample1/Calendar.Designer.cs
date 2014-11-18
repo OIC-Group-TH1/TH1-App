@@ -35,6 +35,7 @@
             // monthCalendar1
             // 
             this.monthCalendar1.Location = new System.Drawing.Point(60, 18);
+            this.monthCalendar1.MaxSelectionCount = 1;
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
             this.monthCalendar1.TabStop = false;
@@ -54,7 +55,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 303);
+            this.ClientSize = new System.Drawing.Size(411, 303);
             this.Controls.Add(this.CalendarTop_button);
             this.Controls.Add(this.monthCalendar1);
             this.Name = "Calendar";

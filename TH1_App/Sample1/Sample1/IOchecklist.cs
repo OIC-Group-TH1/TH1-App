@@ -22,5 +22,19 @@ namespace Sample1
             Top.Visible = true;
             this.Close();
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IOcheck IOche = new IOcheck();
+            IOche.Show();
+            this.Close();
+        }
+
+        private void IOchecklist_Load(object sender, EventArgs e)
+        {
+            //セルを行として管理
+            this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.MultiSelect = false;
+        }
     }
 }

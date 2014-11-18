@@ -127,7 +127,7 @@
             this.CustomerlistBack_button.Name = "CustomerlistBack_button";
             this.CustomerlistBack_button.Size = new System.Drawing.Size(75, 23);
             this.CustomerlistBack_button.TabIndex = 3;
-            this.CustomerlistBack_button.Text = "戻る";
+            this.CustomerlistBack_button.Text = "予約一覧へ";
             this.CustomerlistBack_button.UseVisualStyleBackColor = true;
             this.CustomerlistBack_button.Click += new System.EventHandler(this.CustomerlistBack_button_Click);
             // 
