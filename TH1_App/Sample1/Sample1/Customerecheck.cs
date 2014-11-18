@@ -16,5 +16,19 @@ namespace Sample1
             InitializeComponent();
         }
 
+        private void CustomercheckNo_button_Click(object sender, EventArgs e)
+        {
+            Customerchange Custchange = new Customerchange();
+            Custchange.Show();
+            this.Close();
+        }
+
+        private void CustomercheckYes_button_Click(object sender, EventArgs e)
+        {
+            Customerlist Custlist = new Customerlist();
+            Custlist.Show();
+            this.Close();
+        }
+
     }
 }
