@@ -260,6 +260,7 @@
             this.ReservecheckDelete_button.TabIndex = 35;
             this.ReservecheckDelete_button.Text = "予約情報の削除";
             this.ReservecheckDelete_button.UseVisualStyleBackColor = true;
+            this.ReservecheckDelete_button.Click += new System.EventHandler(this.ReservecheckDelete_button_Click);
             // 
             // ReservecheckBack_button
             // 

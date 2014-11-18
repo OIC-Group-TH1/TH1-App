@@ -44,7 +44,6 @@
             this.Customerchange_Note = new System.Windows.Forms.TextBox();
             this.CustomerchangeChange_button = new System.Windows.Forms.Button();
             this.CustomerchangeBack_button = new System.Windows.Forms.Button();
-            this.CustomerchangeDelete_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CustomerchangeNote_label
@@ -161,7 +160,7 @@
             // 
             // CustomerchangeChange_button
             // 
-            this.CustomerchangeChange_button.Location = new System.Drawing.Point(277, 367);
+            this.CustomerchangeChange_button.Location = new System.Drawing.Point(266, 367);
             this.CustomerchangeChange_button.Name = "CustomerchangeChange_button";
             this.CustomerchangeChange_button.Size = new System.Drawing.Size(75, 23);
             this.CustomerchangeChange_button.TabIndex = 45;
@@ -171,7 +170,7 @@
             // 
             // CustomerchangeBack_button
             // 
-            this.CustomerchangeBack_button.Location = new System.Drawing.Point(388, 414);
+            this.CustomerchangeBack_button.Location = new System.Drawing.Point(378, 367);
             this.CustomerchangeBack_button.Name = "CustomerchangeBack_button";
             this.CustomerchangeBack_button.Size = new System.Drawing.Size(75, 23);
             this.CustomerchangeBack_button.TabIndex = 46;
@@ -179,22 +178,11 @@
             this.CustomerchangeBack_button.UseVisualStyleBackColor = true;
             this.CustomerchangeBack_button.Click += new System.EventHandler(this.CustomerchangeBack_button_Click);
             // 
-            // CustomerchangeDelete_button
-            // 
-            this.CustomerchangeDelete_button.Location = new System.Drawing.Point(388, 367);
-            this.CustomerchangeDelete_button.Name = "CustomerchangeDelete_button";
-            this.CustomerchangeDelete_button.Size = new System.Drawing.Size(75, 23);
-            this.CustomerchangeDelete_button.TabIndex = 47;
-            this.CustomerchangeDelete_button.Text = "削除";
-            this.CustomerchangeDelete_button.UseVisualStyleBackColor = true;
-            this.CustomerchangeDelete_button.Click += new System.EventHandler(this.CustomerchangeDelete_button_Click);
-            // 
             // Customerchange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(504, 475);
-            this.Controls.Add(this.CustomerchangeDelete_button);
             this.Controls.Add(this.CustomerchangeBack_button);
             this.Controls.Add(this.CustomerchangeChange_button);
             this.Controls.Add(this.Customerchange_Note);
@@ -236,6 +224,5 @@
         private System.Windows.Forms.TextBox Customerchange_Note;
         private System.Windows.Forms.Button CustomerchangeChange_button;
         private System.Windows.Forms.Button CustomerchangeBack_button;
-        private System.Windows.Forms.Button CustomerchangeDelete_button;
     }
 }

@@ -29,5 +29,24 @@ namespace Sample1
             Sentry.Show();
             this.Close();
         }
+
+        private void StafflistDelete_button_Click(object sender, EventArgs e)
+        {
+            //メッセージダイアログ(YES,NO)の表示
+            DialogResult result = MessageBox.Show("削除してもよろしいですか？", "",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Exclamation,
+                //デフォルトの選択ボタンは「いいえ」で設定
+                MessageBoxDefaultButton.Button2);
+
+            if (result == DialogResult.Yes)
+            {
+                //「はい」が選択された時の処理を書く
+            }
+            else if (result == DialogResult.No)
+            {
+                //「いいえ」が選択された時の処理を書く
+            }
+        }
     }
 }

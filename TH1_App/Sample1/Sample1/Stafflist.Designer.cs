@@ -141,6 +141,7 @@
             this.StafflistDelete_button.TabIndex = 3;
             this.StafflistDelete_button.Text = "削除";
             this.StafflistDelete_button.UseVisualStyleBackColor = true;
+            this.StafflistDelete_button.Click += new System.EventHandler(this.StafflistDelete_button_Click);
             // 
             // StafflistTop_button
             // 

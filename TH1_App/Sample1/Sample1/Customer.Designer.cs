@@ -45,6 +45,7 @@
             this.CusomerChange_button = new System.Windows.Forms.Button();
             this.CustomerBack_button = new System.Windows.Forms.Button();
             this.CustomerReserve_button = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Customer_Note
@@ -175,11 +176,11 @@
             // 
             // CusomerChange_button
             // 
-            this.CusomerChange_button.Location = new System.Drawing.Point(371, 366);
+            this.CusomerChange_button.Location = new System.Drawing.Point(276, 366);
             this.CusomerChange_button.Name = "CusomerChange_button";
             this.CusomerChange_button.Size = new System.Drawing.Size(75, 23);
             this.CusomerChange_button.TabIndex = 38;
-            this.CusomerChange_button.Text = "変更する";
+            this.CusomerChange_button.Text = "変更";
             this.CusomerChange_button.UseVisualStyleBackColor = true;
             this.CusomerChange_button.Click += new System.EventHandler(this.CusomerChange_button_Click);
             // 
@@ -195,18 +196,29 @@
             // 
             // CustomerReserve_button
             // 
-            this.CustomerReserve_button.Location = new System.Drawing.Point(257, 366);
+            this.CustomerReserve_button.Location = new System.Drawing.Point(177, 366);
             this.CustomerReserve_button.Name = "CustomerReserve_button";
             this.CustomerReserve_button.Size = new System.Drawing.Size(75, 23);
             this.CustomerReserve_button.TabIndex = 40;
-            this.CustomerReserve_button.Text = "予約する";
+            this.CustomerReserve_button.Text = "予約";
             this.CustomerReserve_button.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(371, 366);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "削除";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 451);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.CustomerReserve_button);
             this.Controls.Add(this.CustomerBack_button);
             this.Controls.Add(this.CusomerChange_button);
@@ -250,6 +262,7 @@
         private System.Windows.Forms.Button CusomerChange_button;
         private System.Windows.Forms.Button CustomerBack_button;
         private System.Windows.Forms.Button CustomerReserve_button;
+        private System.Windows.Forms.Button button1;
 
 
 
