@@ -168,6 +168,7 @@
             this.AcountsTop_button.TabIndex = 21;
             this.AcountsTop_button.Text = "TOPへ";
             this.AcountsTop_button.UseVisualStyleBackColor = true;
+            this.AcountsTop_button.Click += new System.EventHandler(this.AcountsTop_button_Click);
             // 
             // AcountsOk_button
             // 
@@ -177,6 +178,7 @@
             this.AcountsOk_button.TabIndex = 20;
             this.AcountsOk_button.Text = "完了";
             this.AcountsOk_button.UseVisualStyleBackColor = true;
+            this.AcountsOk_button.Click += new System.EventHandler(this.AcountsOk_button_Click);
             // 
             // AcountsBack_button
             // 
@@ -186,6 +188,7 @@
             this.AcountsBack_button.TabIndex = 19;
             this.AcountsBack_button.Text = "戻る";
             this.AcountsBack_button.UseVisualStyleBackColor = true;
+            this.AcountsBack_button.Click += new System.EventHandler(this.AcountsBack_button_Click);
             // 
             // dataGridView1
             // 

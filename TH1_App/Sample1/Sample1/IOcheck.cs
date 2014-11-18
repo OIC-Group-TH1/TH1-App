@@ -15,5 +15,24 @@ namespace Sample1
         {
             InitializeComponent();
         }
+
+        private void IOcheckBack_button_Click(object sender, EventArgs e)
+        {
+            IOchecklist Back = new IOchecklist();
+            Back.Show();
+            this.Close();
+        }
+
+        private void IOcheckCI_button_Click(object sender, EventArgs e)
+        {
+            Accounts CI = new Accounts();
+            CI.Show();
+            this.Close();
+        }
+
+        private void IOcheckCO_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

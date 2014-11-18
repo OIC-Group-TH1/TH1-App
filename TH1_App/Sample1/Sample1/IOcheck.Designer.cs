@@ -52,8 +52,9 @@
             this.IOcheckSex_label = new System.Windows.Forms.Label();
             this.IOcheckKana_label = new System.Windows.Forms.Label();
             this.IOcheckName_label = new System.Windows.Forms.Label();
-            this.IOcheckPay_button = new System.Windows.Forms.Button();
+            this.IOcheckCO_button = new System.Windows.Forms.Button();
             this.IOcheckBack_button = new System.Windows.Forms.Button();
+            this.IOcheckCI_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // IOcheck_Rate
@@ -272,14 +273,15 @@
             this.IOcheckName_label.TabIndex = 43;
             this.IOcheckName_label.Text = "名前";
             // 
-            // IOcheckPay_button
+            // IOcheckCO_button
             // 
-            this.IOcheckPay_button.Location = new System.Drawing.Point(265, 401);
-            this.IOcheckPay_button.Name = "IOcheckPay_button";
-            this.IOcheckPay_button.Size = new System.Drawing.Size(75, 23);
-            this.IOcheckPay_button.TabIndex = 67;
-            this.IOcheckPay_button.Text = "会計";
-            this.IOcheckPay_button.UseVisualStyleBackColor = true;
+            this.IOcheckCO_button.Location = new System.Drawing.Point(241, 401);
+            this.IOcheckCO_button.Name = "IOcheckCO_button";
+            this.IOcheckCO_button.Size = new System.Drawing.Size(75, 23);
+            this.IOcheckCO_button.TabIndex = 67;
+            this.IOcheckCO_button.Text = "Check Out";
+            this.IOcheckCO_button.UseVisualStyleBackColor = true;
+            this.IOcheckCO_button.Click += new System.EventHandler(this.IOcheckCO_button_Click);
             // 
             // IOcheckBack_button
             // 
@@ -289,14 +291,26 @@
             this.IOcheckBack_button.TabIndex = 68;
             this.IOcheckBack_button.Text = "戻る";
             this.IOcheckBack_button.UseVisualStyleBackColor = true;
+            this.IOcheckBack_button.Click += new System.EventHandler(this.IOcheckBack_button_Click);
+            // 
+            // IOcheckCI_button
+            // 
+            this.IOcheckCI_button.Location = new System.Drawing.Point(154, 401);
+            this.IOcheckCI_button.Name = "IOcheckCI_button";
+            this.IOcheckCI_button.Size = new System.Drawing.Size(75, 23);
+            this.IOcheckCI_button.TabIndex = 69;
+            this.IOcheckCI_button.Text = "Check In";
+            this.IOcheckCI_button.UseVisualStyleBackColor = true;
+            this.IOcheckCI_button.Click += new System.EventHandler(this.IOcheckCI_button_Click);
             // 
             // IOcheck
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(462, 495);
+            this.Controls.Add(this.IOcheckCI_button);
             this.Controls.Add(this.IOcheckBack_button);
-            this.Controls.Add(this.IOcheckPay_button);
+            this.Controls.Add(this.IOcheckCO_button);
             this.Controls.Add(this.IOcheck_Rate);
             this.Controls.Add(this.IOcheck_Number);
             this.Controls.Add(this.IOcheck_Smoke);
@@ -354,7 +368,8 @@
         private System.Windows.Forms.Label IOcheckSex_label;
         private System.Windows.Forms.Label IOcheckKana_label;
         private System.Windows.Forms.Label IOcheckName_label;
-        private System.Windows.Forms.Button IOcheckPay_button;
+        private System.Windows.Forms.Button IOcheckCO_button;
         private System.Windows.Forms.Button IOcheckBack_button;
+        private System.Windows.Forms.Button IOcheckCI_button;
     }
 }
