@@ -20,5 +20,26 @@ namespace Sample1
         {
 
         }
+
+        private void ReservecheckBack_button_Click(object sender, EventArgs e)
+        {
+            Calendar Cal = new Calendar();
+            Cal.Show();
+            this.Close();
+        }
+
+        private void ReservecheckTop_button_Click(object sender, EventArgs e)
+        {
+            Top_page Top = new Top_page();
+            Top.Show();
+            this.Close();
+        }
+
+        private void ReservecheckCchange_button_Click(object sender, EventArgs e)
+        {
+            Customerchange Custchange = new Customerchange();
+            Custchange.Show();
+            this.Close();
+        }
     }
 }

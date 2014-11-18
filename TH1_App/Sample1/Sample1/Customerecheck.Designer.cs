@@ -190,6 +190,7 @@
             this.CustomercheckYes_button.TabIndex = 22;
             this.CustomercheckYes_button.Text = "はい";
             this.CustomercheckYes_button.UseVisualStyleBackColor = true;
+            this.CustomercheckYes_button.Click += new System.EventHandler(this.CustomercheckYes_button_Click);
             // 
             // CustomercheckNo_button
             // 
@@ -199,6 +200,7 @@
             this.CustomercheckNo_button.TabIndex = 23;
             this.CustomercheckNo_button.Text = "いいえ";
             this.CustomercheckNo_button.UseVisualStyleBackColor = true;
+            this.CustomercheckNo_button.Click += new System.EventHandler(this.CustomercheckNo_button_Click);
             // 
             // Customerecheck
             // 

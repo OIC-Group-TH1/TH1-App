@@ -241,6 +241,7 @@
             this.ReservecheckCchange_button.TabIndex = 33;
             this.ReservecheckCchange_button.Text = "顧客情報の変更";
             this.ReservecheckCchange_button.UseVisualStyleBackColor = true;
+            this.ReservecheckCchange_button.Click += new System.EventHandler(this.ReservecheckCchange_button_Click);
             // 
             // ReservecheckRchange_button
             // 
@@ -268,6 +269,7 @@
             this.ReservecheckBack_button.TabIndex = 36;
             this.ReservecheckBack_button.Text = "戻る";
             this.ReservecheckBack_button.UseVisualStyleBackColor = true;
+            this.ReservecheckBack_button.Click += new System.EventHandler(this.ReservecheckBack_button_Click);
             // 
             // ReservecheckTop_button
             // 
@@ -277,6 +279,7 @@
             this.ReservecheckTop_button.TabIndex = 37;
             this.ReservecheckTop_button.Text = "Topへ";
             this.ReservecheckTop_button.UseVisualStyleBackColor = true;
+            this.ReservecheckTop_button.Click += new System.EventHandler(this.ReservecheckTop_button_Click);
             // 
             // Reservecheck_No
             // 

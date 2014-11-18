@@ -167,6 +167,7 @@
             this.CustomerchangeChange_button.TabIndex = 45;
             this.CustomerchangeChange_button.Text = "変更";
             this.CustomerchangeChange_button.UseVisualStyleBackColor = true;
+            this.CustomerchangeChange_button.Click += new System.EventHandler(this.CustomerchangeChange_button_Click);
             // 
             // CustomerchangeBack_button
             // 
@@ -186,6 +187,7 @@
             this.CustomerchangeDelete_button.TabIndex = 47;
             this.CustomerchangeDelete_button.Text = "削除";
             this.CustomerchangeDelete_button.UseVisualStyleBackColor = true;
+            this.CustomerchangeDelete_button.Click += new System.EventHandler(this.CustomerchangeDelete_button_Click);
             // 
             // Customerchange
             // 
