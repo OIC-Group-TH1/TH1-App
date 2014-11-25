@@ -117,3 +117,5 @@ C:\Users\b3319\Desktop\TH1-App\TH1_App\Sample1\Sample1\obj\x86\Debug\Sample1.Cal
 C:\Users\b3319\Desktop\TH1-App\TH1_App\Sample1\Sample1\obj\x86\Debug\Sample1.Properties.Resources.resources
 C:\Users\b3319\Desktop\TH1-App\TH1_App\Sample1\Sample1\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\b3319\Desktop\TH1-App\TH1_App\Sample1\Sample1\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\b3316\Desktop\TH1-App\TH1_App\Sample1\Sample1\obj\x86\Debug\Sample1.exe
+C:\Users\b3316\Desktop\TH1-App\TH1_App\Sample1\Sample1\obj\x86\Debug\Sample1.pdb
