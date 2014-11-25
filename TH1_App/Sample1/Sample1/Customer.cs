@@ -101,5 +101,10 @@ namespace Sample1
                 //「いいえ」が選択された時の処理を書く
             }
         }
+
+        private void Customer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
