@@ -16,13 +16,6 @@ namespace Sample1
             InitializeComponent();
         }
 
-        private void AcountsTop_button_Click(object sender, EventArgs e)
-        {
-            Top_page Top = new Top_page();
-            Top.Show();
-            this.Close();
-        }
-
         private void AcountsBack_button_Click(object sender, EventArgs e)
         {
             IOcheck Back = new IOcheck();

@@ -48,5 +48,26 @@ namespace Sample1
                 //「いいえ」が選択された時の処理を書く
             }
         }
+
+        private void Stafflist_Load(object sender, EventArgs e)
+        {
+            //セルを行として管理
+            this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.MultiSelect = false;
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //宿泊者セルのデータがある場合
+            if (dataGridView1.CurrentRow.Cells[0].Value != null)
+            {
+                //社員変更画面を表示
+                Staffchange Schange = new Staffchange();
+                Schange.Show();
+                this.Close();
+            }
+        }
+
+
     }
 }

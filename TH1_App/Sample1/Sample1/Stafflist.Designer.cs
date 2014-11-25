@@ -39,8 +39,6 @@
             this.Stafflist_Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stafflist_Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StafflistEntry_button = new System.Windows.Forms.Button();
-            this.StafflistChange_button = new System.Windows.Forms.Button();
-            this.StafflistDelete_button = new System.Windows.Forms.Button();
             this.StafflistTop_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -58,11 +56,12 @@
             this.Stafflist_Mail,
             this.Stafflist_Day,
             this.Stafflist_Address});
-            this.dataGridView1.Location = new System.Drawing.Point(2, 89);
+            this.dataGridView1.Location = new System.Drawing.Point(1, 87);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(828, 220);
+            this.dataGridView1.Size = new System.Drawing.Size(818, 220);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // Stafflist_Code
             // 
@@ -124,28 +123,9 @@
             this.StafflistEntry_button.UseVisualStyleBackColor = true;
             this.StafflistEntry_button.Click += new System.EventHandler(this.StafflistEntry_button_Click);
             // 
-            // StafflistChange_button
-            // 
-            this.StafflistChange_button.Location = new System.Drawing.Point(633, 358);
-            this.StafflistChange_button.Name = "StafflistChange_button";
-            this.StafflistChange_button.Size = new System.Drawing.Size(75, 23);
-            this.StafflistChange_button.TabIndex = 2;
-            this.StafflistChange_button.Text = "変更";
-            this.StafflistChange_button.UseVisualStyleBackColor = true;
-            // 
-            // StafflistDelete_button
-            // 
-            this.StafflistDelete_button.Location = new System.Drawing.Point(744, 358);
-            this.StafflistDelete_button.Name = "StafflistDelete_button";
-            this.StafflistDelete_button.Size = new System.Drawing.Size(75, 23);
-            this.StafflistDelete_button.TabIndex = 3;
-            this.StafflistDelete_button.Text = "削除";
-            this.StafflistDelete_button.UseVisualStyleBackColor = true;
-            this.StafflistDelete_button.Click += new System.EventHandler(this.StafflistDelete_button_Click);
-            // 
             // StafflistTop_button
             // 
-            this.StafflistTop_button.Location = new System.Drawing.Point(744, 410);
+            this.StafflistTop_button.Location = new System.Drawing.Point(734, 358);
             this.StafflistTop_button.Name = "StafflistTop_button";
             this.StafflistTop_button.Size = new System.Drawing.Size(75, 23);
             this.StafflistTop_button.TabIndex = 4;
@@ -159,12 +139,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(831, 460);
             this.Controls.Add(this.StafflistTop_button);
-            this.Controls.Add(this.StafflistDelete_button);
-            this.Controls.Add(this.StafflistChange_button);
             this.Controls.Add(this.StafflistEntry_button);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Stafflist";
             this.Text = "Stafflist";
+            this.Load += new System.EventHandler(this.Stafflist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -183,8 +162,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Stafflist_Day;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stafflist_Address;
         private System.Windows.Forms.Button StafflistEntry_button;
-        private System.Windows.Forms.Button StafflistChange_button;
-        private System.Windows.Forms.Button StafflistDelete_button;
         private System.Windows.Forms.Button StafflistTop_button;
     }
 }

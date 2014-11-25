@@ -279,7 +279,7 @@
             this.IOcheckCO_button.Name = "IOcheckCO_button";
             this.IOcheckCO_button.Size = new System.Drawing.Size(75, 23);
             this.IOcheckCO_button.TabIndex = 67;
-            this.IOcheckCO_button.Text = "Check Out";
+            this.IOcheckCO_button.Text = "チェックアウト";
             this.IOcheckCO_button.UseVisualStyleBackColor = true;
             this.IOcheckCO_button.Click += new System.EventHandler(this.IOcheckCO_button_Click);
             // 
@@ -299,7 +299,7 @@
             this.IOcheckCI_button.Name = "IOcheckCI_button";
             this.IOcheckCI_button.Size = new System.Drawing.Size(75, 23);
             this.IOcheckCI_button.TabIndex = 69;
-            this.IOcheckCI_button.Text = "Check In";
+            this.IOcheckCI_button.Text = "チェックイン";
             this.IOcheckCI_button.UseVisualStyleBackColor = true;
             this.IOcheckCI_button.Click += new System.EventHandler(this.IOcheckCI_button_Click);
             // 

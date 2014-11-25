@@ -42,6 +42,7 @@
             this.StaffchangeName_label = new System.Windows.Forms.Label();
             this.StaffchangeOk_button = new System.Windows.Forms.Button();
             this.StaffchangeBack_button = new System.Windows.Forms.Button();
+            this.StaffchangeDelete_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Staffchange_Address
@@ -142,27 +143,39 @@
             // 
             // StaffchangeOk_button
             // 
-            this.StaffchangeOk_button.Location = new System.Drawing.Point(233, 360);
+            this.StaffchangeOk_button.Location = new System.Drawing.Point(234, 356);
             this.StaffchangeOk_button.Name = "StaffchangeOk_button";
             this.StaffchangeOk_button.Size = new System.Drawing.Size(75, 23);
             this.StaffchangeOk_button.TabIndex = 24;
-            this.StaffchangeOk_button.Text = "変更完了";
+            this.StaffchangeOk_button.Text = "変更";
             this.StaffchangeOk_button.UseVisualStyleBackColor = true;
+            this.StaffchangeOk_button.Click += new System.EventHandler(this.StaffchangeOk_button_Click);
             // 
             // StaffchangeBack_button
             // 
-            this.StaffchangeBack_button.Location = new System.Drawing.Point(337, 360);
+            this.StaffchangeBack_button.Location = new System.Drawing.Point(338, 402);
             this.StaffchangeBack_button.Name = "StaffchangeBack_button";
             this.StaffchangeBack_button.Size = new System.Drawing.Size(75, 23);
             this.StaffchangeBack_button.TabIndex = 25;
             this.StaffchangeBack_button.Text = "戻る";
             this.StaffchangeBack_button.UseVisualStyleBackColor = true;
             // 
+            // StaffchangeDelete_button
+            // 
+            this.StaffchangeDelete_button.Location = new System.Drawing.Point(338, 356);
+            this.StaffchangeDelete_button.Name = "StaffchangeDelete_button";
+            this.StaffchangeDelete_button.Size = new System.Drawing.Size(75, 23);
+            this.StaffchangeDelete_button.TabIndex = 26;
+            this.StaffchangeDelete_button.Text = "削除";
+            this.StaffchangeDelete_button.UseVisualStyleBackColor = true;
+            this.StaffchangeDelete_button.Click += new System.EventHandler(this.StaffchangeDelete_button_Click);
+            // 
             // Staffchange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(449, 456);
+            this.Controls.Add(this.StaffchangeDelete_button);
             this.Controls.Add(this.StaffchangeBack_button);
             this.Controls.Add(this.StaffchangeOk_button);
             this.Controls.Add(this.Staffchange_Address);
@@ -200,5 +213,6 @@
         private System.Windows.Forms.Label StaffchangeName_label;
         private System.Windows.Forms.Button StaffchangeOk_button;
         private System.Windows.Forms.Button StaffchangeBack_button;
+        private System.Windows.Forms.Button StaffchangeDelete_button;
     }
 }

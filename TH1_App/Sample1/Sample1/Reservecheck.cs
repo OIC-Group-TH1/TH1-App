@@ -40,6 +40,7 @@ namespace Sample1
             Customerlist Custlist = new Customerlist();
             Custlist.Show();
             this.Close();
+            
         }
 
         private void ReservecheckDelete_button_Click(object sender, EventArgs e)

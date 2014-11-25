@@ -149,6 +149,7 @@
             this.StaffentryEntry_button.TabIndex = 12;
             this.StaffentryEntry_button.Text = "登録";
             this.StaffentryEntry_button.UseVisualStyleBackColor = true;
+            this.StaffentryEntry_button.Click += new System.EventHandler(this.StaffentryEntry_button_Click);
             // 
             // StaffentryBack_button
             // 

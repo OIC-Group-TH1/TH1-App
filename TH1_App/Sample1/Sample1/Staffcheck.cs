@@ -15,5 +15,19 @@ namespace Sample1
         {
             InitializeComponent();
         }
+
+        private void StaffcheckYes_button_Click(object sender, EventArgs e)
+        {
+            Stafflist Scheckok = new Stafflist();
+            Scheckok.Show();
+            this.Close();
+        }
+
+        private void StaffcheckNo_button_Click(object sender, EventArgs e)
+        {
+            Staffentry Scheckno = new Staffentry();
+            Scheckno.Show();
+            this.Close();
+        }
     }
 }

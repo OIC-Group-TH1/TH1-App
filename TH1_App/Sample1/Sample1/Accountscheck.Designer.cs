@@ -34,7 +34,6 @@
             this.AcountscheckStaff_label = new System.Windows.Forms.Label();
             this.AcountscheckName_label = new System.Windows.Forms.Label();
             this.AcountscheckDate_label = new System.Windows.Forms.Label();
-            this.AcountscheckTop_button = new System.Windows.Forms.Button();
             this.AcountscheckOk_button = new System.Windows.Forms.Button();
             this.AcountscheckBack_button = new System.Windows.Forms.Button();
             this.AccountscheckNo_label = new System.Windows.Forms.Label();
@@ -107,32 +106,25 @@
             this.AcountscheckDate_label.TabIndex = 38;
             this.AcountscheckDate_label.Text = "日付";
             // 
-            // AcountscheckTop_button
-            // 
-            this.AcountscheckTop_button.Location = new System.Drawing.Point(516, 404);
-            this.AcountscheckTop_button.Name = "AcountscheckTop_button";
-            this.AcountscheckTop_button.Size = new System.Drawing.Size(75, 23);
-            this.AcountscheckTop_button.TabIndex = 37;
-            this.AcountscheckTop_button.Text = "TOPへ";
-            this.AcountscheckTop_button.UseVisualStyleBackColor = true;
-            // 
             // AcountscheckOk_button
             // 
-            this.AcountscheckOk_button.Location = new System.Drawing.Point(295, 404);
+            this.AcountscheckOk_button.Location = new System.Drawing.Point(388, 404);
             this.AcountscheckOk_button.Name = "AcountscheckOk_button";
             this.AcountscheckOk_button.Size = new System.Drawing.Size(75, 23);
             this.AcountscheckOk_button.TabIndex = 36;
             this.AcountscheckOk_button.Text = "完了";
             this.AcountscheckOk_button.UseVisualStyleBackColor = true;
+            this.AcountscheckOk_button.Click += new System.EventHandler(this.AcountscheckOk_button_Click);
             // 
             // AcountscheckBack_button
             // 
-            this.AcountscheckBack_button.Location = new System.Drawing.Point(61, 404);
+            this.AcountscheckBack_button.Location = new System.Drawing.Point(516, 404);
             this.AcountscheckBack_button.Name = "AcountscheckBack_button";
             this.AcountscheckBack_button.Size = new System.Drawing.Size(75, 23);
             this.AcountscheckBack_button.TabIndex = 35;
             this.AcountscheckBack_button.Text = "戻る";
             this.AcountscheckBack_button.UseVisualStyleBackColor = true;
+            this.AcountscheckBack_button.Click += new System.EventHandler(this.AcountscheckBack_button_Click);
             // 
             // AccountscheckNo_label
             // 
@@ -142,7 +134,6 @@
             this.AccountscheckNo_label.Size = new System.Drawing.Size(43, 12);
             this.AccountscheckNo_label.TabIndex = 51;
             this.AccountscheckNo_label.Text = "部屋No";
-            this.AccountscheckNo_label.Click += new System.EventHandler(this.label2_Click);
             // 
             // AccountscheckType_label
             // 
@@ -206,7 +197,6 @@
             this.Accountscheck_Number.Size = new System.Drawing.Size(35, 12);
             this.Accountscheck_Number.TabIndex = 58;
             this.Accountscheck_Number.Text = "label4";
-            this.Accountscheck_Number.Click += new System.EventHandler(this.label4_Click);
             // 
             // Accountscheck_Value
             // 
@@ -287,7 +277,6 @@
             this.Controls.Add(this.AcountscheckStaff_label);
             this.Controls.Add(this.AcountscheckName_label);
             this.Controls.Add(this.AcountscheckDate_label);
-            this.Controls.Add(this.AcountscheckTop_button);
             this.Controls.Add(this.AcountscheckOk_button);
             this.Controls.Add(this.AcountscheckBack_button);
             this.Name = "Accountscheck";
@@ -305,7 +294,6 @@
         private System.Windows.Forms.Label AcountscheckStaff_label;
         private System.Windows.Forms.Label AcountscheckName_label;
         private System.Windows.Forms.Label AcountscheckDate_label;
-        private System.Windows.Forms.Button AcountscheckTop_button;
         private System.Windows.Forms.Button AcountscheckOk_button;
         private System.Windows.Forms.Button AcountscheckBack_button;
         private System.Windows.Forms.Label AccountscheckNo_label;

@@ -40,7 +40,6 @@
             this.AcountsStaff_label = new System.Windows.Forms.Label();
             this.AcountsName_label = new System.Windows.Forms.Label();
             this.AcountsDate_label = new System.Windows.Forms.Label();
-            this.AcountsTop_button = new System.Windows.Forms.Button();
             this.AcountsOk_button = new System.Windows.Forms.Button();
             this.AcountsBack_button = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -160,19 +159,9 @@
             this.AcountsDate_label.TabIndex = 22;
             this.AcountsDate_label.Text = "日付";
             // 
-            // AcountsTop_button
-            // 
-            this.AcountsTop_button.Location = new System.Drawing.Point(495, 373);
-            this.AcountsTop_button.Name = "AcountsTop_button";
-            this.AcountsTop_button.Size = new System.Drawing.Size(75, 23);
-            this.AcountsTop_button.TabIndex = 21;
-            this.AcountsTop_button.Text = "TOPへ";
-            this.AcountsTop_button.UseVisualStyleBackColor = true;
-            this.AcountsTop_button.Click += new System.EventHandler(this.AcountsTop_button_Click);
-            // 
             // AcountsOk_button
             // 
-            this.AcountsOk_button.Location = new System.Drawing.Point(274, 373);
+            this.AcountsOk_button.Location = new System.Drawing.Point(386, 373);
             this.AcountsOk_button.Name = "AcountsOk_button";
             this.AcountsOk_button.Size = new System.Drawing.Size(75, 23);
             this.AcountsOk_button.TabIndex = 20;
@@ -182,7 +171,7 @@
             // 
             // AcountsBack_button
             // 
-            this.AcountsBack_button.Location = new System.Drawing.Point(40, 373);
+            this.AcountsBack_button.Location = new System.Drawing.Point(495, 373);
             this.AcountsBack_button.Name = "AcountsBack_button";
             this.AcountsBack_button.Size = new System.Drawing.Size(75, 23);
             this.AcountsBack_button.TabIndex = 19;
@@ -247,7 +236,6 @@
             this.Controls.Add(this.AcountsStaff_label);
             this.Controls.Add(this.AcountsName_label);
             this.Controls.Add(this.AcountsDate_label);
-            this.Controls.Add(this.AcountsTop_button);
             this.Controls.Add(this.AcountsOk_button);
             this.Controls.Add(this.AcountsBack_button);
             this.Controls.Add(this.dataGridView1);
@@ -273,7 +261,6 @@
         private System.Windows.Forms.Label AcountsStaff_label;
         private System.Windows.Forms.Label AcountsName_label;
         private System.Windows.Forms.Label AcountsDate_label;
-        private System.Windows.Forms.Button AcountsTop_button;
         private System.Windows.Forms.Button AcountsOk_button;
         private System.Windows.Forms.Button AcountsBack_button;
         private System.Windows.Forms.DataGridView dataGridView1;
