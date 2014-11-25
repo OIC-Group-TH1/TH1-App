@@ -29,5 +29,12 @@ namespace Sample1
 
 
         }
+
+        private void StaffentryEntry_button_Click(object sender, EventArgs e)
+        {
+            Staffcheck Scheck = new Staffcheck();
+            Scheck.Show();
+            this.Close();
+        }
     }
 }

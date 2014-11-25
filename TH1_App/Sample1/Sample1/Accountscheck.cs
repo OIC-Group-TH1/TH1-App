@@ -16,14 +16,19 @@ namespace Sample1
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
 
+        private void AcountscheckOk_button_Click(object sender, EventArgs e)
+        {
+            IOchecklist Checkin = new IOchecklist();
+            Checkin.Show();
+            this.Close();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void AcountscheckBack_button_Click(object sender, EventArgs e)
         {
-
+            Accounts Back = new Accounts();
+            Back.Show();
+            this.Close();
         }
     }
 }

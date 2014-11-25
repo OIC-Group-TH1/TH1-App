@@ -15,5 +15,34 @@ namespace Sample1
         {
             InitializeComponent();
         }
+
+        private void StaffchangeDelete_button_Click(object sender, EventArgs e)
+        {
+            //メッセージダイアログ(YES,NO)の表示
+            DialogResult result = MessageBox.Show("削除してもよろしいですか？", "",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Exclamation,
+                //デフォルトの選択ボタンは「いいえ」で設定
+                MessageBoxDefaultButton.Button2);
+
+            if (result == DialogResult.Yes)
+            {
+                //「はい」が選択された時の処理を書く
+                Stafflist Sdelete = new Stafflist();
+                Sdelete.Show();
+                this.Close();
+            }
+            else if (result == DialogResult.No)
+            {
+                //「いいえ」が選択された時の処理を書く
+            }
+        }
+
+        private void StaffchangeOk_button_Click(object sender, EventArgs e)
+        {
+            Staffcheck Scheck = new Staffcheck();
+            Scheck.Show();
+            this.Close();
+        }
     }
 }

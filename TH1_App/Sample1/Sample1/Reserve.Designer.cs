@@ -57,6 +57,7 @@
             this.Message_label = new System.Windows.Forms.Label();
             this.ReserveOk_button = new System.Windows.Forms.Button();
             this.ReserveNo_button = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // Reserve_Date
@@ -320,11 +321,22 @@
             this.ReserveNo_button.Text = "いいえ";
             this.ReserveNo_button.UseVisualStyleBackColor = true;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(59, 308);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(56, 12);
+            this.linkLabel1.TabIndex = 74;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "linkLabel1";
+            // 
             // Reserve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 485);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.ReserveNo_button);
             this.Controls.Add(this.ReserveOk_button);
             this.Controls.Add(this.Message_label);
@@ -392,6 +404,7 @@
         private System.Windows.Forms.Label Message_label;
         private System.Windows.Forms.Button ReserveOk_button;
         private System.Windows.Forms.Button ReserveNo_button;
+        private System.Windows.Forms.LinkLabel linkLabel1;
 
     }
 }

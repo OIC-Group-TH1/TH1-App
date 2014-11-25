@@ -170,6 +170,7 @@
             this.StaffcheckYes_button.TabIndex = 19;
             this.StaffcheckYes_button.Text = "はい";
             this.StaffcheckYes_button.UseVisualStyleBackColor = true;
+            this.StaffcheckYes_button.Click += new System.EventHandler(this.StaffcheckYes_button_Click);
             // 
             // StaffcheckNo_button
             // 
@@ -179,6 +180,7 @@
             this.StaffcheckNo_button.TabIndex = 20;
             this.StaffcheckNo_button.Text = "いいえ";
             this.StaffcheckNo_button.UseVisualStyleBackColor = true;
+            this.StaffcheckNo_button.Click += new System.EventHandler(this.StaffcheckNo_button_Click);
             // 
             // Staffcheck
             // 

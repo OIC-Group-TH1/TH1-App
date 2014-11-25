@@ -32,7 +32,27 @@ namespace Sample1
 
         private void IOcheckCO_button_Click(object sender, EventArgs e)
         {
+            //メッセージダイアログ(YES,NO)の表示
+            DialogResult result = MessageBox.Show("チェックアウトしますか？", "",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Exclamation,
+                //デフォルトの選択ボタンは「いいえ」で設定
+                MessageBoxDefaultButton.Button2);
 
+            if (result == DialogResult.Yes)
+            {
+                //「はい」が選択された時の処理を書
+                IOchecklist Checkout = new IOchecklist();
+                Checkout.Show();
+                this.Close();
+            }
+            else if (result == DialogResult.No)
+            {
+                //「いいえ」が選択された時の処理を書
+                //Reservecheck Resback = new Reservecheck();
+                //Resback.Show();
+                //this.Close();
+            }
         }
     }
 }
