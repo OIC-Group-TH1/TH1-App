@@ -15,7 +15,12 @@ namespace Sample1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            
+            //Db動作をする時は下をコメントアウト
             Application.Run(new Top_page());
+
+            //SampleDBの確認のためフォームを呼び出す
+            //Application.Run(new SampleDB());
         }
     }
 }
