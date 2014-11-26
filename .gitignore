@@ -150,7 +150,7 @@ csx/
 # Windows Store app package directory
 AppPackages/
 
-# Others
+# Other
 sql/
 *.Cache
 ClientBin/
