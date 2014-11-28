@@ -5,31 +5,38 @@ using System.Data.SqlClient;
 
 namespace Sample1
 {
+
     public class DBconnection
     {
+         System.Data.SqlClient.SqlConnection scn
+                = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
         // SQLServer
+
+
         public void DB_Open()
         {
-            SqlConnection scn = new SqlConnection();
-
-            scn.ConnectionString = (@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
-            
-            // 接続します。
-            scn.Open();    
+            try
+            {
+                scn.Open();
+                
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Connect Error", ex);
+            }
         }
 
         public void DB_Close()
         {
-            SqlConnection scn = new SqlConnection();
+            try
+            {
+                scn.Open();
 
-            scn.ConnectionString = (@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
-
-            //切断します。
-            scn.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Disconnect Error", ex);
+            }
         }
-
-
-
     }
 }
-

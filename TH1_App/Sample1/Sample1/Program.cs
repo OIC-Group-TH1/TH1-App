@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using System.Text;
+using System.Data.SqlClient;
 
 namespace Sample1
 {
@@ -17,7 +19,7 @@ namespace Sample1
             Application.SetCompatibleTextRenderingDefault(false);
             
             //Db動作をする時は下をコメントアウト
-            Application.Run(new Top_page());
+            //Application.Run(new Top_page());
 
             //SampleDBの確認のためフォームを呼び出す
             //Application.Run(new SampleDB());
