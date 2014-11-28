@@ -34,6 +34,39 @@ namespace Sample1
             //セルを行として管理
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
+
+
+
+            //行の追加（TEST用）↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓★後で消して！
+
+            // DataGridViewの行追加
+            dataGridView1.Rows.Add();//一回書く事で項目が一行ずつ増える
+            dataGridView1.Rows.Add();
+            dataGridView1.Rows.Add();
+            dataGridView1.Rows.Add();
+            dataGridView1.Rows.Add();
+            dataGridView1.Rows[0].Cells[7].Value = "不可";
+            dataGridView1.Rows[1].Cells[7].Value = "可";
+            dataGridView1.Rows[2].Cells[7].Value = "不可";
+            dataGridView1.Rows[2].Cells[3].Value = "namae";
+            dataGridView1.Rows[3].Cells[7].Value = "不可";
+            dataGridView1.Rows[4].Cells[7].Value = "可";
+            //行の追加（TEST用）↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑★後で消して！
+
+
+
+            //セルの数の分色を付ける
+            for(int i = 0 ; i < dataGridView1.Rows.Count ; i++)
+            {
+                //仮で色を指定
+                if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "可")
+                    this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.YellowGreen;
+                else if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "不可")
+                    this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.LightPink;
+                    //LightSkyBlueが出て来ない（2014.11.28）
+                else if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "不可")
+                    this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.LightSkyBlue;
+            }
         }
 
         private void ReservelistTop_button_Click(object sender, EventArgs e)

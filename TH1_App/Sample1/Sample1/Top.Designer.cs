@@ -60,7 +60,7 @@
             this.Room_button.Name = "Room_button";
             this.Room_button.Size = new System.Drawing.Size(266, 65);
             this.Room_button.TabIndex = 2;
-            this.Room_button.Text = "客室状況管理";
+            this.Room_button.Text = "I　・　O　管理";
             this.Room_button.UseVisualStyleBackColor = true;
             this.Room_button.Click += new System.EventHandler(this.Room_button_Click);
             // 
