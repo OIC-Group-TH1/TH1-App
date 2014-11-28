@@ -42,6 +42,7 @@ namespace Sample1
                 Cust.Show();
                 this.Close();
             }
+            //－－－－－elseの場合まだ未入力－－－－－
         }
 
         private void Customerlist_Load(object sender, EventArgs e)
