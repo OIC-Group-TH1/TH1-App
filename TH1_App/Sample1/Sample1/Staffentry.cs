@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Sample1
 {
@@ -35,6 +36,49 @@ namespace Sample1
             Staffcheck Scheck = new Staffcheck();
             Scheck.Show();
             this.Close();
+
+            System.Data.SqlClient.SqlConnection scn
+                   = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+            try
+            {
+                //データベースファイルオープン
+                scn.Open();
+                string name = Staffentry_Name.Text;
+                string sex = Staffentry_Sex.Text;
+                string age = Staffentry_Age.Text;
+                string position = Staffentry_Position.Text;
+                string tel = Staffentry_Tel.Text;
+                string mail = Staffentry_Mail.Text;
+                string day = Staffentry_Day.Text;
+                string address = Staffentry_Address.Text;
+
+                SqlCommand scm = new SqlCommand
+                    ("insert into STAFF_TABLE values ("
+                        + "'" + name + "',"
+                        + "'" + sex + "',"
+                        + "'" + age + "',"
+                        + "'" + position + "',"
+                        + "'" + tel + "',"
+                        + "'" + mail + "',"
+                        + "'" + day + "',"
+                        + "'" + address + "," + ")", scn);
+
+                scm.ExecuteNonQuery();
+                scn.Close();
+            }
+
+            catch (Exception ex)
+            {
+                //データベースファイルクローズ
+                scn.Close();
+                MessageBox.Show(ex.Message, "エラー");
+            }
+        }
+
+
+        private void Staffentry_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
