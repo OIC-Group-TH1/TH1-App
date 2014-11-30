@@ -251,6 +251,7 @@
             this.ReservecheckRchange_button.TabIndex = 34;
             this.ReservecheckRchange_button.Text = "部屋情報の変更";
             this.ReservecheckRchange_button.UseVisualStyleBackColor = true;
+            this.ReservecheckRchange_button.Click += new System.EventHandler(this.ReservecheckRchange_button_Click);
             // 
             // ReservecheckDelete_button
             // 

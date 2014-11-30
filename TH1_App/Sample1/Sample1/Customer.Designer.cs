@@ -202,6 +202,7 @@
             this.CustomerReserve_button.TabIndex = 40;
             this.CustomerReserve_button.Text = "予約";
             this.CustomerReserve_button.UseVisualStyleBackColor = true;
+            this.CustomerReserve_button.Click += new System.EventHandler(this.CustomerReserve_button_Click);
             // 
             // button1
             // 

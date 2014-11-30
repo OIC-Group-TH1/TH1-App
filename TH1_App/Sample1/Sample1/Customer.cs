@@ -104,7 +104,14 @@ namespace Sample1
 
         private void Customer_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void CustomerReserve_button_Click(object sender, EventArgs e)
+        {
+            Reserve Rserv = new Reserve();
+            Rserv.Show();
+            this.Close();
         }
     }
 }

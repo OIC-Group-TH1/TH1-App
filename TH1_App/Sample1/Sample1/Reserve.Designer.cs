@@ -311,6 +311,7 @@
             this.ReserveOk_button.TabIndex = 72;
             this.ReserveOk_button.Text = "はい";
             this.ReserveOk_button.UseVisualStyleBackColor = true;
+            this.ReserveOk_button.Click += new System.EventHandler(this.ReserveOk_button_Click);
             // 
             // ReserveNo_button
             // 
@@ -320,6 +321,7 @@
             this.ReserveNo_button.TabIndex = 73;
             this.ReserveNo_button.Text = "いいえ";
             this.ReserveNo_button.UseVisualStyleBackColor = true;
+            this.ReserveNo_button.Click += new System.EventHandler(this.ReserveNo_button_Click);
             // 
             // linkLabel1
             // 

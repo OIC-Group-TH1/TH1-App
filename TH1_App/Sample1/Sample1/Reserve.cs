@@ -15,5 +15,20 @@ namespace Sample1
         {
             InitializeComponent();
         }
+
+        private void ReserveOk_button_Click(object sender, EventArgs e)
+        {
+            Top_page Top = new Top_page();
+            Top.Visible = true;
+            this.Close();
+        }
+
+        private void ReserveNo_button_Click(object sender, EventArgs e)
+        {
+            //顧客一覧を表示
+            Customerlist Clist = new Customerlist();
+            Clist.Show();
+            this.Close();
+        }
     }
 }

@@ -29,5 +29,12 @@ namespace Sample1
             Top.Visible = true;
             this.Close();
         }
+
+        private void CustomerentryEntry_button_Click(object sender, EventArgs e)
+        {
+            Customerecheck Ccheck = new Customerecheck();
+            Ccheck.Show();
+            this.Close();
+        }
     }
 }

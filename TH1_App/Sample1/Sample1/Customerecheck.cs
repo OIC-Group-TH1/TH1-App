@@ -18,8 +18,8 @@ namespace Sample1
 
         private void CustomercheckNo_button_Click(object sender, EventArgs e)
         {
-            Customerchange Custchange = new Customerchange();
-            Custchange.Show();
+            Customerlist Custlist = new Customerlist();
+            Custlist.Show();
             this.Close();
         }
 

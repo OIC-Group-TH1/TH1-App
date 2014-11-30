@@ -142,7 +142,7 @@
             this.Controls.Add(this.StafflistEntry_button);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Stafflist";
-            this.Text = "Stafflist";
+            this.Text = "fff";
             this.Load += new System.EventHandler(this.Stafflist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

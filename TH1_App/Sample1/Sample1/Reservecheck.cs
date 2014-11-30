@@ -67,5 +67,12 @@ namespace Sample1
                 //this.Close();
             }
         }
+
+        private void ReservecheckRchange_button_Click(object sender, EventArgs e)
+        {
+            Calendar Cal = new Calendar();
+            Cal.Show();
+            this.Close();
+        }
     }
 }

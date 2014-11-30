@@ -167,6 +167,7 @@
             this.CustomerentryEntry_button.TabIndex = 14;
             this.CustomerentryEntry_button.Text = "登録";
             this.CustomerentryEntry_button.UseVisualStyleBackColor = true;
+            this.CustomerentryEntry_button.Click += new System.EventHandler(this.CustomerentryEntry_button_Click);
             // 
             // CustomerentryBack_button
             // 
