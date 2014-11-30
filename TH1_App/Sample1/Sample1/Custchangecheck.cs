@@ -15,5 +15,10 @@ namespace Sample1
         {
             InitializeComponent();
         }
+
+        private void Custchangecheck_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

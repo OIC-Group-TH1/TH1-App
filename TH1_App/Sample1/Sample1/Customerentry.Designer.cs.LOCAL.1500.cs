@@ -215,6 +215,7 @@
             this.Text = "Customerentry";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

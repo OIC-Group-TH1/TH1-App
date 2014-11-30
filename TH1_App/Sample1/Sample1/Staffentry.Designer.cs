@@ -42,6 +42,10 @@
             this.Staffentry_Address = new System.Windows.Forms.TextBox();
             this.StaffentryEntry_button = new System.Windows.Forms.Button();
             this.StaffentryBack_button = new System.Windows.Forms.Button();
+            this.Staffentry_Age = new System.Windows.Forms.TextBox();
+            this.StaffentryAge_label = new System.Windows.Forms.Label();
+            this.StaffentryDay_label = new System.Windows.Forms.Label();
+            this.Staffentry_Day = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // StaffentryName_label
@@ -66,7 +70,7 @@
             // StaffentryPosition_label
             // 
             this.StaffentryPosition_label.AutoSize = true;
-            this.StaffentryPosition_label.Location = new System.Drawing.Point(54, 139);
+            this.StaffentryPosition_label.Location = new System.Drawing.Point(54, 185);
             this.StaffentryPosition_label.Name = "StaffentryPosition_label";
             this.StaffentryPosition_label.Size = new System.Drawing.Size(29, 12);
             this.StaffentryPosition_label.TabIndex = 2;
@@ -75,7 +79,7 @@
             // StaffentryTel_label
             // 
             this.StaffentryTel_label.AutoSize = true;
-            this.StaffentryTel_label.Location = new System.Drawing.Point(54, 192);
+            this.StaffentryTel_label.Location = new System.Drawing.Point(54, 238);
             this.StaffentryTel_label.Name = "StaffentryTel_label";
             this.StaffentryTel_label.Size = new System.Drawing.Size(53, 12);
             this.StaffentryTel_label.TabIndex = 3;
@@ -84,7 +88,7 @@
             // StaffentryAddress_label
             // 
             this.StaffentryAddress_label.AutoSize = true;
-            this.StaffentryAddress_label.Location = new System.Drawing.Point(54, 290);
+            this.StaffentryAddress_label.Location = new System.Drawing.Point(54, 365);
             this.StaffentryAddress_label.Name = "StaffentryAddress_label";
             this.StaffentryAddress_label.Size = new System.Drawing.Size(29, 12);
             this.StaffentryAddress_label.TabIndex = 4;
@@ -93,7 +97,7 @@
             // StaffentryMail_label
             // 
             this.StaffentryMail_label.AutoSize = true;
-            this.StaffentryMail_label.Location = new System.Drawing.Point(54, 241);
+            this.StaffentryMail_label.Location = new System.Drawing.Point(54, 287);
             this.StaffentryMail_label.Name = "StaffentryMail_label";
             this.StaffentryMail_label.Size = new System.Drawing.Size(69, 12);
             this.StaffentryMail_label.TabIndex = 5;
@@ -115,35 +119,35 @@
             // 
             // Staffentry_Position
             // 
-            this.Staffentry_Position.Location = new System.Drawing.Point(135, 139);
+            this.Staffentry_Position.Location = new System.Drawing.Point(135, 185);
             this.Staffentry_Position.Name = "Staffentry_Position";
             this.Staffentry_Position.Size = new System.Drawing.Size(150, 19);
             this.Staffentry_Position.TabIndex = 8;
             // 
             // Staffentry_Tel
             // 
-            this.Staffentry_Tel.Location = new System.Drawing.Point(135, 185);
+            this.Staffentry_Tel.Location = new System.Drawing.Point(135, 235);
             this.Staffentry_Tel.Name = "Staffentry_Tel";
             this.Staffentry_Tel.Size = new System.Drawing.Size(150, 19);
             this.Staffentry_Tel.TabIndex = 9;
             // 
             // Staffentry_Mail
             // 
-            this.Staffentry_Mail.Location = new System.Drawing.Point(135, 238);
+            this.Staffentry_Mail.Location = new System.Drawing.Point(135, 284);
             this.Staffentry_Mail.Name = "Staffentry_Mail";
             this.Staffentry_Mail.Size = new System.Drawing.Size(150, 19);
             this.Staffentry_Mail.TabIndex = 10;
             // 
             // Staffentry_Address
             // 
-            this.Staffentry_Address.Location = new System.Drawing.Point(135, 290);
+            this.Staffentry_Address.Location = new System.Drawing.Point(135, 365);
             this.Staffentry_Address.Name = "Staffentry_Address";
             this.Staffentry_Address.Size = new System.Drawing.Size(150, 19);
             this.Staffentry_Address.TabIndex = 11;
             // 
             // StaffentryEntry_button
             // 
-            this.StaffentryEntry_button.Location = new System.Drawing.Point(262, 337);
+            this.StaffentryEntry_button.Location = new System.Drawing.Point(269, 421);
             this.StaffentryEntry_button.Name = "StaffentryEntry_button";
             this.StaffentryEntry_button.Size = new System.Drawing.Size(75, 23);
             this.StaffentryEntry_button.TabIndex = 12;
@@ -153,7 +157,7 @@
             // 
             // StaffentryBack_button
             // 
-            this.StaffentryBack_button.Location = new System.Drawing.Point(357, 337);
+            this.StaffentryBack_button.Location = new System.Drawing.Point(372, 421);
             this.StaffentryBack_button.Name = "StaffentryBack_button";
             this.StaffentryBack_button.Size = new System.Drawing.Size(75, 23);
             this.StaffentryBack_button.TabIndex = 13;
@@ -161,11 +165,47 @@
             this.StaffentryBack_button.UseVisualStyleBackColor = true;
             this.StaffentryBack_button.Click += new System.EventHandler(this.StaffentryBack_button_Click);
             // 
+            // Staffentry_Age
+            // 
+            this.Staffentry_Age.Location = new System.Drawing.Point(135, 138);
+            this.Staffentry_Age.Name = "Staffentry_Age";
+            this.Staffentry_Age.Size = new System.Drawing.Size(150, 19);
+            this.Staffentry_Age.TabIndex = 14;
+            // 
+            // StaffentryAge_label
+            // 
+            this.StaffentryAge_label.AutoSize = true;
+            this.StaffentryAge_label.Location = new System.Drawing.Point(54, 138);
+            this.StaffentryAge_label.Name = "StaffentryAge_label";
+            this.StaffentryAge_label.Size = new System.Drawing.Size(29, 12);
+            this.StaffentryAge_label.TabIndex = 15;
+            this.StaffentryAge_label.Text = "年齢";
+            // 
+            // StaffentryDay_label
+            // 
+            this.StaffentryDay_label.AutoSize = true;
+            this.StaffentryDay_label.Location = new System.Drawing.Point(54, 328);
+            this.StaffentryDay_label.Name = "StaffentryDay_label";
+            this.StaffentryDay_label.Size = new System.Drawing.Size(65, 12);
+            this.StaffentryDay_label.TabIndex = 16;
+            this.StaffentryDay_label.Text = "入社年月日";
+            // 
+            // Staffentry_Day
+            // 
+            this.Staffentry_Day.Location = new System.Drawing.Point(135, 325);
+            this.Staffentry_Day.Name = "Staffentry_Day";
+            this.Staffentry_Day.Size = new System.Drawing.Size(150, 19);
+            this.Staffentry_Day.TabIndex = 17;
+            // 
             // Staffentry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 408);
+            this.ClientSize = new System.Drawing.Size(459, 473);
+            this.Controls.Add(this.Staffentry_Day);
+            this.Controls.Add(this.StaffentryDay_label);
+            this.Controls.Add(this.StaffentryAge_label);
+            this.Controls.Add(this.Staffentry_Age);
             this.Controls.Add(this.StaffentryBack_button);
             this.Controls.Add(this.StaffentryEntry_button);
             this.Controls.Add(this.Staffentry_Address);
@@ -182,6 +222,7 @@
             this.Controls.Add(this.StaffentryName_label);
             this.Name = "Staffentry";
             this.Text = "Staffentry";
+            this.Load += new System.EventHandler(this.Staffentry_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +244,9 @@
         private System.Windows.Forms.TextBox Staffentry_Address;
         private System.Windows.Forms.Button StaffentryEntry_button;
         private System.Windows.Forms.Button StaffentryBack_button;
+        private System.Windows.Forms.TextBox Staffentry_Age;
+        private System.Windows.Forms.Label StaffentryAge_label;
+        private System.Windows.Forms.Label StaffentryDay_label;
+        private System.Windows.Forms.TextBox Staffentry_Day;
     }
 }
