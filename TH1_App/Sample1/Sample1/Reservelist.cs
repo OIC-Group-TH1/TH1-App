@@ -93,7 +93,11 @@ namespace Sample1
                Reservecheck Rcheck = new Reservecheck();
                Rcheck.Show();
                this.Close();
-           }
+               //値の取得(これをselect文で検索し、情報をReservecheckで)
+               string r_code = (string)dataGridView1.CurrentRow.Cells[0].Value;
+               string c_name = (string)dataGridView1.CurrentRow.Cells[3].Value;
+               string c_tel = (string)dataGridView1.CurrentRow.Cells[5].Value;
+            }
         }
     }
 }

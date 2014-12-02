@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Sample1
 {
@@ -55,6 +56,26 @@ namespace Sample1
             if (result == DialogResult.Yes)
             {
                 //「はい」が選択された時の処理を書
+                System.Data.SqlClient.SqlConnection scn
+                   = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+                try
+                {
+                    //データベースファイルオープン
+                    scn.Open();
+                   SqlCommand scm = new SqlCommand
+                        ("DELETE FROM RESERVATION_TABLE WHERE RESERVATION_CODE = ");
+
+                    scm.ExecuteNonQuery();
+                    scn.Close();
+                }
+
+                catch (Exception ex)
+                {
+                    //データベースファイルクローズ
+                    scn.Close();
+                    MessageBox.Show(ex.Message, "エラー");
+                }
+
                 Top_page Top = new Top_page();
                 Top.Show();
                 this.Close();
