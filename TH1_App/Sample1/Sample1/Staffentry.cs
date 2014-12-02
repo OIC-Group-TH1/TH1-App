@@ -57,7 +57,7 @@ namespace Sample1
 
                 SqlCommand scm = new SqlCommand
                     ("insert into STAFF_TABLE values ("
-                        + "'" + chararray + "',"
+                        + "'" + chararray[0] + "',"
                         + "'" + name + "',"
                         + "'" + sex + "',"
                         + "'" + age + "',"
@@ -87,11 +87,11 @@ namespace Sample1
 
         private void Staffentry_Load(object sender, EventArgs e)
         {
-            ComboBox combo = new ComboBox();
-            combo.Items.Add("男性");
-            combo.Items.Add("女性");
-            this.Controls.Add(combo);
-            combo.SelectedIndex = 0;
+            
+            Staffentry_Sex.Items.Add("男性");
+            Staffentry_Sex.Items.Add("女性");
+            this.Controls.Add(Staffentry_Sex);
+            Staffentry_Sex.SelectedIndex = 0;
         }
 
         private void Staffentry_Sex_SelectedIndexChanged(object sender, EventArgs e)

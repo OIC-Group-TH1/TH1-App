@@ -83,11 +83,10 @@ namespace Sample1
 
         private void Customerentry_Load(object sender, EventArgs e)
         {
-            ComboBox combo = new ComboBox();
-            combo.Items.Add("男性");
-            combo.Items.Add("女性");
-            this.Controls.Add(combo);
-            combo.SelectedIndex = 0;
+            Customerentry_Sex.Items.Add("男性");
+            Customerentry_Sex.Items.Add("女性");
+            this.Controls.Add(Customerentry_Sex);
+            Customerentry_Sex.SelectedIndex = 0;
         }
     }
 }
