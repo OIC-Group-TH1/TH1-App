@@ -31,9 +31,6 @@
             this.Reserve_Date = new System.Windows.Forms.Label();
             this.ReserveDate_label = new System.Windows.Forms.Label();
             this.Reserve_Value = new System.Windows.Forms.Label();
-            this.Reserve_Number = new System.Windows.Forms.Label();
-            this.Reserve_Smoke = new System.Windows.Forms.Label();
-            this.Reserve_Type = new System.Windows.Forms.Label();
             this.Reserve_No = new System.Windows.Forms.Label();
             this.ReserveValue_label = new System.Windows.Forms.Label();
             this.ReserveNumber_label = new System.Windows.Forms.Label();
@@ -47,17 +44,21 @@
             this.Reserve_Sex = new System.Windows.Forms.Label();
             this.Reserve_Kana = new System.Windows.Forms.Label();
             this.Reserve_Name = new System.Windows.Forms.Label();
-            this.ReserveNote_label = new System.Windows.Forms.Label();
-            this.ReserveAddress_label = new System.Windows.Forms.Label();
-            this.ReservePost_label = new System.Windows.Forms.Label();
-            this.ReserveTel_label = new System.Windows.Forms.Label();
-            this.ReserveSex_label = new System.Windows.Forms.Label();
-            this.CustomerKana_label = new System.Windows.Forms.Label();
-            this.ReserveName_label = new System.Windows.Forms.Label();
             this.Message_label = new System.Windows.Forms.Label();
             this.ReserveOk_button = new System.Windows.Forms.Button();
             this.ReserveNo_button = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.ReserveName_linkLabel = new System.Windows.Forms.LinkLabel();
+            this.ReserveKana_linkLabel = new System.Windows.Forms.LinkLabel();
+            this.ReserveSexlinkLabel = new System.Windows.Forms.LinkLabel();
+            this.ReserveTel_linkLabel = new System.Windows.Forms.LinkLabel();
+            this.ReservePost_linkLabel = new System.Windows.Forms.LinkLabel();
+            this.ReserveAddress_linkLabel = new System.Windows.Forms.LinkLabel();
+            this.ReserveMemo_linkLabel = new System.Windows.Forms.LinkLabel();
+            this.Reserve_dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.Reserve_NosmokeradioButton = new System.Windows.Forms.RadioButton();
+            this.Reserve_SmokeradioButton = new System.Windows.Forms.RadioButton();
+            this.Reserve_TcomboBox = new System.Windows.Forms.ComboBox();
+            this.Reserve_NcomboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // Reserve_Date
@@ -72,7 +73,7 @@
             // ReserveDate_label
             // 
             this.ReserveDate_label.AutoSize = true;
-            this.ReserveDate_label.Location = new System.Drawing.Point(57, 44);
+            this.ReserveDate_label.Location = new System.Drawing.Point(55, 44);
             this.ReserveDate_label.Name = "ReserveDate_label";
             this.ReserveDate_label.Size = new System.Drawing.Size(29, 12);
             this.ReserveDate_label.TabIndex = 69;
@@ -81,43 +82,16 @@
             // Reserve_Value
             // 
             this.Reserve_Value.AutoSize = true;
-            this.Reserve_Value.Location = new System.Drawing.Point(170, 260);
+            this.Reserve_Value.Location = new System.Drawing.Point(180, 260);
             this.Reserve_Value.Name = "Reserve_Value";
             this.Reserve_Value.Size = new System.Drawing.Size(35, 12);
             this.Reserve_Value.TabIndex = 68;
             this.Reserve_Value.Text = "label5";
             // 
-            // Reserve_Number
-            // 
-            this.Reserve_Number.AutoSize = true;
-            this.Reserve_Number.Location = new System.Drawing.Point(170, 214);
-            this.Reserve_Number.Name = "Reserve_Number";
-            this.Reserve_Number.Size = new System.Drawing.Size(35, 12);
-            this.Reserve_Number.TabIndex = 67;
-            this.Reserve_Number.Text = "label4";
-            // 
-            // Reserve_Smoke
-            // 
-            this.Reserve_Smoke.AutoSize = true;
-            this.Reserve_Smoke.Location = new System.Drawing.Point(170, 170);
-            this.Reserve_Smoke.Name = "Reserve_Smoke";
-            this.Reserve_Smoke.Size = new System.Drawing.Size(35, 12);
-            this.Reserve_Smoke.TabIndex = 66;
-            this.Reserve_Smoke.Text = "label3";
-            // 
-            // Reserve_Type
-            // 
-            this.Reserve_Type.AutoSize = true;
-            this.Reserve_Type.Location = new System.Drawing.Point(170, 128);
-            this.Reserve_Type.Name = "Reserve_Type";
-            this.Reserve_Type.Size = new System.Drawing.Size(35, 12);
-            this.Reserve_Type.TabIndex = 65;
-            this.Reserve_Type.Text = "label2";
-            // 
             // Reserve_No
             // 
             this.Reserve_No.AutoSize = true;
-            this.Reserve_No.Location = new System.Drawing.Point(170, 86);
+            this.Reserve_No.Location = new System.Drawing.Point(180, 86);
             this.Reserve_No.Name = "Reserve_No";
             this.Reserve_No.Size = new System.Drawing.Size(35, 12);
             this.Reserve_No.TabIndex = 64;
@@ -135,7 +109,7 @@
             // ReserveNumber_label
             // 
             this.ReserveNumber_label.AutoSize = true;
-            this.ReserveNumber_label.Location = new System.Drawing.Point(57, 214);
+            this.ReserveNumber_label.Location = new System.Drawing.Point(55, 221);
             this.ReserveNumber_label.Name = "ReserveNumber_label";
             this.ReserveNumber_label.Size = new System.Drawing.Size(53, 12);
             this.ReserveNumber_label.TabIndex = 62;
@@ -144,7 +118,7 @@
             // ReserveSmoke_label
             // 
             this.ReserveSmoke_label.AutoSize = true;
-            this.ReserveSmoke_label.Location = new System.Drawing.Point(57, 170);
+            this.ReserveSmoke_label.Location = new System.Drawing.Point(55, 172);
             this.ReserveSmoke_label.Name = "ReserveSmoke_label";
             this.ReserveSmoke_label.Size = new System.Drawing.Size(31, 12);
             this.ReserveSmoke_label.TabIndex = 61;
@@ -153,7 +127,7 @@
             // ReserveType_label
             // 
             this.ReserveType_label.AutoSize = true;
-            this.ReserveType_label.Location = new System.Drawing.Point(57, 128);
+            this.ReserveType_label.Location = new System.Drawing.Point(55, 128);
             this.ReserveType_label.Name = "ReserveType_label";
             this.ReserveType_label.Size = new System.Drawing.Size(63, 12);
             this.ReserveType_label.TabIndex = 60;
@@ -162,7 +136,7 @@
             // ReserveNo_label
             // 
             this.ReserveNo_label.AutoSize = true;
-            this.ReserveNo_label.Location = new System.Drawing.Point(57, 86);
+            this.ReserveNo_label.Location = new System.Drawing.Point(55, 86);
             this.ReserveNo_label.Name = "ReserveNo_label";
             this.ReserveNo_label.Size = new System.Drawing.Size(43, 12);
             this.ReserveNo_label.TabIndex = 59;
@@ -231,77 +205,14 @@
             this.Reserve_Name.TabIndex = 52;
             this.Reserve_Name.Text = "label1";
             // 
-            // ReserveNote_label
-            // 
-            this.ReserveNote_label.AutoSize = true;
-            this.ReserveNote_label.Location = new System.Drawing.Point(269, 309);
-            this.ReserveNote_label.Name = "ReserveNote_label";
-            this.ReserveNote_label.Size = new System.Drawing.Size(29, 12);
-            this.ReserveNote_label.TabIndex = 51;
-            this.ReserveNote_label.Text = "備考";
-            // 
-            // ReserveAddress_label
-            // 
-            this.ReserveAddress_label.AutoSize = true;
-            this.ReserveAddress_label.Location = new System.Drawing.Point(269, 265);
-            this.ReserveAddress_label.Name = "ReserveAddress_label";
-            this.ReserveAddress_label.Size = new System.Drawing.Size(29, 12);
-            this.ReserveAddress_label.TabIndex = 50;
-            this.ReserveAddress_label.Text = "住所";
-            // 
-            // ReservePost_label
-            // 
-            this.ReservePost_label.AutoSize = true;
-            this.ReservePost_label.Location = new System.Drawing.Point(269, 218);
-            this.ReservePost_label.Name = "ReservePost_label";
-            this.ReservePost_label.Size = new System.Drawing.Size(53, 12);
-            this.ReservePost_label.TabIndex = 49;
-            this.ReservePost_label.Text = "郵便番号";
-            // 
-            // ReserveTel_label
-            // 
-            this.ReserveTel_label.AutoSize = true;
-            this.ReserveTel_label.Location = new System.Drawing.Point(269, 172);
-            this.ReserveTel_label.Name = "ReserveTel_label";
-            this.ReserveTel_label.Size = new System.Drawing.Size(53, 12);
-            this.ReserveTel_label.TabIndex = 48;
-            this.ReserveTel_label.Text = "電話番号";
-            // 
-            // ReserveSex_label
-            // 
-            this.ReserveSex_label.AutoSize = true;
-            this.ReserveSex_label.Location = new System.Drawing.Point(269, 128);
-            this.ReserveSex_label.Name = "ReserveSex_label";
-            this.ReserveSex_label.Size = new System.Drawing.Size(29, 12);
-            this.ReserveSex_label.TabIndex = 47;
-            this.ReserveSex_label.Text = "性別";
-            // 
-            // CustomerKana_label
-            // 
-            this.CustomerKana_label.AutoSize = true;
-            this.CustomerKana_label.Location = new System.Drawing.Point(269, 86);
-            this.CustomerKana_label.Name = "CustomerKana_label";
-            this.CustomerKana_label.Size = new System.Drawing.Size(43, 12);
-            this.CustomerKana_label.TabIndex = 46;
-            this.CustomerKana_label.Text = "ふりがな";
-            // 
-            // ReserveName_label
-            // 
-            this.ReserveName_label.AutoSize = true;
-            this.ReserveName_label.Location = new System.Drawing.Point(269, 44);
-            this.ReserveName_label.Name = "ReserveName_label";
-            this.ReserveName_label.Size = new System.Drawing.Size(29, 12);
-            this.ReserveName_label.TabIndex = 45;
-            this.ReserveName_label.Text = "名前";
-            // 
             // Message_label
             // 
             this.Message_label.AutoSize = true;
             this.Message_label.Location = new System.Drawing.Point(57, 377);
             this.Message_label.Name = "Message_label";
-            this.Message_label.Size = new System.Drawing.Size(189, 12);
+            this.Message_label.Size = new System.Drawing.Size(300, 12);
             this.Message_label.TabIndex = 71;
-            this.Message_label.Text = "以上の内容で予約を確定させますか？";
+            this.Message_label.Text = "宿泊人数を選択の上、以上の内容で予約を確定させますか？";
             // 
             // ReserveOk_button
             // 
@@ -323,31 +234,154 @@
             this.ReserveNo_button.UseVisualStyleBackColor = true;
             this.ReserveNo_button.Click += new System.EventHandler(this.ReserveNo_button_Click);
             // 
-            // linkLabel1
+            // ReserveName_linkLabel
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(59, 308);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(56, 12);
-            this.linkLabel1.TabIndex = 74;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
+            this.ReserveName_linkLabel.AutoSize = true;
+            this.ReserveName_linkLabel.Location = new System.Drawing.Point(293, 44);
+            this.ReserveName_linkLabel.Name = "ReserveName_linkLabel";
+            this.ReserveName_linkLabel.Size = new System.Drawing.Size(29, 12);
+            this.ReserveName_linkLabel.TabIndex = 75;
+            this.ReserveName_linkLabel.TabStop = true;
+            this.ReserveName_linkLabel.Text = "名前";
+            this.ReserveName_linkLabel.DoubleClick += new System.EventHandler(this.ReserveName_linkLabel_DoubleClick);
+            // 
+            // ReserveKana_linkLabel
+            // 
+            this.ReserveKana_linkLabel.AutoSize = true;
+            this.ReserveKana_linkLabel.Location = new System.Drawing.Point(293, 86);
+            this.ReserveKana_linkLabel.Name = "ReserveKana_linkLabel";
+            this.ReserveKana_linkLabel.Size = new System.Drawing.Size(43, 12);
+            this.ReserveKana_linkLabel.TabIndex = 76;
+            this.ReserveKana_linkLabel.TabStop = true;
+            this.ReserveKana_linkLabel.Text = "ふりがな";
+            this.ReserveKana_linkLabel.DoubleClick += new System.EventHandler(this.ReserveName_linkLabel_DoubleClick);
+            // 
+            // ReserveSexlinkLabel
+            // 
+            this.ReserveSexlinkLabel.AutoSize = true;
+            this.ReserveSexlinkLabel.Location = new System.Drawing.Point(293, 128);
+            this.ReserveSexlinkLabel.Name = "ReserveSexlinkLabel";
+            this.ReserveSexlinkLabel.Size = new System.Drawing.Size(29, 12);
+            this.ReserveSexlinkLabel.TabIndex = 77;
+            this.ReserveSexlinkLabel.TabStop = true;
+            this.ReserveSexlinkLabel.Text = "性別";
+            this.ReserveSexlinkLabel.DoubleClick += new System.EventHandler(this.ReserveName_linkLabel_DoubleClick);
+            // 
+            // ReserveTel_linkLabel
+            // 
+            this.ReserveTel_linkLabel.AutoSize = true;
+            this.ReserveTel_linkLabel.Location = new System.Drawing.Point(293, 172);
+            this.ReserveTel_linkLabel.Name = "ReserveTel_linkLabel";
+            this.ReserveTel_linkLabel.Size = new System.Drawing.Size(53, 12);
+            this.ReserveTel_linkLabel.TabIndex = 78;
+            this.ReserveTel_linkLabel.TabStop = true;
+            this.ReserveTel_linkLabel.Text = "電話番号";
+            this.ReserveTel_linkLabel.DoubleClick += new System.EventHandler(this.ReserveName_linkLabel_DoubleClick);
+            // 
+            // ReservePost_linkLabel
+            // 
+            this.ReservePost_linkLabel.AutoSize = true;
+            this.ReservePost_linkLabel.Location = new System.Drawing.Point(293, 218);
+            this.ReservePost_linkLabel.Name = "ReservePost_linkLabel";
+            this.ReservePost_linkLabel.Size = new System.Drawing.Size(53, 12);
+            this.ReservePost_linkLabel.TabIndex = 79;
+            this.ReservePost_linkLabel.TabStop = true;
+            this.ReservePost_linkLabel.Text = "郵便番号";
+            this.ReservePost_linkLabel.DoubleClick += new System.EventHandler(this.ReserveName_linkLabel_DoubleClick);
+            // 
+            // ReserveAddress_linkLabel
+            // 
+            this.ReserveAddress_linkLabel.AutoSize = true;
+            this.ReserveAddress_linkLabel.Location = new System.Drawing.Point(293, 265);
+            this.ReserveAddress_linkLabel.Name = "ReserveAddress_linkLabel";
+            this.ReserveAddress_linkLabel.Size = new System.Drawing.Size(29, 12);
+            this.ReserveAddress_linkLabel.TabIndex = 80;
+            this.ReserveAddress_linkLabel.TabStop = true;
+            this.ReserveAddress_linkLabel.Text = "住所";
+            this.ReserveAddress_linkLabel.DoubleClick += new System.EventHandler(this.ReserveName_linkLabel_DoubleClick);
+            // 
+            // ReserveMemo_linkLabel
+            // 
+            this.ReserveMemo_linkLabel.AutoSize = true;
+            this.ReserveMemo_linkLabel.Location = new System.Drawing.Point(293, 309);
+            this.ReserveMemo_linkLabel.Name = "ReserveMemo_linkLabel";
+            this.ReserveMemo_linkLabel.Size = new System.Drawing.Size(29, 12);
+            this.ReserveMemo_linkLabel.TabIndex = 81;
+            this.ReserveMemo_linkLabel.TabStop = true;
+            this.ReserveMemo_linkLabel.Text = "備考";
+            this.ReserveMemo_linkLabel.DoubleClick += new System.EventHandler(this.ReserveName_linkLabel_DoubleClick);
+            // 
+            // Reserve_dateTimePicker
+            // 
+            this.Reserve_dateTimePicker.Location = new System.Drawing.Point(133, 39);
+            this.Reserve_dateTimePicker.Name = "Reserve_dateTimePicker";
+            this.Reserve_dateTimePicker.Size = new System.Drawing.Size(137, 19);
+            this.Reserve_dateTimePicker.TabIndex = 82;
+            // 
+            // Reserve_NosmokeradioButton
+            // 
+            this.Reserve_NosmokeradioButton.AutoSize = true;
+            this.Reserve_NosmokeradioButton.Location = new System.Drawing.Point(150, 174);
+            this.Reserve_NosmokeradioButton.Name = "Reserve_NosmokeradioButton";
+            this.Reserve_NosmokeradioButton.Size = new System.Drawing.Size(47, 16);
+            this.Reserve_NosmokeradioButton.TabIndex = 84;
+            this.Reserve_NosmokeradioButton.TabStop = true;
+            this.Reserve_NosmokeradioButton.Text = "禁煙";
+            this.Reserve_NosmokeradioButton.UseVisualStyleBackColor = true;
+            this.Reserve_NosmokeradioButton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // Reserve_SmokeradioButton
+            // 
+            this.Reserve_SmokeradioButton.AutoSize = true;
+            this.Reserve_SmokeradioButton.Location = new System.Drawing.Point(205, 174);
+            this.Reserve_SmokeradioButton.Name = "Reserve_SmokeradioButton";
+            this.Reserve_SmokeradioButton.Size = new System.Drawing.Size(47, 16);
+            this.Reserve_SmokeradioButton.TabIndex = 85;
+            this.Reserve_SmokeradioButton.TabStop = true;
+            this.Reserve_SmokeradioButton.Text = "喫煙";
+            this.Reserve_SmokeradioButton.UseVisualStyleBackColor = true;
+            // 
+            // Reserve_TcomboBox
+            // 
+            this.Reserve_TcomboBox.FormattingEnabled = true;
+            this.Reserve_TcomboBox.Location = new System.Drawing.Point(133, 125);
+            this.Reserve_TcomboBox.Name = "Reserve_TcomboBox";
+            this.Reserve_TcomboBox.Size = new System.Drawing.Size(137, 20);
+            this.Reserve_TcomboBox.TabIndex = 87;
+            this.Reserve_TcomboBox.Text = "＊指定された初期値を設定";
+            // 
+            // Reserve_NcomboBox
+            // 
+            this.Reserve_NcomboBox.FormattingEnabled = true;
+            this.Reserve_NcomboBox.Location = new System.Drawing.Point(133, 218);
+            this.Reserve_NcomboBox.Name = "Reserve_NcomboBox";
+            this.Reserve_NcomboBox.Size = new System.Drawing.Size(137, 20);
+            this.Reserve_NcomboBox.TabIndex = 88;
+            this.Reserve_NcomboBox.Text = "人数を選択してください";
             // 
             // Reserve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 485);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.Reserve_NcomboBox);
+            this.Controls.Add(this.Reserve_TcomboBox);
+            this.Controls.Add(this.Reserve_SmokeradioButton);
+            this.Controls.Add(this.Reserve_NosmokeradioButton);
+            this.Controls.Add(this.Reserve_dateTimePicker);
+            this.Controls.Add(this.ReserveMemo_linkLabel);
+            this.Controls.Add(this.ReserveAddress_linkLabel);
+            this.Controls.Add(this.ReservePost_linkLabel);
+            this.Controls.Add(this.ReserveTel_linkLabel);
+            this.Controls.Add(this.ReserveSexlinkLabel);
+            this.Controls.Add(this.ReserveKana_linkLabel);
+            this.Controls.Add(this.ReserveName_linkLabel);
             this.Controls.Add(this.ReserveNo_button);
             this.Controls.Add(this.ReserveOk_button);
             this.Controls.Add(this.Message_label);
             this.Controls.Add(this.Reserve_Date);
             this.Controls.Add(this.ReserveDate_label);
             this.Controls.Add(this.Reserve_Value);
-            this.Controls.Add(this.Reserve_Number);
-            this.Controls.Add(this.Reserve_Smoke);
-            this.Controls.Add(this.Reserve_Type);
             this.Controls.Add(this.Reserve_No);
             this.Controls.Add(this.ReserveValue_label);
             this.Controls.Add(this.ReserveNumber_label);
@@ -361,13 +395,6 @@
             this.Controls.Add(this.Reserve_Sex);
             this.Controls.Add(this.Reserve_Kana);
             this.Controls.Add(this.Reserve_Name);
-            this.Controls.Add(this.ReserveNote_label);
-            this.Controls.Add(this.ReserveAddress_label);
-            this.Controls.Add(this.ReservePost_label);
-            this.Controls.Add(this.ReserveTel_label);
-            this.Controls.Add(this.ReserveSex_label);
-            this.Controls.Add(this.CustomerKana_label);
-            this.Controls.Add(this.ReserveName_label);
             this.Name = "Reserve";
             this.Text = "Reserve";
             this.ResumeLayout(false);
@@ -380,9 +407,6 @@
         private System.Windows.Forms.Label Reserve_Date;
         private System.Windows.Forms.Label ReserveDate_label;
         private System.Windows.Forms.Label Reserve_Value;
-        private System.Windows.Forms.Label Reserve_Number;
-        private System.Windows.Forms.Label Reserve_Smoke;
-        private System.Windows.Forms.Label Reserve_Type;
         private System.Windows.Forms.Label Reserve_No;
         private System.Windows.Forms.Label ReserveValue_label;
         private System.Windows.Forms.Label ReserveNumber_label;
@@ -396,17 +420,21 @@
         private System.Windows.Forms.Label Reserve_Sex;
         private System.Windows.Forms.Label Reserve_Kana;
         private System.Windows.Forms.Label Reserve_Name;
-        private System.Windows.Forms.Label ReserveNote_label;
-        private System.Windows.Forms.Label ReserveAddress_label;
-        private System.Windows.Forms.Label ReservePost_label;
-        private System.Windows.Forms.Label ReserveTel_label;
-        private System.Windows.Forms.Label ReserveSex_label;
-        private System.Windows.Forms.Label CustomerKana_label;
-        private System.Windows.Forms.Label ReserveName_label;
         private System.Windows.Forms.Label Message_label;
         private System.Windows.Forms.Button ReserveOk_button;
         private System.Windows.Forms.Button ReserveNo_button;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel ReserveName_linkLabel;
+        private System.Windows.Forms.LinkLabel ReserveKana_linkLabel;
+        private System.Windows.Forms.LinkLabel ReserveSexlinkLabel;
+        private System.Windows.Forms.LinkLabel ReserveTel_linkLabel;
+        private System.Windows.Forms.LinkLabel ReservePost_linkLabel;
+        private System.Windows.Forms.LinkLabel ReserveAddress_linkLabel;
+        private System.Windows.Forms.LinkLabel ReserveMemo_linkLabel;
+        private System.Windows.Forms.DateTimePicker Reserve_dateTimePicker;
+        private System.Windows.Forms.RadioButton Reserve_NosmokeradioButton;
+        private System.Windows.Forms.RadioButton Reserve_SmokeradioButton;
+        private System.Windows.Forms.ComboBox Reserve_TcomboBox;
+        private System.Windows.Forms.ComboBox Reserve_NcomboBox;
 
     }
 }
