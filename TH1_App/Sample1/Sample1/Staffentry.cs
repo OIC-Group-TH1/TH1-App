@@ -33,18 +33,21 @@ namespace Sample1
 
         private void StaffentryEntry_button_Click(object sender, EventArgs e)
         {
-            Staffcheck Scheck = new Staffcheck();
-            Scheck.Show();
-            this.Close();
-
             System.Data.SqlClient.SqlConnection scn
                    = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
             try
             {
                 //データベースファイルオープン
                 scn.Open();
+                char[] chararray = new char[6];
+                chararray[0] = 'S';
+                chararray[1] = '0';
+                chararray[2] = '0';
+                chararray[3] = '0';
+                chararray[4] = '0';
+                chararray[5] = '1';
                 string name = Staffentry_Name.Text;
-                string sex = Staffentry_Sex.Text;
+                Boolean sex = Convert.ToBoolean(Staffentry_Sex.SelectedIndex);
                 string age = Staffentry_Age.Text;
                 string position = Staffentry_Position.Text;
                 string tel = Staffentry_Tel.Text;
@@ -54,6 +57,7 @@ namespace Sample1
 
                 SqlCommand scm = new SqlCommand
                     ("insert into STAFF_TABLE values ("
+                        + "'" + chararray + "',"
                         + "'" + name + "',"
                         + "'" + sex + "',"
                         + "'" + age + "',"
@@ -73,12 +77,25 @@ namespace Sample1
                 scn.Close();
                 MessageBox.Show(ex.Message, "エラー");
             }
+            Staffcheck Scheck = new Staffcheck();
+            Scheck.Show();
+            this.Close();
+
+           
         }
 
 
         private void Staffentry_Load(object sender, EventArgs e)
         {
+            ComboBox combo = new ComboBox();
+            combo.Items.Add("男性");
+            combo.Items.Add("女性");
+            this.Controls.Add(combo);
+            combo.SelectedIndex = 0;
+        }
 
+        private void Staffentry_Sex_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }

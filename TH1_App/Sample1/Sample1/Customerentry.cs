@@ -33,19 +33,21 @@ namespace Sample1
 
         private void CustomerentryEntry_button_Click(object sender, EventArgs e)
         {
-            Customerecheck Ccheck = new Customerecheck();
-            Ccheck.Show();
-            this.Close();
-
             System.Data.SqlClient.SqlConnection scn
                    = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
             try
             {
                 //データベースファイルオープン
                 scn.Open();
+                char[] chararray = new char[5];
+                chararray[0] = 'R';
+                chararray[1] = '0';
+                chararray[2] = '0';
+                chararray[3] = '0';
+                chararray[4] = '1';
                 string name = Customerentry_Name.Text;
                 string kana = Customerentry_Kana.Text;
-                string sex = Customerentry_Sex.Text;
+                Boolean sex = Convert.ToBoolean(Customerentry_Sex.SelectedIndex);
                 string tel = Customerentry_Tel.Text;
                 string post = Customerentry_Post.Text;
                 string address = Customerentry_Address.Text;
@@ -53,13 +55,14 @@ namespace Sample1
 
                 SqlCommand scm = new SqlCommand
                     ("insert into STAFF_TABLE values ("
+                        + "'" + chararray +"',"
                         + "'" + name + "',"
                         + "'" + kana + "',"
                         + "'" + sex + "',"
                         + "'" + tel + "',"
                         + "'" + post + "',"
                         + "'" + address + "',"
-                        + "'" + note + "," + ")", scn);
+                        + "'" + note + "," + ") 'a','a'", scn);
 
                 scm.ExecuteNonQuery();
                 scn.Close();
@@ -71,6 +74,20 @@ namespace Sample1
                 scn.Close();
                 MessageBox.Show(ex.Message, "エラー");
             }
+            Customerecheck Ccheck = new Customerecheck();
+            Ccheck.Show();
+            this.Close();
+
+            
+        }
+
+        private void Customerentry_Load(object sender, EventArgs e)
+        {
+            ComboBox combo = new ComboBox();
+            combo.Items.Add("男性");
+            combo.Items.Add("女性");
+            this.Controls.Add(combo);
+            combo.SelectedIndex = 0;
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="globalDBDataSet" targetNamespace="http://tempuri.org/globalDBDataSet.xsd" xmlns:mstns="http://tempuri.org/globalDBDataSet.xsd" xmlns="http://tempuri.org/globalDBDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="globalDBDataSet1" targetNamespace="http://tempuri.org/globalDBDataSet1.xsd" xmlns:mstns="http://tempuri.org/globalDBDataSet1.xsd" xmlns="http://tempuri.org/globalDBDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -301,7 +301,7 @@ SELECT STAFF_CODE, STAFF_NAME, SEX, STAFF_AGE, STAFF_POSITION, STAFF_TEL, STAFF_
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="globalDBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="globalDBDataSet" msprop:Generator_UserDSName="globalDBDataSet">
+  <xs:element name="globalDBDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="globalDBDataSet1" msprop:Generator_UserDSName="globalDBDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="TBL_CLIENT" msprop:Generator_TableClassName="TBL_CLIENTDataTable" msprop:Generator_TableVarName="tableTBL_CLIENT" msprop:Generator_TablePropName="TBL_CLIENT" msprop:Generator_RowDeletingName="TBL_CLIENTRowDeleting" msprop:Generator_UserTableName="TBL_CLIENT" msprop:Generator_RowChangingName="TBL_CLIENTRowChanging" msprop:Generator_RowEvHandlerName="TBL_CLIENTRowChangeEventHandler" msprop:Generator_RowDeletedName="TBL_CLIENTRowDeleted" msprop:Generator_RowEvArgName="TBL_CLIENTRowChangeEvent" msprop:Generator_RowChangedName="TBL_CLIENTRowChanged" msprop:Generator_RowClassName="TBL_CLIENTRow">

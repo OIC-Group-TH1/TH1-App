@@ -20,9 +20,9 @@ namespace Sample1 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("globalDBDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("globalDBDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class globalDBDataSet : global::System.Data.DataSet {
+    public partial class globalDBDataSet1 : global::System.Data.DataSet {
         
         private TBL_CLIENTDataTable tableTBL_CLIENT;
         
@@ -42,7 +42,7 @@ namespace Sample1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public globalDBDataSet() {
+        public globalDBDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -53,7 +53,7 @@ namespace Sample1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected globalDBDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected globalDBDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -178,7 +178,7 @@ namespace Sample1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            globalDBDataSet cln = ((globalDBDataSet)(base.Clone()));
+            globalDBDataSet1 cln = ((globalDBDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -280,9 +280,9 @@ namespace Sample1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "globalDBDataSet";
+            this.DataSetName = "globalDBDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/globalDBDataSet.xsd";
+            this.Namespace = "http://tempuri.org/globalDBDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableTBL_CLIENT = new TBL_CLIENTDataTable();
@@ -342,7 +342,7 @@ namespace Sample1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            globalDBDataSet ds = new globalDBDataSet();
+            globalDBDataSet1 ds = new globalDBDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -735,7 +735,7 @@ namespace Sample1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                globalDBDataSet ds = new globalDBDataSet();
+                globalDBDataSet1 ds = new globalDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1104,7 +1104,7 @@ namespace Sample1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                globalDBDataSet ds = new globalDBDataSet();
+                globalDBDataSet1 ds = new globalDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1439,7 +1439,7 @@ namespace Sample1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                globalDBDataSet ds = new globalDBDataSet();
+                globalDBDataSet1 ds = new globalDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1817,7 +1817,7 @@ namespace Sample1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                globalDBDataSet ds = new globalDBDataSet();
+                globalDBDataSet1 ds = new globalDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2961,7 +2961,7 @@ namespace Sample1 {
         }
     }
 }
-namespace Sample1.globalDBDataSetTableAdapters {
+namespace Sample1.globalDBDataSet1TableAdapters {
     
     
     /// <summary>
@@ -3164,7 +3164,7 @@ SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, SEX, CLIENT_TEL, CLIENT_POST, CLIE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(globalDBDataSet.TBL_CLIENTDataTable dataTable) {
+        public virtual int Fill(globalDBDataSet1.TBL_CLIENTDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3177,9 +3177,9 @@ SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, SEX, CLIENT_TEL, CLIENT_POST, CLIE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual globalDBDataSet.TBL_CLIENTDataTable GetData() {
+        public virtual globalDBDataSet1.TBL_CLIENTDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            globalDBDataSet.TBL_CLIENTDataTable dataTable = new globalDBDataSet.TBL_CLIENTDataTable();
+            globalDBDataSet1.TBL_CLIENTDataTable dataTable = new globalDBDataSet1.TBL_CLIENTDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3187,14 +3187,14 @@ SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, SEX, CLIENT_TEL, CLIENT_POST, CLIE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(globalDBDataSet.TBL_CLIENTDataTable dataTable) {
+        public virtual int Update(globalDBDataSet1.TBL_CLIENTDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(globalDBDataSet dataSet) {
+        public virtual int Update(globalDBDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "TBL_CLIENT");
         }
         
@@ -3653,7 +3653,7 @@ SELECT RECERVATION_CODE, RECERVATION_DATE, RECERVATION_DAY, RECERVATION_NUM, STA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(globalDBDataSet.TBL_RECERVATIONDataTable dataTable) {
+        public virtual int Fill(globalDBDataSet1.TBL_RECERVATIONDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3666,9 +3666,9 @@ SELECT RECERVATION_CODE, RECERVATION_DATE, RECERVATION_DAY, RECERVATION_NUM, STA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual globalDBDataSet.TBL_RECERVATIONDataTable GetData() {
+        public virtual globalDBDataSet1.TBL_RECERVATIONDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            globalDBDataSet.TBL_RECERVATIONDataTable dataTable = new globalDBDataSet.TBL_RECERVATIONDataTable();
+            globalDBDataSet1.TBL_RECERVATIONDataTable dataTable = new globalDBDataSet1.TBL_RECERVATIONDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3676,14 +3676,14 @@ SELECT RECERVATION_CODE, RECERVATION_DATE, RECERVATION_DAY, RECERVATION_NUM, STA
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(globalDBDataSet.TBL_RECERVATIONDataTable dataTable) {
+        public virtual int Update(globalDBDataSet1.TBL_RECERVATIONDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(globalDBDataSet dataSet) {
+        public virtual int Update(globalDBDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "TBL_RECERVATION");
         }
         
@@ -4138,7 +4138,7 @@ SELECT ROOM_CODE, ROOM_NAME, ROOM_VALUE, ROOM_BED, ROOM_CIGARETTE, ROOM_MAX FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(globalDBDataSet.TBL_ROOMDataTable dataTable) {
+        public virtual int Fill(globalDBDataSet1.TBL_ROOMDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4151,9 +4151,9 @@ SELECT ROOM_CODE, ROOM_NAME, ROOM_VALUE, ROOM_BED, ROOM_CIGARETTE, ROOM_MAX FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual globalDBDataSet.TBL_ROOMDataTable GetData() {
+        public virtual globalDBDataSet1.TBL_ROOMDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            globalDBDataSet.TBL_ROOMDataTable dataTable = new globalDBDataSet.TBL_ROOMDataTable();
+            globalDBDataSet1.TBL_ROOMDataTable dataTable = new globalDBDataSet1.TBL_ROOMDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4161,14 +4161,14 @@ SELECT ROOM_CODE, ROOM_NAME, ROOM_VALUE, ROOM_BED, ROOM_CIGARETTE, ROOM_MAX FROM
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(globalDBDataSet.TBL_ROOMDataTable dataTable) {
+        public virtual int Update(globalDBDataSet1.TBL_ROOMDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(globalDBDataSet dataSet) {
+        public virtual int Update(globalDBDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "TBL_ROOM");
         }
         
@@ -4537,7 +4537,7 @@ SELECT STAFF_CODE, STAFF_NAME, SEX, STAFF_AGE, STAFF_POSITION, STAFF_TEL, STAFF_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(globalDBDataSet.TBL_STAFFDataTable dataTable) {
+        public virtual int Fill(globalDBDataSet1.TBL_STAFFDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4550,9 +4550,9 @@ SELECT STAFF_CODE, STAFF_NAME, SEX, STAFF_AGE, STAFF_POSITION, STAFF_TEL, STAFF_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual globalDBDataSet.TBL_STAFFDataTable GetData() {
+        public virtual globalDBDataSet1.TBL_STAFFDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            globalDBDataSet.TBL_STAFFDataTable dataTable = new globalDBDataSet.TBL_STAFFDataTable();
+            globalDBDataSet1.TBL_STAFFDataTable dataTable = new globalDBDataSet1.TBL_STAFFDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4560,14 +4560,14 @@ SELECT STAFF_CODE, STAFF_NAME, SEX, STAFF_AGE, STAFF_POSITION, STAFF_TEL, STAFF_
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(globalDBDataSet.TBL_STAFFDataTable dataTable) {
+        public virtual int Update(globalDBDataSet1.TBL_STAFFDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(globalDBDataSet dataSet) {
+        public virtual int Update(globalDBDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "TBL_STAFF");
         }
         
@@ -4954,7 +4954,7 @@ SELECT STAFF_CODE, STAFF_NAME, SEX, STAFF_AGE, STAFF_POSITION, STAFF_TEL, STAFF_
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(globalDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(globalDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tBL_ROOMTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.TBL_ROOM.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -5000,7 +5000,7 @@ SELECT STAFF_CODE, STAFF_NAME, SEX, STAFF_AGE, STAFF_POSITION, STAFF_TEL, STAFF_
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(globalDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(globalDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tBL_ROOMTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.TBL_ROOM.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -5042,7 +5042,7 @@ SELECT STAFF_CODE, STAFF_NAME, SEX, STAFF_AGE, STAFF_POSITION, STAFF_TEL, STAFF_
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(globalDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(globalDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._tBL_CLIENTTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.TBL_CLIENT.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -5108,7 +5108,7 @@ SELECT STAFF_CODE, STAFF_NAME, SEX, STAFF_AGE, STAFF_POSITION, STAFF_TEL, STAFF_
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(globalDBDataSet dataSet) {
+        public virtual int UpdateAll(globalDBDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
