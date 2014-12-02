@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -60,6 +60,7 @@ namespace Sample1
             {
                 //仮で色を指定
                 if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "可")
+
                     this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.YellowGreen;
                 else if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "不可" && dataGridView1.Rows[i].Cells[3].Value == null)
                     this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.LightSkyBlue;
