@@ -21,7 +21,7 @@ namespace Sample1
             Application.Run(new Top_page());
 
             //Db動作をする時は下をコメントアウト
-            //Application.Run(new Staffentry());
+            //Application.Run(new Reserve());
 
             //SampleDBの確認のためフォームを呼び出す
             //Application.Run(new SampleDB());

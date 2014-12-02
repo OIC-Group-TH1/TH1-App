@@ -45,6 +45,7 @@ namespace Sample1
                 IOchecklist Checkout = new IOchecklist();
                 Checkout.Show();
                 this.Close();
+                
             }
             else if (result == DialogResult.No)
             {
