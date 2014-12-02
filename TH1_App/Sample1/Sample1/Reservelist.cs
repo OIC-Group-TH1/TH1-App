@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,7 +35,7 @@ namespace Sample1
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
 
-            Logic.add(10, 20);
+
 
             //行の追加（TEST用）↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓★後で消して！
 
@@ -60,6 +60,7 @@ namespace Sample1
             {
                 //仮で色を指定
                 if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "可")
+
                     this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.YellowGreen;
                 else if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "不可" && dataGridView1.Rows[i].Cells[3].Value == null)
                     this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.LightSkyBlue;
@@ -93,7 +94,11 @@ namespace Sample1
                Reservecheck Rcheck = new Reservecheck();
                Rcheck.Show();
                this.Close();
-           }
+               //値の取得(これをselect文で検索し、情報をReservecheckで)
+               string r_code = (string)dataGridView1.CurrentRow.Cells[0].Value;
+               string c_name = (string)dataGridView1.CurrentRow.Cells[3].Value;
+               string c_tel = (string)dataGridView1.CurrentRow.Cells[5].Value;
+            }
         }
     }
 }
