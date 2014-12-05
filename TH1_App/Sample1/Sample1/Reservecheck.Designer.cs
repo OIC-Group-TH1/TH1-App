@@ -384,6 +384,7 @@
             this.Controls.Add(this.ReservecheckName_label);
             this.Name = "Reservecheck";
             this.Text = "Reservecheck";
+            this.Load += new System.EventHandler(this.Reservecheck_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

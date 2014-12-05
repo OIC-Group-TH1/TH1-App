@@ -115,49 +115,49 @@
             this.Customerentry_Name.Location = new System.Drawing.Point(140, 57);
             this.Customerentry_Name.Name = "Customerentry_Name";
             this.Customerentry_Name.Size = new System.Drawing.Size(100, 19);
-            this.Customerentry_Name.TabIndex = 7;
+            this.Customerentry_Name.TabIndex = 1;
             // 
             // Customerentry_Kana
             // 
             this.Customerentry_Kana.Location = new System.Drawing.Point(140, 98);
             this.Customerentry_Kana.Name = "Customerentry_Kana";
             this.Customerentry_Kana.Size = new System.Drawing.Size(100, 19);
-            this.Customerentry_Kana.TabIndex = 8;
+            this.Customerentry_Kana.TabIndex = 2;
             // 
             // Customerentry_Tel
             // 
             this.Customerentry_Tel.Location = new System.Drawing.Point(140, 181);
             this.Customerentry_Tel.Name = "Customerentry_Tel";
             this.Customerentry_Tel.Size = new System.Drawing.Size(100, 19);
-            this.Customerentry_Tel.TabIndex = 10;
+            this.Customerentry_Tel.TabIndex = 3;
             // 
             // Customerentry_Post
             // 
             this.Customerentry_Post.Location = new System.Drawing.Point(140, 222);
             this.Customerentry_Post.Name = "Customerentry_Post";
             this.Customerentry_Post.Size = new System.Drawing.Size(100, 19);
-            this.Customerentry_Post.TabIndex = 11;
+            this.Customerentry_Post.TabIndex = 4;
             // 
             // Customerentry_Address
             // 
             this.Customerentry_Address.Location = new System.Drawing.Point(140, 263);
             this.Customerentry_Address.Name = "Customerentry_Address";
             this.Customerentry_Address.Size = new System.Drawing.Size(100, 19);
-            this.Customerentry_Address.TabIndex = 12;
+            this.Customerentry_Address.TabIndex = 5;
             // 
             // Customerentry_Note
             // 
             this.Customerentry_Note.Location = new System.Drawing.Point(140, 304);
             this.Customerentry_Note.Name = "Customerentry_Note";
             this.Customerentry_Note.Size = new System.Drawing.Size(100, 19);
-            this.Customerentry_Note.TabIndex = 13;
+            this.Customerentry_Note.TabIndex = 6;
             // 
             // CustomerentryEntry_button
             // 
             this.CustomerentryEntry_button.Location = new System.Drawing.Point(381, 285);
             this.CustomerentryEntry_button.Name = "CustomerentryEntry_button";
             this.CustomerentryEntry_button.Size = new System.Drawing.Size(75, 23);
-            this.CustomerentryEntry_button.TabIndex = 14;
+            this.CustomerentryEntry_button.TabIndex = 7;
             this.CustomerentryEntry_button.Text = "登録";
             this.CustomerentryEntry_button.UseVisualStyleBackColor = true;
             this.CustomerentryEntry_button.Click += new System.EventHandler(this.CustomerentryEntry_button_Click);
@@ -167,7 +167,7 @@
             this.CustomerentryBack_button.Location = new System.Drawing.Point(286, 329);
             this.CustomerentryBack_button.Name = "CustomerentryBack_button";
             this.CustomerentryBack_button.Size = new System.Drawing.Size(75, 23);
-            this.CustomerentryBack_button.TabIndex = 15;
+            this.CustomerentryBack_button.TabIndex = 8;
             this.CustomerentryBack_button.Text = "戻る";
             this.CustomerentryBack_button.UseVisualStyleBackColor = true;
             this.CustomerentryBack_button.Click += new System.EventHandler(this.CustomerentryBack_button_Click);
@@ -177,7 +177,7 @@
             this.CustomerentryTop_button.Location = new System.Drawing.Point(381, 329);
             this.CustomerentryTop_button.Name = "CustomerentryTop_button";
             this.CustomerentryTop_button.Size = new System.Drawing.Size(75, 23);
-            this.CustomerentryTop_button.TabIndex = 16;
+            this.CustomerentryTop_button.TabIndex = 9;
             this.CustomerentryTop_button.Text = "Topへ";
             this.CustomerentryTop_button.UseVisualStyleBackColor = true;
             this.CustomerentryTop_button.Click += new System.EventHandler(this.CustomerentryTop_button_Click);
