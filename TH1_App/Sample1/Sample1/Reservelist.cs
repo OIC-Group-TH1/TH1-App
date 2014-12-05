@@ -99,7 +99,8 @@ namespace Sample1
                r_code = (string)dataGridView1.CurrentRow.Cells[0].Value;
                c_name = (string)dataGridView1.CurrentRow.Cells[3].Value;
                c_tel  = (string)dataGridView1.CurrentRow.Cells[5].Value;
-               //データベースからの取得
+               /*
+                * //データベースからの取得
                  System.Data.SqlClient.SqlConnection scn
                    = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
                 
@@ -126,7 +127,7 @@ namespace Sample1
                     scn.Close();
                     MessageBox.Show(ex.Message, "エラー");
                 }
-                
+                */
                 
                 
 
