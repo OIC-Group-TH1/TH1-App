@@ -59,6 +59,7 @@
     <Compile Include="Accountscheck.Designer.cs">
       <DependentUpon>Accountscheck.cs</DependentUpon>
     </Compile>
+    <Compile Include="DBconnection.cs" />
     <Compile Include="Custchangecheck.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,11 +96,21 @@
     <Compile Include="Customerlist.Designer.cs">
       <DependentUpon>Customerlist.cs</DependentUpon>
     </Compile>
-    <Compile Include="DBconnection.cs" />
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="globalDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>globalDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="globalDBDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>globalDBDataSet11.xsd</DependentUpon>
     </Compile>
     <Compile Include="Logic.cs" />
     <Compile Include="SampleDB.cs">
@@ -200,6 +211,9 @@
     <EmbeddedResource Include="Customerlist.resx">
       <DependentUpon>Customerlist.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SampleDB.resx">
       <DependentUpon>SampleDB.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,6 +270,17 @@
     </None>
     <None Include="globalDBDataSet.xss">
       <DependentUpon>globalDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="globalDBDataSet11.xsc">
+      <DependentUpon>globalDBDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="globalDBDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>globalDBDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="globalDBDataSet11.xss">
+      <DependentUpon>globalDBDataSet11.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

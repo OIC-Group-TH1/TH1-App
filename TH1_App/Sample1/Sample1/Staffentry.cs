@@ -56,8 +56,8 @@ namespace Sample1
                 string address = Staffentry_Address.Text;
 
                 SqlCommand scm = new SqlCommand
-                    ("insert into STAFF_TABLE values ("
-                        + "'" + chararray[0] + "',"
+                    ("insert into TBL_STAFF values ("
+                        + "'" + chararray + "',"
                         + "'" + name + "',"
                         + "'" + sex + "',"
                         + "'" + age + "',"
@@ -65,7 +65,7 @@ namespace Sample1
                         + "'" + tel + "',"
                         + "'" + mail + "',"
                         + "'" + day + "',"
-                        + "'" + address + "," + ")", scn);
+                        + "'" + address + "')", scn);
 
                 scm.ExecuteNonQuery();
                 scn.Close();

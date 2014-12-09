@@ -54,7 +54,7 @@ namespace Sample1
                 string note = Customerentry_Note.Text;
 
                 SqlCommand scm = new SqlCommand
-                    ("insert into STAFF_TABLE values ("
+                    ("insert into TBL_CLIENT values ("
                         + "'" + chararray +"',"
                         + "'" + name + "',"
                         + "'" + kana + "',"
