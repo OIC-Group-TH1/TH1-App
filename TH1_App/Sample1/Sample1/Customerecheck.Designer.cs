@@ -226,6 +226,7 @@
             this.Controls.Add(this.CustomercheckName_label);
             this.Name = "Customerecheck";
             this.Text = "Customerecheck";
+            this.Load += new System.EventHandler(this.Customerecheck_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

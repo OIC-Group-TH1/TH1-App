@@ -6,18 +6,85 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Sample1
 {
     public partial class Staffcheck : Form
     {
+        Staffentry Staffentry_main;
+
         public Staffcheck()
         {
             InitializeComponent();
         }
 
+        public Staffcheck(Staffentry form)
+        {
+            InitializeComponent();
+            Staffentry_main = form;
+        }
+
+        private void Staffcheck_Load(object sender, EventArgs e)
+        {
+
+            Staffcheck_Name.Text = Staffentry_main.name;
+            Staffcheck_Kana.Text = Staffentry_main.kana;
+            Staffcheck_Sex.Text = Staffentry_main.sex;
+            Staffcheck_Age.Text = Staffentry_main.age;
+            Staffcheck_Position.Text = Staffentry_main.position;
+            Staffcheck_Tel.Text = Staffentry_main.tel;
+            Staffcheck_Mail.Text = Staffentry_main.mail;
+            Staffcheck_Day.Text = Staffentry_main.day;
+            Staffcheck_Address.Text = Staffentry_main.address;
+        }
         private void StaffcheckYes_button_Click(object sender, EventArgs e)
         {
+            System.Data.SqlClient.SqlConnection scn
+                   = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+            try
+            {
+                //データベースファイルオープン
+                scn.Open();
+
+                char[] chararray = new char[6];
+                chararray[0] = 'S';
+                chararray[1] = '0';
+                chararray[2] = '0';
+                chararray[3] = '0';
+                chararray[4] = '0';
+                chararray[5] = '1';
+                string name = Staffcheck_Name.Text;
+                string sex = Staffcheck_Sex.Text;
+                string age = StaffcheckAge_label.Text;
+                string position = Staffcheck_Position.Text;
+                string tel = Staffcheck_Tel.Text;
+                string mail = Staffcheck_Mail.Text;
+                string day = Staffcheck_Day.Text;
+                string address = Staffcheck_Address.Text;
+
+                SqlCommand scm = new SqlCommand
+                    ("insert into STAFF_TABLE values ("
+                        + "'" + chararray[0] + "',"
+                        + "'" + name + "',"
+                        + "'" + sex + "',"
+                        + "'" + age + "',"
+                        + "'" + position + "',"
+                        + "'" + tel + "',"
+                        + "'" + mail + "',"
+                        + "'" + day + "',"
+                        + "'" + address + "," + ")", scn);
+
+                scm.ExecuteNonQuery();
+                scn.Close();
+            }
+
+            catch (Exception ex)
+            {
+                //データベースファイルクローズ
+                scn.Close();
+                MessageBox.Show(ex.Message, "エラー");
+            }
             Stafflist Scheckok = new Stafflist();
             Scheckok.Show();
             this.Close();
@@ -29,5 +96,8 @@ namespace Sample1
             Scheckno.Show();
             this.Close();
         }
+
+        
     }
 }
+

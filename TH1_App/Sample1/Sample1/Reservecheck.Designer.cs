@@ -290,7 +290,7 @@
             this.Reservecheck_No.Name = "Reservecheck_No";
             this.Reservecheck_No.Size = new System.Drawing.Size(35, 12);
             this.Reservecheck_No.TabIndex = 38;
-            this.Reservecheck_No.Text = "label1";
+            this.Reservecheck_No.Text = "label2";
             // 
             // Reservecheck_Type
             // 
@@ -299,7 +299,7 @@
             this.Reservecheck_Type.Name = "Reservecheck_Type";
             this.Reservecheck_Type.Size = new System.Drawing.Size(35, 12);
             this.Reservecheck_Type.TabIndex = 39;
-            this.Reservecheck_Type.Text = "label2";
+            this.Reservecheck_Type.Text = "label3";
             // 
             // Reservecheck_Smoke
             // 
@@ -308,7 +308,7 @@
             this.Reservecheck_Smoke.Name = "Reservecheck_Smoke";
             this.Reservecheck_Smoke.Size = new System.Drawing.Size(35, 12);
             this.Reservecheck_Smoke.TabIndex = 40;
-            this.Reservecheck_Smoke.Text = "label3";
+            this.Reservecheck_Smoke.Text = "label4";
             // 
             // Reservecheck_Number
             // 
@@ -317,7 +317,7 @@
             this.Reservecheck_Number.Name = "Reservecheck_Number";
             this.Reservecheck_Number.Size = new System.Drawing.Size(35, 12);
             this.Reservecheck_Number.TabIndex = 41;
-            this.Reservecheck_Number.Text = "label4";
+            this.Reservecheck_Number.Text = "label5";
             // 
             // Reservecheck_Value
             // 
@@ -326,7 +326,7 @@
             this.Reservecheck_Value.Name = "Reservecheck_Value";
             this.Reservecheck_Value.Size = new System.Drawing.Size(35, 12);
             this.Reservecheck_Value.TabIndex = 42;
-            this.Reservecheck_Value.Text = "label5";
+            this.Reservecheck_Value.Text = "label6";
             // 
             // ReservecheckDate_label
             // 
