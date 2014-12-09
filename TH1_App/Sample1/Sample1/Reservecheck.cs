@@ -12,9 +12,19 @@ namespace Sample1
 {
     public partial class Reservecheck : Form
     {
-        public Reservecheck()
+        reservelist reservelist_main;
+
+        public Reservecheck(reservelist form)
         {
             InitializeComponent();
+            reservelist_main = form;
+        }
+
+        private void Reservecheck_Load(object sender, EventArgs e)
+        {
+            Reservecheck_No.Text = reservelist_main.r_code;
+            Reservecheck_Name.Text = reservelist_main.c_name;
+            Reservecheck_Tel.Text = reservelist_main.c_tel;
         }
 
         private void CustomerentryKana_label2_Click(object sender, EventArgs e)
@@ -95,5 +105,7 @@ namespace Sample1
             Cal.Show();
             this.Close();
         }
+
+        
     }
 }
