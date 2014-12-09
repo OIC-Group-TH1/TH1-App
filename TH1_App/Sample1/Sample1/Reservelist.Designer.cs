@@ -43,10 +43,13 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+<<<<<<< HEAD
             this.予約コード = new System.Windows.Forms.DataGridViewTextBoxColumn();
+=======
+            this.globalDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+>>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -78,7 +81,6 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -88,10 +90,15 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
+<<<<<<< HEAD
             this.dataGridViewTextBoxColumn8,
             this.予約コード});
             this.dataGridView1.DataSource = this.globalDBDataSetBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(33, 87);
+=======
+            this.dataGridViewTextBoxColumn8});
+            this.dataGridView1.Location = new System.Drawing.Point(21, 90);
+>>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
             this.dataGridView1.Size = new System.Drawing.Size(702, 183);
@@ -154,12 +161,15 @@
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.Width = 80;
             // 
+<<<<<<< HEAD
             // 予約コード
             // 
             this.予約コード.HeaderText = "予約コード";
             this.予約コード.Name = "予約コード";
             this.予約コード.Visible = false;
             // 
+=======
+>>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
             // reservelist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -174,7 +184,6 @@
             this.Load += new System.EventHandler(this.reservelist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -195,6 +204,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+<<<<<<< HEAD
         private System.Windows.Forms.DataGridViewTextBoxColumn 予約コード;
+=======
+        private System.Windows.Forms.BindingSource globalDBDataSetBindingSource;
+>>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
     }
 }

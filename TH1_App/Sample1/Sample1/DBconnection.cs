@@ -8,8 +8,8 @@ namespace Sample1
 
     public class DBconnection
     {
-         System.Data.SqlClient.SqlConnection scn
-                = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+        System.Data.SqlClient.SqlConnection scn
+               = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
         // SQLServer
 
 
@@ -18,7 +18,7 @@ namespace Sample1
             try
             {
                 scn.Open();
-                
+
             }
             catch (Exception ex)
             {

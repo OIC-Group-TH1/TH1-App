@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.Acounts_Change = new System.Windows.Forms.Label();
-            this.Acounts_Receive = new System.Windows.Forms.Label();
             this.Acounts_Total = new System.Windows.Forms.Label();
             this.Acounts_Staff = new System.Windows.Forms.Label();
             this.Acounts_Name = new System.Windows.Forms.Label();
@@ -48,31 +47,23 @@
             this.Accounts_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Accounts_Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Accounts_Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Accounts_Recieve = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Acounts_Change
             // 
             this.Acounts_Change.AutoSize = true;
-            this.Acounts_Change.Location = new System.Drawing.Point(467, 347);
+            this.Acounts_Change.Location = new System.Drawing.Point(534, 347);
             this.Acounts_Change.Name = "Acounts_Change";
             this.Acounts_Change.Size = new System.Drawing.Size(35, 12);
             this.Acounts_Change.TabIndex = 33;
             this.Acounts_Change.Text = "label6";
             // 
-            // Acounts_Receive
-            // 
-            this.Acounts_Receive.AutoSize = true;
-            this.Acounts_Receive.Location = new System.Drawing.Point(467, 327);
-            this.Acounts_Receive.Name = "Acounts_Receive";
-            this.Acounts_Receive.Size = new System.Drawing.Size(35, 12);
-            this.Acounts_Receive.TabIndex = 32;
-            this.Acounts_Receive.Text = "label5";
-            // 
             // Acounts_Total
             // 
             this.Acounts_Total.AutoSize = true;
-            this.Acounts_Total.Location = new System.Drawing.Point(467, 307);
+            this.Acounts_Total.Location = new System.Drawing.Point(534, 302);
             this.Acounts_Total.Name = "Acounts_Total";
             this.Acounts_Total.Size = new System.Drawing.Size(35, 12);
             this.Acounts_Total.TabIndex = 31;
@@ -117,7 +108,7 @@
             // AcountsReceive_label
             // 
             this.AcountsReceive_label.AutoSize = true;
-            this.AcountsReceive_label.Location = new System.Drawing.Point(426, 327);
+            this.AcountsReceive_label.Location = new System.Drawing.Point(426, 323);
             this.AcountsReceive_label.Name = "AcountsReceive_label";
             this.AcountsReceive_label.Size = new System.Drawing.Size(37, 12);
             this.AcountsReceive_label.TabIndex = 26;
@@ -126,7 +117,7 @@
             // AcountsTotal_label
             // 
             this.AcountsTotal_label.AutoSize = true;
-            this.AcountsTotal_label.Location = new System.Drawing.Point(426, 307);
+            this.AcountsTotal_label.Location = new System.Drawing.Point(426, 302);
             this.AcountsTotal_label.Name = "AcountsTotal_label";
             this.AcountsTotal_label.Size = new System.Drawing.Size(29, 12);
             this.AcountsTotal_label.TabIndex = 25;
@@ -219,13 +210,20 @@
             this.Accounts_Total.HeaderText = "合計";
             this.Accounts_Total.Name = "Accounts_Total";
             // 
+            // Accounts_Recieve
+            // 
+            this.Accounts_Recieve.Location = new System.Drawing.Point(469, 320);
+            this.Accounts_Recieve.Name = "Accounts_Recieve";
+            this.Accounts_Recieve.Size = new System.Drawing.Size(100, 19);
+            this.Accounts_Recieve.TabIndex = 34;
+            // 
             // Accounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(680, 445);
+            this.Controls.Add(this.Accounts_Recieve);
             this.Controls.Add(this.Acounts_Change);
-            this.Controls.Add(this.Acounts_Receive);
             this.Controls.Add(this.Acounts_Total);
             this.Controls.Add(this.Acounts_Staff);
             this.Controls.Add(this.Acounts_Name);
@@ -250,7 +248,6 @@
         #endregion
 
         private System.Windows.Forms.Label Acounts_Change;
-        private System.Windows.Forms.Label Acounts_Receive;
         private System.Windows.Forms.Label Acounts_Total;
         private System.Windows.Forms.Label Acounts_Staff;
         private System.Windows.Forms.Label Acounts_Name;
@@ -269,5 +266,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Accounts_Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn Accounts_Day;
         private System.Windows.Forms.DataGridViewTextBoxColumn Accounts_Total;
+        private System.Windows.Forms.TextBox Accounts_Recieve;
     }
 }

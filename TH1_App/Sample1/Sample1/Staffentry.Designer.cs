@@ -110,42 +110,62 @@
             this.Staffentry_Name.Location = new System.Drawing.Point(135, 25);
             this.Staffentry_Name.Name = "Staffentry_Name";
             this.Staffentry_Name.Size = new System.Drawing.Size(150, 19);
-            this.Staffentry_Name.TabIndex = 6;
+            this.Staffentry_Name.TabIndex = 1;
             // 
             // Staffentry_Position
             // 
             this.Staffentry_Position.Location = new System.Drawing.Point(135, 194);
             this.Staffentry_Position.Name = "Staffentry_Position";
             this.Staffentry_Position.Size = new System.Drawing.Size(150, 19);
+<<<<<<< HEAD
             this.Staffentry_Position.TabIndex = 9;
+=======
+            this.Staffentry_Position.TabIndex = 4;
+>>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
             // 
             // Staffentry_Tel
             // 
             this.Staffentry_Tel.Location = new System.Drawing.Point(135, 236);
             this.Staffentry_Tel.Name = "Staffentry_Tel";
             this.Staffentry_Tel.Size = new System.Drawing.Size(150, 19);
+<<<<<<< HEAD
             this.Staffentry_Tel.TabIndex = 10;
+=======
+            this.Staffentry_Tel.TabIndex = 5;
+>>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
             // 
             // Staffentry_Mail
             // 
             this.Staffentry_Mail.Location = new System.Drawing.Point(135, 278);
             this.Staffentry_Mail.Name = "Staffentry_Mail";
             this.Staffentry_Mail.Size = new System.Drawing.Size(150, 19);
+<<<<<<< HEAD
             this.Staffentry_Mail.TabIndex = 11;
+=======
+            this.Staffentry_Mail.TabIndex = 6;
+>>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
             // 
             // Staffentry_Address
             // 
             this.Staffentry_Address.Location = new System.Drawing.Point(135, 362);
             this.Staffentry_Address.Name = "Staffentry_Address";
             this.Staffentry_Address.Size = new System.Drawing.Size(150, 19);
+<<<<<<< HEAD
             this.Staffentry_Address.TabIndex = 13;
+=======
+            this.Staffentry_Address.TabIndex = 8;
+>>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
             // 
             // StaffentryEntry_button
             // 
             this.StaffentryEntry_button.Location = new System.Drawing.Point(269, 421);
             this.StaffentryEntry_button.Name = "StaffentryEntry_button";
             this.StaffentryEntry_button.Size = new System.Drawing.Size(75, 23);
+<<<<<<< HEAD
             this.StaffentryEntry_button.TabIndex = 14;
+=======
+            this.StaffentryEntry_button.TabIndex = 9;
+>>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
             this.StaffentryEntry_button.Text = "登録";
             this.StaffentryEntry_button.UseVisualStyleBackColor = true;
             this.StaffentryEntry_button.Click += new System.EventHandler(this.StaffentryEntry_button_Click);
@@ -155,7 +175,11 @@
             this.StaffentryBack_button.Location = new System.Drawing.Point(372, 421);
             this.StaffentryBack_button.Name = "StaffentryBack_button";
             this.StaffentryBack_button.Size = new System.Drawing.Size(75, 23);
+<<<<<<< HEAD
             this.StaffentryBack_button.TabIndex = 15;
+=======
+            this.StaffentryBack_button.TabIndex = 10;
+>>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
             this.StaffentryBack_button.Text = "戻る";
             this.StaffentryBack_button.UseVisualStyleBackColor = true;
             this.StaffentryBack_button.Click += new System.EventHandler(this.StaffentryBack_button_Click);
@@ -165,7 +189,11 @@
             this.Staffentry_Age.Location = new System.Drawing.Point(135, 152);
             this.Staffentry_Age.Name = "Staffentry_Age";
             this.Staffentry_Age.Size = new System.Drawing.Size(150, 19);
+<<<<<<< HEAD
             this.Staffentry_Age.TabIndex = 8;
+=======
+            this.Staffentry_Age.TabIndex = 3;
+>>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
             // 
             // StaffentryAge_label
             // 
@@ -190,7 +218,11 @@
             this.Staffentry_Day.Location = new System.Drawing.Point(135, 320);
             this.Staffentry_Day.Name = "Staffentry_Day";
             this.Staffentry_Day.Size = new System.Drawing.Size(150, 19);
+<<<<<<< HEAD
             this.Staffentry_Day.TabIndex = 12;
+=======
+            this.Staffentry_Day.TabIndex = 7;
+>>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
             // 
             // Staffentry_Sex
             // 
@@ -198,7 +230,11 @@
             this.Staffentry_Sex.Location = new System.Drawing.Point(135, 109);
             this.Staffentry_Sex.Name = "Staffentry_Sex";
             this.Staffentry_Sex.Size = new System.Drawing.Size(150, 20);
+<<<<<<< HEAD
             this.Staffentry_Sex.TabIndex = 7;
+=======
+            this.Staffentry_Sex.TabIndex = 2;
+>>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
             this.Staffentry_Sex.SelectedIndexChanged += new System.EventHandler(this.Staffentry_Sex_SelectedIndexChanged);
             // 
             // StaffentryKana_label
