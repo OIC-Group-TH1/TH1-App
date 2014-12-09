@@ -59,6 +59,7 @@
     <Compile Include="Accountscheck.Designer.cs">
       <DependentUpon>Accountscheck.cs</DependentUpon>
     </Compile>
+    <Compile Include="DBconnection.cs" />
     <Compile Include="Custchangecheck.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,17 +251,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="app.config" />
-    <None Include="globalDBDataSet.xsc">
-      <DependentUpon>globalDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="globalDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>globalDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="globalDBDataSet.xss">
-      <DependentUpon>globalDBDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -42,10 +42,8 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.globalDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.globalDBDataSet = new Sample1.globalDBDataSet();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -140,16 +138,6 @@
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.Width = 80;
             // 
-            // globalDBDataSetBindingSource
-            // 
-            this.globalDBDataSetBindingSource.DataSource = this.globalDBDataSet;
-            this.globalDBDataSetBindingSource.Position = 0;
-            // 
-            // globalDBDataSet
-            // 
-            this.globalDBDataSet.DataSetName = "globalDBDataSet";
-            this.globalDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // reservelist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -164,7 +152,6 @@
             this.Load += new System.EventHandler(this.reservelist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,6 +171,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.BindingSource globalDBDataSetBindingSource;
-        private globalDBDataSet globalDBDataSet;
     }
 }
