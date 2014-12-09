@@ -52,7 +52,6 @@
             this.IOcheckSex_label = new System.Windows.Forms.Label();
             this.IOcheckKana_label = new System.Windows.Forms.Label();
             this.IOcheckName_label = new System.Windows.Forms.Label();
-            this.IOcheckCO_button = new System.Windows.Forms.Button();
             this.IOcheckBack_button = new System.Windows.Forms.Button();
             this.IOcheckCI_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -273,16 +272,6 @@
             this.IOcheckName_label.TabIndex = 43;
             this.IOcheckName_label.Text = "名前";
             // 
-            // IOcheckCO_button
-            // 
-            this.IOcheckCO_button.Location = new System.Drawing.Point(241, 401);
-            this.IOcheckCO_button.Name = "IOcheckCO_button";
-            this.IOcheckCO_button.Size = new System.Drawing.Size(75, 23);
-            this.IOcheckCO_button.TabIndex = 67;
-            this.IOcheckCO_button.Text = "チェックアウト";
-            this.IOcheckCO_button.UseVisualStyleBackColor = true;
-            this.IOcheckCO_button.Click += new System.EventHandler(this.IOcheckCO_button_Click);
-            // 
             // IOcheckBack_button
             // 
             this.IOcheckBack_button.Location = new System.Drawing.Point(360, 401);
@@ -295,11 +284,11 @@
             // 
             // IOcheckCI_button
             // 
-            this.IOcheckCI_button.Location = new System.Drawing.Point(154, 401);
+            this.IOcheckCI_button.Location = new System.Drawing.Point(241, 401);
             this.IOcheckCI_button.Name = "IOcheckCI_button";
             this.IOcheckCI_button.Size = new System.Drawing.Size(75, 23);
             this.IOcheckCI_button.TabIndex = 69;
-            this.IOcheckCI_button.Text = "チェックイン";
+            this.IOcheckCI_button.Text = "会計へ";
             this.IOcheckCI_button.UseVisualStyleBackColor = true;
             this.IOcheckCI_button.Click += new System.EventHandler(this.IOcheckCI_button_Click);
             // 
@@ -310,7 +299,6 @@
             this.ClientSize = new System.Drawing.Size(462, 495);
             this.Controls.Add(this.IOcheckCI_button);
             this.Controls.Add(this.IOcheckBack_button);
-            this.Controls.Add(this.IOcheckCO_button);
             this.Controls.Add(this.IOcheck_Rate);
             this.Controls.Add(this.IOcheck_Number);
             this.Controls.Add(this.IOcheck_Smoke);
@@ -368,7 +356,6 @@
         private System.Windows.Forms.Label IOcheckSex_label;
         private System.Windows.Forms.Label IOcheckKana_label;
         private System.Windows.Forms.Label IOcheckName_label;
-        private System.Windows.Forms.Button IOcheckCO_button;
         private System.Windows.Forms.Button IOcheckBack_button;
         private System.Windows.Forms.Button IOcheckCI_button;
     }

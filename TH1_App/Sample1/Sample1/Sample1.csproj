@@ -96,12 +96,6 @@
       <DependentUpon>Customerlist.cs</DependentUpon>
     </Compile>
     <Compile Include="DBconnection.cs" />
-    <Compile Include="Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
     <Compile Include="globalDBDataSet.cs">
       <DependentUpon>globalDBDataSet.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -209,9 +203,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customerlist.resx">
       <DependentUpon>Customerlist.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SampleDB.resx">
       <DependentUpon>SampleDB.cs</DependentUpon>

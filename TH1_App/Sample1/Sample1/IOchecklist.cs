@@ -14,6 +14,7 @@ namespace Sample1
         public IOchecklist()
         {
             InitializeComponent();
+ 
         }
 
         private void IOchecklistTop_button_Click(object sender, EventArgs e)
@@ -36,5 +37,64 @@ namespace Sample1
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
         }
+
+        private void IOchecklistCI_button_Click(object sender, EventArgs e)
+        {
+            //メッセージダイアログ(YES,NO)の表示
+            DialogResult result = MessageBox.Show("チェックイン処理しますか？", "",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Exclamation,
+                //デフォルトの選択ボタンは「いいえ」で設定
+                MessageBoxDefaultButton.Button2);
+
+            if (result == DialogResult.Yes)
+            {
+                
+                if (dataGridView1.CurrentRow.Cells[6].Value == null)
+                {
+                    //チェックボックスがチェックされる
+                    dataGridView1.CurrentRow.Cells[6].Value = true;
+                }
+                else
+                {
+                    MessageBox.Show("既にチェックイン済みです", "エラー",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                }
+                
+            }
+
+            
+        }
+
+        private void IOchecklistCO_button_Click(object sender, EventArgs e)
+        {
+            //メッセージダイアログ(YES,NO)の表示
+            DialogResult result = MessageBox.Show("チェックアウト処理しますか？", "",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Exclamation,
+                //デフォルトの選択ボタンは「いいえ」で設定
+                MessageBoxDefaultButton.Button2);
+
+            if (result == DialogResult.Yes)
+            {
+                if (dataGridView1.CurrentRow.Cells[7].Value == null)
+                {
+                    //チェックボックスがチェックされる
+                    dataGridView1.CurrentRow.Cells[7].Value = true;
+                }
+                else
+                {
+                    MessageBox.Show("既にチェックイン済みです", "エラー",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                }
+            }
+
+        }
+
+
+
+
     }
 }

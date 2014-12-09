@@ -25,8 +25,8 @@ namespace Sample1
 
         private void CustomercheckYes_button_Click(object sender, EventArgs e)
         {
-            Customerlist Custlist = new Customerlist();
-            Custlist.Show();
+            Customer Cust = new Customer();
+            Cust.Show();
             this.Close();
         }
 
