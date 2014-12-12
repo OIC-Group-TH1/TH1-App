@@ -11,6 +11,12 @@ namespace Sample1
 {
     public partial class IOchecklist : Form
     {
+
+        //public string IO_r_code;
+        //public string IO_r_no;
+        //public string IO_c_name;
+        //public string IO_c_tel;
+
         public IOchecklist()
         {
             InitializeComponent();
@@ -26,6 +32,12 @@ namespace Sample1
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            //情報の取得(これをselect文で検索し、IOcheck情報をで)
+            //IO_r_code = (string)dataGridView1.CurrentRow.Cells[8].Value;
+            //IO_r_no = (string)dataGridView1.CurrentRow.Cells[0].Value;
+            //IO_c_name = (string)dataGridView1.CurrentRow.Cells[3].Value;
+            //IO_c_tel = (string)dataGridView1.CurrentRow.Cells[5].Value;
+
             IOcheck IOche = new IOcheck();
             IOche.Show();
             this.Close();
@@ -36,6 +48,13 @@ namespace Sample1
             //セルを行として管理
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
+
+            //サンプルデータ
+            for (int i = 0; i < 5; i++)
+            {
+                dataGridView1.Rows.Add();
+                dataGridView1.Rows[i].Cells[0].Value = 1234;
+            }
         }
 
         private void IOchecklistCI_button_Click(object sender, EventArgs e)
