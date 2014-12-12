@@ -51,12 +51,6 @@ namespace Sample1
             {
                 //データベースファイルオープン
                 scn.Open();
-                char[] chararray = new char[5];
-                chararray[0] = 'R';
-                chararray[1] = '0';
-                chararray[2] = '0';
-                chararray[3] = '0';
-                chararray[4] = '1';
                 string name = Customercheck_Name.Text;
                 string kana = Customercheck_Kana.Text;
                 string sex = Customercheck_Sex.Text;
@@ -67,7 +61,6 @@ namespace Sample1
 
                 SqlCommand scm = new SqlCommand
                     ("insert into STAFF_TABLE values ("
-                        + "'" + chararray +"',"
                         + "'" + name + "',"
                         + "'" + kana + "',"
                         + "'" + sex + "',"

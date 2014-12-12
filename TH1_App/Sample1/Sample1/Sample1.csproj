@@ -96,12 +96,6 @@
       <DependentUpon>Customerlist.cs</DependentUpon>
     </Compile>
     <Compile Include="Logic.cs" />
-    <Compile Include="SampleDB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SampleDB.Designer.cs">
-      <DependentUpon>SampleDB.cs</DependentUpon>
-    </Compile>
     <Compile Include="IOcheck.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,9 +187,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customerlist.resx">
       <DependentUpon>Customerlist.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SampleDB.resx">
-      <DependentUpon>SampleDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IOcheck.resx">
       <DependentUpon>IOcheck.cs</DependentUpon>
