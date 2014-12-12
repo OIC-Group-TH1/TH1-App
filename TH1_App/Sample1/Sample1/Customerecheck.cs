@@ -6,27 +6,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-<<<<<<< HEAD
 using System.Data.SqlClient;
-=======
->>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
 
 namespace Sample1
 {
     public partial class Customerecheck : Form
     {
-<<<<<<< HEAD
         Customerentry Customerentry_main;
 
         public Customerecheck()
-=======
-        public Customerecheck()
-        {
-            InitializeComponent();
-        }
-
-        private void CustomercheckNo_button_Click(object sender, EventArgs e)
->>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
         {
             InitializeComponent();
         }
@@ -105,17 +93,5 @@ namespace Sample1
             Custlist.Show();
             this.Close();
         }
-
-<<<<<<< HEAD
-        
-=======
-        private void CustomercheckYes_button_Click(object sender, EventArgs e)
-        {
-            Customer Cust = new Customer();
-            Cust.Show();
-            this.Close();
-        }
-
->>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
     }
 }

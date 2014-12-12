@@ -59,7 +59,6 @@
     <Compile Include="Accountscheck.Designer.cs">
       <DependentUpon>Accountscheck.cs</DependentUpon>
     </Compile>
-    <Compile Include="DBconnection.cs" />
     <Compile Include="Custchangecheck.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,16 +94,6 @@
     </Compile>
     <Compile Include="Customerlist.Designer.cs">
       <DependentUpon>Customerlist.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DBconnection.cs" />
-    <Compile Include="globalDBDataSet.cs">
-      <DependentUpon>globalDBDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="globalDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>globalDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Logic.cs" />
     <Compile Include="SampleDB.cs">

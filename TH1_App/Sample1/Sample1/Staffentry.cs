@@ -43,7 +43,6 @@ namespace Sample1
 
         private void StaffentryEntry_button_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
                 name = Staffentry_Name.Text;
                 kana = Staffentry_Kana.Text;
                 sex = Staffentry_Sex.SelectedItem.ToString();
@@ -53,41 +52,6 @@ namespace Sample1
                 mail = Staffentry_Mail.Text;
                 day = Staffentry_Day.Text;
                 address = Staffentry_Address.Text;
-=======
-            System.Data.SqlClient.SqlConnection scn
-                   = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
-            try
-            {
-                //データベースファイルオープン
-                scn.Open();
-                char[] chararray = new char[6];
-                chararray[0] = 'S';
-                chararray[1] = '0';
-                chararray[2] = '0';
-                chararray[3] = '0';
-                chararray[4] = '0';
-                chararray[5] = '1';
-                string name = Staffentry_Name.Text;
-                Boolean sex = Convert.ToBoolean(Staffentry_Sex.SelectedIndex);
-                string age = Staffentry_Age.Text;
-                string position = Staffentry_Position.Text;
-                string tel = Staffentry_Tel.Text;
-                string mail = Staffentry_Mail.Text;
-                string day = Staffentry_Day.Text;
-                string address = Staffentry_Address.Text;
-
-                SqlCommand scm = new SqlCommand
-                    ("insert into TBL_STAFF values ("
-                        + "'" + chararray + "',"
-                        + "'" + name + "',"
-                        + "'" + sex + "',"
-                        + "'" + age + "',"
-                        + "'" + position + "',"
-                        + "'" + tel + "',"
-                        + "'" + mail + "',"
-                        + "'" + day + "',"
-                        + "'" + address + "')", scn);
->>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
 
             Staffcheck Scheck = new Staffcheck(this);
             Scheck.Show();

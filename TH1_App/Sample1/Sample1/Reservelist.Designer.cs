@@ -33,8 +33,6 @@
             this.ReservelistBack_button = new System.Windows.Forms.Button();
             this.ReservelistTop_button = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.globalDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.globalDBDataSet = new Sample1.globalDBDataSet();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,11 +41,8 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-<<<<<<< HEAD
             this.予約コード = new System.Windows.Forms.DataGridViewTextBoxColumn();
-=======
             this.globalDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
->>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -90,31 +85,15 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
-<<<<<<< HEAD
             this.dataGridViewTextBoxColumn8,
             this.予約コード});
-            this.dataGridView1.DataSource = this.globalDBDataSetBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(33, 87);
-=======
-            this.dataGridViewTextBoxColumn8});
-            this.dataGridView1.Location = new System.Drawing.Point(21, 90);
->>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
             this.dataGridView1.Size = new System.Drawing.Size(702, 183);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // globalDBDataSetBindingSource
-            // 
-            this.globalDBDataSetBindingSource.DataSource = this.globalDBDataSet;
-            this.globalDBDataSetBindingSource.Position = 0;
-            // 
-            // globalDBDataSet
-            // 
-            this.globalDBDataSet.DataSetName = "globalDBDataSet";
-            this.globalDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -161,15 +140,12 @@
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.Width = 80;
             // 
-<<<<<<< HEAD
             // 予約コード
             // 
             this.予約コード.HeaderText = "予約コード";
             this.予約コード.Name = "予約コード";
             this.予約コード.Visible = false;
             // 
-=======
->>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
             // reservelist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -195,7 +171,6 @@
         private System.Windows.Forms.Button ReservelistTop_button;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource globalDBDataSetBindingSource;
-        private globalDBDataSet globalDBDataSet;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -204,10 +179,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-<<<<<<< HEAD
         private System.Windows.Forms.DataGridViewTextBoxColumn 予約コード;
-=======
-        private System.Windows.Forms.BindingSource globalDBDataSetBindingSource;
->>>>>>> 4d88baa77b7dfa15966796c051838df109c6fa61
     }
 }
