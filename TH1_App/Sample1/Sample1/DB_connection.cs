@@ -8,7 +8,7 @@ namespace Sample1
     //接続用クラス
     class DBconnection
     {
-        //データベース接続変数　ＳＣＮ
+        //データベース接続変数　SCN
         System.Data.SqlClient.SqlConnection scn
                = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
 
@@ -21,7 +21,7 @@ namespace Sample1
             }
             catch (Exception ex)
             {
-
+                
             }
         }
 

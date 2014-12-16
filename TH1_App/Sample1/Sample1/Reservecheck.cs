@@ -64,14 +64,8 @@ namespace Sample1
                  //               scn.Close();
                  //           }
 
-                 //   }
-                 //       //できなかったらクローズしてエラー
-                 //   catch (Exception ex)
-                 //   {
-                 //       //データベースファイルクローズ
-                 //       scn.Close();
-                 //       MessageBox.Show(ex.Message, "エラー");
-                 //   }
+                 //   } 
+                 
                 
         }
 
