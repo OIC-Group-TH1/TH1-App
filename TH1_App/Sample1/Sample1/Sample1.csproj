@@ -132,6 +132,7 @@
     <Compile Include="Reservelist.Designer.cs">
       <DependentUpon>Reservelist.cs</DependentUpon>
     </Compile>
+    <Compile Include="Staff.cs" />
     <Compile Include="Staffchange.cs">
       <SubType>Form</SubType>
     </Compile>

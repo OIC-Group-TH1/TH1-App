@@ -42,6 +42,36 @@ namespace Sample1
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
 
+            //SQL Serverからリストを取得
+            //
+            // System.Data.SqlClient.SqlConnection scn
+            //   = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+
+            // try
+            //{
+            //    //データベースファイルオープン
+            //    scn.Open();
+            //    SqlCommand command = new SqlCommand();
+            //    command.CommandText = "SELECT * FROM TBL_CLIENT WHERE ";
+            //    // SQLを実行
+            //    SqlDataReader reader = command.ExecuteReader();
+            //    while (reader.Read())
+            //        {
+            //            string id = (string)reader.GetValue(0);
+            //            string name = (string)reader.GetValue(1);
+            //            scn.Close();
+            //        }
+
+            //}
+
+            //catch (Exception ex)
+            //{
+            //    //データベースファイルクローズ
+            //    scn.Close();
+            //    MessageBox.Show(ex.Message, "エラー");
+            //}
+
+
             //行の追加（TEST用）↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓★後で消す
             // DataGridViewの行追加
             dataGridView1.Rows.Add();//一回書く事で項目が一行ずつ増える
@@ -101,33 +131,7 @@ namespace Sample1
                 c_name = (string)dataGridView1.CurrentRow.Cells[3].Value;
                 c_tel = (string)dataGridView1.CurrentRow.Cells[5].Value;
                 
-                 // //データベースからの取得
-                 // System.Data.SqlClient.SqlConnection scn
-                 //   = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
-                
-                 // try
-                 //{
-                 //    //データベースファイルオープン
-                 //    scn.Open();
-                 //    SqlCommand command = new SqlCommand();
-                 //    command.CommandText = "SELECT * FROM TBL_CLIENT WHERE ";
-                 //    // SQLを実行
-                 //    SqlDataReader reader = command.ExecuteReader();
-                 //    while (reader.Read())
-                 //        {
-                 //            string id = (string)reader.GetValue(0);
-                 //            string name = (string)reader.GetValue(1);
-                 //            scn.Close();
-                 //        }
-
-                 //}
-
-                 //catch (Exception ex)
-                 //{
-                 //    //データベースファイルクローズ
-                 //    scn.Close();
-                 //    MessageBox.Show(ex.Message, "エラー");
-                 //}
+                 
                  
 
 

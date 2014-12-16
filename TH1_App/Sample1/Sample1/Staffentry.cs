@@ -12,17 +12,7 @@ namespace Sample1
 {
     public partial class Staffentry : Form
     {
-        public string name;
-        public string kana;
-        public string sex;
-        public string age;
-        public string position;
-        public string tel;
-        public string mail;
-        public string day;
-        public string address;
-
-        public Staffentry()
+         public Staffentry()
         {
             InitializeComponent();
         }
@@ -43,19 +33,19 @@ namespace Sample1
 
         private void StaffentryEntry_button_Click(object sender, EventArgs e)
         {
-                name = Staffentry_Name.Text;
-                kana = Staffentry_Kana.Text;
-                sex = Staffentry_Sex.SelectedItem.ToString();
-                age = Staffentry_Age.Text;
-                position = Staffentry_Position.Text;
-                tel = Staffentry_Tel.Text;
-                mail = Staffentry_Mail.Text;
-                day = Staffentry_Day.Text;
-                address = Staffentry_Address.Text;
+                Staff.NAME = Staffentry_Name.Text;
+                Staff.KANA = Staffentry_Kana.Text;
+                Staff.SEX = Staffentry_Sex.SelectedItem.ToString();
+                Staff.AGE = Staffentry_Age.Text;
+                Staff.POSITION = Staffentry_Position.Text;
+                Staff.TEL = Staffentry_Tel.Text;
+                Staff.MAIL = Staffentry_Mail.Text;
+                Staff.DAY = Staffentry_Day.Text;
+                Staff.ADDRESS = Staffentry_Address.Text;
 
             Staffcheck Scheck = new Staffcheck(this,"Staffentry");
             Scheck.Show();
-            this.Close();
+            this.Hide();
            
         }
 

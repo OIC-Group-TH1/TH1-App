@@ -77,8 +77,7 @@ namespace Sample1
             {
                 //データベースファイルクローズ
                 scn.Close();                
-            }*/
-                
+            }*/                
         }
 
         private void CustomerentryKana_label2_Click(object sender, EventArgs e)
