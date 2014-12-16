@@ -29,8 +29,11 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.StafflistEntry_button = new System.Windows.Forms.Button();
+            this.StafflistTop_button = new System.Windows.Forms.Button();
             this.Stafflist_Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stafflist_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stafflist_Kana = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stafflist_Sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stafflist_age = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stafflist_Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,8 +41,6 @@
             this.Stafflist_Mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stafflist_Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stafflist_Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StafflistEntry_button = new System.Windows.Forms.Button();
-            this.StafflistTop_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,6 +50,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Stafflist_Code,
             this.Stafflist_Name,
+            this.Stafflist_Kana,
             this.Stafflist_Sex,
             this.Stafflist_age,
             this.Stafflist_Position,
@@ -56,12 +58,32 @@
             this.Stafflist_Mail,
             this.Stafflist_Day,
             this.Stafflist_Address});
-            this.dataGridView1.Location = new System.Drawing.Point(1, 87);
+            this.dataGridView1.Location = new System.Drawing.Point(1, 77);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(818, 220);
+            this.dataGridView1.Size = new System.Drawing.Size(940, 220);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // StafflistEntry_button
+            // 
+            this.StafflistEntry_button.Location = new System.Drawing.Point(527, 358);
+            this.StafflistEntry_button.Name = "StafflistEntry_button";
+            this.StafflistEntry_button.Size = new System.Drawing.Size(75, 23);
+            this.StafflistEntry_button.TabIndex = 1;
+            this.StafflistEntry_button.Text = "登録";
+            this.StafflistEntry_button.UseVisualStyleBackColor = true;
+            this.StafflistEntry_button.Click += new System.EventHandler(this.StafflistEntry_button_Click);
+            // 
+            // StafflistTop_button
+            // 
+            this.StafflistTop_button.Location = new System.Drawing.Point(734, 358);
+            this.StafflistTop_button.Name = "StafflistTop_button";
+            this.StafflistTop_button.Size = new System.Drawing.Size(75, 23);
+            this.StafflistTop_button.TabIndex = 4;
+            this.StafflistTop_button.Text = "Topへ";
+            this.StafflistTop_button.UseVisualStyleBackColor = true;
+            this.StafflistTop_button.Click += new System.EventHandler(this.StafflistTop_button_Click);
             // 
             // Stafflist_Code
             // 
@@ -73,6 +95,11 @@
             // 
             this.Stafflist_Name.HeaderText = "名前";
             this.Stafflist_Name.Name = "Stafflist_Name";
+            // 
+            // Stafflist_Kana
+            // 
+            this.Stafflist_Kana.HeaderText = "フリガナ";
+            this.Stafflist_Kana.Name = "Stafflist_Kana";
             // 
             // Stafflist_Sex
             // 
@@ -113,36 +140,16 @@
             this.Stafflist_Address.HeaderText = "住所";
             this.Stafflist_Address.Name = "Stafflist_Address";
             // 
-            // StafflistEntry_button
-            // 
-            this.StafflistEntry_button.Location = new System.Drawing.Point(527, 358);
-            this.StafflistEntry_button.Name = "StafflistEntry_button";
-            this.StafflistEntry_button.Size = new System.Drawing.Size(75, 23);
-            this.StafflistEntry_button.TabIndex = 1;
-            this.StafflistEntry_button.Text = "登録";
-            this.StafflistEntry_button.UseVisualStyleBackColor = true;
-            this.StafflistEntry_button.Click += new System.EventHandler(this.StafflistEntry_button_Click);
-            // 
-            // StafflistTop_button
-            // 
-            this.StafflistTop_button.Location = new System.Drawing.Point(734, 358);
-            this.StafflistTop_button.Name = "StafflistTop_button";
-            this.StafflistTop_button.Size = new System.Drawing.Size(75, 23);
-            this.StafflistTop_button.TabIndex = 4;
-            this.StafflistTop_button.Text = "Topへ";
-            this.StafflistTop_button.UseVisualStyleBackColor = true;
-            this.StafflistTop_button.Click += new System.EventHandler(this.StafflistTop_button_Click);
-            // 
             // Stafflist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 460);
+            this.ClientSize = new System.Drawing.Size(972, 467);
             this.Controls.Add(this.StafflistTop_button);
             this.Controls.Add(this.StafflistEntry_button);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Stafflist";
-            this.Text = "fff";
+            this.Text = "Staflist";
             this.Load += new System.EventHandler(this.Stafflist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -152,8 +159,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button StafflistEntry_button;
+        private System.Windows.Forms.Button StafflistTop_button;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stafflist_Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stafflist_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stafflist_Kana;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stafflist_Sex;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stafflist_age;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stafflist_Position;
@@ -161,7 +171,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Stafflist_Mail;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stafflist_Day;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stafflist_Address;
-        private System.Windows.Forms.Button StafflistEntry_button;
-        private System.Windows.Forms.Button StafflistTop_button;
     }
 }

@@ -13,7 +13,8 @@ namespace Sample1
     public partial class Staffcheck : Form
     {
         string _form_name;
-        Staffentry Staffentry_main;
+        Staffentry _Staffentry;
+        Staffchange _Staffchange;
 
         public Staffcheck()
         {
@@ -26,26 +27,50 @@ namespace Sample1
             _form_name = form_name;
         }
 
-        //form_nameに移動前のフォーム名を入力
+        //社員登録（Staffentry）から
         public Staffcheck(Staffentry form, string form_name)
         {
             InitializeComponent();
             _form_name = form_name; //画面判定用の簡易な変数
-            Staffentry_main = form;
+            _Staffentry = form;
+        }
+        //社員変更（Staffchange）から
+        public Staffcheck(Staffchange form, string form_name)
+        {
+            InitializeComponent();
+            _form_name = form_name; //画面判定用の簡易な変数
+            _Staffchange = form;
         }
 
         private void Staffcheck_Load(object sender, EventArgs e)
         {
-
-            //Staffcheck_Name.Text = Staffentry_main.name;
-            //Staffcheck_Kana.Text = Staffentry_main.kana;
-            //Staffcheck_Sex.Text = Staffentry_main.sex;
-            //Staffcheck_Age.Text = Staffentry_main.age;
-            //Staffcheck_Position.Text = Staffentry_main.position;
-            //Staffcheck_Tel.Text = Staffentry_main.tel;
-            //Staffcheck_Mail.Text = Staffentry_main.mail;
-            //Staffcheck_Day.Text = Staffentry_main.day;
-            //Staffcheck_Address.Text = Staffentry_main.address;
+            //社員登録（Staffentry）からのデータを表示
+            if (_form_name == "Staffentry")
+            {
+                Staffcheck_Name.Text = Staff.NAME;
+                Staffcheck_Kana.Text = Staff.KANA;
+                Staffcheck_Sex.Text = Staff.SEX;
+                Staffcheck_Age.Text = Staff.AGE;
+                Staffcheck_Position.Text = Staff.POSITION;
+                Staffcheck_Tel.Text = Staff.TEL;
+                Staffcheck_Mail.Text = Staff.MAIL;
+                Staffcheck_Day.Text = Staff.DAY;
+                Staffcheck_Address.Text = Staff.ADDRESS;
+            }
+            //社員変更（Staffchange）からのデータを表示
+            else if (_form_name == "Staffchange")
+            {
+                Staffcheck_Name.Text = Staff.NAME;
+                Staffcheck_Kana.Text = Staff.KANA;
+                Staffcheck_Sex.Text = Staff.SEX;
+                Staffcheck_Age.Text = Staff.AGE;
+                Staffcheck_Position.Text = Staff.POSITION;
+                Staffcheck_Tel.Text = Staff.TEL;
+                Staffcheck_Mail.Text = Staff.MAIL;
+                Staffcheck_Day.Text = Staff.DAY;
+                Staffcheck_Address.Text = Staff.ADDRESS;
+            
+            }
         }
         private void StaffcheckYes_button_Click(object sender, EventArgs e)
         {
@@ -91,19 +116,21 @@ namespace Sample1
             Stafflist Scheckok = new Stafflist();
             Scheckok.Show();
             this.Close();
+            _Staffentry.Close();    //Hide状態の登録画面（Staffentry）を閉じる
+            _Staffchange.Close();   //Hide状態の変更画面（Staffchange）を閉じる
         }
 
         private void StaffcheckNo_button_Click(object sender, EventArgs e)
         {
             if (_form_name == "Staffentry")
             {
-                Staffentry Scheckno = new Staffentry();
-                Scheckno.Show();
+                _Staffentry.Show();
+                
             }
             else if (_form_name == "Staffchange")
             {
-                Staffchange Schange = new Staffchange();
-                Schange.Show();
+                _Staffchange.Show();
+                
             }
             else
             {

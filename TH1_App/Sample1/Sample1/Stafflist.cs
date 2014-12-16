@@ -60,23 +60,26 @@ namespace Sample1
             dataGridView1.Rows.Add();
             dataGridView1.Rows[0].Cells[0].Value = "S0001";
             dataGridView1.Rows[0].Cells[1].Value = "藤田知樹";
-            dataGridView1.Rows[0].Cells[2].Value = "男";
-            dataGridView1.Rows[0].Cells[3].Value = "24";
-            dataGridView1.Rows[0].Cells[4].Value = "Y01";
-            dataGridView1.Rows[0].Cells[5].Value = "0611112222";
-            dataGridView1.Rows[0].Cells[6].Value = "tomokilove@hotmail.com";
-            dataGridView1.Rows[0].Cells[7].Value = "20140401";
-            dataGridView1.Rows[0].Cells[8].Value = "山口県";
+            dataGridView1.Rows[0].Cells[2].Value = "フジタトモキ";
+            dataGridView1.Rows[0].Cells[3].Value = "男";
+            dataGridView1.Rows[0].Cells[4].Value = "24";
+            dataGridView1.Rows[0].Cells[5].Value = "Y01";
+            dataGridView1.Rows[0].Cells[6].Value = "0611112222";
+            dataGridView1.Rows[0].Cells[7].Value = "tomokilove@hotmail.com";
+            dataGridView1.Rows[0].Cells[8].Value = "20140401";
+            dataGridView1.Rows[0].Cells[9].Value = "山口県";
+
 
             dataGridView1.Rows[1].Cells[0].Value = "S0002";
             dataGridView1.Rows[1].Cells[1].Value = "古川康";
-            dataGridView1.Rows[1].Cells[2].Value = "男";
-            dataGridView1.Rows[1].Cells[3].Value = "24";
-            dataGridView1.Rows[1].Cells[4].Value = "Y02";
-            dataGridView1.Rows[1].Cells[5].Value = "0611134222";
-            dataGridView1.Rows[1].Cells[6].Value = "furukawalove@hotmail.com";
-            dataGridView1.Rows[1].Cells[7].Value = "20130401";
-            dataGridView1.Rows[1].Cells[8].Value = "奈良県";
+            dataGridView1.Rows[1].Cells[2].Value = "フルカワヤスシ";
+            dataGridView1.Rows[1].Cells[3].Value = "男";
+            dataGridView1.Rows[1].Cells[4].Value = "24";
+            dataGridView1.Rows[1].Cells[5].Value = "Y02";
+            dataGridView1.Rows[1].Cells[6].Value = "0611134222";
+            dataGridView1.Rows[1].Cells[7].Value = "furukawalove@hotmail.com";
+            dataGridView1.Rows[1].Cells[8].Value = "20130401";
+            dataGridView1.Rows[1].Cells[9].Value = "奈良県";
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -84,9 +87,24 @@ namespace Sample1
             //宿泊者セルのデータがある場合
             if (dataGridView1.CurrentRow.Cells[0].Value != null)
             {
+                //DataGridViewの各セルのデータを取得
+                
+                Staff.CODE = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                Staff.NAME = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                Staff.KANA = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                Staff.SEX = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                Staff.AGE = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                Staff.POSITION = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                Staff.TEL = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                Staff.MAIL = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                Staff.DAY = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+                Staff.ADDRESS = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+
+
+
                 //社員変更画面を表示
                 //String StaffInform = this.dataGridView1.
-                Staffchange Schange = new Staffchange();
+                Staffchange Schange = new Staffchange(this);
                 Schange.Show();
                 this.Close();
             }
