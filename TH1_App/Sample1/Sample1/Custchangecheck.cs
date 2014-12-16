@@ -20,5 +20,15 @@ namespace Sample1
         {
 
         }
+
+        private void CustchangecheckOk_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CustchangecheckNo_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
