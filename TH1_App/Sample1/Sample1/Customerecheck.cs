@@ -57,7 +57,7 @@ namespace Sample1
                 string tel = Customercheck_Tel.Text;
                 string post = Customercheck_Post.Text;
                 string address = Customercheck_Address.Text;
-                string note = Customercheck_Note.Text;
+                string note = Customercheck_Note.Text;                
 
                 SqlCommand scm = new SqlCommand
                     ("insert into STAFF_TABLE values ("
@@ -67,7 +67,7 @@ namespace Sample1
                         + "'" + tel + "',"
                         + "'" + post + "',"
                         + "'" + address + "',"
-                        + "'" + note + "," + ") 'a','a'", scn);
+                        + "'" + note + "'" + ")", scn);
 
                 scm.ExecuteNonQuery();
                 scn.Close();

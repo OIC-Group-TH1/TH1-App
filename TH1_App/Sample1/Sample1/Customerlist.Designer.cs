@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Customerlist_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Customerlist_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Customerlist_Kana = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Customerlist_Sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Customerlist_Tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Customerlist_Post = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Customerlist_Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerlistSearch_button = new System.Windows.Forms.Button();
             this.CustomerlistEntry_button = new System.Windows.Forms.Button();
             this.CustomerlistBack_button = new System.Windows.Forms.Button();
@@ -44,6 +37,14 @@
             this.CustomerlistTel_label = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Customerlist_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Customerlist_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Customerlist_Kana = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Customerlist_Sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Customerlist_Tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Customerlist_Post = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Customerlist_Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Customerlist_note = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,50 +58,14 @@
             this.Customerlist_Sex,
             this.Customerlist_Tel,
             this.Customerlist_Post,
-            this.Customerlist_Address});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 67);
+            this.Customerlist_Address,
+            this.Customerlist_note});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 58);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(670, 212);
+            this.dataGridView1.Size = new System.Drawing.Size(777, 212);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // Customerlist_No
-            // 
-            this.Customerlist_No.HeaderText = "No";
-            this.Customerlist_No.Name = "Customerlist_No";
-            this.Customerlist_No.Width = 50;
-            // 
-            // Customerlist_name
-            // 
-            this.Customerlist_name.HeaderText = "名前";
-            this.Customerlist_name.Name = "Customerlist_name";
-            // 
-            // Customerlist_Kana
-            // 
-            this.Customerlist_Kana.HeaderText = "ふりがな";
-            this.Customerlist_Kana.Name = "Customerlist_Kana";
-            // 
-            // Customerlist_Sex
-            // 
-            this.Customerlist_Sex.HeaderText = "性別";
-            this.Customerlist_Sex.Name = "Customerlist_Sex";
-            this.Customerlist_Sex.Width = 80;
-            // 
-            // Customerlist_Tel
-            // 
-            this.Customerlist_Tel.HeaderText = "電話番号";
-            this.Customerlist_Tel.Name = "Customerlist_Tel";
-            // 
-            // Customerlist_Post
-            // 
-            this.Customerlist_Post.HeaderText = "郵便番号";
-            this.Customerlist_Post.Name = "Customerlist_Post";
-            // 
-            // Customerlist_Address
-            // 
-            this.Customerlist_Address.HeaderText = "住所";
-            this.Customerlist_Address.Name = "Customerlist_Address";
             // 
             // CustomerlistSearch_button
             // 
@@ -110,6 +75,7 @@
             this.CustomerlistSearch_button.TabIndex = 1;
             this.CustomerlistSearch_button.Text = "検索";
             this.CustomerlistSearch_button.UseVisualStyleBackColor = true;
+            this.CustomerlistSearch_button.Click += new System.EventHandler(this.CustomerlistSearch_button_Click);
             // 
             // CustomerlistEntry_button
             // 
@@ -173,11 +139,53 @@
             this.textBox2.Size = new System.Drawing.Size(100, 19);
             this.textBox2.TabIndex = 8;
             // 
+            // Customerlist_No
+            // 
+            this.Customerlist_No.HeaderText = "No";
+            this.Customerlist_No.Name = "Customerlist_No";
+            this.Customerlist_No.Width = 50;
+            // 
+            // Customerlist_name
+            // 
+            this.Customerlist_name.HeaderText = "名前";
+            this.Customerlist_name.Name = "Customerlist_name";
+            // 
+            // Customerlist_Kana
+            // 
+            this.Customerlist_Kana.HeaderText = "ふりがな";
+            this.Customerlist_Kana.Name = "Customerlist_Kana";
+            // 
+            // Customerlist_Sex
+            // 
+            this.Customerlist_Sex.HeaderText = "性別";
+            this.Customerlist_Sex.Name = "Customerlist_Sex";
+            this.Customerlist_Sex.Width = 80;
+            // 
+            // Customerlist_Tel
+            // 
+            this.Customerlist_Tel.HeaderText = "電話番号";
+            this.Customerlist_Tel.Name = "Customerlist_Tel";
+            // 
+            // Customerlist_Post
+            // 
+            this.Customerlist_Post.HeaderText = "郵便番号";
+            this.Customerlist_Post.Name = "Customerlist_Post";
+            // 
+            // Customerlist_Address
+            // 
+            this.Customerlist_Address.HeaderText = "住所";
+            this.Customerlist_Address.Name = "Customerlist_Address";
+            // 
+            // Customerlist_note
+            // 
+            this.Customerlist_note.HeaderText = "備考";
+            this.Customerlist_note.Name = "Customerlist_note";
+            // 
             // Customerlist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 489);
+            this.ClientSize = new System.Drawing.Size(813, 489);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.CustomerlistTel_label);
@@ -199,13 +207,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_No;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_Kana;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_Sex;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_Tel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_Post;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_Address;
         private System.Windows.Forms.Button CustomerlistSearch_button;
         private System.Windows.Forms.Button CustomerlistEntry_button;
         private System.Windows.Forms.Button CustomerlistBack_button;
@@ -214,5 +215,13 @@
         private System.Windows.Forms.Label CustomerlistTel_label;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_No;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_Kana;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_Sex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_Tel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_Post;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_note;
     }
 }

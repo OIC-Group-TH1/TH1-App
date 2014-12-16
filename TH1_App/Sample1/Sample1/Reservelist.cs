@@ -83,7 +83,7 @@ namespace Sample1
 
         public void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            //宿泊者セルのデータがある場合
+            //宿泊者セルのデータがない場合
             if (dataGridView1.CurrentRow.Cells[3].Value == null)
             {
                 //顧客一覧を表示
@@ -91,7 +91,7 @@ namespace Sample1
                 Clist.Show();
                 this.Close();
             }
-            //宿泊者セルのデータがない場合
+            //宿泊者セルのデータがある場合
             else if (dataGridView1.CurrentRow.Cells[3].Value != null)
             {
 
@@ -99,35 +99,35 @@ namespace Sample1
                 r_code = (string)dataGridView1.CurrentRow.Cells[0].Value;
                 c_name = (string)dataGridView1.CurrentRow.Cells[3].Value;
                 c_tel = (string)dataGridView1.CurrentRow.Cells[5].Value;
-                /*
-                 * //データベースからの取得
-                  System.Data.SqlClient.SqlConnection scn
-                    = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
                 
-                  try
-                 {
-                     //データベースファイルオープン
-                     scn.Open();
-                     SqlCommand command = new SqlCommand();
-                     command.CommandText = "SELECT * FROM TBL_CLIENT WHERE ";
-                     // SQLを実行
-                     SqlDataReader reader = command.ExecuteReader();
-                     while (reader.Read())
-                         {
-                             string id = (string)reader.GetValue(0);
-                             string name = (string)reader.GetValue(1);
-                             scn.Close();
-                         }
+                 // //データベースからの取得
+                 // System.Data.SqlClient.SqlConnection scn
+                 //   = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+                
+                 // try
+                 //{
+                 //    //データベースファイルオープン
+                 //    scn.Open();
+                 //    SqlCommand command = new SqlCommand();
+                 //    command.CommandText = "SELECT * FROM TBL_CLIENT WHERE ";
+                 //    // SQLを実行
+                 //    SqlDataReader reader = command.ExecuteReader();
+                 //    while (reader.Read())
+                 //        {
+                 //            string id = (string)reader.GetValue(0);
+                 //            string name = (string)reader.GetValue(1);
+                 //            scn.Close();
+                 //        }
 
-                 }
+                 //}
 
-                 catch (Exception ex)
-                 {
-                     //データベースファイルクローズ
-                     scn.Close();
-                     MessageBox.Show(ex.Message, "エラー");
-                 }
-                 */
+                 //catch (Exception ex)
+                 //{
+                 //    //データベースファイルクローズ
+                 //    scn.Close();
+                 //    MessageBox.Show(ex.Message, "エラー");
+                 //}
+                 
 
 
 

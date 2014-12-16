@@ -181,6 +181,7 @@
             this.CustchangecheckOk_button.TabIndex = 52;
             this.CustchangecheckOk_button.Text = "はい";
             this.CustchangecheckOk_button.UseVisualStyleBackColor = true;
+            this.CustchangecheckOk_button.Click += new System.EventHandler(this.CustchangecheckOk_button_Click);
             // 
             // CustchangecheckNo_button
             // 
@@ -190,6 +191,7 @@
             this.CustchangecheckNo_button.TabIndex = 53;
             this.CustchangecheckNo_button.Text = "いいえ";
             this.CustchangecheckNo_button.UseVisualStyleBackColor = true;
+            this.CustchangecheckNo_button.Click += new System.EventHandler(this.CustchangecheckNo_button_Click);
             // 
             // Message_label
             // 

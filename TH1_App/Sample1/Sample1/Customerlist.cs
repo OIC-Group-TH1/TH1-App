@@ -11,6 +11,15 @@ namespace Sample1
 {
     public partial class Customerlist : Form
     {
+        public int id;
+        public string name;
+        public string kana;
+        public string sex;
+        public string tel;
+        public string post;
+        public string address;
+        public string note;
+
         public Customerlist()
         {
             InitializeComponent();
@@ -38,7 +47,16 @@ namespace Sample1
             if (dataGridView1.CurrentRow.Cells[1].Value != null)
             {
                 //顧客情報を表示
-                Customer Cust = new Customer();
+                id = (int)dataGridView1.CurrentRow.Cells[0].Value;
+                name = (string)dataGridView1.CurrentRow.Cells[1].Value;
+                kana = (string)dataGridView1.CurrentRow.Cells[2].Value;
+                sex = (string)dataGridView1.CurrentRow.Cells[3].Value;
+                tel = (string)dataGridView1.CurrentRow.Cells[4].Value;
+                post = (string)dataGridView1.CurrentRow.Cells[5].Value;
+                address = (string)dataGridView1.CurrentRow.Cells[6].Value;
+                note = (string)dataGridView1.CurrentRow.Cells[7].Value;
+
+                Customer Cust = new Customer(this);
                 Cust.Show();
                 this.Close();
             }
@@ -50,6 +68,11 @@ namespace Sample1
             //セルを行として管理
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
+            //DB接続
+            DBconnection dbcn = new DBconnection();
+            dbcn.DB_connect();
+
+
         }
 
         private void CustomerlistBack_button_Click(object sender, EventArgs e)
@@ -58,6 +81,11 @@ namespace Sample1
             reservelist Rlist = new reservelist();
             Rlist.Show();
             this.Close();
+        }
+
+        private void CustomerlistSearch_button_Click(object sender, EventArgs e)
+        {
+            //検索ボタンの処理
         }
     }
 }

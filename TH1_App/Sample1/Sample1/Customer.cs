@@ -11,11 +11,18 @@ namespace Sample1
 {
     public partial class Customer : Form
     {
+        Customerlist custmerlist_main;
+
         public Customer()
         {
             InitializeComponent();
         }
 
+        public Customer(Customerlist form)
+        {
+            InitializeComponent();
+            custmerlist_main = form;
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -104,7 +111,14 @@ namespace Sample1
 
         private void Customer_Load(object sender, EventArgs e)
         {
-            
+            Customer_Name.Text = custmerlist_main.name;
+            Customer_Kana.Text = custmerlist_main.kana;
+            Customer_Sex.Text = custmerlist_main.sex;
+            Customer_Tel.Text = custmerlist_main.tel;
+            Customer_Post.Text = custmerlist_main.post;
+            Customer_Address.Text = custmerlist_main.address;
+            Customer_Note.Text = custmerlist_main.note;
+
         }
 
         private void CustomerReserve_button_Click(object sender, EventArgs e)
