@@ -53,7 +53,7 @@ namespace Sample1
                 day = Staffentry_Day.Text;
                 address = Staffentry_Address.Text;
 
-            Staffcheck Scheck = new Staffcheck(this);
+            Staffcheck Scheck = new Staffcheck(this,"Staffentry");
             Scheck.Show();
             this.Close();
            
