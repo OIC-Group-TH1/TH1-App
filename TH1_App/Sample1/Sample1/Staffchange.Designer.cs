@@ -159,6 +159,7 @@
             this.StaffchangeBack_button.TabIndex = 25;
             this.StaffchangeBack_button.Text = "戻る";
             this.StaffchangeBack_button.UseVisualStyleBackColor = true;
+            this.StaffchangeBack_button.Click += new System.EventHandler(this.StaffchangeBack_button_Click);
             // 
             // StaffchangeDelete_button
             // 

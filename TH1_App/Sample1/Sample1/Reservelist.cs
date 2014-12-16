@@ -41,8 +41,7 @@ namespace Sample1
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
 
-            //行の追加（TEST用）↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓★後で消して！
-
+            //行の追加（TEST用）↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓★後で消す
             // DataGridViewの行追加
             dataGridView1.Rows.Add();//一回書く事で項目が一行ずつ増える
             dataGridView1.Rows.Add();

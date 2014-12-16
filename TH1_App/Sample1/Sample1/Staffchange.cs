@@ -40,8 +40,15 @@ namespace Sample1
 
         private void StaffchangeOk_button_Click(object sender, EventArgs e)
         {
-            Staffcheck Scheck = new Staffcheck();
+            Staffcheck Scheck = new Staffcheck("Staffchange");
             Scheck.Show();
+            this.Close();
+        }
+
+        private void StaffchangeBack_button_Click(object sender, EventArgs e)
+        {
+            Stafflist Slist = new Stafflist();
+            Slist.Show();
             this.Close();
         }
     }
