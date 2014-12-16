@@ -12,6 +12,7 @@ namespace Sample1
 {
     public partial class Staffcheck : Form
     {
+        string _form_name;
         Staffentry Staffentry_main;
 
         public Staffcheck()
@@ -19,24 +20,32 @@ namespace Sample1
             InitializeComponent();
         }
 
-        public Staffcheck(Staffentry form)
+        public Staffcheck(string form_name)
         {
             InitializeComponent();
+            _form_name = form_name;
+        }
+
+        //form_nameに移動前のフォーム名を入力
+        public Staffcheck(Staffentry form, string form_name)
+        {
+            InitializeComponent();
+            _form_name = form_name; //画面判定用の簡易な変数
             Staffentry_main = form;
         }
 
         private void Staffcheck_Load(object sender, EventArgs e)
         {
 
-            Staffcheck_Name.Text = Staffentry_main.name;
-            Staffcheck_Kana.Text = Staffentry_main.kana;
-            Staffcheck_Sex.Text = Staffentry_main.sex;
-            Staffcheck_Age.Text = Staffentry_main.age;
-            Staffcheck_Position.Text = Staffentry_main.position;
-            Staffcheck_Tel.Text = Staffentry_main.tel;
-            Staffcheck_Mail.Text = Staffentry_main.mail;
-            Staffcheck_Day.Text = Staffentry_main.day;
-            Staffcheck_Address.Text = Staffentry_main.address;
+            //Staffcheck_Name.Text = Staffentry_main.name;
+            //Staffcheck_Kana.Text = Staffentry_main.kana;
+            //Staffcheck_Sex.Text = Staffentry_main.sex;
+            //Staffcheck_Age.Text = Staffentry_main.age;
+            //Staffcheck_Position.Text = Staffentry_main.position;
+            //Staffcheck_Tel.Text = Staffentry_main.tel;
+            //Staffcheck_Mail.Text = Staffentry_main.mail;
+            //Staffcheck_Day.Text = Staffentry_main.day;
+            //Staffcheck_Address.Text = Staffentry_main.address;
         }
         private void StaffcheckYes_button_Click(object sender, EventArgs e)
         {
@@ -86,12 +95,23 @@ namespace Sample1
 
         private void StaffcheckNo_button_Click(object sender, EventArgs e)
         {
-            Staffentry Scheckno = new Staffentry();
-            Scheckno.Show();
+            if (_form_name == "Staffentry")
+            {
+                Staffentry Scheckno = new Staffentry();
+                Scheckno.Show();
+            }
+            else if (_form_name == "Staffchange")
+            {
+                Staffchange Schange = new Staffchange();
+                Schange.Show();
+            }
+            else
+            {
+                Stafflist Slist = new Stafflist();
+                Slist.Show();
+            }
             this.Close();
         }
-
-        
     }
 }
 
