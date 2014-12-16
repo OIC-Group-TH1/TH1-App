@@ -56,14 +56,8 @@ namespace Sample1
                 //データベースファイルオープン
                 scn.Open();
 
-                char[] chararray = new char[6];
-                chararray[0] = 'S';
-                chararray[1] = '0';
-                chararray[2] = '0';
-                chararray[3] = '0';
-                chararray[4] = '0';
-                chararray[5] = '1';
                 string name = Staffcheck_Name.Text;
+                string kana = Staffcheck_Kana.Text;
                 string sex = Staffcheck_Sex.Text;
                 string age = StaffcheckAge_label.Text;
                 string position = Staffcheck_Position.Text;
@@ -73,16 +67,16 @@ namespace Sample1
                 string address = Staffcheck_Address.Text;
 
                 SqlCommand scm = new SqlCommand
-                    ("insert into STAFF_TABLE values ("
-                        + "'" + chararray[0] + "',"
+                    ("insert into TBL_STAFF values ("
                         + "'" + name + "',"
+                        + "'" + kana + "',"
                         + "'" + sex + "',"
                         + "'" + age + "',"
                         + "'" + position + "',"
                         + "'" + tel + "',"
                         + "'" + mail + "',"
                         + "'" + day + "',"
-                        + "'" + address + "," + ")", scn);
+                        + "'" + address + "'" + ")", scn);
 
                 scm.ExecuteNonQuery();
                 scn.Close();

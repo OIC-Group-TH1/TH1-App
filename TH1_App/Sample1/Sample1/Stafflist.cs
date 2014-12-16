@@ -54,6 +54,29 @@ namespace Sample1
             //セルを行として管理
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
+            // DataGridViewの行追加
+            dataGridView1.Rows.Add();//一回書く事で項目が一行ずつ増える
+            dataGridView1.Rows.Add();
+            dataGridView1.Rows.Add();
+            dataGridView1.Rows[0].Cells[0].Value = "S0001";
+            dataGridView1.Rows[0].Cells[1].Value = "藤田知樹";
+            dataGridView1.Rows[0].Cells[2].Value = "男";
+            dataGridView1.Rows[0].Cells[3].Value = "24";
+            dataGridView1.Rows[0].Cells[4].Value = "Y01";
+            dataGridView1.Rows[0].Cells[5].Value = "0611112222";
+            dataGridView1.Rows[0].Cells[6].Value = "tomokilove@hotmail.com";
+            dataGridView1.Rows[0].Cells[7].Value = "20140401";
+            dataGridView1.Rows[0].Cells[8].Value = "山口県";
+
+            dataGridView1.Rows[1].Cells[0].Value = "S0002";
+            dataGridView1.Rows[1].Cells[1].Value = "古川康";
+            dataGridView1.Rows[1].Cells[2].Value = "男";
+            dataGridView1.Rows[1].Cells[3].Value = "24";
+            dataGridView1.Rows[1].Cells[4].Value = "Y02";
+            dataGridView1.Rows[1].Cells[5].Value = "0611134222";
+            dataGridView1.Rows[1].Cells[6].Value = "furukawalove@hotmail.com";
+            dataGridView1.Rows[1].Cells[7].Value = "20130401";
+            dataGridView1.Rows[1].Cells[8].Value = "奈良県";
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -62,6 +85,7 @@ namespace Sample1
             if (dataGridView1.CurrentRow.Cells[0].Value != null)
             {
                 //社員変更画面を表示
+                //String StaffInform = this.dataGridView1.
                 Staffchange Schange = new Staffchange();
                 Schange.Show();
                 this.Close();

@@ -13,7 +13,6 @@ namespace Sample1
     public partial class reservelist : Form
     {
         public string r_code;
-        public string r_no;
         public string c_name;
         public string c_tel;
 
@@ -41,9 +40,8 @@ namespace Sample1
             //セルを行として管理
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
-            
-            //行の追加（TEST用）↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓★後で消して！
 
+            //行の追加（TEST用）↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓★後で消す
             // DataGridViewの行追加
             dataGridView1.Rows.Add();//一回書く事で項目が一行ずつ増える
             dataGridView1.Rows.Add();
@@ -61,16 +59,16 @@ namespace Sample1
 
 
             //セルの数の分色を付ける
-            for(int i = 0 ; i < dataGridView1.RowCount-1; i++)
+            for (int i = 0; i < dataGridView1.RowCount - 1; i++)
             {
                 //仮で色を指定
                 if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "可")
 
-                    this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.YellowGreen;
+                    this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.White;
                 else if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "不可" && dataGridView1.Rows[i].Cells[3].Value == null)
-                    this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.LightSkyBlue;
+                    this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.YellowGreen;
                 else if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "不可")
-                    this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.LightPink;
+                    this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.Gold;
             }
         }
 
@@ -84,7 +82,7 @@ namespace Sample1
 
         public void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            //宿泊者セルのデータがない場合
+            //宿泊者セルのデータがある場合
             if (dataGridView1.CurrentRow.Cells[3].Value == null)
             {
                 //顧客一覧を表示
@@ -92,22 +90,51 @@ namespace Sample1
                 Clist.Show();
                 this.Close();
             }
-            //宿泊者セルのデータがある場合
-           else if (dataGridView1.CurrentRow.Cells[3].Value != null)
-           {
-               
-               //情報の取得(これをselect文で検索し、情報をReservecheckで)
-               r_code = (string)dataGridView1.CurrentRow.Cells[8].Value;
-               r_no = (string)dataGridView1.CurrentRow.Cells[0].Value;
-               c_name = (string)dataGridView1.CurrentRow.Cells[3].Value;
-               c_tel  = (string)dataGridView1.CurrentRow.Cells[5].Value;
-                
+            //宿泊者セルのデータがない場合
+            else if (dataGridView1.CurrentRow.Cells[3].Value != null)
+            {
 
-               //情報を持って予約情報を表示
-               Reservecheck Rcheck = new Reservecheck(this);
-               Rcheck.Show();
-               this.Close();
-               
+                //値の取得(これをselect文で検索し、情報をReservecheckで)
+                r_code = (string)dataGridView1.CurrentRow.Cells[0].Value;
+                c_name = (string)dataGridView1.CurrentRow.Cells[3].Value;
+                c_tel = (string)dataGridView1.CurrentRow.Cells[5].Value;
+                /*
+                 * //データベースからの取得
+                  System.Data.SqlClient.SqlConnection scn
+                    = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+                
+                  try
+                 {
+                     //データベースファイルオープン
+                     scn.Open();
+                     SqlCommand command = new SqlCommand();
+                     command.CommandText = "SELECT * FROM TBL_CLIENT WHERE ";
+                     // SQLを実行
+                     SqlDataReader reader = command.ExecuteReader();
+                     while (reader.Read())
+                         {
+                             string id = (string)reader.GetValue(0);
+                             string name = (string)reader.GetValue(1);
+                             scn.Close();
+                         }
+
+                 }
+
+                 catch (Exception ex)
+                 {
+                     //データベースファイルクローズ
+                     scn.Close();
+                     MessageBox.Show(ex.Message, "エラー");
+                 }
+                 */
+
+
+
+                //情報を持って予約情報を表示
+                Reservecheck Rcheck = new Reservecheck(this);
+                Rcheck.Show();
+                this.Close();
+
 
             }
         }
