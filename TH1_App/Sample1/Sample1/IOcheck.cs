@@ -11,9 +11,16 @@ namespace Sample1
 {
     public partial class IOcheck : Form
     {
+        IOchecklist IOcheck_main;
+
         public IOcheck()
         {
             InitializeComponent();
+        }
+        public IOcheck(IOchecklist form)
+        {
+            InitializeComponent();
+            IOcheck_main = form;
         }
 
         private void IOcheckBack_button_Click(object sender, EventArgs e)
@@ -46,9 +53,9 @@ namespace Sample1
             //       SqlCommand room_command = new SqlCommand();
 
             //       //SQL文の入力
-            //       client_command.CommandText = "SELECT * FROM TBL_CLIENT WHERE CLIENT_NAME = @c_name AND CLIENT_TEL = @c_tel";
-            //       reservation_command.CommandText = "SELECT * FROM TBL_RESERVATION WHERE RESERVATION_CODE = @r_code";
-            //       room_command.CommandText = "SELECT * FROM TBL_ROOM WHERE ROOM_CODE = @r_no";
+            //       client_command.CommandText = "SELECT * FROM TBL_CLIENT WHERE CLIENT_NAME = @IO_c_name AND CLIENT_TEL = @IO_c_tel";
+            //       reservation_command.CommandText = "SELECT * FROM TBL_RESERVATION WHERE RESERVATION_CODE = @IO_r_code";
+            //       room_command.CommandText = "SELECT * FROM TBL_ROOM WHERE ROOM_CODE = @IO_r_no";
 
             //       // SQLを実行
             //       SqlDataReader client_reader = client_command.ExecuteReader();
@@ -57,19 +64,19 @@ namespace Sample1
             //       while (client_reader.Read() & reservation_reader.Read() & room_reader.Read())
             //           {
             //               Reservecheck_Date.Text = (string)reservation_reader.GetValue(1);
-            //               Reservecheck_No.Text = (string)room_reader.GetValue(0);
-            //               Reservecheck_Type.Text = (string)room_reader.GetValue(1);
-            //               Reservecheck_Smoke.Text = (string)room_reader.GetValue(3);
-            //               Reservecheck_Number.Text = (string)reservation_reader.GetValue(3);
-            //               Reservecheck_Value.Text = (string)room_reader.GetValue(2);
+            //               IOcheck_No.Text = (string)room_reader.GetValue(0);
+            //               IOcheck_Type.Text = (string)room_reader.GetValue(1);
+            //               IOcheck_Smoke.Text = (string)room_reader.GetValue(3);
+            //               IOcheck_Number.Text = (string)reservation_reader.GetValue(3);
+            //               IOcheck_Rate.Text = (string)room_reader.GetValue(2);
 
-            //               Reservecheck_Name.Text = (string)client_reader.GetValue(1);
-            //               Reservecheck_Kana.Text = (string)client_reader.GetValue(2);
-            //               Reservecheck_Sex.Text = (string)client_reader.GetValue(3);
-            //               Reservecheck_Tel.Text = (string)client_reader.GetValue(4);
-            //               Reservecheck_Post.Text = (string)client_reader.GetValue(5);
-            //               Reservecheck_Address.Text = (string)client_reader.GetValue(6);
-            //               Reservecheck_Note.Text = (string)client_reader.GetValue(7);
+            //               IOcheck_Name.Text = (string)client_reader.GetValue(1);
+            //               IOcheck_Kana.Text = (string)client_reader.GetValue(2);
+            //               IOcheck_Sex.Text = (string)client_reader.GetValue(3);
+            //               IOcheck_Tel.Text = (string)client_reader.GetValue(4);
+            //               IOcheck_Post.Text = (string)client_reader.GetValue(5);
+            //               IOcheck_Address.Text = (string)client_reader.GetValue(6);
+            //               IOcheck_Note.Text = (string)client_reader.GetValue(7);
 
             //               scn.Close();
             //           }

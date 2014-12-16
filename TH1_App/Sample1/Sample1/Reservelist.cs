@@ -83,7 +83,7 @@ namespace Sample1
 
         public void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            //宿泊者セルのデータがある場合
+            //宿泊者セルのデータがない場合
             if (dataGridView1.CurrentRow.Cells[3].Value == null)
             {
                 //顧客一覧を表示
@@ -91,7 +91,7 @@ namespace Sample1
                 Clist.Show();
                 this.Close();
             }
-            //宿泊者セルのデータがない場合
+            //宿泊者セルのデータがある場合
             else if (dataGridView1.CurrentRow.Cells[3].Value != null)
             {
 

@@ -38,7 +38,8 @@ namespace Sample1
             //IO_c_name = (string)dataGridView1.CurrentRow.Cells[3].Value;
             //IO_c_tel = (string)dataGridView1.CurrentRow.Cells[5].Value;
 
-            IOcheck IOche = new IOcheck();
+            
+            IOcheck IOche = new IOcheck(this);
             IOche.Show();
             this.Close();
         }
