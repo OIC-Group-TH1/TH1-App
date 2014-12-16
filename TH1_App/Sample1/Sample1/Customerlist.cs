@@ -65,6 +65,8 @@ namespace Sample1
 
         private void Customerlist_Load(object sender, EventArgs e)
         {
+            // TODO: このコード行はデータを 'globalDBDataSet.TBL_CLIENT' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.tBL_CLIENTTableAdapter.Fill(this.globalDBDataSet.TBL_CLIENT);
             //セルを行として管理
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;

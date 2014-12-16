@@ -15,6 +15,7 @@ namespace Sample1
         public string r_code;
         public string c_name;
         public string c_tel;
+        public string r_no;
 
 
         public reservelist()
@@ -95,7 +96,8 @@ namespace Sample1
             {
 
                 //値の取得(これをselect文で検索し、情報をReservecheckで)
-                r_code = (string)dataGridView1.CurrentRow.Cells[0].Value;
+                r_code = (string)dataGridView1.CurrentRow.Cells[8].Value;
+                r_no = (string)dataGridView1.CurrentRow.Cells[1].Value;
                 c_name = (string)dataGridView1.CurrentRow.Cells[3].Value;
                 c_tel = (string)dataGridView1.CurrentRow.Cells[5].Value;
                 

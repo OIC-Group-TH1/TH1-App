@@ -37,15 +37,15 @@ namespace Sample1
         private void Staffcheck_Load(object sender, EventArgs e)
         {
 
-            //Staffcheck_Name.Text = Staffentry_main.name;
-            //Staffcheck_Kana.Text = Staffentry_main.kana;
-            //Staffcheck_Sex.Text = Staffentry_main.sex;
-            //Staffcheck_Age.Text = Staffentry_main.age;
-            //Staffcheck_Position.Text = Staffentry_main.position;
-            //Staffcheck_Tel.Text = Staffentry_main.tel;
-            //Staffcheck_Mail.Text = Staffentry_main.mail;
-            //Staffcheck_Day.Text = Staffentry_main.day;
-            //Staffcheck_Address.Text = Staffentry_main.address;
+            Staffcheck_Name.Text = Staffentry_main.name;
+            Staffcheck_Kana.Text = Staffentry_main.kana;
+            Staffcheck_Sex.Text = Staffentry_main.sex;
+            Staffcheck_Age.Text = Staffentry_main.age;
+            Staffcheck_Position.Text = Staffentry_main.position;
+            Staffcheck_Tel.Text = Staffentry_main.tel;
+            Staffcheck_Mail.Text = Staffentry_main.mail;
+            Staffcheck_Day.Text = Staffentry_main.day;
+            Staffcheck_Address.Text = Staffentry_main.address;
         }
         private void StaffcheckYes_button_Click(object sender, EventArgs e)
         {
@@ -59,7 +59,7 @@ namespace Sample1
                 string name = Staffcheck_Name.Text;
                 string kana = Staffcheck_Kana.Text;
                 string sex = Staffcheck_Sex.Text;
-                string age = StaffcheckAge_label.Text;
+                string age = Staffcheck_Age.Text;
                 string position = Staffcheck_Position.Text;
                 string tel = Staffcheck_Tel.Text;
                 string mail = Staffcheck_Mail.Text;
