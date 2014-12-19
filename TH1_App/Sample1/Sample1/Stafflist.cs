@@ -52,36 +52,39 @@ namespace Sample1
         private void Stafflist_Load(object sender, EventArgs e)
         {
             // TODO: このコード行はデータを 'globalDBDataSet.TBL_STAFF' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.tBL_STAFFTableAdapter.Fill(this.globalDBDataSet.TBL_STAFF);
+            this.tBL_STAFFTableAdapter1.Fill(this.globalDBDataSet.TBL_STAFF);
+            // TODO: このコード行はデータを 'globalDBDataSet1.TBL_STAFF' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.tBL_STAFFTableAdapter.Fill(this.globalDBDataSet1.TBL_STAFF);
+            // TODO: このコード行はデータを 'globalDBDataSet.TBL_STAFF' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             //セルを行として管理
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
             // DataGridViewの行追加
-            dataGridView1.Rows.Add();//一回書く事で項目が一行ずつ増える
-            dataGridView1.Rows.Add();
-            dataGridView1.Rows.Add();
-            dataGridView1.Rows[0].Cells[0].Value = "S0001";
-            dataGridView1.Rows[0].Cells[1].Value = "藤田知樹";
-            dataGridView1.Rows[0].Cells[2].Value = "フジタトモキ";
-            dataGridView1.Rows[0].Cells[3].Value = "男";
-            dataGridView1.Rows[0].Cells[4].Value = "24";
-            dataGridView1.Rows[0].Cells[5].Value = "Y01";
-            dataGridView1.Rows[0].Cells[6].Value = "0611112222";
-            dataGridView1.Rows[0].Cells[7].Value = "tomokilove@hotmail.com";
-            dataGridView1.Rows[0].Cells[8].Value = "20140401";
-            dataGridView1.Rows[0].Cells[9].Value = "山口県";
+            //dataGridView1.Rows.Add();//一回書く事で項目が一行ずつ増える
+            //dataGridView1.Rows.Add();
+            //dataGridView1.Rows.Add();
+            //dataGridView1.Rows[0].Cells[0].Value = "S0001";
+            //dataGridView1.Rows[0].Cells[1].Value = "藤田知樹";
+            //dataGridView1.Rows[0].Cells[2].Value = "フジタトモキ";
+            //dataGridView1.Rows[0].Cells[3].Value = "男";
+            //dataGridView1.Rows[0].Cells[4].Value = "24";
+            //dataGridView1.Rows[0].Cells[5].Value = "Y01";
+            //dataGridView1.Rows[0].Cells[6].Value = "0611112222";
+            //dataGridView1.Rows[0].Cells[7].Value = "tomokilove@hotmail.com";
+            //dataGridView1.Rows[0].Cells[8].Value = "20140401";
+            //dataGridView1.Rows[0].Cells[9].Value = "山口県";
 
 
-            dataGridView1.Rows[1].Cells[0].Value = "S0002";
-            dataGridView1.Rows[1].Cells[1].Value = "古川康";
-            dataGridView1.Rows[1].Cells[2].Value = "フルカワヤスシ";
-            dataGridView1.Rows[1].Cells[3].Value = "男";
-            dataGridView1.Rows[1].Cells[4].Value = "24";
-            dataGridView1.Rows[1].Cells[5].Value = "Y02";
-            dataGridView1.Rows[1].Cells[6].Value = "0611134222";
-            dataGridView1.Rows[1].Cells[7].Value = "furukawalove@hotmail.com";
-            dataGridView1.Rows[1].Cells[8].Value = "20130401";
-            dataGridView1.Rows[1].Cells[9].Value = "奈良県";
+            //dataGridView1.Rows[1].Cells[0].Value = "S0002";
+            //dataGridView1.Rows[1].Cells[1].Value = "古川康";
+            //dataGridView1.Rows[1].Cells[2].Value = "フルカワヤスシ";
+            //dataGridView1.Rows[1].Cells[3].Value = "男";
+            //dataGridView1.Rows[1].Cells[4].Value = "24";
+            //dataGridView1.Rows[1].Cells[5].Value = "Y02";
+            //dataGridView1.Rows[1].Cells[6].Value = "0611134222";
+            //dataGridView1.Rows[1].Cells[7].Value = "furukawalove@hotmail.com";
+            //dataGridView1.Rows[1].Cells[8].Value = "20130401";
+            //dataGridView1.Rows[1].Cells[9].Value = "奈良県";
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

@@ -115,9 +115,14 @@ namespace Sample1
             Stafflist Scheckok = new Stafflist();
             Scheckok.Show();
             this.Close();
-
-            _Staffentry.Close();    //Hide状態の登録画面（Staffentry）を閉じる
-            _Staffchange.Close();   //Hide状態の変更画面（Staffchange）を閉じる
+            if (_form_name == "Staffentry")
+            {
+                _Staffentry.Close();    //Hide状態の登録画面（Staffentry）を閉じる
+            }
+            else if (_form_name == "Staffchange")
+            {
+                _Staffchange.Close();   //Hide状態の変更画面（Staffchange）を閉じる
+            }
         }
 
         private void StaffcheckNo_button_Click(object sender, EventArgs e)
