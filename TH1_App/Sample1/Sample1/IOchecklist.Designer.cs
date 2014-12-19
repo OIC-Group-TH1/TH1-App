@@ -40,7 +40,8 @@
             this.IOchecklist_Tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IOchecklist_In = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.IOchecklist_Out = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.IOchecklist_Reserve = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IOchecklist_Rcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IOchecklist_Ccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +57,8 @@
             this.IOchecklist_Tel,
             this.IOchecklist_In,
             this.IOchecklist_Out,
-            this.IOchecklist_Reserve});
+            this.IOchecklist_Rcode,
+            this.IOchecklist_Ccode});
             this.dataGridView1.Location = new System.Drawing.Point(12, 69);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
@@ -148,11 +150,17 @@
             this.IOchecklist_Out.ReadOnly = true;
             this.IOchecklist_Out.Width = 70;
             // 
-            // IOchecklist_Reserve
+            // IOchecklist_Rcode
             // 
-            this.IOchecklist_Reserve.HeaderText = "予約コード";
-            this.IOchecklist_Reserve.Name = "IOchecklist_Reserve";
-            this.IOchecklist_Reserve.Visible = false;
+            this.IOchecklist_Rcode.HeaderText = "予約コード";
+            this.IOchecklist_Rcode.Name = "IOchecklist_Rcode";
+            this.IOchecklist_Rcode.Visible = false;
+            // 
+            // IOchecklist_Ccode
+            // 
+            this.IOchecklist_Ccode.HeaderText = "顧客コード";
+            this.IOchecklist_Ccode.Name = "IOchecklist_Ccode";
+            this.IOchecklist_Ccode.Visible = false;
             // 
             // IOchecklist
             // 
@@ -185,6 +193,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IOchecklist_Tel;
         private System.Windows.Forms.DataGridViewCheckBoxColumn IOchecklist_In;
         private System.Windows.Forms.DataGridViewCheckBoxColumn IOchecklist_Out;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IOchecklist_Reserve;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IOchecklist_Rcode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IOchecklist_Ccode;
     }
 }

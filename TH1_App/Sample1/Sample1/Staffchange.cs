@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Sample1
 {
@@ -34,15 +35,39 @@ namespace Sample1
 
             if (result == DialogResult.Yes)
             {
-                //「はい」が選択された時の処理を書く
+
+                DBconnection DBC = new DBconnection();
+                DBC.DB_connect();
+
+                try
+                {
+                    //データベースファイルオープン
+                    
+                    SqlCommand scm = new SqlCommand
+                        ("delete from TBL_STAFF where STAFF_CODE ="+Staff.CODE, DBC.Get_scn());
+
+                    scm.ExecuteNonQuery();
+                    DBC.DB_DisConnect();
+                }
+
+                catch (Exception ex)
+                {
+                    //データベースファイルクローズ
+                    DBC.DB_DisConnect();
+                    MessageBox.Show(ex.Message, "エラー");
+                }
+
                 Stafflist Sdelete = new Stafflist();
                 Sdelete.Show();
                 this.Close();
+
             }
             else if (result == DialogResult.No)
             {
                 //「いいえ」が選択された時の処理を書く
             }
+            
+
         }
 
         private void StaffchangeOk_button_Click(object sender, EventArgs e)

@@ -37,9 +37,19 @@ namespace Sample1
             //IO_r_no = (string)dataGridView1.CurrentRow.Cells[0].Value;
             //IO_c_name = (string)dataGridView1.CurrentRow.Cells[3].Value;
             //IO_c_tel = (string)dataGridView1.CurrentRow.Cells[5].Value;
+            IO.NO =  int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            IO.RCODE = int.Parse(dataGridView1.CurrentRow.Cells[8].Value.ToString());
+            IO.CCODE = int.Parse(dataGridView1.CurrentRow.Cells[9].Value.ToString());
+            IO.TYPE = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            IO.SMOKE = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            IO.NAME = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            IO.NUMBER = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+
+            IO.DATE = DateTime.Today;
+
 
             
-            IOcheck IOche = new IOcheck(this);
+            IOcheck IOche = new IOcheck();
             IOche.Show();
             this.Close();
         }

@@ -73,51 +73,106 @@ namespace Sample1
         }
         private void StaffcheckYes_button_Click(object sender, EventArgs e)
         {
-            System.Data.SqlClient.SqlConnection scn
-                   = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
-            try
+            
+            DBconnection DBC = new DBconnection();
+            DBC.DB_connect();
+
+
+            if (_form_name == "staffentry")
             {
-                //データベースファイルオープン
-                scn.Open();
 
-                string name = Staffcheck_Name.Text;
-                string kana = Staffcheck_Kana.Text;
-                string sex = Staffcheck_Sex.Text;
-                string age = Staffcheck_Age.Text;
-                string position = Staffcheck_Position.Text;
-                string tel = Staffcheck_Tel.Text;
-                string mail = Staffcheck_Mail.Text;
-                string day = Staffcheck_Day.Text;
-                string address = Staffcheck_Address.Text;
+                try
+                {
+                    //データベースファイルオープン
+                    string name = Staffcheck_Name.Text;
+                    string kana = Staffcheck_Kana.Text;
+                    string sex = Staffcheck_Sex.Text;
+                    string age = Staffcheck_Age.Text;
+                    string position = Staffcheck_Position.Text;
+                    string tel = Staffcheck_Tel.Text;
+                    string mail = Staffcheck_Mail.Text;
+                    string day = Staffcheck_Day.Text;
+                    string address = Staffcheck_Address.Text;
 
-                SqlCommand scm = new SqlCommand
-                    ("insert into TBL_STAFF values ("
-                        + "'" + name + "',"
-                        + "'" + kana + "',"
-                        + "'" + sex + "',"
-                        + "'" + age + "',"
-                        + "'" + position + "',"
-                        + "'" + tel + "',"
-                        + "'" + mail + "',"
-                        + "'" + day + "',"
-                        + "'" + address + "'" + ")", scn);
+                    SqlCommand scm = new SqlCommand
+                        ("insert into TBL_STAFF values ("
+                            + "'" + name + "',"
+                            + "'" + kana + "',"
+                            + "'" + sex + "',"
+                            + "'" + age + "',"
+                            + "'" + position + "',"
+                            + "'" + tel + "',"
+                            + "'" + mail + "',"
+                            + "'" + day + "',"
+                            + "'" + address + "'" + ")", DBC.Get_scn());
 
-                scm.ExecuteNonQuery();
-                scn.Close();
+                    scm.ExecuteNonQuery();
+
+                    DBC.DB_DisConnect();
+                }
+
+                catch (Exception ex)
+                {
+                    //データベースファイルクローズ
+                    DBC.DB_DisConnect();
+                    MessageBox.Show(ex.Message, "エラー");
+                }
+
+                Stafflist Scheckok = new Stafflist();
+                Scheckok.Show();
+                this.Close();
+
+                _Staffentry.Close();    //Hide状態の登録画面（Staffentry）を閉じる
+
             }
 
-            catch (Exception ex)
+            else if (_form_name == "staffchange")
             {
-                //データベースファイルクローズ
-                scn.Close();
-                MessageBox.Show(ex.Message, "エラー");
-            }
-            Stafflist Scheckok = new Stafflist();
-            Scheckok.Show();
-            this.Close();
+                try
+                {
+                    //データベースファイルオープン
+                    string code = Staff.CODE;
+                    string name = Staffcheck_Name.Text;
+                    string kana = Staffcheck_Kana.Text;
+                    string sex = Staffcheck_Sex.Text;
+                    string age = Staffcheck_Age.Text;
+                    string position = Staffcheck_Position.Text;
+                    string tel = Staffcheck_Tel.Text;
+                    string mail = Staffcheck_Mail.Text;
+                    string day = Staffcheck_Day.Text;
+                    string address = Staffcheck_Address.Text;
 
-            _Staffentry.Close();    //Hide状態の登録画面（Staffentry）を閉じる
-            _Staffchange.Close();   //Hide状態の変更画面（Staffchange）を閉じる
+                    SqlCommand scm = new SqlCommand
+                        ("update TBL_STAFF set "
+                    +"STAFF_NAME = "+ name +","
+                    +"STAFF_KANA = "+ kana +","
+                    +"STAFF_SEX = "+ sex +","
+                    +"STAFF_AGE = "+ age +","
+                    +"STAFF_POSITION = "+ position +","
+                    +"STAFF_TEL = "+ tel +","
+                    +"STAFF_MAIL = "+ mail +","
+                    +"STAFF_DAY = "+ day +","
+                    +"STAFF_ADDRESS = "+ address +","
+                    +"where STAFF_CODE = "+ code
+                    , DBC.Get_scn());
+
+                    scm.ExecuteNonQuery();
+                    DBC.DB_DisConnect();
+                }
+
+                catch (Exception ex)
+                {
+                    //データベースファイルクローズ
+                    DBC.DB_DisConnect();
+                    MessageBox.Show(ex.Message, "エラー");
+                }
+
+                Stafflist Scheckok = new Stafflist();
+                Scheckok.Show();
+                this.Close();
+
+                _Staffchange.Close();   //Hide状態の変更画面（Staffchange）を閉じる
+            }
         }
 
         private void StaffcheckNo_button_Click(object sender, EventArgs e)
