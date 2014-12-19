@@ -42,13 +42,13 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.予約コード = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.globalDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.globalDBDataSet = new Sample1.globalDBDataSet();
             this.globalDBDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.globalDBDataSet = new Sample1.globalDBDataSet();
+            this.globalDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSetBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -76,11 +76,9 @@
             this.ReservelistTop_button.TabIndex = 3;
             this.ReservelistTop_button.Text = "Topへ";
             this.ReservelistTop_button.UseVisualStyleBackColor = true;
-            this.ReservelistTop_button.Click += new System.EventHandler(this.ReservelistTop_button_Click);
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -92,14 +90,11 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.予約コード});
-            this.dataGridView1.DataSource = this.globalDBDataSetBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(33, 87);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
             this.dataGridView1.Size = new System.Drawing.Size(702, 183);
             this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -109,7 +104,7 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "タイプ";
+            this.dataGridViewTextBoxColumn2.HeaderText = "部屋名";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Width = 70;
             // 
@@ -121,12 +116,12 @@
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "宿泊者";
+            this.dataGridViewTextBoxColumn4.HeaderText = "宿泊者氏名";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "住所";
+            this.dataGridViewTextBoxColumn5.HeaderText = "宿泊者フリガナ";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // dataGridViewTextBoxColumn6
@@ -152,15 +147,15 @@
             this.予約コード.Name = "予約コード";
             this.予約コード.Visible = false;
             // 
-            // globalDBDataSet
-            // 
-            this.globalDBDataSet.DataSetName = "globalDBDataSet";
-            this.globalDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // globalDBDataSetBindingSource1
             // 
             this.globalDBDataSetBindingSource1.DataSource = this.globalDBDataSet;
             this.globalDBDataSetBindingSource1.Position = 0;
+            // 
+            // globalDBDataSet
+            // 
+            this.globalDBDataSet.DataSetName = "globalDBDataSet";
+            this.globalDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reservelist
             // 
@@ -175,9 +170,9 @@
             this.Text = "Reservelist";
             this.Load += new System.EventHandler(this.reservelist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSetBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -200,5 +195,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 予約コード;
         private System.Windows.Forms.BindingSource globalDBDataSetBindingSource1;
         private globalDBDataSet globalDBDataSet;
+
     }
 }

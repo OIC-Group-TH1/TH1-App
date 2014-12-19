@@ -397,6 +397,7 @@
             this.Controls.Add(this.Reserve_Name);
             this.Name = "Reserve";
             this.Text = "Reserve";
+            this.Load += new System.EventHandler(this.Reserve_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

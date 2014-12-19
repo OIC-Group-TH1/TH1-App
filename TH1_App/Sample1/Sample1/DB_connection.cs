@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Sample1
 {
@@ -37,6 +38,10 @@ namespace Sample1
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        public SqlConnection Get_scn()
+        {
+            return scn;
         }
     }
 }
