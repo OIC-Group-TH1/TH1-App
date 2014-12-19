@@ -51,11 +51,9 @@ namespace Sample1
 
         private void Stafflist_Load(object sender, EventArgs e)
         {
-            // TODO: このコード行はデータを 'globalDBDataSet.TBL_STAFF' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.tBL_STAFFTableAdapter1.Fill(this.globalDBDataSet.TBL_STAFF);
-            // TODO: このコード行はデータを 'globalDBDataSet1.TBL_STAFF' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.tBL_STAFFTableAdapter.Fill(this.globalDBDataSet1.TBL_STAFF);
-            // TODO: このコード行はデータを 'globalDBDataSet.TBL_STAFF' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            // TODO: このコード行はデータを 'globalDBDataSet4.TBL_STAFF' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.tBL_STAFFTableAdapter.Fill(this.globalDBDataSet4.TBL_STAFF);
+            
             //セルを行として管理
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;

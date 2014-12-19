@@ -20,7 +20,7 @@ namespace Sample1 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("globalDBDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("globalDBDataSet4")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class globalDBDataSet : global::System.Data.DataSet {
         
@@ -32,11 +32,11 @@ namespace Sample1 {
         
         private TBL_STAFFDataTable tableTBL_STAFF;
         
-        private global::System.Data.DataRelation relationFK_顧客テーブル_予約テーブル;
+        private global::System.Data.DataRelation relationFK_TBL_RESERVATION_TBL_CLIENT;
         
-        private global::System.Data.DataRelation relationFK_予約テーブル_客室テーブル;
+        private global::System.Data.DataRelation relationFK_TBL_RESERVATION_TBL_ROOM;
         
-        private global::System.Data.DataRelation relationFK_予約テーブル_社員テーブル;
+        private global::System.Data.DataRelation relationFK_TBL_RESERVATION_TBL_STAFF;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -272,17 +272,17 @@ namespace Sample1 {
                     this.tableTBL_STAFF.InitVars();
                 }
             }
-            this.relationFK_顧客テーブル_予約テーブル = this.Relations["FK_顧客テーブル_予約テーブル"];
-            this.relationFK_予約テーブル_客室テーブル = this.Relations["FK_予約テーブル_客室テーブル"];
-            this.relationFK_予約テーブル_社員テーブル = this.Relations["FK_予約テーブル_社員テーブル"];
+            this.relationFK_TBL_RESERVATION_TBL_CLIENT = this.Relations["FK_TBL_RESERVATION_TBL_CLIENT"];
+            this.relationFK_TBL_RESERVATION_TBL_ROOM = this.Relations["FK_TBL_RESERVATION_TBL_ROOM"];
+            this.relationFK_TBL_RESERVATION_TBL_STAFF = this.Relations["FK_TBL_RESERVATION_TBL_STAFF"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "globalDBDataSet";
+            this.DataSetName = "globalDBDataSet4";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/globalDBDataSet.xsd";
+            this.Namespace = "http://tempuri.org/globalDBDataSet4.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableTBL_CLIENT = new TBL_CLIENTDataTable();
@@ -293,18 +293,18 @@ namespace Sample1 {
             base.Tables.Add(this.tableTBL_ROOM);
             this.tableTBL_STAFF = new TBL_STAFFDataTable();
             base.Tables.Add(this.tableTBL_STAFF);
-            this.relationFK_顧客テーブル_予約テーブル = new global::System.Data.DataRelation("FK_顧客テーブル_予約テーブル", new global::System.Data.DataColumn[] {
-                        this.tableTBL_RESERVATION.RESERVATION_CODEColumn}, new global::System.Data.DataColumn[] {
-                        this.tableTBL_CLIENT.RESERVATION_CODEColumn}, false);
-            this.Relations.Add(this.relationFK_顧客テーブル_予約テーブル);
-            this.relationFK_予約テーブル_客室テーブル = new global::System.Data.DataRelation("FK_予約テーブル_客室テーブル", new global::System.Data.DataColumn[] {
+            this.relationFK_TBL_RESERVATION_TBL_CLIENT = new global::System.Data.DataRelation("FK_TBL_RESERVATION_TBL_CLIENT", new global::System.Data.DataColumn[] {
+                        this.tableTBL_CLIENT.CLIENT_CODEColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTBL_RESERVATION.CLIENT_CODEColumn}, false);
+            this.Relations.Add(this.relationFK_TBL_RESERVATION_TBL_CLIENT);
+            this.relationFK_TBL_RESERVATION_TBL_ROOM = new global::System.Data.DataRelation("FK_TBL_RESERVATION_TBL_ROOM", new global::System.Data.DataColumn[] {
                         this.tableTBL_ROOM.ROOM_CODEColumn}, new global::System.Data.DataColumn[] {
                         this.tableTBL_RESERVATION.ROOM_CODEColumn}, false);
-            this.Relations.Add(this.relationFK_予約テーブル_客室テーブル);
-            this.relationFK_予約テーブル_社員テーブル = new global::System.Data.DataRelation("FK_予約テーブル_社員テーブル", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK_TBL_RESERVATION_TBL_ROOM);
+            this.relationFK_TBL_RESERVATION_TBL_STAFF = new global::System.Data.DataRelation("FK_TBL_RESERVATION_TBL_STAFF", new global::System.Data.DataColumn[] {
                         this.tableTBL_STAFF.STAFF_CODEColumn}, new global::System.Data.DataColumn[] {
                         this.tableTBL_RESERVATION.STAFF_CODEColumn}, false);
-            this.Relations.Add(this.relationFK_予約テーブル_社員テーブル);
+            this.Relations.Add(this.relationFK_TBL_RESERVATION_TBL_STAFF);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -411,7 +411,7 @@ namespace Sample1 {
             
             private global::System.Data.DataColumn columnCLIENT_KANA;
             
-            private global::System.Data.DataColumn columnSEX;
+            private global::System.Data.DataColumn columnCLIENT_SEX;
             
             private global::System.Data.DataColumn columnCLIENT_TEL;
             
@@ -484,9 +484,9 @@ namespace Sample1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SEXColumn {
+            public global::System.Data.DataColumn CLIENT_SEXColumn {
                 get {
-                    return this.columnSEX;
+                    return this.columnCLIENT_SEX;
                 }
             }
             
@@ -575,22 +575,19 @@ namespace Sample1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TBL_CLIENTRow AddTBL_CLIENTRow(string CLIENT_NAME, string CLIENT_KANA, string SEX, string CLIENT_TEL, string CLIENT_POST, string CLIENT_ADDRESS, string CLIENT_NOTE, TBL_RESERVATIONRow parentTBL_RESERVATIONRowByFK_顧客テーブル_予約テーブル, string CLIENT_COUNT) {
+            public TBL_CLIENTRow AddTBL_CLIENTRow(string CLIENT_NAME, string CLIENT_KANA, string CLIENT_SEX, string CLIENT_TEL, string CLIENT_POST, string CLIENT_ADDRESS, string CLIENT_NOTE, int RESERVATION_CODE, string CLIENT_COUNT) {
                 TBL_CLIENTRow rowTBL_CLIENTRow = ((TBL_CLIENTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         CLIENT_NAME,
                         CLIENT_KANA,
-                        SEX,
+                        CLIENT_SEX,
                         CLIENT_TEL,
                         CLIENT_POST,
                         CLIENT_ADDRESS,
                         CLIENT_NOTE,
-                        null,
+                        RESERVATION_CODE,
                         CLIENT_COUNT};
-                if ((parentTBL_RESERVATIONRowByFK_顧客テーブル_予約テーブル != null)) {
-                    columnValuesArray[8] = parentTBL_RESERVATIONRowByFK_顧客テーブル_予約テーブル[0];
-                }
                 rowTBL_CLIENTRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTBL_CLIENTRow);
                 return rowTBL_CLIENTRow;
@@ -623,7 +620,7 @@ namespace Sample1 {
                 this.columnCLIENT_CODE = base.Columns["CLIENT_CODE"];
                 this.columnCLIENT_NAME = base.Columns["CLIENT_NAME"];
                 this.columnCLIENT_KANA = base.Columns["CLIENT_KANA"];
-                this.columnSEX = base.Columns["SEX"];
+                this.columnCLIENT_SEX = base.Columns["CLIENT_SEX"];
                 this.columnCLIENT_TEL = base.Columns["CLIENT_TEL"];
                 this.columnCLIENT_POST = base.Columns["CLIENT_POST"];
                 this.columnCLIENT_ADDRESS = base.Columns["CLIENT_ADDRESS"];
@@ -641,8 +638,8 @@ namespace Sample1 {
                 base.Columns.Add(this.columnCLIENT_NAME);
                 this.columnCLIENT_KANA = new global::System.Data.DataColumn("CLIENT_KANA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCLIENT_KANA);
-                this.columnSEX = new global::System.Data.DataColumn("SEX", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSEX);
+                this.columnCLIENT_SEX = new global::System.Data.DataColumn("CLIENT_SEX", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCLIENT_SEX);
                 this.columnCLIENT_TEL = new global::System.Data.DataColumn("CLIENT_TEL", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCLIENT_TEL);
                 this.columnCLIENT_POST = new global::System.Data.DataColumn("CLIENT_POST", typeof(string), null, global::System.Data.MappingType.Element);
@@ -665,7 +662,7 @@ namespace Sample1 {
                 this.columnCLIENT_CODE.Unique = true;
                 this.columnCLIENT_NAME.MaxLength = 1073741823;
                 this.columnCLIENT_KANA.MaxLength = 1073741823;
-                this.columnSEX.MaxLength = 1073741823;
+                this.columnCLIENT_SEX.MaxLength = 1073741823;
                 this.columnCLIENT_TEL.MaxLength = 1073741823;
                 this.columnCLIENT_POST.MaxLength = 1073741823;
                 this.columnCLIENT_ADDRESS.MaxLength = 1073741823;
@@ -954,7 +951,7 @@ namespace Sample1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TBL_RESERVATIONRow AddTBL_RESERVATIONRow(System.DateTime RESERVATION_DATE, string RESERVATION_DAY, string RESERVATION_NUM, TBL_STAFFRow parentTBL_STAFFRowByFK_予約テーブル_社員テーブル, TBL_ROOMRow parentTBL_ROOMRowByFK_予約テーブル_客室テーブル, string CLIENT_CODE, bool CHECK) {
+            public TBL_RESERVATIONRow AddTBL_RESERVATIONRow(System.DateTime RESERVATION_DATE, string RESERVATION_DAY, string RESERVATION_NUM, TBL_STAFFRow parentTBL_STAFFRowByFK_TBL_RESERVATION_TBL_STAFF, TBL_ROOMRow parentTBL_ROOMRowByFK_TBL_RESERVATION_TBL_ROOM, TBL_CLIENTRow parentTBL_CLIENTRowByFK_TBL_RESERVATION_TBL_CLIENT, bool CHECK) {
                 TBL_RESERVATIONRow rowTBL_RESERVATIONRow = ((TBL_RESERVATIONRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -963,13 +960,16 @@ namespace Sample1 {
                         RESERVATION_NUM,
                         null,
                         null,
-                        CLIENT_CODE,
+                        null,
                         CHECK};
-                if ((parentTBL_STAFFRowByFK_予約テーブル_社員テーブル != null)) {
-                    columnValuesArray[4] = parentTBL_STAFFRowByFK_予約テーブル_社員テーブル[0];
+                if ((parentTBL_STAFFRowByFK_TBL_RESERVATION_TBL_STAFF != null)) {
+                    columnValuesArray[4] = parentTBL_STAFFRowByFK_TBL_RESERVATION_TBL_STAFF[0];
                 }
-                if ((parentTBL_ROOMRowByFK_予約テーブル_客室テーブル != null)) {
-                    columnValuesArray[5] = parentTBL_ROOMRowByFK_予約テーブル_客室テーブル[0];
+                if ((parentTBL_ROOMRowByFK_TBL_RESERVATION_TBL_ROOM != null)) {
+                    columnValuesArray[5] = parentTBL_ROOMRowByFK_TBL_RESERVATION_TBL_ROOM[0];
+                }
+                if ((parentTBL_CLIENTRowByFK_TBL_RESERVATION_TBL_CLIENT != null)) {
+                    columnValuesArray[6] = parentTBL_CLIENTRowByFK_TBL_RESERVATION_TBL_CLIENT[0];
                 }
                 rowTBL_RESERVATIONRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTBL_RESERVATIONRow);
@@ -1025,7 +1025,7 @@ namespace Sample1 {
                 base.Columns.Add(this.columnSTAFF_CODE);
                 this.columnROOM_CODE = new global::System.Data.DataColumn("ROOM_CODE", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnROOM_CODE);
-                this.columnCLIENT_CODE = new global::System.Data.DataColumn("CLIENT_CODE", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnCLIENT_CODE = new global::System.Data.DataColumn("CLIENT_CODE", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCLIENT_CODE);
                 this.columnCHECK = new global::System.Data.DataColumn("CHECK", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCHECK);
@@ -1040,7 +1040,8 @@ namespace Sample1 {
                 this.columnRESERVATION_DAY.MaxLength = 1073741823;
                 this.columnRESERVATION_NUM.MaxLength = 1073741823;
                 this.columnSTAFF_CODE.AllowDBNull = false;
-                this.columnCLIENT_CODE.MaxLength = 6;
+                this.columnROOM_CODE.AllowDBNull = false;
+                this.columnCLIENT_CODE.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1517,7 +1518,7 @@ namespace Sample1 {
             
             private global::System.Data.DataColumn columnSTAFF_KANA;
             
-            private global::System.Data.DataColumn columnSEX;
+            private global::System.Data.DataColumn columnSTAFF_SEX;
             
             private global::System.Data.DataColumn columnSTAFF_AGE;
             
@@ -1590,9 +1591,9 @@ namespace Sample1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SEXColumn {
+            public global::System.Data.DataColumn STAFF_SEXColumn {
                 get {
-                    return this.columnSEX;
+                    return this.columnSTAFF_SEX;
                 }
             }
             
@@ -1681,13 +1682,13 @@ namespace Sample1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TBL_STAFFRow AddTBL_STAFFRow(string STAFF_NAME, string STAFF_KANA, string SEX, string STAFF_AGE, string STAFF_POSITION, string STAFF_TEL, string STAFF_MAIL, string STAFF_DAY, string STAFF_ADDRESS) {
+            public TBL_STAFFRow AddTBL_STAFFRow(string STAFF_NAME, string STAFF_KANA, string STAFF_SEX, string STAFF_AGE, string STAFF_POSITION, string STAFF_TEL, string STAFF_MAIL, string STAFF_DAY, string STAFF_ADDRESS) {
                 TBL_STAFFRow rowTBL_STAFFRow = ((TBL_STAFFRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         STAFF_NAME,
                         STAFF_KANA,
-                        SEX,
+                        STAFF_SEX,
                         STAFF_AGE,
                         STAFF_POSITION,
                         STAFF_TEL,
@@ -1726,7 +1727,7 @@ namespace Sample1 {
                 this.columnSTAFF_CODE = base.Columns["STAFF_CODE"];
                 this.columnSTAFF_NAME = base.Columns["STAFF_NAME"];
                 this.columnSTAFF_KANA = base.Columns["STAFF_KANA"];
-                this.columnSEX = base.Columns["SEX"];
+                this.columnSTAFF_SEX = base.Columns["STAFF_SEX"];
                 this.columnSTAFF_AGE = base.Columns["STAFF_AGE"];
                 this.columnSTAFF_POSITION = base.Columns["STAFF_POSITION"];
                 this.columnSTAFF_TEL = base.Columns["STAFF_TEL"];
@@ -1744,8 +1745,8 @@ namespace Sample1 {
                 base.Columns.Add(this.columnSTAFF_NAME);
                 this.columnSTAFF_KANA = new global::System.Data.DataColumn("STAFF_KANA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSTAFF_KANA);
-                this.columnSEX = new global::System.Data.DataColumn("SEX", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSEX);
+                this.columnSTAFF_SEX = new global::System.Data.DataColumn("STAFF_SEX", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSTAFF_SEX);
                 this.columnSTAFF_AGE = new global::System.Data.DataColumn("STAFF_AGE", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSTAFF_AGE);
                 this.columnSTAFF_POSITION = new global::System.Data.DataColumn("STAFF_POSITION", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1768,7 +1769,7 @@ namespace Sample1 {
                 this.columnSTAFF_CODE.Unique = true;
                 this.columnSTAFF_NAME.MaxLength = 1073741823;
                 this.columnSTAFF_KANA.MaxLength = 1073741823;
-                this.columnSEX.MaxLength = 1073741823;
+                this.columnSTAFF_SEX.MaxLength = 1073741823;
                 this.columnSTAFF_AGE.MaxLength = 1073741823;
                 this.columnSTAFF_POSITION.MaxLength = 1073741823;
                 this.columnSTAFF_TEL.MaxLength = 1073741823;
@@ -1960,17 +1961,17 @@ namespace Sample1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string SEX {
+            public string CLIENT_SEX {
                 get {
                     try {
-                        return ((string)(this[this.tableTBL_CLIENT.SEXColumn]));
+                        return ((string)(this[this.tableTBL_CLIENT.CLIENT_SEXColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'TBL_CLIENT\' にある列 \'SEX\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'TBL_CLIENT\' にある列 \'CLIENT_SEX\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableTBL_CLIENT.SEXColumn] = value;
+                    this[this.tableTBL_CLIENT.CLIENT_SEXColumn] = value;
                 }
             }
             
@@ -2072,17 +2073,6 @@ namespace Sample1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TBL_RESERVATIONRow TBL_RESERVATIONRow {
-                get {
-                    return ((TBL_RESERVATIONRow)(this.GetParentRow(this.Table.ParentRelations["FK_顧客テーブル_予約テーブル"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_顧客テーブル_予約テーブル"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCLIENT_NAMENull() {
                 return this.IsNull(this.tableTBL_CLIENT.CLIENT_NAMEColumn);
             }
@@ -2107,14 +2097,14 @@ namespace Sample1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSEXNull() {
-                return this.IsNull(this.tableTBL_CLIENT.SEXColumn);
+            public bool IsCLIENT_SEXNull() {
+                return this.IsNull(this.tableTBL_CLIENT.CLIENT_SEXColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSEXNull() {
-                this[this.tableTBL_CLIENT.SEXColumn] = global::System.Convert.DBNull;
+            public void SetCLIENT_SEXNull() {
+                this[this.tableTBL_CLIENT.CLIENT_SEXColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2187,6 +2177,17 @@ namespace Sample1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCLIENT_COUNTNull() {
                 this[this.tableTBL_CLIENT.CLIENT_COUNTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TBL_RESERVATIONRow[] GetTBL_RESERVATIONRows() {
+                if ((this.Table.ChildRelations["FK_TBL_RESERVATION_TBL_CLIENT"] == null)) {
+                    return new TBL_RESERVATIONRow[0];
+                }
+                else {
+                    return ((TBL_RESERVATIONRow[])(base.GetChildRows(this.Table.ChildRelations["FK_TBL_RESERVATION_TBL_CLIENT"])));
+                }
             }
         }
         
@@ -2278,12 +2279,7 @@ namespace Sample1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int ROOM_CODE {
                 get {
-                    try {
-                        return ((int)(this[this.tableTBL_RESERVATION.ROOM_CODEColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'TBL_RESERVATION\' にある列 \'ROOM_CODE\' の値は DBNull です。", e);
-                    }
+                    return ((int)(this[this.tableTBL_RESERVATION.ROOM_CODEColumn]));
                 }
                 set {
                     this[this.tableTBL_RESERVATION.ROOM_CODEColumn] = value;
@@ -2292,14 +2288,9 @@ namespace Sample1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string CLIENT_CODE {
+            public int CLIENT_CODE {
                 get {
-                    try {
-                        return ((string)(this[this.tableTBL_RESERVATION.CLIENT_CODEColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'TBL_RESERVATION\' にある列 \'CLIENT_CODE\' の値は DBNull です。", e);
-                    }
+                    return ((int)(this[this.tableTBL_RESERVATION.CLIENT_CODEColumn]));
                 }
                 set {
                     this[this.tableTBL_RESERVATION.CLIENT_CODEColumn] = value;
@@ -2324,12 +2315,23 @@ namespace Sample1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TBL_ROOMRow TBL_ROOMRow {
+            public TBL_CLIENTRow TBL_CLIENTRow {
                 get {
-                    return ((TBL_ROOMRow)(this.GetParentRow(this.Table.ParentRelations["FK_予約テーブル_客室テーブル"])));
+                    return ((TBL_CLIENTRow)(this.GetParentRow(this.Table.ParentRelations["FK_TBL_RESERVATION_TBL_CLIENT"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_予約テーブル_客室テーブル"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_TBL_RESERVATION_TBL_CLIENT"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TBL_ROOMRow TBL_ROOMRow {
+                get {
+                    return ((TBL_ROOMRow)(this.GetParentRow(this.Table.ParentRelations["FK_TBL_RESERVATION_TBL_ROOM"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_TBL_RESERVATION_TBL_ROOM"]);
                 }
             }
             
@@ -2337,10 +2339,10 @@ namespace Sample1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TBL_STAFFRow TBL_STAFFRow {
                 get {
-                    return ((TBL_STAFFRow)(this.GetParentRow(this.Table.ParentRelations["FK_予約テーブル_社員テーブル"])));
+                    return ((TBL_STAFFRow)(this.GetParentRow(this.Table.ParentRelations["FK_TBL_RESERVATION_TBL_STAFF"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_予約テーブル_社員テーブル"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_TBL_RESERVATION_TBL_STAFF"]);
                 }
             }
             
@@ -2382,30 +2384,6 @@ namespace Sample1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsROOM_CODENull() {
-                return this.IsNull(this.tableTBL_RESERVATION.ROOM_CODEColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetROOM_CODENull() {
-                this[this.tableTBL_RESERVATION.ROOM_CODEColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCLIENT_CODENull() {
-                return this.IsNull(this.tableTBL_RESERVATION.CLIENT_CODEColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCLIENT_CODENull() {
-                this[this.tableTBL_RESERVATION.CLIENT_CODEColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCHECKNull() {
                 return this.IsNull(this.tableTBL_RESERVATION.CHECKColumn);
             }
@@ -2414,17 +2392,6 @@ namespace Sample1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetCHECKNull() {
                 this[this.tableTBL_RESERVATION.CHECKColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TBL_CLIENTRow[] GetTBL_CLIENTRows() {
-                if ((this.Table.ChildRelations["FK_顧客テーブル_予約テーブル"] == null)) {
-                    return new TBL_CLIENTRow[0];
-                }
-                else {
-                    return ((TBL_CLIENTRow[])(base.GetChildRows(this.Table.ChildRelations["FK_顧客テーブル_予約テーブル"])));
-                }
             }
         }
         
@@ -2596,11 +2563,11 @@ namespace Sample1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TBL_RESERVATIONRow[] GetTBL_RESERVATIONRows() {
-                if ((this.Table.ChildRelations["FK_予約テーブル_客室テーブル"] == null)) {
+                if ((this.Table.ChildRelations["FK_TBL_RESERVATION_TBL_ROOM"] == null)) {
                     return new TBL_RESERVATIONRow[0];
                 }
                 else {
-                    return ((TBL_RESERVATIONRow[])(base.GetChildRows(this.Table.ChildRelations["FK_予約テーブル_客室テーブル"])));
+                    return ((TBL_RESERVATIONRow[])(base.GetChildRows(this.Table.ChildRelations["FK_TBL_RESERVATION_TBL_ROOM"])));
                 }
             }
         }
@@ -2664,17 +2631,17 @@ namespace Sample1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string SEX {
+            public string STAFF_SEX {
                 get {
                     try {
-                        return ((string)(this[this.tableTBL_STAFF.SEXColumn]));
+                        return ((string)(this[this.tableTBL_STAFF.STAFF_SEXColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'TBL_STAFF\' にある列 \'SEX\' の値は DBNull です。", e);
+                        throw new global::System.Data.StrongTypingException("テーブル \'TBL_STAFF\' にある列 \'STAFF_SEX\' の値は DBNull です。", e);
                     }
                 }
                 set {
-                    this[this.tableTBL_STAFF.SEXColumn] = value;
+                    this[this.tableTBL_STAFF.STAFF_SEXColumn] = value;
                 }
             }
             
@@ -2800,14 +2767,14 @@ namespace Sample1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSEXNull() {
-                return this.IsNull(this.tableTBL_STAFF.SEXColumn);
+            public bool IsSTAFF_SEXNull() {
+                return this.IsNull(this.tableTBL_STAFF.STAFF_SEXColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSEXNull() {
-                this[this.tableTBL_STAFF.SEXColumn] = global::System.Convert.DBNull;
+            public void SetSTAFF_SEXNull() {
+                this[this.tableTBL_STAFF.STAFF_SEXColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2885,11 +2852,11 @@ namespace Sample1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TBL_RESERVATIONRow[] GetTBL_RESERVATIONRows() {
-                if ((this.Table.ChildRelations["FK_予約テーブル_社員テーブル"] == null)) {
+                if ((this.Table.ChildRelations["FK_TBL_RESERVATION_TBL_STAFF"] == null)) {
                     return new TBL_RESERVATIONRow[0];
                 }
                 else {
-                    return ((TBL_RESERVATIONRow[])(base.GetChildRows(this.Table.ChildRelations["FK_予約テーブル_社員テーブル"])));
+                    return ((TBL_RESERVATIONRow[])(base.GetChildRows(this.Table.ChildRelations["FK_TBL_RESERVATION_TBL_STAFF"])));
                 }
             }
         }
@@ -3031,7 +2998,7 @@ namespace Sample1 {
         }
     }
 }
-namespace Sample1.globalDBDataSetTableAdapters {
+namespace Sample1.globalDBDataSet4TableAdapters {
     
     
     /// <summary>
@@ -3158,7 +3125,7 @@ namespace Sample1.globalDBDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("CLIENT_CODE", "CLIENT_CODE");
             tableMapping.ColumnMappings.Add("CLIENT_NAME", "CLIENT_NAME");
             tableMapping.ColumnMappings.Add("CLIENT_KANA", "CLIENT_KANA");
-            tableMapping.ColumnMappings.Add("SEX", "SEX");
+            tableMapping.ColumnMappings.Add("CLIENT_SEX", "CLIENT_SEX");
             tableMapping.ColumnMappings.Add("CLIENT_TEL", "CLIENT_TEL");
             tableMapping.ColumnMappings.Add("CLIENT_POST", "CLIENT_POST");
             tableMapping.ColumnMappings.Add("CLIENT_ADDRESS", "CLIENT_ADDRESS");
@@ -3177,12 +3144,12 @@ namespace Sample1.globalDBDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RESERVATION_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RESERVATION_CODE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[TBL_CLIENT] ([CLIENT_NAME], [CLIENT_KANA], [SEX], [CLIENT_TEL], [CLIENT_POST], [CLIENT_ADDRESS], [CLIENT_NOTE], [RESERVATION_CODE], [CLIENT_COUNT]) VALUES (@CLIENT_NAME, @CLIENT_KANA, @SEX, @CLIENT_TEL, @CLIENT_POST, @CLIENT_ADDRESS, @CLIENT_NOTE, @RESERVATION_CODE, @CLIENT_COUNT);
-SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, SEX, CLIENT_TEL, CLIENT_POST, CLIENT_ADDRESS, CLIENT_NOTE, RESERVATION_CODE, CLIENT_COUNT FROM TBL_CLIENT WHERE (CLIENT_CODE = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[TBL_CLIENT] ([CLIENT_NAME], [CLIENT_KANA], [CLIENT_SEX], [CLIENT_TEL], [CLIENT_POST], [CLIENT_ADDRESS], [CLIENT_NOTE], [RESERVATION_CODE], [CLIENT_COUNT]) VALUES (@CLIENT_NAME, @CLIENT_KANA, @CLIENT_SEX, @CLIENT_TEL, @CLIENT_POST, @CLIENT_ADDRESS, @CLIENT_NOTE, @RESERVATION_CODE, @CLIENT_COUNT);
+SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, CLIENT_SEX, CLIENT_TEL, CLIENT_POST, CLIENT_ADDRESS, CLIENT_NOTE, RESERVATION_CODE, CLIENT_COUNT FROM TBL_CLIENT WHERE (CLIENT_CODE = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_NAME", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_KANA", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_KANA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SEX", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SEX", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_SEX", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_SEX", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_TEL", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_TEL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_POST", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_POST", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_ADDRESS", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_ADDRESS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3191,12 +3158,12 @@ SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, SEX, CLIENT_TEL, CLIENT_POST, CLIE
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_COUNT", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_COUNT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TBL_CLIENT] SET [CLIENT_NAME] = @CLIENT_NAME, [CLIENT_KANA] = @CLIENT_KANA, [SEX] = @SEX, [CLIENT_TEL] = @CLIENT_TEL, [CLIENT_POST] = @CLIENT_POST, [CLIENT_ADDRESS] = @CLIENT_ADDRESS, [CLIENT_NOTE] = @CLIENT_NOTE, [RESERVATION_CODE] = @RESERVATION_CODE, [CLIENT_COUNT] = @CLIENT_COUNT WHERE (([CLIENT_CODE] = @Original_CLIENT_CODE) AND ((@IsNull_RESERVATION_CODE = 1 AND [RESERVATION_CODE] IS NULL) OR ([RESERVATION_CODE] = @Original_RESERVATION_CODE)));
-SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, SEX, CLIENT_TEL, CLIENT_POST, CLIENT_ADDRESS, CLIENT_NOTE, RESERVATION_CODE, CLIENT_COUNT FROM TBL_CLIENT WHERE (CLIENT_CODE = @CLIENT_CODE)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TBL_CLIENT] SET [CLIENT_NAME] = @CLIENT_NAME, [CLIENT_KANA] = @CLIENT_KANA, [CLIENT_SEX] = @CLIENT_SEX, [CLIENT_TEL] = @CLIENT_TEL, [CLIENT_POST] = @CLIENT_POST, [CLIENT_ADDRESS] = @CLIENT_ADDRESS, [CLIENT_NOTE] = @CLIENT_NOTE, [RESERVATION_CODE] = @RESERVATION_CODE, [CLIENT_COUNT] = @CLIENT_COUNT WHERE (([CLIENT_CODE] = @Original_CLIENT_CODE) AND ((@IsNull_RESERVATION_CODE = 1 AND [RESERVATION_CODE] IS NULL) OR ([RESERVATION_CODE] = @Original_RESERVATION_CODE)));
+SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, CLIENT_SEX, CLIENT_TEL, CLIENT_POST, CLIENT_ADDRESS, CLIENT_NOTE, RESERVATION_CODE, CLIENT_COUNT FROM TBL_CLIENT WHERE (CLIENT_CODE = @CLIENT_CODE)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_NAME", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_KANA", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_KANA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SEX", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SEX", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_SEX", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_SEX", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_TEL", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_TEL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_POST", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_POST", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_ADDRESS", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_ADDRESS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3222,8 +3189,9 @@ SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, SEX, CLIENT_TEL, CLIENT_POST, CLIE
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, SEX, CLIENT_TEL, CLIENT_POST, CLIEN" +
-                "T_ADDRESS, CLIENT_NOTE, RESERVATION_CODE, CLIENT_COUNT FROM dbo.TBL_CLIENT";
+            this._commandCollection[0].CommandText = "SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, CLIENT_SEX, CLIENT_TEL, CLIENT_POST" +
+                ", CLIENT_ADDRESS, CLIENT_NOTE, RESERVATION_CODE, CLIENT_COUNT FROM dbo.TBL_CLIEN" +
+                "T";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3314,7 +3282,7 @@ SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, SEX, CLIENT_TEL, CLIENT_POST, CLIE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string CLIENT_NAME, string CLIENT_KANA, string SEX, string CLIENT_TEL, string CLIENT_POST, string CLIENT_ADDRESS, string CLIENT_NOTE, global::System.Nullable<int> RESERVATION_CODE, string CLIENT_COUNT) {
+        public virtual int Insert(string CLIENT_NAME, string CLIENT_KANA, string CLIENT_SEX, string CLIENT_TEL, string CLIENT_POST, string CLIENT_ADDRESS, string CLIENT_NOTE, global::System.Nullable<int> RESERVATION_CODE, string CLIENT_COUNT) {
             if ((CLIENT_NAME == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -3327,11 +3295,11 @@ SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, SEX, CLIENT_TEL, CLIENT_POST, CLIE
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(CLIENT_KANA));
             }
-            if ((SEX == null)) {
+            if ((CLIENT_SEX == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(SEX));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(CLIENT_SEX));
             }
             if ((CLIENT_TEL == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
@@ -3389,7 +3357,7 @@ SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, SEX, CLIENT_TEL, CLIENT_POST, CLIE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string CLIENT_NAME, string CLIENT_KANA, string SEX, string CLIENT_TEL, string CLIENT_POST, string CLIENT_ADDRESS, string CLIENT_NOTE, global::System.Nullable<int> RESERVATION_CODE, string CLIENT_COUNT, int Original_CLIENT_CODE, global::System.Nullable<int> Original_RESERVATION_CODE, int CLIENT_CODE) {
+        public virtual int Update(string CLIENT_NAME, string CLIENT_KANA, string CLIENT_SEX, string CLIENT_TEL, string CLIENT_POST, string CLIENT_ADDRESS, string CLIENT_NOTE, global::System.Nullable<int> RESERVATION_CODE, string CLIENT_COUNT, int Original_CLIENT_CODE, global::System.Nullable<int> Original_RESERVATION_CODE, int CLIENT_CODE) {
             if ((CLIENT_NAME == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -3402,11 +3370,11 @@ SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, SEX, CLIENT_TEL, CLIENT_POST, CLIE
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(CLIENT_KANA));
             }
-            if ((SEX == null)) {
+            if ((CLIENT_SEX == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(SEX));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(CLIENT_SEX));
             }
             if ((CLIENT_TEL == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
@@ -3474,8 +3442,8 @@ SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, SEX, CLIENT_TEL, CLIENT_POST, CLIE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string CLIENT_NAME, string CLIENT_KANA, string SEX, string CLIENT_TEL, string CLIENT_POST, string CLIENT_ADDRESS, string CLIENT_NOTE, global::System.Nullable<int> RESERVATION_CODE, string CLIENT_COUNT, int Original_CLIENT_CODE, global::System.Nullable<int> Original_RESERVATION_CODE) {
-            return this.Update(CLIENT_NAME, CLIENT_KANA, SEX, CLIENT_TEL, CLIENT_POST, CLIENT_ADDRESS, CLIENT_NOTE, RESERVATION_CODE, CLIENT_COUNT, Original_CLIENT_CODE, Original_RESERVATION_CODE, Original_CLIENT_CODE);
+        public virtual int Update(string CLIENT_NAME, string CLIENT_KANA, string CLIENT_SEX, string CLIENT_TEL, string CLIENT_POST, string CLIENT_ADDRESS, string CLIENT_NOTE, global::System.Nullable<int> RESERVATION_CODE, string CLIENT_COUNT, int Original_CLIENT_CODE, global::System.Nullable<int> Original_RESERVATION_CODE) {
+            return this.Update(CLIENT_NAME, CLIENT_KANA, CLIENT_SEX, CLIENT_TEL, CLIENT_POST, CLIENT_ADDRESS, CLIENT_NOTE, RESERVATION_CODE, CLIENT_COUNT, Original_CLIENT_CODE, Original_RESERVATION_CODE, Original_CLIENT_CODE);
         }
     }
     
@@ -3611,16 +3579,14 @@ SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, SEX, CLIENT_TEL, CLIENT_POST, CLIE
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[TBL_RESERVATION] WHERE (([RESERVATION_CODE] = @Original_RESERVATION_CODE) AND ((@IsNull_RESERVATION_DATE = 1 AND [RESERVATION_DATE] IS NULL) OR ([RESERVATION_DATE] = @Original_RESERVATION_DATE)) AND ([STAFF_CODE] = @Original_STAFF_CODE) AND ((@IsNull_ROOM_CODE = 1 AND [ROOM_CODE] IS NULL) OR ([ROOM_CODE] = @Original_ROOM_CODE)) AND ((@IsNull_CLIENT_CODE = 1 AND [CLIENT_CODE] IS NULL) OR ([CLIENT_CODE] = @Original_CLIENT_CODE)) AND ((@IsNull_CHECK = 1 AND [CHECK] IS NULL) OR ([CHECK] = @Original_CHECK)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[TBL_RESERVATION] WHERE (([RESERVATION_CODE] = @Original_RESERVATION_CODE) AND ((@IsNull_RESERVATION_DATE = 1 AND [RESERVATION_DATE] IS NULL) OR ([RESERVATION_DATE] = @Original_RESERVATION_DATE)) AND ([STAFF_CODE] = @Original_STAFF_CODE) AND ([ROOM_CODE] = @Original_ROOM_CODE) AND ([CLIENT_CODE] = @Original_CLIENT_CODE) AND ((@IsNull_CHECK = 1 AND [CHECK] IS NULL) OR ([CHECK] = @Original_CHECK)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RESERVATION_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RESERVATION_CODE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RESERVATION_DATE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RESERVATION_DATE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RESERVATION_DATE", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RESERVATION_DATE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_STAFF_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STAFF_CODE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ROOM_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ROOM_CODE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ROOM_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ROOM_CODE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CLIENT_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_CODE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CLIENT_CODE", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_CODE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CLIENT_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_CODE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CHECK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CHECK", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CHECK", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CHECK", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
@@ -3633,11 +3599,11 @@ SELECT RESERVATION_CODE, RESERVATION_DATE, RESERVATION_DAY, RESERVATION_NUM, STA
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RESERVATION_NUM", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RESERVATION_NUM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STAFF_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STAFF_CODE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ROOM_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ROOM_CODE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_CODE", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_CODE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_CODE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CHECK", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CHECK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TBL_RESERVATION] SET [RESERVATION_DATE] = @RESERVATION_DATE, [RESERVATION_DAY] = @RESERVATION_DAY, [RESERVATION_NUM] = @RESERVATION_NUM, [STAFF_CODE] = @STAFF_CODE, [ROOM_CODE] = @ROOM_CODE, [CLIENT_CODE] = @CLIENT_CODE, [CHECK] = @CHECK WHERE (([RESERVATION_CODE] = @Original_RESERVATION_CODE) AND ((@IsNull_RESERVATION_DATE = 1 AND [RESERVATION_DATE] IS NULL) OR ([RESERVATION_DATE] = @Original_RESERVATION_DATE)) AND ([STAFF_CODE] = @Original_STAFF_CODE) AND ((@IsNull_ROOM_CODE = 1 AND [ROOM_CODE] IS NULL) OR ([ROOM_CODE] = @Original_ROOM_CODE)) AND ((@IsNull_CLIENT_CODE = 1 AND [CLIENT_CODE] IS NULL) OR ([CLIENT_CODE] = @Original_CLIENT_CODE)) AND ((@IsNull_CHECK = 1 AND [CHECK] IS NULL) OR ([CHECK] = @Original_CHECK)));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TBL_RESERVATION] SET [RESERVATION_DATE] = @RESERVATION_DATE, [RESERVATION_DAY] = @RESERVATION_DAY, [RESERVATION_NUM] = @RESERVATION_NUM, [STAFF_CODE] = @STAFF_CODE, [ROOM_CODE] = @ROOM_CODE, [CLIENT_CODE] = @CLIENT_CODE, [CHECK] = @CHECK WHERE (([RESERVATION_CODE] = @Original_RESERVATION_CODE) AND ((@IsNull_RESERVATION_DATE = 1 AND [RESERVATION_DATE] IS NULL) OR ([RESERVATION_DATE] = @Original_RESERVATION_DATE)) AND ([STAFF_CODE] = @Original_STAFF_CODE) AND ([ROOM_CODE] = @Original_ROOM_CODE) AND ([CLIENT_CODE] = @Original_CLIENT_CODE) AND ((@IsNull_CHECK = 1 AND [CHECK] IS NULL) OR ([CHECK] = @Original_CHECK)));
 SELECT RESERVATION_CODE, RESERVATION_DATE, RESERVATION_DAY, RESERVATION_NUM, STAFF_CODE, ROOM_CODE, CLIENT_CODE, [CHECK] FROM TBL_RESERVATION WHERE (RESERVATION_CODE = @RESERVATION_CODE)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RESERVATION_DATE", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RESERVATION_DATE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3645,16 +3611,14 @@ SELECT RESERVATION_CODE, RESERVATION_DATE, RESERVATION_DAY, RESERVATION_NUM, STA
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RESERVATION_NUM", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RESERVATION_NUM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STAFF_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STAFF_CODE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ROOM_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ROOM_CODE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_CODE", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_CODE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_CODE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CHECK", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CHECK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RESERVATION_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RESERVATION_CODE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RESERVATION_DATE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RESERVATION_DATE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RESERVATION_DATE", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RESERVATION_DATE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_STAFF_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STAFF_CODE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ROOM_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ROOM_CODE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ROOM_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ROOM_CODE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CLIENT_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_CODE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CLIENT_CODE", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_CODE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CLIENT_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_CODE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CHECK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CHECK", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CHECK", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CHECK", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RESERVATION_CODE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RESERVATION_CODE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3735,7 +3699,7 @@ SELECT RESERVATION_CODE, RESERVATION_DATE, RESERVATION_DAY, RESERVATION_NUM, STA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_RESERVATION_CODE, global::System.Nullable<global::System.DateTime> Original_RESERVATION_DATE, int Original_STAFF_CODE, global::System.Nullable<int> Original_ROOM_CODE, string Original_CLIENT_CODE, global::System.Nullable<bool> Original_CHECK) {
+        public virtual int Delete(int Original_RESERVATION_CODE, global::System.Nullable<global::System.DateTime> Original_RESERVATION_DATE, int Original_STAFF_CODE, int Original_ROOM_CODE, int Original_CLIENT_CODE, global::System.Nullable<bool> Original_CHECK) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_RESERVATION_CODE));
             if ((Original_RESERVATION_DATE.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -3746,29 +3710,15 @@ SELECT RESERVATION_CODE, RESERVATION_DATE, RESERVATION_DAY, RESERVATION_NUM, STA
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_STAFF_CODE));
-            if ((Original_ROOM_CODE.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_ROOM_CODE.Value));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_ROOM_CODE));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_CLIENT_CODE));
+            if ((Original_CHECK.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((bool)(Original_CHECK.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Original_CLIENT_CODE == null)) {
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_CLIENT_CODE));
-            }
-            if ((Original_CHECK.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((bool)(Original_CHECK.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3790,7 +3740,7 @@ SELECT RESERVATION_CODE, RESERVATION_DATE, RESERVATION_DAY, RESERVATION_NUM, STA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<global::System.DateTime> RESERVATION_DATE, string RESERVATION_DAY, string RESERVATION_NUM, int STAFF_CODE, global::System.Nullable<int> ROOM_CODE, string CLIENT_CODE, global::System.Nullable<bool> CHECK) {
+        public virtual int Insert(global::System.Nullable<global::System.DateTime> RESERVATION_DATE, string RESERVATION_DAY, string RESERVATION_NUM, int STAFF_CODE, int ROOM_CODE, int CLIENT_CODE, global::System.Nullable<bool> CHECK) {
             if ((RESERVATION_DATE.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(RESERVATION_DATE.Value));
             }
@@ -3810,18 +3760,8 @@ SELECT RESERVATION_CODE, RESERVATION_DATE, RESERVATION_DAY, RESERVATION_NUM, STA
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(RESERVATION_NUM));
             }
             this.Adapter.InsertCommand.Parameters[3].Value = ((int)(STAFF_CODE));
-            if ((ROOM_CODE.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(ROOM_CODE.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((CLIENT_CODE == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(CLIENT_CODE));
-            }
+            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(ROOM_CODE));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(CLIENT_CODE));
             if ((CHECK.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((bool)(CHECK.Value));
             }
@@ -3848,7 +3788,7 @@ SELECT RESERVATION_CODE, RESERVATION_DATE, RESERVATION_DAY, RESERVATION_NUM, STA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> RESERVATION_DATE, string RESERVATION_DAY, string RESERVATION_NUM, int STAFF_CODE, global::System.Nullable<int> ROOM_CODE, string CLIENT_CODE, global::System.Nullable<bool> CHECK, int Original_RESERVATION_CODE, global::System.Nullable<global::System.DateTime> Original_RESERVATION_DATE, int Original_STAFF_CODE, global::System.Nullable<int> Original_ROOM_CODE, string Original_CLIENT_CODE, global::System.Nullable<bool> Original_CHECK, int RESERVATION_CODE) {
+        public virtual int Update(global::System.Nullable<global::System.DateTime> RESERVATION_DATE, string RESERVATION_DAY, string RESERVATION_NUM, int STAFF_CODE, int ROOM_CODE, int CLIENT_CODE, global::System.Nullable<bool> CHECK, int Original_RESERVATION_CODE, global::System.Nullable<global::System.DateTime> Original_RESERVATION_DATE, int Original_STAFF_CODE, int Original_ROOM_CODE, int Original_CLIENT_CODE, global::System.Nullable<bool> Original_CHECK, int RESERVATION_CODE) {
             if ((RESERVATION_DATE.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(RESERVATION_DATE.Value));
             }
@@ -3868,18 +3808,8 @@ SELECT RESERVATION_CODE, RESERVATION_DATE, RESERVATION_DAY, RESERVATION_NUM, STA
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(RESERVATION_NUM));
             }
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(STAFF_CODE));
-            if ((ROOM_CODE.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(ROOM_CODE.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((CLIENT_CODE == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(CLIENT_CODE));
-            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(ROOM_CODE));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(CLIENT_CODE));
             if ((CHECK.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(CHECK.Value));
             }
@@ -3896,31 +3826,17 @@ SELECT RESERVATION_CODE, RESERVATION_DATE, RESERVATION_DAY, RESERVATION_NUM, STA
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_STAFF_CODE));
-            if ((Original_ROOM_CODE.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_ROOM_CODE.Value));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_ROOM_CODE));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_CLIENT_CODE));
+            if ((Original_CHECK.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((bool)(Original_CHECK.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((Original_CLIENT_CODE == null)) {
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_CLIENT_CODE));
-            }
-            if ((Original_CHECK.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((bool)(Original_CHECK.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(RESERVATION_CODE));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(RESERVATION_CODE));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3941,7 +3857,7 @@ SELECT RESERVATION_CODE, RESERVATION_DATE, RESERVATION_DAY, RESERVATION_NUM, STA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> RESERVATION_DATE, string RESERVATION_DAY, string RESERVATION_NUM, int STAFF_CODE, global::System.Nullable<int> ROOM_CODE, string CLIENT_CODE, global::System.Nullable<bool> CHECK, int Original_RESERVATION_CODE, global::System.Nullable<global::System.DateTime> Original_RESERVATION_DATE, int Original_STAFF_CODE, global::System.Nullable<int> Original_ROOM_CODE, string Original_CLIENT_CODE, global::System.Nullable<bool> Original_CHECK) {
+        public virtual int Update(global::System.Nullable<global::System.DateTime> RESERVATION_DATE, string RESERVATION_DAY, string RESERVATION_NUM, int STAFF_CODE, int ROOM_CODE, int CLIENT_CODE, global::System.Nullable<bool> CHECK, int Original_RESERVATION_CODE, global::System.Nullable<global::System.DateTime> Original_RESERVATION_DATE, int Original_STAFF_CODE, int Original_ROOM_CODE, int Original_CLIENT_CODE, global::System.Nullable<bool> Original_CHECK) {
             return this.Update(RESERVATION_DATE, RESERVATION_DAY, RESERVATION_NUM, STAFF_CODE, ROOM_CODE, CLIENT_CODE, CHECK, Original_RESERVATION_CODE, Original_RESERVATION_DATE, Original_STAFF_CODE, Original_ROOM_CODE, Original_CLIENT_CODE, Original_CHECK, Original_RESERVATION_CODE);
         }
     }
@@ -4433,7 +4349,7 @@ SELECT ROOM_CODE, ROOM_NAME, ROOM_VALUE, ROOM_BED, ROOM_CIGARETTE, ROOM_MAX FROM
             tableMapping.ColumnMappings.Add("STAFF_CODE", "STAFF_CODE");
             tableMapping.ColumnMappings.Add("STAFF_NAME", "STAFF_NAME");
             tableMapping.ColumnMappings.Add("STAFF_KANA", "STAFF_KANA");
-            tableMapping.ColumnMappings.Add("SEX", "SEX");
+            tableMapping.ColumnMappings.Add("STAFF_SEX", "STAFF_SEX");
             tableMapping.ColumnMappings.Add("STAFF_AGE", "STAFF_AGE");
             tableMapping.ColumnMappings.Add("STAFF_POSITION", "STAFF_POSITION");
             tableMapping.ColumnMappings.Add("STAFF_TEL", "STAFF_TEL");
@@ -4448,12 +4364,12 @@ SELECT ROOM_CODE, ROOM_NAME, ROOM_VALUE, ROOM_BED, ROOM_CIGARETTE, ROOM_MAX FROM
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_STAFF_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STAFF_CODE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[TBL_STAFF] ([STAFF_NAME], [STAFF_KANA], [SEX], [STAFF_AGE], [STAFF_POSITION], [STAFF_TEL], [STAFF_MAIL], [STAFF_DAY], [STAFF_ADDRESS]) VALUES (@STAFF_NAME, @STAFF_KANA, @SEX, @STAFF_AGE, @STAFF_POSITION, @STAFF_TEL, @STAFF_MAIL, @STAFF_DAY, @STAFF_ADDRESS);
-SELECT STAFF_CODE, STAFF_NAME, STAFF_KANA, SEX, STAFF_AGE, STAFF_POSITION, STAFF_TEL, STAFF_MAIL, STAFF_DAY, STAFF_ADDRESS FROM TBL_STAFF WHERE (STAFF_CODE = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[TBL_STAFF] ([STAFF_NAME], [STAFF_KANA], [STAFF_SEX], [STAFF_AGE], [STAFF_POSITION], [STAFF_TEL], [STAFF_MAIL], [STAFF_DAY], [STAFF_ADDRESS]) VALUES (@STAFF_NAME, @STAFF_KANA, @STAFF_SEX, @STAFF_AGE, @STAFF_POSITION, @STAFF_TEL, @STAFF_MAIL, @STAFF_DAY, @STAFF_ADDRESS);
+SELECT STAFF_CODE, STAFF_NAME, STAFF_KANA, STAFF_SEX, STAFF_AGE, STAFF_POSITION, STAFF_TEL, STAFF_MAIL, STAFF_DAY, STAFF_ADDRESS FROM TBL_STAFF WHERE (STAFF_CODE = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STAFF_NAME", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STAFF_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STAFF_KANA", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STAFF_KANA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SEX", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SEX", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STAFF_SEX", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STAFF_SEX", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STAFF_AGE", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STAFF_AGE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STAFF_POSITION", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STAFF_POSITION", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STAFF_TEL", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STAFF_TEL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4462,12 +4378,12 @@ SELECT STAFF_CODE, STAFF_NAME, STAFF_KANA, SEX, STAFF_AGE, STAFF_POSITION, STAFF
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STAFF_ADDRESS", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STAFF_ADDRESS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TBL_STAFF] SET [STAFF_NAME] = @STAFF_NAME, [STAFF_KANA] = @STAFF_KANA, [SEX] = @SEX, [STAFF_AGE] = @STAFF_AGE, [STAFF_POSITION] = @STAFF_POSITION, [STAFF_TEL] = @STAFF_TEL, [STAFF_MAIL] = @STAFF_MAIL, [STAFF_DAY] = @STAFF_DAY, [STAFF_ADDRESS] = @STAFF_ADDRESS WHERE (([STAFF_CODE] = @Original_STAFF_CODE));
-SELECT STAFF_CODE, STAFF_NAME, STAFF_KANA, SEX, STAFF_AGE, STAFF_POSITION, STAFF_TEL, STAFF_MAIL, STAFF_DAY, STAFF_ADDRESS FROM TBL_STAFF WHERE (STAFF_CODE = @STAFF_CODE)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TBL_STAFF] SET [STAFF_NAME] = @STAFF_NAME, [STAFF_KANA] = @STAFF_KANA, [STAFF_SEX] = @STAFF_SEX, [STAFF_AGE] = @STAFF_AGE, [STAFF_POSITION] = @STAFF_POSITION, [STAFF_TEL] = @STAFF_TEL, [STAFF_MAIL] = @STAFF_MAIL, [STAFF_DAY] = @STAFF_DAY, [STAFF_ADDRESS] = @STAFF_ADDRESS WHERE (([STAFF_CODE] = @Original_STAFF_CODE));
+SELECT STAFF_CODE, STAFF_NAME, STAFF_KANA, STAFF_SEX, STAFF_AGE, STAFF_POSITION, STAFF_TEL, STAFF_MAIL, STAFF_DAY, STAFF_ADDRESS FROM TBL_STAFF WHERE (STAFF_CODE = @STAFF_CODE)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STAFF_NAME", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STAFF_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STAFF_KANA", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STAFF_KANA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SEX", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SEX", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STAFF_SEX", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STAFF_SEX", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STAFF_AGE", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STAFF_AGE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STAFF_POSITION", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STAFF_POSITION", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STAFF_TEL", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STAFF_TEL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4491,8 +4407,8 @@ SELECT STAFF_CODE, STAFF_NAME, STAFF_KANA, SEX, STAFF_AGE, STAFF_POSITION, STAFF
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT STAFF_CODE, STAFF_NAME, STAFF_KANA, SEX, STAFF_AGE, STAFF_POSITION, STAFF_" +
-                "TEL, STAFF_MAIL, STAFF_DAY, STAFF_ADDRESS FROM dbo.TBL_STAFF";
+            this._commandCollection[0].CommandText = "SELECT STAFF_CODE, STAFF_NAME, STAFF_KANA, STAFF_SEX, STAFF_AGE, STAFF_POSITION, " +
+                "STAFF_TEL, STAFF_MAIL, STAFF_DAY, STAFF_ADDRESS FROM dbo.TBL_STAFF";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4575,7 +4491,7 @@ SELECT STAFF_CODE, STAFF_NAME, STAFF_KANA, SEX, STAFF_AGE, STAFF_POSITION, STAFF
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string STAFF_NAME, string STAFF_KANA, string SEX, string STAFF_AGE, string STAFF_POSITION, string STAFF_TEL, string STAFF_MAIL, string STAFF_DAY, string STAFF_ADDRESS) {
+        public virtual int Insert(string STAFF_NAME, string STAFF_KANA, string STAFF_SEX, string STAFF_AGE, string STAFF_POSITION, string STAFF_TEL, string STAFF_MAIL, string STAFF_DAY, string STAFF_ADDRESS) {
             if ((STAFF_NAME == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -4588,11 +4504,11 @@ SELECT STAFF_CODE, STAFF_NAME, STAFF_KANA, SEX, STAFF_AGE, STAFF_POSITION, STAFF
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(STAFF_KANA));
             }
-            if ((SEX == null)) {
+            if ((STAFF_SEX == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(SEX));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(STAFF_SEX));
             }
             if ((STAFF_AGE == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
@@ -4650,7 +4566,7 @@ SELECT STAFF_CODE, STAFF_NAME, STAFF_KANA, SEX, STAFF_AGE, STAFF_POSITION, STAFF
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string STAFF_NAME, string STAFF_KANA, string SEX, string STAFF_AGE, string STAFF_POSITION, string STAFF_TEL, string STAFF_MAIL, string STAFF_DAY, string STAFF_ADDRESS, int Original_STAFF_CODE, int STAFF_CODE) {
+        public virtual int Update(string STAFF_NAME, string STAFF_KANA, string STAFF_SEX, string STAFF_AGE, string STAFF_POSITION, string STAFF_TEL, string STAFF_MAIL, string STAFF_DAY, string STAFF_ADDRESS, int Original_STAFF_CODE, int STAFF_CODE) {
             if ((STAFF_NAME == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -4663,11 +4579,11 @@ SELECT STAFF_CODE, STAFF_NAME, STAFF_KANA, SEX, STAFF_AGE, STAFF_POSITION, STAFF
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(STAFF_KANA));
             }
-            if ((SEX == null)) {
+            if ((STAFF_SEX == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(SEX));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(STAFF_SEX));
             }
             if ((STAFF_AGE == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
@@ -4727,8 +4643,8 @@ SELECT STAFF_CODE, STAFF_NAME, STAFF_KANA, SEX, STAFF_AGE, STAFF_POSITION, STAFF
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string STAFF_NAME, string STAFF_KANA, string SEX, string STAFF_AGE, string STAFF_POSITION, string STAFF_TEL, string STAFF_MAIL, string STAFF_DAY, string STAFF_ADDRESS, int Original_STAFF_CODE) {
-            return this.Update(STAFF_NAME, STAFF_KANA, SEX, STAFF_AGE, STAFF_POSITION, STAFF_TEL, STAFF_MAIL, STAFF_DAY, STAFF_ADDRESS, Original_STAFF_CODE, Original_STAFF_CODE);
+        public virtual int Update(string STAFF_NAME, string STAFF_KANA, string STAFF_SEX, string STAFF_AGE, string STAFF_POSITION, string STAFF_TEL, string STAFF_MAIL, string STAFF_DAY, string STAFF_ADDRESS, int Original_STAFF_CODE) {
+            return this.Update(STAFF_NAME, STAFF_KANA, STAFF_SEX, STAFF_AGE, STAFF_POSITION, STAFF_TEL, STAFF_MAIL, STAFF_DAY, STAFF_ADDRESS, Original_STAFF_CODE, Original_STAFF_CODE);
         }
     }
     
@@ -4912,21 +4828,21 @@ SELECT STAFF_CODE, STAFF_NAME, STAFF_KANA, SEX, STAFF_AGE, STAFF_POSITION, STAFF
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tBL_RESERVATIONTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.TBL_RESERVATION.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tBL_RESERVATIONTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._tBL_CLIENTTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.TBL_CLIENT.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._tBL_CLIENTTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tBL_RESERVATIONTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TBL_RESERVATION.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tBL_RESERVATIONTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -4956,19 +4872,19 @@ SELECT STAFF_CODE, STAFF_NAME, STAFF_KANA, SEX, STAFF_AGE, STAFF_POSITION, STAFF
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tBL_RESERVATIONTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.TBL_RESERVATION.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tBL_RESERVATIONTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._tBL_CLIENTTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.TBL_CLIENT.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._tBL_CLIENTTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tBL_RESERVATIONTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TBL_RESERVATION.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tBL_RESERVATIONTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -4982,19 +4898,19 @@ SELECT STAFF_CODE, STAFF_NAME, STAFF_KANA, SEX, STAFF_AGE, STAFF_POSITION, STAFF
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(globalDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._tBL_CLIENTTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TBL_CLIENT.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tBL_CLIENTTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._tBL_RESERVATIONTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.TBL_RESERVATION.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._tBL_RESERVATIONTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tBL_CLIENTTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TBL_CLIENT.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tBL_CLIENTTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

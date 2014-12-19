@@ -76,13 +76,14 @@ namespace Sample1
             
             DBconnection DBC = new DBconnection();
             DBC.DB_connect();
+            
 
-
-            if (_form_name == "staffentry")
+            if (_form_name == "Staffentry")
             {
 
                 try
                 {
+                    
                     //データベースファイルオープン
                     string name = Staffcheck_Name.Text;
                     string kana = Staffcheck_Kana.Text;
@@ -109,12 +110,14 @@ namespace Sample1
                     scm.ExecuteNonQuery();
 
                     DBC.DB_DisConnect();
+                    
                 }
 
                 catch (Exception ex)
                 {
                     //データベースファイルクローズ
                     DBC.DB_DisConnect();
+                    
                     MessageBox.Show(ex.Message, "エラー");
                 }
 
@@ -126,7 +129,7 @@ namespace Sample1
 
             }
 
-            else if (_form_name == "staffchange")
+            else if (_form_name == "Staffchange")
             {
                 try
                 {
@@ -144,16 +147,16 @@ namespace Sample1
 
                     SqlCommand scm = new SqlCommand
                         ("update TBL_STAFF set "
-                    +"STAFF_NAME = "+ name +","
-                    +"STAFF_KANA = "+ kana +","
-                    +"STAFF_SEX = "+ sex +","
-                    +"STAFF_AGE = "+ age +","
-                    +"STAFF_POSITION = "+ position +","
-                    +"STAFF_TEL = "+ tel +","
-                    +"STAFF_MAIL = "+ mail +","
-                    +"STAFF_DAY = "+ day +","
-                    +"STAFF_ADDRESS = "+ address +","
-                    +"where STAFF_CODE = "+ code
+                    + "STAFF_NAME = '" + name + "',"
+                    + "STAFF_KANA = '" + kana + "',"
+                    + "STAFF_SEX = '" + sex + "',"
+                    + "STAFF_AGE = '" + age + "',"
+                    + "STAFF_POSITION = '" + position + "',"
+                    + "STAFF_TEL = '" + tel + "',"
+                    + "STAFF_MAIL = '" + mail + "',"
+                    + "STAFF_DAY = '" + day + "',"
+                    + "STAFF_ADDRESS = '" + address + "'"
+                    + "where STAFF_CODE = '" + code + "'"
                     , DBC.Get_scn());
 
                     scm.ExecuteNonQuery();

@@ -38,7 +38,7 @@
             this.Customerlist_Post = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Customerlist_Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tBLCLIENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.globalDBDataSet = new Sample1.globalDBDataSet();
+            this.globalDBDataSet4 = new Sample1.globalDBDataSet();
             this.CustomerlistSearch_button = new System.Windows.Forms.Button();
             this.CustomerlistEntry_button = new System.Windows.Forms.Button();
             this.CustomerlistBack_button = new System.Windows.Forms.Button();
@@ -47,10 +47,10 @@
             this.CustomerlistTel_label = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.tBL_CLIENTTableAdapter = new Sample1.globalDBDataSetTableAdapters.TBL_CLIENTTableAdapter();
+            this.tBL_CLIENTTableAdapter = new Sample1.globalDBDataSet4TableAdapters.TBL_CLIENTTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLCLIENTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -69,6 +69,7 @@
             this.dataGridView1.RowTemplate.Height = 21;
             this.dataGridView1.Size = new System.Drawing.Size(777, 212);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // Customerlist_No
@@ -93,7 +94,7 @@
             // 
             // Customerlist_Sex
             // 
-            this.Customerlist_Sex.DataPropertyName = "SEX";
+            this.Customerlist_Sex.DataPropertyName = "CLIENT_SEX";
             this.Customerlist_Sex.HeaderText = "性別";
             this.Customerlist_Sex.Name = "Customerlist_Sex";
             this.Customerlist_Sex.Width = 80;
@@ -119,12 +120,12 @@
             // tBLCLIENTBindingSource
             // 
             this.tBLCLIENTBindingSource.DataMember = "TBL_CLIENT";
-            this.tBLCLIENTBindingSource.DataSource = this.globalDBDataSet;
+            this.tBLCLIENTBindingSource.DataSource = this.globalDBDataSet4;
             // 
-            // globalDBDataSet
+            // globalDBDataSet4
             // 
-            this.globalDBDataSet.DataSetName = "globalDBDataSet";
-            this.globalDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.globalDBDataSet4.DataSetName = "globalDBDataSet4";
+            this.globalDBDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // CustomerlistSearch_button
             // 
@@ -221,7 +222,7 @@
             this.Load += new System.EventHandler(this.Customerlist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLCLIENTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,9 +239,6 @@
         private System.Windows.Forms.Label CustomerlistTel_label;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private globalDBDataSet globalDBDataSet;
-        private System.Windows.Forms.BindingSource tBLCLIENTBindingSource;
-        private globalDBDataSetTableAdapters.TBL_CLIENTTableAdapter tBL_CLIENTTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_No;
         private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_Kana;
@@ -248,5 +246,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_Tel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_Post;
         private System.Windows.Forms.DataGridViewTextBoxColumn Customerlist_Address;
+        private globalDBDataSet globalDBDataSet4;
+        private System.Windows.Forms.BindingSource tBLCLIENTBindingSource;
+        private globalDBDataSet4TableAdapters.TBL_CLIENTTableAdapter tBL_CLIENTTableAdapter;
     }
 }
