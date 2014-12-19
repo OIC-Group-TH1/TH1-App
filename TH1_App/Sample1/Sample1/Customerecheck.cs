@@ -45,12 +45,12 @@ namespace Sample1
 
         private void CustomercheckYes_button_Click(object sender, EventArgs e)
         {
-            System.Data.SqlClient.SqlConnection scn
-                   = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+
+            DBconnection DBC = new DBconnection();
+            DBC.DB_connect();
             try
             {
                 //データベースファイルオープン
-                scn.Open();
                 string name = Customercheck_Name.Text;
                 string kana = Customercheck_Kana.Text;
                 string sex = Customercheck_Sex.Text;
@@ -67,17 +67,16 @@ namespace Sample1
                         + "'" + tel + "',"
                         + "'" + post + "',"
                         + "'" + address + "',"
-                        + "'" + note + "'" + ")", scn);
+                        + "'" + note + "'" + ")", DBC.Get_scn());
 
                 scm.ExecuteNonQuery();
-                scn.Close();
+                DBC.DB_DisConnect();
             }
 
             catch (Exception ex)
             {
                 //データベースファイルクローズ
-                scn.Close();
-                MessageBox.Show(ex.Message, "エラー");
+                DBC.DB_DisConnect();
             }
             Customerecheck Ccheck = new Customerecheck();
             Ccheck.Show();

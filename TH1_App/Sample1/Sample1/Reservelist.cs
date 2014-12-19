@@ -16,6 +16,7 @@ namespace Sample1
         public string c_name;
         public string c_tel;
         public string r_no;
+        public string r_date;
 
 
         public reservelist()
@@ -26,6 +27,7 @@ namespace Sample1
         {
             InitializeComponent();
             dateTimePicker1.Text = str;
+            r_date = dateTimePicker1.Text;
         }
 
         private void ReservelistBack_button_Click(object sender, EventArgs e)
@@ -43,48 +45,36 @@ namespace Sample1
             this.dataGridView1.MultiSelect = false;
 
             //SQL Serverからリストを取得
-            //
-            // System.Data.SqlClient.SqlConnection scn
-            //   = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+            DBconnection DBC = new DBconnection();
+            DBC.DB_connect();
+            SqlCommand command = new SqlCommand();
+            command.CommandText = "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM FROM TBL_ROOM RO,TBL_RESERVATION RE,TBL.CLIENT CL WHERE RE.ROOM_CODE = RO.ROOM_CODE and RE.CLIENT_CODE = CL.CLIENT_CODE and RESERVATION_DATE =" + "'" + r_date + "'";
+            // SQLを実行
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string id = (string)reader.GetValue(0);
+                string name = (string)reader.GetValue(1);
+                
+            }
+            DBC.DB_DisConnect();
 
-            // try
-            //{
-            //    //データベースファイルオープン
-            //    scn.Open();
-            //    SqlCommand command = new SqlCommand();
-            //    command.CommandText = "SELECT * FROM TBL_CLIENT WHERE ";
-            //    // SQLを実行
-            //    SqlDataReader reader = command.ExecuteReader();
-            //    while (reader.Read())
-            //        {
-            //            string id = (string)reader.GetValue(0);
-            //            string name = (string)reader.GetValue(1);
-            //            scn.Close();
-            //        }
 
-            //}
-
-            //catch (Exception ex)
-            //{
-            //    //データベースファイルクローズ
-            //    scn.Close();
-            //    MessageBox.Show(ex.Message, "エラー");
-            //}
 
 
             //行の追加（TEST用）↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓★後で消す
             // DataGridViewの行追加
-            dataGridView1.Rows.Add();//一回書く事で項目が一行ずつ増える
-            dataGridView1.Rows.Add();
-            dataGridView1.Rows.Add();
-            dataGridView1.Rows.Add();
-            dataGridView1.Rows.Add();
-            dataGridView1.Rows[0].Cells[7].Value = "不可";
-            dataGridView1.Rows[1].Cells[7].Value = "可";
-            dataGridView1.Rows[2].Cells[7].Value = "不可";
-            dataGridView1.Rows[2].Cells[3].Value = "namae";
-            dataGridView1.Rows[3].Cells[7].Value = "不可";
-            dataGridView1.Rows[4].Cells[7].Value = "可";
+            //dataGridView1.Rows.Add();//一回書く事で項目が一行ずつ増える
+            //dataGridView1.Rows.Add();
+            //dataGridView1.Rows.Add();
+            //dataGridView1.Rows.Add();
+            //dataGridView1.Rows.Add();
+            //dataGridView1.Rows[0].Cells[7].Value = "不可";
+            //dataGridView1.Rows[1].Cells[7].Value = "可";
+            //dataGridView1.Rows[2].Cells[7].Value = "不可";
+            //dataGridView1.Rows[2].Cells[3].Value = "namae";
+            //dataGridView1.Rows[3].Cells[7].Value = "不可";
+            //dataGridView1.Rows[4].Cells[7].Value = "可";
             //行の追加（TEST用）↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑★後で消して！
 
 
@@ -94,7 +84,6 @@ namespace Sample1
             {
                 //仮で色を指定
                 if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "可")
-
                     this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.White;
                 else if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "不可" && dataGridView1.Rows[i].Cells[3].Value == null)
                     this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.YellowGreen;
@@ -102,6 +91,12 @@ namespace Sample1
                     this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.Gold;
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        
+        }
+        
 
         private void ReservelistTop_button_Click(object sender, EventArgs e)
         {
@@ -146,6 +141,11 @@ namespace Sample1
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }
