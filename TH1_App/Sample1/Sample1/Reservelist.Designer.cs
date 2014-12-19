@@ -72,7 +72,6 @@
             this.ReservelistTop_button.TabIndex = 3;
             this.ReservelistTop_button.Text = "Topへ";
             this.ReservelistTop_button.UseVisualStyleBackColor = true;
-            this.ReservelistTop_button.Click += new System.EventHandler(this.ReservelistTop_button_Click);
             // 
             // dataGridView1
             // 
@@ -93,7 +92,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(702, 183);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -103,7 +101,7 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "タイプ";
+            this.dataGridViewTextBoxColumn2.HeaderText = "部屋名";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Width = 70;
             // 
@@ -115,12 +113,12 @@
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "宿泊者";
+            this.dataGridViewTextBoxColumn4.HeaderText = "宿泊者氏名";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "住所";
+            this.dataGridViewTextBoxColumn5.HeaderText = "宿泊者フリガナ";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // dataGridViewTextBoxColumn6

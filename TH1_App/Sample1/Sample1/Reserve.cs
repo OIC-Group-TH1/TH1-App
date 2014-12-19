@@ -79,6 +79,11 @@ namespace Sample1
 
         }
 
+        private void Reserve_Load(object sender, EventArgs e)
+        {
+
+        }
+
     
    
     }
