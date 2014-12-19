@@ -101,6 +101,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>globalDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="IO.cs" />
     <Compile Include="Logic.cs" />
     <Compile Include="IOcheck.cs">
       <SubType>Form</SubType>

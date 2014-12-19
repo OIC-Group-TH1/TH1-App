@@ -12,7 +12,7 @@ namespace Sample1
     {
         //データベース接続変数　SCN
         System.Data.SqlClient.SqlConnection scn
-               = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+               = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Documents and Settings\Yasushi Furukawa\デスクトップ\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
 
         //接続用
         public void DB_connect()

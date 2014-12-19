@@ -76,6 +76,7 @@ namespace Sample1
             catch (Exception ex)
             {
                 //データベースファイルクローズ
+                MessageBox.Show(ex.Message);
                 DBC.DB_DisConnect();
             }
             Customerecheck Ccheck = new Customerecheck();
