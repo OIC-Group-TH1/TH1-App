@@ -42,13 +42,13 @@ namespace Sample1
 
         private void CustomerentryEntry_button_Click(object sender, EventArgs e)
         {
-            name = Customerentry_Name.Text;
-            kana = Customerentry_Kana.Text;
-            sex = Customerentry_Sex.SelectedItem.ToString();
-            tel = Customerentry_Tel.Text;
-            post = Customerentry_Post.Text;
-            address = Customerentry_Address.Text;
-            note = Customerentry_Note.Text;
+            Customer_Class._customer_name       = Customerentry_Name.Text;
+            Customer_Class._customer_kana       = Customerentry_Kana.Text;
+            Customer_Class._customer_sex        = Customerentry_Sex.SelectedItem.ToString();
+            Customer_Class._customer_tel        = Customerentry_Tel.Text;
+            Customer_Class._customer_post       = Customerentry_Post.Text;
+            Customer_Class._customer_address    = Customerentry_Address.Text;
+            Customer_Class._customer_note       = Customerentry_Note.Text;
 
             Customerecheck Ccheck = new Customerecheck(this);
             Ccheck.Show();

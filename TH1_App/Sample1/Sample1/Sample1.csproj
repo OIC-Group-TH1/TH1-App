@@ -95,6 +95,7 @@
     <Compile Include="Customerlist.Designer.cs">
       <DependentUpon>Customerlist.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer_Class.cs" />
     <Compile Include="DB_connection.cs" />
     <Compile Include="globalDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>

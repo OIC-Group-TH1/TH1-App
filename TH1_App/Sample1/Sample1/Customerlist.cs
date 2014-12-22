@@ -65,8 +65,12 @@ namespace Sample1
 
         private void Customerlist_Load(object sender, EventArgs e)
         {
+            // TODO: このコード行はデータを 'globalDBDataSet.TBL_CLIENT' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.tBL_CLIENTTableAdapter.Fill(this.globalDBDataSet.TBL_CLIENT);
+            // TODO: このコード行はデータを 'globalDBDataSet1.TBL_CLIENT' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.tBL_CLIENTTableAdapter.Fill(this.globalDBDataSet.TBL_CLIENT);
             // TODO: このコード行はデータを 'globalDBDataSet4.TBL_CLIENT' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.tBL_CLIENTTableAdapter.Fill(this.globalDBDataSet4.TBL_CLIENT);
+            this.tBL_CLIENTTableAdapter.Fill(this.globalDBDataSet.TBL_CLIENT);
             // TODO: このコード行はデータを 'globalDBDataSet3.TBL_CLIENT' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
            
             //セルを行として管理

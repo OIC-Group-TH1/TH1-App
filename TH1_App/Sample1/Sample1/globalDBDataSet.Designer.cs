@@ -20,7 +20,7 @@ namespace Sample1 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("globalDBDataSet4")]
+    [global::System.Xml.Serialization.XmlRootAttribute("globalDBDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class globalDBDataSet : global::System.Data.DataSet {
         
@@ -280,9 +280,9 @@ namespace Sample1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "globalDBDataSet4";
+            this.DataSetName = "globalDBDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/globalDBDataSet4.xsd";
+            this.Namespace = "http://tempuri.org/globalDBDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableTBL_CLIENT = new TBL_CLIENTDataTable();
@@ -423,8 +423,6 @@ namespace Sample1 {
             
             private global::System.Data.DataColumn columnRESERVATION_CODE;
             
-            private global::System.Data.DataColumn columnCLIENT_COUNT;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TBL_CLIENTDataTable() {
@@ -532,14 +530,6 @@ namespace Sample1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CLIENT_COUNTColumn {
-                get {
-                    return this.columnCLIENT_COUNT;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -575,7 +565,7 @@ namespace Sample1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TBL_CLIENTRow AddTBL_CLIENTRow(string CLIENT_NAME, string CLIENT_KANA, string CLIENT_SEX, string CLIENT_TEL, string CLIENT_POST, string CLIENT_ADDRESS, string CLIENT_NOTE, int RESERVATION_CODE, string CLIENT_COUNT) {
+            public TBL_CLIENTRow AddTBL_CLIENTRow(string CLIENT_NAME, string CLIENT_KANA, string CLIENT_SEX, string CLIENT_TEL, string CLIENT_POST, string CLIENT_ADDRESS, string CLIENT_NOTE, int RESERVATION_CODE) {
                 TBL_CLIENTRow rowTBL_CLIENTRow = ((TBL_CLIENTRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -586,8 +576,7 @@ namespace Sample1 {
                         CLIENT_POST,
                         CLIENT_ADDRESS,
                         CLIENT_NOTE,
-                        RESERVATION_CODE,
-                        CLIENT_COUNT};
+                        RESERVATION_CODE};
                 rowTBL_CLIENTRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTBL_CLIENTRow);
                 return rowTBL_CLIENTRow;
@@ -626,7 +615,6 @@ namespace Sample1 {
                 this.columnCLIENT_ADDRESS = base.Columns["CLIENT_ADDRESS"];
                 this.columnCLIENT_NOTE = base.Columns["CLIENT_NOTE"];
                 this.columnRESERVATION_CODE = base.Columns["RESERVATION_CODE"];
-                this.columnCLIENT_COUNT = base.Columns["CLIENT_COUNT"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -650,8 +638,6 @@ namespace Sample1 {
                 base.Columns.Add(this.columnCLIENT_NOTE);
                 this.columnRESERVATION_CODE = new global::System.Data.DataColumn("RESERVATION_CODE", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRESERVATION_CODE);
-                this.columnCLIENT_COUNT = new global::System.Data.DataColumn("CLIENT_COUNT", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCLIENT_COUNT);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCLIENT_CODE}, true));
                 this.columnCLIENT_CODE.AutoIncrement = true;
@@ -667,7 +653,6 @@ namespace Sample1 {
                 this.columnCLIENT_POST.MaxLength = 1073741823;
                 this.columnCLIENT_ADDRESS.MaxLength = 1073741823;
                 this.columnCLIENT_NOTE.MaxLength = 1073741823;
-                this.columnCLIENT_COUNT.MaxLength = 1073741823;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2057,22 +2042,6 @@ namespace Sample1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string CLIENT_COUNT {
-                get {
-                    try {
-                        return ((string)(this[this.tableTBL_CLIENT.CLIENT_COUNTColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("テーブル \'TBL_CLIENT\' にある列 \'CLIENT_COUNT\' の値は DBNull です。", e);
-                    }
-                }
-                set {
-                    this[this.tableTBL_CLIENT.CLIENT_COUNTColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsCLIENT_NAMENull() {
                 return this.IsNull(this.tableTBL_CLIENT.CLIENT_NAMEColumn);
             }
@@ -2165,18 +2134,6 @@ namespace Sample1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetRESERVATION_CODENull() {
                 this[this.tableTBL_CLIENT.RESERVATION_CODEColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCLIENT_COUNTNull() {
-                return this.IsNull(this.tableTBL_CLIENT.CLIENT_COUNTColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCLIENT_COUNTNull() {
-                this[this.tableTBL_CLIENT.CLIENT_COUNTColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2998,7 +2955,7 @@ namespace Sample1 {
         }
     }
 }
-namespace Sample1.globalDBDataSet4TableAdapters {
+namespace Sample1.globalDBDataSetTableAdapters {
     
     
     /// <summary>
@@ -3131,7 +3088,6 @@ namespace Sample1.globalDBDataSet4TableAdapters {
             tableMapping.ColumnMappings.Add("CLIENT_ADDRESS", "CLIENT_ADDRESS");
             tableMapping.ColumnMappings.Add("CLIENT_NOTE", "CLIENT_NOTE");
             tableMapping.ColumnMappings.Add("RESERVATION_CODE", "RESERVATION_CODE");
-            tableMapping.ColumnMappings.Add("CLIENT_COUNT", "CLIENT_COUNT");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -3144,8 +3100,8 @@ namespace Sample1.globalDBDataSet4TableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RESERVATION_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RESERVATION_CODE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[TBL_CLIENT] ([CLIENT_NAME], [CLIENT_KANA], [CLIENT_SEX], [CLIENT_TEL], [CLIENT_POST], [CLIENT_ADDRESS], [CLIENT_NOTE], [RESERVATION_CODE], [CLIENT_COUNT]) VALUES (@CLIENT_NAME, @CLIENT_KANA, @CLIENT_SEX, @CLIENT_TEL, @CLIENT_POST, @CLIENT_ADDRESS, @CLIENT_NOTE, @RESERVATION_CODE, @CLIENT_COUNT);
-SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, CLIENT_SEX, CLIENT_TEL, CLIENT_POST, CLIENT_ADDRESS, CLIENT_NOTE, RESERVATION_CODE, CLIENT_COUNT FROM TBL_CLIENT WHERE (CLIENT_CODE = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[TBL_CLIENT] ([CLIENT_NAME], [CLIENT_KANA], [CLIENT_SEX], [CLIENT_TEL], [CLIENT_POST], [CLIENT_ADDRESS], [CLIENT_NOTE], [RESERVATION_CODE]) VALUES (@CLIENT_NAME, @CLIENT_KANA, @CLIENT_SEX, @CLIENT_TEL, @CLIENT_POST, @CLIENT_ADDRESS, @CLIENT_NOTE, @RESERVATION_CODE);
+SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, CLIENT_SEX, CLIENT_TEL, CLIENT_POST, CLIENT_ADDRESS, CLIENT_NOTE, RESERVATION_CODE FROM TBL_CLIENT WHERE (CLIENT_CODE = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_NAME", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_KANA", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_KANA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3155,11 +3111,10 @@ SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, CLIENT_SEX, CLIENT_TEL, CLIENT_POS
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_ADDRESS", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_ADDRESS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_NOTE", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_NOTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RESERVATION_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RESERVATION_CODE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_COUNT", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_COUNT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TBL_CLIENT] SET [CLIENT_NAME] = @CLIENT_NAME, [CLIENT_KANA] = @CLIENT_KANA, [CLIENT_SEX] = @CLIENT_SEX, [CLIENT_TEL] = @CLIENT_TEL, [CLIENT_POST] = @CLIENT_POST, [CLIENT_ADDRESS] = @CLIENT_ADDRESS, [CLIENT_NOTE] = @CLIENT_NOTE, [RESERVATION_CODE] = @RESERVATION_CODE, [CLIENT_COUNT] = @CLIENT_COUNT WHERE (([CLIENT_CODE] = @Original_CLIENT_CODE) AND ((@IsNull_RESERVATION_CODE = 1 AND [RESERVATION_CODE] IS NULL) OR ([RESERVATION_CODE] = @Original_RESERVATION_CODE)));
-SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, CLIENT_SEX, CLIENT_TEL, CLIENT_POST, CLIENT_ADDRESS, CLIENT_NOTE, RESERVATION_CODE, CLIENT_COUNT FROM TBL_CLIENT WHERE (CLIENT_CODE = @CLIENT_CODE)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TBL_CLIENT] SET [CLIENT_NAME] = @CLIENT_NAME, [CLIENT_KANA] = @CLIENT_KANA, [CLIENT_SEX] = @CLIENT_SEX, [CLIENT_TEL] = @CLIENT_TEL, [CLIENT_POST] = @CLIENT_POST, [CLIENT_ADDRESS] = @CLIENT_ADDRESS, [CLIENT_NOTE] = @CLIENT_NOTE, [RESERVATION_CODE] = @RESERVATION_CODE WHERE (([CLIENT_CODE] = @Original_CLIENT_CODE) AND ((@IsNull_RESERVATION_CODE = 1 AND [RESERVATION_CODE] IS NULL) OR ([RESERVATION_CODE] = @Original_RESERVATION_CODE)));
+SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, CLIENT_SEX, CLIENT_TEL, CLIENT_POST, CLIENT_ADDRESS, CLIENT_NOTE, RESERVATION_CODE FROM TBL_CLIENT WHERE (CLIENT_CODE = @CLIENT_CODE)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_NAME", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_KANA", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_KANA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3169,7 +3124,6 @@ SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, CLIENT_SEX, CLIENT_TEL, CLIENT_POS
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_ADDRESS", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_ADDRESS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_NOTE", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_NOTE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RESERVATION_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RESERVATION_CODE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CLIENT_COUNT", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_COUNT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CLIENT_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CLIENT_CODE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RESERVATION_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RESERVATION_CODE", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RESERVATION_CODE", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RESERVATION_CODE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -3190,8 +3144,7 @@ SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, CLIENT_SEX, CLIENT_TEL, CLIENT_POS
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, CLIENT_SEX, CLIENT_TEL, CLIENT_POST" +
-                ", CLIENT_ADDRESS, CLIENT_NOTE, RESERVATION_CODE, CLIENT_COUNT FROM dbo.TBL_CLIEN" +
-                "T";
+                ", CLIENT_ADDRESS, CLIENT_NOTE, RESERVATION_CODE FROM dbo.TBL_CLIENT";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3282,7 +3235,7 @@ SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, CLIENT_SEX, CLIENT_TEL, CLIENT_POS
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string CLIENT_NAME, string CLIENT_KANA, string CLIENT_SEX, string CLIENT_TEL, string CLIENT_POST, string CLIENT_ADDRESS, string CLIENT_NOTE, global::System.Nullable<int> RESERVATION_CODE, string CLIENT_COUNT) {
+        public virtual int Insert(string CLIENT_NAME, string CLIENT_KANA, string CLIENT_SEX, string CLIENT_TEL, string CLIENT_POST, string CLIENT_ADDRESS, string CLIENT_NOTE, global::System.Nullable<int> RESERVATION_CODE) {
             if ((CLIENT_NAME == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -3331,12 +3284,6 @@ SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, CLIENT_SEX, CLIENT_TEL, CLIENT_POS
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((CLIENT_COUNT == null)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(CLIENT_COUNT));
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3357,7 +3304,7 @@ SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, CLIENT_SEX, CLIENT_TEL, CLIENT_POS
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string CLIENT_NAME, string CLIENT_KANA, string CLIENT_SEX, string CLIENT_TEL, string CLIENT_POST, string CLIENT_ADDRESS, string CLIENT_NOTE, global::System.Nullable<int> RESERVATION_CODE, string CLIENT_COUNT, int Original_CLIENT_CODE, global::System.Nullable<int> Original_RESERVATION_CODE, int CLIENT_CODE) {
+        public virtual int Update(string CLIENT_NAME, string CLIENT_KANA, string CLIENT_SEX, string CLIENT_TEL, string CLIENT_POST, string CLIENT_ADDRESS, string CLIENT_NOTE, global::System.Nullable<int> RESERVATION_CODE, int Original_CLIENT_CODE, global::System.Nullable<int> Original_RESERVATION_CODE, int CLIENT_CODE) {
             if ((CLIENT_NAME == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -3406,22 +3353,16 @@ SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, CLIENT_SEX, CLIENT_TEL, CLIENT_POS
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((CLIENT_COUNT == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(CLIENT_COUNT));
-            }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_CLIENT_CODE));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_CLIENT_CODE));
             if ((Original_RESERVATION_CODE.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_RESERVATION_CODE.Value));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_RESERVATION_CODE.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(CLIENT_CODE));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(CLIENT_CODE));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3442,8 +3383,8 @@ SELECT CLIENT_CODE, CLIENT_NAME, CLIENT_KANA, CLIENT_SEX, CLIENT_TEL, CLIENT_POS
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string CLIENT_NAME, string CLIENT_KANA, string CLIENT_SEX, string CLIENT_TEL, string CLIENT_POST, string CLIENT_ADDRESS, string CLIENT_NOTE, global::System.Nullable<int> RESERVATION_CODE, string CLIENT_COUNT, int Original_CLIENT_CODE, global::System.Nullable<int> Original_RESERVATION_CODE) {
-            return this.Update(CLIENT_NAME, CLIENT_KANA, CLIENT_SEX, CLIENT_TEL, CLIENT_POST, CLIENT_ADDRESS, CLIENT_NOTE, RESERVATION_CODE, CLIENT_COUNT, Original_CLIENT_CODE, Original_RESERVATION_CODE, Original_CLIENT_CODE);
+        public virtual int Update(string CLIENT_NAME, string CLIENT_KANA, string CLIENT_SEX, string CLIENT_TEL, string CLIENT_POST, string CLIENT_ADDRESS, string CLIENT_NOTE, global::System.Nullable<int> RESERVATION_CODE, int Original_CLIENT_CODE, global::System.Nullable<int> Original_RESERVATION_CODE) {
+            return this.Update(CLIENT_NAME, CLIENT_KANA, CLIENT_SEX, CLIENT_TEL, CLIENT_POST, CLIENT_ADDRESS, CLIENT_NOTE, RESERVATION_CODE, Original_CLIENT_CODE, Original_RESERVATION_CODE, Original_CLIENT_CODE);
         }
     }
     

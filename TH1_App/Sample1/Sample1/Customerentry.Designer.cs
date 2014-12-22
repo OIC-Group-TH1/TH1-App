@@ -184,6 +184,7 @@
             // 
             // Customerentry_Sex
             // 
+            this.Customerentry_Sex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Customerentry_Sex.FormattingEnabled = true;
             this.Customerentry_Sex.Location = new System.Drawing.Point(140, 139);
             this.Customerentry_Sex.Name = "Customerentry_Sex";

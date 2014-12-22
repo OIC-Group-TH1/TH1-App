@@ -25,21 +25,24 @@ namespace Sample1
         }
         private void Customerecheck_Load(object sender, EventArgs e)
         {
-            Customercheck_Name.Text = Customerentry_main.name;
-            Customercheck_Kana.Text = Customerentry_main.kana;
-            Customercheck_Sex.Text = Customerentry_main.sex;
-            Customercheck_Tel.Text = Customerentry_main.tel;
-            Customercheck_Post.Text = Customerentry_main.post;
-            Customercheck_Address.Text = Customerentry_main.address;
-            Customercheck_Note.Text = Customerentry_main.note;
+            Customercheck_Name.Text     = Customer_Class._customer_name;
+            Customercheck_Kana.Text     = Customer_Class._customer_kana;
+            Customercheck_Sex.Text      = Customer_Class._customer_sex;
+            Customercheck_Tel.Text      = Customer_Class._customer_tel;
+            Customercheck_Post.Text     = Customer_Class._customer_post;
+            Customercheck_Address.Text  = Customer_Class._customer_address;
+            Customercheck_Note.Text     = Customer_Class._customer_note;
+            //Customercheck_reservation.Text = Customer_Class._customer_reservation;
 
         }
 
 
         private void CustomercheckNo_button_Click(object sender, EventArgs e)
         {
-            Customerlist Custlist = new Customerlist();
-            Custlist.Show();
+            //Customerlist Custlist = new Customerlist(); エントリ画面に行くはずなのにリスト画面に行く。変更済み。確認要
+            //Custlist.Show();
+            Customerentry Customerentry = new Customerentry();
+            Customerentry.Show();
             this.Close();
         }
 
@@ -51,23 +54,15 @@ namespace Sample1
             try
             {
                 //データベースファイルオープン
-                string name = Customercheck_Name.Text;
-                string kana = Customercheck_Kana.Text;
-                string sex = Customercheck_Sex.Text;
-                string tel = Customercheck_Tel.Text;
-                string post = Customercheck_Post.Text;
-                string address = Customercheck_Address.Text;
-                string note = Customercheck_Note.Text;                
-
                 SqlCommand scm = new SqlCommand
-                    ("insert into STAFF_TABLE values ("
-                        + "'" + name + "',"
-                        + "'" + kana + "',"
-                        + "'" + sex + "',"
-                        + "'" + tel + "',"
-                        + "'" + post + "',"
-                        + "'" + address + "',"
-                        + "'" + note + "'" + ")", DBC.Get_scn());
+                    ("insert into TBL_CLIENT (CLIENT_NAME, CLIENT_KANA, CLIENT_SEX, CLIENT_TEL, CLIENT_POST, CLIENT_ADDRESS, CLIENT_NOTE)values ("      //TBL_STAFFだったけどこれで大丈夫？現在TBL_CLIENTに変更
+                        + "'" + Customer_Class._customer_name +    "',"
+                        + "'" + Customer_Class._customer_kana +    "',"
+                        + "'" + Customer_Class._customer_sex +     "',"
+                        + "'" + Customer_Class._customer_tel +     "',"
+                        + "'" + Customer_Class._customer_post +    "',"
+                        + "'" + Customer_Class._customer_address + "',"
+                        + "'" + Customer_Class._customer_note + "'" + ")", DBC.Get_scn());
 
                 scm.ExecuteNonQuery();
                 DBC.DB_DisConnect();
@@ -75,12 +70,13 @@ namespace Sample1
 
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 //データベースファイルクローズ
                 DBC.DB_DisConnect();
             }
-            Customerecheck Ccheck = new Customerecheck();
-            Ccheck.Show();
-            this.Close();
+            //Customerecheck Ccheck = new Customerecheck(); おかしい。確認要
+            //Ccheck.Show();
+            //this.Close();
             Customerlist Custlist = new Customerlist();
             Custlist.Show();
             this.Close();

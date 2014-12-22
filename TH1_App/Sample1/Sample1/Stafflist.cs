@@ -51,8 +51,12 @@ namespace Sample1
 
         private void Stafflist_Load(object sender, EventArgs e)
         {
+            // TODO: このコード行はデータを 'globalDBDataSet.TBL_STAFF' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.tBL_STAFFTableAdapter.Fill(this.globalDBDataSet.TBL_STAFF);
+            // TODO: このコード行はデータを 'globalDBDataSet1.TBL_STAFF' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.tBL_STAFFTableAdapter.Fill(this.globalDBDataSet.TBL_STAFF);
             // TODO: このコード行はデータを 'globalDBDataSet4.TBL_STAFF' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.tBL_STAFFTableAdapter.Fill(this.globalDBDataSet4.TBL_STAFF);
+            this.tBL_STAFFTableAdapter.Fill(this.globalDBDataSet.TBL_STAFF);
             
             //セルを行として管理
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -92,16 +96,16 @@ namespace Sample1
             {
                 //DataGridViewの各セルのデータを取得
 
-                Staff.CODE = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                Staff.NAME = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                Staff.KANA = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                Staff.SEX = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                Staff.AGE = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-                Staff.POSITION = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-                Staff.TEL = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-                Staff.MAIL = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-                Staff.DAY = dataGridView1.CurrentRow.Cells[8].Value.ToString();
-                Staff.ADDRESS = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+                Staff_Class.CODE = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                Staff_Class.NAME = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                Staff_Class.KANA = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                Staff_Class.SEX = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                Staff_Class.AGE = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                Staff_Class.POSITION = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                Staff_Class.TEL = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                Staff_Class.MAIL = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                Staff_Class.DAY = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+                Staff_Class.ADDRESS = dataGridView1.CurrentRow.Cells[9].Value.ToString();
 
 
 
