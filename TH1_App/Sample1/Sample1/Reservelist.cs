@@ -23,11 +23,11 @@ namespace Sample1
         {
             InitializeComponent();
         }
-        public reservelist(string str)
+        public reservelist(DateTime str)
         {
             InitializeComponent();
-            dateTimePicker1.Text = str;
-            r_date = dateTimePicker1.Text;
+            dateTimePicker1.Value = str;
+            r_date = str.ToString("yyyy/MM/dd");
         }
 
         private void ReservelistBack_button_Click(object sender, EventArgs e)
@@ -40,65 +40,82 @@ namespace Sample1
 
         public void reservelist_Load(object sender, EventArgs e)
         {
-            //セルを行として管理
+            /*//セルを行として管理
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
-
             //SQL Serverからリストを取得
             DBconnection DBC = new DBconnection();
             DBC.DB_connect();
             SqlCommand command = new SqlCommand();
-            command.CommandText = "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM FROM TBL_ROOM RO,TBL_RESERVATION RE,TBL.CLIENT CL WHERE RE.ROOM_CODE = RO.ROOM_CODE and RE.CLIENT_CODE = CL.CLIENT_CODE and RESERVATION_DATE =" + "'" + r_date + "'";
+            command.CommandText = "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.RESERVATION_CODE FROM TBL_ROOM RO,TBL_RESERVATION RE,TBL_CLIENT CL WHERE RE.ROOM_CODE = RO.ROOM_CODE and RE.CLIENT_CODE = CL.CLIENT_CODE and RESERVATION_DATE =" + "'" + r_date + "'";
             // SQLを実行
+            command.Connection = DBC.Get_scn();
             SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            int m, n;
+            for (m = 0; reader.Read(); m++)
             {
-                string id = (string)reader.GetValue(0);
-                string name = (string)reader.GetValue(1);
-                
+                for (n = 0; n < 9; n++)
+                {
+                    reader.GetValue(n);
+                    if (reader.GetValue(n) != DBNull.Value)
+                    {
+                        if (n == 0)
+                        {
+                            dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
+                        }
+                        else if (n == 8)
+                        {
+                            dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
+                        }
+                        else if (n == 7)
+                        {
+                            dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
+                        }
+                        
+                        else
+                        {
+                            dataGridView1.Rows[m].Cells[n].Value = (string)reader.GetValue(n);
+                        }
+                    }
+
+                }
             }
-            DBC.DB_DisConnect();
+            DBC.DB_DisConnect();*/
+        
+                //行の追加（TEST用）↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓★後で消す
+                // DataGridViewの行追加
+                //dataGridView1.Rows.Add();//一回書く事で項目が一行ずつ増える
+                //dataGridView1.Rows.Add();
+                //dataGridView1.Rows.Add();
+                //dataGridView1.Rows.Add();
+                //dataGridView1.Rows.Add();
+                //dataGridView1.Rows[0].Cells[7].Value = "不可";
+                //dataGridView1.Rows[1].Cells[7].Value = "可";
+                //dataGridView1.Rows[2].Cells[7].Value = "不可";
+                //dataGridView1.Rows[2].Cells[3].Value = "namae";
+                //dataGridView1.Rows[3].Cells[7].Value = "不可";
+                //dataGridView1.Rows[4].Cells[7].Value = "可";
+                //行の追加（TEST用）↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑★後で消して！
 
 
 
-
-            //行の追加（TEST用）↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓★後で消す
-            // DataGridViewの行追加
-            //dataGridView1.Rows.Add();//一回書く事で項目が一行ずつ増える
-            //dataGridView1.Rows.Add();
-            //dataGridView1.Rows.Add();
-            //dataGridView1.Rows.Add();
-            //dataGridView1.Rows.Add();
-            //dataGridView1.Rows[0].Cells[7].Value = "不可";
-            //dataGridView1.Rows[1].Cells[7].Value = "可";
-            //dataGridView1.Rows[2].Cells[7].Value = "不可";
-            //dataGridView1.Rows[2].Cells[3].Value = "namae";
-            //dataGridView1.Rows[3].Cells[7].Value = "不可";
-            //dataGridView1.Rows[4].Cells[7].Value = "可";
-            //行の追加（TEST用）↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑★後で消して！
-
-
-
-            //セルの数の分色を付ける
-            for (int i = 0; i < dataGridView1.RowCount - 1; i++)
-            {
-                //仮で色を指定
-                if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "可")
-                    this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.White;
-                else if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "不可" && dataGridView1.Rows[i].Cells[3].Value == null)
-                    this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.YellowGreen;
-                else if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "不可")
-                    this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.Gold;
+                //セルの数の分色を付ける
+                for (int i = 0; i < dataGridView1.RowCount - 1; i++)
+                {
+                    //仮で色を指定
+                    if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "可")
+                        this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.White;
+                    else if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "不可" && dataGridView1.Rows[i].Cells[3].Value == null)
+                        this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.YellowGreen;
+                    else if (dataGridView1.Rows[i].Cells[7].Value.ToString() == "不可")
+                        this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.Gold;
+                }
             }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
         
-        }
         
-
-        private void ReservelistTop_button_Click(object sender, EventArgs e)
+        
+        
+        private void ReservelistTop_button_Click_1(object sender, EventArgs e)
         {
             //トップページへ戻る
             Top_page Top = new Top_page();
@@ -106,7 +123,48 @@ namespace Sample1
             this.Close();
         }
 
-        public void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
+        {
+            /*r_date = dateTimePicker1.Value.ToString("yyyy/MM/dd");
+            DBconnection DBC = new DBconnection();
+            DBC.DB_connect();
+            SqlCommand command = new SqlCommand();
+            command.CommandText = "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.RESERVATION_CODE FROM TBL_ROOM RO,TBL_RESERVATION RE,TBL_CLIENT CL WHERE RE.ROOM_CODE = RO.ROOM_CODE and RE.CLIENT_CODE = CL.CLIENT_CODE and RESERVATION_DATE =" + "'" + r_date + "'";
+            // SQLを実行
+            command.Connection = DBC.Get_scn();
+            SqlDataReader reader = command.ExecuteReader();
+            int m, n;
+            for (m = 0; reader.Read(); m++)
+            {
+                for (n = 0; n < 9; n++)
+                {
+                    reader.GetValue(n);
+                    if (reader.GetValue(n) != DBNull.Value)
+                    {
+                        if (n == 0)
+                        {
+                            dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
+                        }
+                        else if (n == 7)
+                        {
+                            dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
+                        }
+                        else if (n == 8)
+                        {
+                            dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
+                        }
+                        else
+                        {
+                            dataGridView1.Rows[m].Cells[n].Value = (string)reader.GetValue(n);
+                        }
+                    }
+
+                }
+            }
+            DBC.DB_DisConnect();*/
+        }
+
+        private void dataGridView1_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
             //宿泊者セルのデータがない場合
             if (dataGridView1.CurrentRow.Cells[3].Value == null)
@@ -121,22 +179,12 @@ namespace Sample1
             {
 
                 //値の取得(これをselect文で検索し、情報をReservecheckで)
-                r_code = (string)dataGridView1.CurrentRow.Cells[8].Value;
-                r_no = (string)dataGridView1.CurrentRow.Cells[1].Value;
-                c_name = (string)dataGridView1.CurrentRow.Cells[3].Value;
-                c_tel = (string)dataGridView1.CurrentRow.Cells[5].Value;
+                r_code = dataGridView1.CurrentRow.Cells[8].Value.ToString();
                 
-                 
-                 
-
-
-
                 //情報を持って予約情報を表示
                 Reservecheck Rcheck = new Reservecheck(this);
                 Rcheck.Show();
                 this.Close();
-
-
             }
         }
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)

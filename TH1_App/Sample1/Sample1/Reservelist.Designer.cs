@@ -33,6 +33,7 @@
             this.ReservelistBack_button = new System.Windows.Forms.Button();
             this.ReservelistTop_button = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.globalDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +58,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 19);
             this.dateTimePicker1.TabIndex = 1;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
             // 
             // ReservelistBack_button
             // 
@@ -76,6 +78,7 @@
             this.ReservelistTop_button.TabIndex = 3;
             this.ReservelistTop_button.Text = "Topへ";
             this.ReservelistTop_button.UseVisualStyleBackColor = true;
+            this.ReservelistTop_button.Click += new System.EventHandler(this.ReservelistTop_button_Click_1);
             // 
             // dataGridView1
             // 
@@ -90,11 +93,12 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.予約コード});
-            this.dataGridView1.Location = new System.Drawing.Point(33, 87);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 87);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(702, 183);
+            this.dataGridView1.Size = new System.Drawing.Size(740, 183);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick_1);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // dataGridViewTextBoxColumn1
@@ -146,7 +150,6 @@
             // 
             this.予約コード.HeaderText = "予約コード";
             this.予約コード.Name = "予約コード";
-            this.予約コード.Visible = false;
             // 
             // globalDBDataSetBindingSource1
             // 

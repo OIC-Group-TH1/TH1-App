@@ -26,7 +26,7 @@ namespace Sample1
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
             //クリックした日付を選択代入 
-            String Today = this.monthCalendar1.SelectionRange.Start.ToString();
+            DateTime Today = this.monthCalendar1.SelectionRange.Start;
             reservelist Rlist = new reservelist(Today);
             Rlist.Show();
             this.Close();

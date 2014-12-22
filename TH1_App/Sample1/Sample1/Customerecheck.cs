@@ -72,6 +72,7 @@ namespace Sample1
             {
                 MessageBox.Show(ex.Message);
                 //データベースファイルクローズ
+                MessageBox.Show(ex.Message);
                 DBC.DB_DisConnect();
             }
             //Customerecheck Ccheck = new Customerecheck(); おかしい。確認要
