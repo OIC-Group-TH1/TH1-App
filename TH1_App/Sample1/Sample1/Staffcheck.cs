@@ -47,28 +47,28 @@ namespace Sample1
             //社員登録（Staffentry）からのデータを表示
             if (_form_name == "Staffentry")
             {
-                Staffcheck_Name.Text = Staff_Class.NAME;
-                Staffcheck_Kana.Text = Staff_Class.KANA;
-                Staffcheck_Sex.Text = Staff_Class.SEX;
-                Staffcheck_Age.Text = Staff_Class.AGE;
-                Staffcheck_Position.Text = Staff_Class.POSITION;
-                Staffcheck_Tel.Text = Staff_Class.TEL;
-                Staffcheck_Mail.Text = Staff_Class.MAIL;
-                Staffcheck_Day.Text = Staff_Class.DAY;
-                Staffcheck_Address.Text = Staff_Class.ADDRESS;
+                Staffcheck_Name.Text = Staff_Class.STAFF_NAME;
+                Staffcheck_Kana.Text = Staff_Class.STAFF_KANA;
+                Staffcheck_Sex.Text = Staff_Class.STAFF_SEX;
+                Staffcheck_Age.Text = Staff_Class.STAFF_AGE;
+                Staffcheck_Position.Text = Staff_Class.STAFF_POSITION;
+                Staffcheck_Tel.Text = Staff_Class.STAFF_TEL;
+                Staffcheck_Mail.Text = Staff_Class.STAFF_MAIL;
+                Staffcheck_Day.Text = Staff_Class.STAFF_DAY;
+                Staffcheck_Address.Text = Staff_Class.STAFF_ADDRESS;
             }
             //社員変更（Staffchange）からのデータを表示
             else if (_form_name == "Staffchange")
             {
-                Staffcheck_Name.Text = Staff_Class.NAME;
-                Staffcheck_Kana.Text = Staff_Class.KANA;
-                Staffcheck_Sex.Text = Staff_Class.SEX;
-                Staffcheck_Age.Text = Staff_Class.AGE;
-                Staffcheck_Position.Text = Staff_Class.POSITION;
-                Staffcheck_Tel.Text = Staff_Class.TEL;
-                Staffcheck_Mail.Text = Staff_Class.MAIL;
-                Staffcheck_Day.Text = Staff_Class.DAY;
-                Staffcheck_Address.Text = Staff_Class.ADDRESS;
+                Staffcheck_Name.Text = Staff_Class.STAFF_NAME;
+                Staffcheck_Kana.Text = Staff_Class.STAFF_KANA;
+                Staffcheck_Sex.Text = Staff_Class.STAFF_SEX;
+                Staffcheck_Age.Text = Staff_Class.STAFF_AGE;
+                Staffcheck_Position.Text = Staff_Class.STAFF_POSITION;
+                Staffcheck_Tel.Text = Staff_Class.STAFF_TEL;
+                Staffcheck_Mail.Text = Staff_Class.STAFF_MAIL;
+                Staffcheck_Day.Text = Staff_Class.STAFF_DAY;
+                Staffcheck_Address.Text = Staff_Class.STAFF_ADDRESS;
             }
         }
         private void StaffcheckYes_button_Click(object sender, EventArgs e)
@@ -134,7 +134,7 @@ namespace Sample1
                 try
                 {
                     //データベースファイルオープン
-                    string code = Staff_Class.CODE;
+                    string code = Staff_Class.STAFF_CODE;
                     string name = Staffcheck_Name.Text;
                     string kana = Staffcheck_Kana.Text;
                     string sex = Staffcheck_Sex.Text;

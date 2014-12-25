@@ -13,67 +13,67 @@ namespace Sample1
     public static class Staff_Class
     {
         //DataGridViewから取得したデータを保持する変数
-        private static string _code;
-        private static string _name;
-        private static string _kana;
-        private static string _sex;
-        private static string _age;
-        private static string _position;
-        private static string _tel;
-        private static string _mail;
-        private static string _day;
-        private static string _address;
+        private static string _staff_code;
+        private static string _staff_name;
+        private static string _staff_kana;
+        private static string _staff_sex;
+        private static string _staff_age;
+        private static string _staff_position;
+        private static string _staff_tel;
+        private static string _staff_mail;
+        private static string _staff_day;
+        private static string _staff_address;
 
-        public static string CODE
+        public static string STAFF_CODE
         {
-            set { _code = value; }
-            get { return _code; }
+            set { _staff_code = value; }
+            get { return _staff_code; }
         }
 
-        public static string NAME
+        public static string STAFF_NAME
         {
-            set { _name = value; }
-            get { return _name; }
+            set { _staff_name = value; }
+            get { return _staff_name; }
         }
-        public static string KANA
+        public static string STAFF_KANA
         {
-            set { _kana = value; }
-            get { return _kana; }
+            set { _staff_kana = value; }
+            get { return _staff_kana; }
         }
-        public static string SEX
+        public static string STAFF_SEX
         {
-            set { _sex = value; }
-            get { return _sex; }
+            set { _staff_sex = value; }
+            get { return _staff_sex; }
         }
-        public static string AGE
+        public static string STAFF_AGE
         {
-            set { _age = value; }
-            get { return _age; }
+            set { _staff_age = value; }
+            get { return _staff_age; }
         }
-        public static string POSITION
+        public static string STAFF_POSITION
         {
-            set { _position = value; }
-            get { return _position; }
+            set { _staff_position = value; }
+            get { return _staff_position; }
         }
-        public static string TEL
+        public static string STAFF_TEL
         {
-            set { _tel = value; }
-            get { return _tel; }
+            set { _staff_tel = value; }
+            get { return _staff_tel; }
         }
-        public static string MAIL
+        public static string STAFF_MAIL
         {
-            set { _mail = value; }
-            get { return _mail; }
+            set { _staff_mail = value; }
+            get { return _staff_mail; }
         }
-        public static string DAY
+        public static string STAFF_DAY
         {
-            set { _day = value; }
-            get { return _day; }
+            set { _staff_day = value; }
+            get { return _staff_day; }
         }
-        public static string ADDRESS
+        public static string STAFF_ADDRESS
         {
-            set { _address = value; }
-            get { return _address; }
+            set { _staff_address = value; }
+            get { return _staff_address; }
         }
     }
 }

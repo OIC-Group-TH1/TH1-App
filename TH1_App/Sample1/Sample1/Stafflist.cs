@@ -96,16 +96,16 @@ namespace Sample1
             {
                 //DataGridViewの各セルのデータを取得
 
-                Staff_Class.CODE = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                Staff_Class.NAME = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                Staff_Class.KANA = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                Staff_Class.SEX = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                Staff_Class.AGE = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-                Staff_Class.POSITION = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-                Staff_Class.TEL = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-                Staff_Class.MAIL = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-                Staff_Class.DAY = dataGridView1.CurrentRow.Cells[8].Value.ToString();
-                Staff_Class.ADDRESS = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+                Staff_Class.STAFF_CODE = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                Staff_Class.STAFF_NAME = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                Staff_Class.STAFF_KANA = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                Staff_Class.STAFF_SEX = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                Staff_Class.STAFF_AGE = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                Staff_Class.STAFF_POSITION = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                Staff_Class.STAFF_TEL = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                Staff_Class.STAFF_MAIL = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                Staff_Class.STAFF_DAY = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+                Staff_Class.STAFF_ADDRESS = dataGridView1.CurrentRow.Cells[9].Value.ToString();
 
 
 

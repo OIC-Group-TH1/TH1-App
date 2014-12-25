@@ -102,7 +102,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>globalDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="IO.cs" />
+    <Compile Include="IO_Class.cs" />
     <Compile Include="test_GRID.cs">
       <SubType>Form</SubType>
     </Compile>
