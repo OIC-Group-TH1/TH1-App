@@ -6,16 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Sample1
 {
     public partial class IOchecklist : Form
     {
-
-        //public string IO_r_code;
-        //public string IO_r_no;
-        //public string IO_c_name;
-        //public string IO_c_tel;
 
         public IOchecklist()
         {
@@ -33,19 +29,15 @@ namespace Sample1
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             //情報の取得(これをselect文で検索し、IOcheck情報をで)
-            //IO_r_code = (string)dataGridView1.CurrentRow.Cells[8].Value;
-            //IO_r_no = (string)dataGridView1.CurrentRow.Cells[0].Value;
-            //IO_c_name = (string)dataGridView1.CurrentRow.Cells[3].Value;
-            //IO_c_tel = (string)dataGridView1.CurrentRow.Cells[5].Value;
-            IO.NO =  int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            IO.RCODE = int.Parse(dataGridView1.CurrentRow.Cells[8].Value.ToString());
-            IO.CCODE = int.Parse(dataGridView1.CurrentRow.Cells[9].Value.ToString());
-            IO.TYPE = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            IO.SMOKE = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            IO.NAME = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            IO.NUMBER = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            IO_Class.IO_NO = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            IO_Class.IO_RCODE = int.Parse(dataGridView1.CurrentRow.Cells[8].Value.ToString());
+            IO_Class.IO_CCODE = int.Parse(dataGridView1.CurrentRow.Cells[9].Value.ToString());
+            IO_Class.IO_TYPE = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            IO_Class.IO_SMOKE = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            IO_Class.IO_NAME = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            IO_Class.IO_NUMBER = dataGridView1.CurrentRow.Cells[4].Value.ToString();
 
-            IO.DATE = DateTime.Today;
+            IO_Class.IO_DATE = DateTime.Today;
 
 
             
@@ -64,7 +56,8 @@ namespace Sample1
             for (int i = 0; i < 5; i++)
             {
                 dataGridView1.Rows.Add();
-                dataGridView1.Rows[i].Cells[0].Value = 1234;
+                dataGridView1.Rows[i].Cells[0].Value = i;
+                dataGridView1.Rows[i].Cells[9].Value = i;
             }
         }
 
@@ -80,11 +73,35 @@ namespace Sample1
             if (result == DialogResult.Yes)
             {
                 
-                if (dataGridView1.CurrentRow.Cells[6].Value == null)
+                if (dataGridView1.CurrentRow.Cells[7].Value == null)
                 {
                     //チェックボックスがチェックされる
-                    dataGridView1.CurrentRow.Cells[6].Value = true;
-                }
+                    dataGridView1.CurrentRow.Cells[7].Value = true;
+
+                    int R_code = int.Parse(dataGridView1.CurrentRow.Cells[8].Value.ToString());
+
+                    DBconnection DBC = new DBconnection();
+                    DBC.DB_connect();
+          
+                    try
+                    {
+                        SqlCommand scm = new SqlCommand
+                        ("update TBL_RESERVATION set CHECK = TRUE where RESERVATION_CODE = " + R_code +")",DBC.Get_scn());
+
+                        scm.ExecuteNonQuery();
+
+                        DBC.DB_DisConnect();
+                    
+                
+                    }
+                    catch (Exception ex)
+                    {
+                        //データベースファイルクローズ
+                        DBC.DB_DisConnect();
+                    
+                        MessageBox.Show(ex.Message, "エラー");
+                    }
+                }   
                 else
                 {
                     MessageBox.Show("既にチェックイン済みです", "エラー",
@@ -108,10 +125,10 @@ namespace Sample1
 
             if (result == DialogResult.Yes)
             {
-                if (dataGridView1.CurrentRow.Cells[7].Value == null)
+                if (dataGridView1.CurrentRow.Cells[8].Value == null)
                 {
                     //チェックボックスがチェックされる
-                    dataGridView1.CurrentRow.Cells[7].Value = true;
+                    dataGridView1.CurrentRow.Cells[8].Value = true;
                 }
                 else
                 {
@@ -121,6 +138,25 @@ namespace Sample1
                 }
             }
 
+        }
+
+        private void IOchecklistAccounts_button_Click(object sender, EventArgs e)
+        {
+            int cnt = dataGridView1.Rows.Count;
+            int n = 0;
+            int[] IO_Rcode = new int[cnt];
+            for (int i = 0; i < cnt - 1; i++)
+            {
+                if (dataGridView1.Rows[i].Cells[6].Value != null)
+                {
+                    IO_Rcode[n] = int.Parse(dataGridView1.Rows[i].Cells[9].Value.ToString());
+                    n++;
+                }
+
+            }
+            Accounts IOaccounts = new Accounts(IO_Rcode);
+            IOaccounts.Show();
+            this.Close();
         }
 
 

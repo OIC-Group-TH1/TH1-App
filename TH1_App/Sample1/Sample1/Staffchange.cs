@@ -44,7 +44,7 @@ namespace Sample1
                     //データベースファイルオープン
                     
                     SqlCommand scm = new SqlCommand
-                        ("delete from TBL_STAFF where STAFF_CODE ="+Staff_Class.CODE, DBC.Get_scn());
+                        ("delete from TBL_STAFF where STAFF_CODE =" + Staff_Class.STAFF_CODE, DBC.Get_scn());
 
                     scm.ExecuteNonQuery();
                     DBC.DB_DisConnect();
@@ -73,14 +73,14 @@ namespace Sample1
         private void StaffchangeOk_button_Click(object sender, EventArgs e)
         {
             //変更したデータを変数で保持
-            Staff_Class.NAME = Staffchange_Name.Text; 
-            Staff_Class.KANA = Staffchange_Kana.Text;
-            Staff_Class.SEX = Staffchange_Sex.Text;
-            Staff_Class.AGE = Staffchange_Age.Text;
-            Staff_Class.POSITION = Staffchange_Position.Text;
-            Staff_Class.TEL = Staffchange_Tel.Text;
-            Staff_Class.MAIL = Staffchange_Mail.Text;
-            Staff_Class.ADDRESS = Staffchange_Address.Text; 
+            Staff_Class.STAFF_NAME = Staffchange_Name.Text;
+            Staff_Class.STAFF_KANA = Staffchange_Kana.Text;
+            Staff_Class.STAFF_SEX = Staffchange_Sex.Text;
+            Staff_Class.STAFF_AGE = Staffchange_Age.Text;
+            Staff_Class.STAFF_POSITION = Staffchange_Position.Text;
+            Staff_Class.STAFF_TEL = Staffchange_Tel.Text;
+            Staff_Class.STAFF_MAIL = Staffchange_Mail.Text;
+            Staff_Class.STAFF_ADDRESS = Staffchange_Address.Text; 
 
             Staffcheck Scheck = new Staffcheck(this,"Staffchange");
             Scheck.Show();
@@ -97,14 +97,14 @@ namespace Sample1
         private void Staffchange_Load(object sender, EventArgs e)
         {
             //Stafflistからのデータをロード時に表示
-            Staffchange_Name.Text = Staff_Class.NAME;
-            Staffchange_Kana.Text = Staff_Class.KANA;
-            Staffchange_Sex.Text = Staff_Class.SEX;
-            Staffchange_Age.Text = Staff_Class.AGE;
-            Staffchange_Position.Text = Staff_Class.POSITION;
-            Staffchange_Tel.Text = Staff_Class.TEL;
-            Staffchange_Mail.Text = Staff_Class.MAIL;
-            Staffchange_Address.Text = Staff_Class.ADDRESS;
+            Staffchange_Name.Text = Staff_Class.STAFF_NAME;
+            Staffchange_Kana.Text = Staff_Class.STAFF_KANA;
+            Staffchange_Sex.Text = Staff_Class.STAFF_SEX;
+            Staffchange_Age.Text = Staff_Class.STAFF_AGE;
+            Staffchange_Position.Text = Staff_Class.STAFF_POSITION;
+            Staffchange_Tel.Text = Staff_Class.STAFF_TEL;
+            Staffchange_Mail.Text = Staff_Class.STAFF_MAIL;
+            Staffchange_Address.Text = Staff_Class.STAFF_ADDRESS;
            
         }
     }

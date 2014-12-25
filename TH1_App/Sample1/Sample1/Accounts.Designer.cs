@@ -31,30 +31,30 @@
             this.Accounts_Change = new System.Windows.Forms.Label();
             this.Accounts_Alltotal = new System.Windows.Forms.Label();
             this.Accounts_Staff = new System.Windows.Forms.Label();
-            this.Accounts_Name = new System.Windows.Forms.Label();
             this.Accounts_Date = new System.Windows.Forms.Label();
             this.AccountsChange_label = new System.Windows.Forms.Label();
             this.AccountsReceive_label = new System.Windows.Forms.Label();
             this.AccountsTotal_label = new System.Windows.Forms.Label();
             this.AccountsStaff_label = new System.Windows.Forms.Label();
-            this.AccountsName_label = new System.Windows.Forms.Label();
             this.AccountsDate_label = new System.Windows.Forms.Label();
             this.AccountsOk_button = new System.Windows.Forms.Button();
             this.AccountsBack_button = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Accounts_Recieve = new System.Windows.Forms.TextBox();
+            this.Accounts_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Accounts_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Accounts_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Accounts_Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Accounts_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Accounts_Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Accounts_Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Accounts_Recieve = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Accounts_Change
             // 
             this.Accounts_Change.AutoSize = true;
-            this.Accounts_Change.Location = new System.Drawing.Point(534, 347);
+            this.Accounts_Change.Location = new System.Drawing.Point(708, 350);
             this.Accounts_Change.Name = "Accounts_Change";
             this.Accounts_Change.Size = new System.Drawing.Size(35, 12);
             this.Accounts_Change.TabIndex = 33;
@@ -63,7 +63,7 @@
             // Accounts_Alltotal
             // 
             this.Accounts_Alltotal.AutoSize = true;
-            this.Accounts_Alltotal.Location = new System.Drawing.Point(534, 302);
+            this.Accounts_Alltotal.Location = new System.Drawing.Point(708, 305);
             this.Accounts_Alltotal.Name = "Accounts_Alltotal";
             this.Accounts_Alltotal.Size = new System.Drawing.Size(35, 12);
             this.Accounts_Alltotal.TabIndex = 31;
@@ -72,25 +72,16 @@
             // Accounts_Staff
             // 
             this.Accounts_Staff.AutoSize = true;
-            this.Accounts_Staff.Location = new System.Drawing.Point(514, 31);
+            this.Accounts_Staff.Location = new System.Drawing.Point(723, 62);
             this.Accounts_Staff.Name = "Accounts_Staff";
             this.Accounts_Staff.Size = new System.Drawing.Size(35, 12);
             this.Accounts_Staff.TabIndex = 30;
             this.Accounts_Staff.Text = "label3";
             // 
-            // Accounts_Name
-            // 
-            this.Accounts_Name.AutoSize = true;
-            this.Accounts_Name.Location = new System.Drawing.Point(70, 65);
-            this.Accounts_Name.Name = "Accounts_Name";
-            this.Accounts_Name.Size = new System.Drawing.Size(35, 12);
-            this.Accounts_Name.TabIndex = 29;
-            this.Accounts_Name.Text = "label2";
-            // 
             // Accounts_Date
             // 
             this.Accounts_Date.AutoSize = true;
-            this.Accounts_Date.Location = new System.Drawing.Point(70, 31);
+            this.Accounts_Date.Location = new System.Drawing.Point(70, 62);
             this.Accounts_Date.Name = "Accounts_Date";
             this.Accounts_Date.Size = new System.Drawing.Size(35, 12);
             this.Accounts_Date.TabIndex = 28;
@@ -99,7 +90,7 @@
             // AccountsChange_label
             // 
             this.AccountsChange_label.AutoSize = true;
-            this.AccountsChange_label.Location = new System.Drawing.Point(426, 347);
+            this.AccountsChange_label.Location = new System.Drawing.Point(600, 350);
             this.AccountsChange_label.Name = "AccountsChange_label";
             this.AccountsChange_label.Size = new System.Drawing.Size(35, 12);
             this.AccountsChange_label.TabIndex = 27;
@@ -108,7 +99,7 @@
             // AccountsReceive_label
             // 
             this.AccountsReceive_label.AutoSize = true;
-            this.AccountsReceive_label.Location = new System.Drawing.Point(426, 323);
+            this.AccountsReceive_label.Location = new System.Drawing.Point(600, 326);
             this.AccountsReceive_label.Name = "AccountsReceive_label";
             this.AccountsReceive_label.Size = new System.Drawing.Size(37, 12);
             this.AccountsReceive_label.TabIndex = 26;
@@ -117,7 +108,7 @@
             // AccountsTotal_label
             // 
             this.AccountsTotal_label.AutoSize = true;
-            this.AccountsTotal_label.Location = new System.Drawing.Point(426, 302);
+            this.AccountsTotal_label.Location = new System.Drawing.Point(600, 305);
             this.AccountsTotal_label.Name = "AccountsTotal_label";
             this.AccountsTotal_label.Size = new System.Drawing.Size(29, 12);
             this.AccountsTotal_label.TabIndex = 25;
@@ -126,25 +117,16 @@
             // AccountsStaff_label
             // 
             this.AccountsStaff_label.AutoSize = true;
-            this.AccountsStaff_label.Location = new System.Drawing.Point(449, 31);
+            this.AccountsStaff_label.Location = new System.Drawing.Point(658, 62);
             this.AccountsStaff_label.Name = "AccountsStaff_label";
             this.AccountsStaff_label.Size = new System.Drawing.Size(41, 12);
             this.AccountsStaff_label.TabIndex = 24;
             this.AccountsStaff_label.Text = "社員名";
             // 
-            // AccountsName_label
-            // 
-            this.AccountsName_label.AutoSize = true;
-            this.AccountsName_label.Location = new System.Drawing.Point(24, 65);
-            this.AccountsName_label.Name = "AccountsName_label";
-            this.AccountsName_label.Size = new System.Drawing.Size(29, 12);
-            this.AccountsName_label.TabIndex = 23;
-            this.AccountsName_label.Text = "名前";
-            // 
             // AccountsDate_label
             // 
             this.AccountsDate_label.AutoSize = true;
-            this.AccountsDate_label.Location = new System.Drawing.Point(24, 31);
+            this.AccountsDate_label.Location = new System.Drawing.Point(24, 62);
             this.AccountsDate_label.Name = "AccountsDate_label";
             this.AccountsDate_label.Size = new System.Drawing.Size(29, 12);
             this.AccountsDate_label.TabIndex = 22;
@@ -152,7 +134,7 @@
             // 
             // AccountsOk_button
             // 
-            this.AccountsOk_button.Location = new System.Drawing.Point(386, 373);
+            this.AccountsOk_button.Location = new System.Drawing.Point(560, 376);
             this.AccountsOk_button.Name = "AccountsOk_button";
             this.AccountsOk_button.Size = new System.Drawing.Size(75, 23);
             this.AccountsOk_button.TabIndex = 20;
@@ -162,7 +144,7 @@
             // 
             // AccountsBack_button
             // 
-            this.AccountsBack_button.Location = new System.Drawing.Point(495, 373);
+            this.AccountsBack_button.Location = new System.Drawing.Point(669, 376);
             this.AccountsBack_button.Name = "AccountsBack_button";
             this.AccountsBack_button.Size = new System.Drawing.Size(75, 23);
             this.AccountsBack_button.TabIndex = 19;
@@ -174,21 +156,42 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Accounts_No,
             this.Accounts_Type,
+            this.Accounts_Name,
             this.Accounts_Value,
             this.Accounts_Number,
             this.Accounts_Day,
             this.Accounts_Total});
-            this.dataGridView1.Location = new System.Drawing.Point(26, 92);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 94);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(544, 192);
+            this.dataGridView1.Size = new System.Drawing.Size(743, 192);
             this.dataGridView1.TabIndex = 18;
+            // 
+            // Accounts_Recieve
+            // 
+            this.Accounts_Recieve.Location = new System.Drawing.Point(643, 323);
+            this.Accounts_Recieve.Name = "Accounts_Recieve";
+            this.Accounts_Recieve.Size = new System.Drawing.Size(100, 19);
+            this.Accounts_Recieve.TabIndex = 34;
+            this.Accounts_Recieve.TextChanged += new System.EventHandler(this.Acounts_Recieve_TextChanged);
+            this.Accounts_Recieve.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Accounts_Recieve_KeyPress);
+            // 
+            // Accounts_No
+            // 
+            this.Accounts_No.HeaderText = "部屋No";
+            this.Accounts_No.Name = "Accounts_No";
             // 
             // Accounts_Type
             // 
             this.Accounts_Type.HeaderText = "タイプ";
             this.Accounts_Type.Name = "Accounts_Type";
+            // 
+            // Accounts_Name
+            // 
+            this.Accounts_Name.HeaderText = "宿泊者名";
+            this.Accounts_Name.Name = "Accounts_Name";
             // 
             // Accounts_Value
             // 
@@ -210,30 +213,20 @@
             this.Accounts_Total.HeaderText = "合計";
             this.Accounts_Total.Name = "Accounts_Total";
             // 
-            // Accounts_Recieve
-            // 
-            this.Accounts_Recieve.Location = new System.Drawing.Point(469, 320);
-            this.Accounts_Recieve.Name = "Accounts_Recieve";
-            this.Accounts_Recieve.Size = new System.Drawing.Size(100, 19);
-            this.Accounts_Recieve.TabIndex = 34;
-            this.Accounts_Recieve.TextChanged += new System.EventHandler(this.Acounts_Recieve_TextChanged);
-            // 
             // Accounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 445);
+            this.ClientSize = new System.Drawing.Size(803, 450);
             this.Controls.Add(this.Accounts_Recieve);
             this.Controls.Add(this.Accounts_Change);
             this.Controls.Add(this.Accounts_Alltotal);
             this.Controls.Add(this.Accounts_Staff);
-            this.Controls.Add(this.Accounts_Name);
             this.Controls.Add(this.Accounts_Date);
             this.Controls.Add(this.AccountsChange_label);
             this.Controls.Add(this.AccountsReceive_label);
             this.Controls.Add(this.AccountsTotal_label);
             this.Controls.Add(this.AccountsStaff_label);
-            this.Controls.Add(this.AccountsName_label);
             this.Controls.Add(this.AccountsDate_label);
             this.Controls.Add(this.AccountsOk_button);
             this.Controls.Add(this.AccountsBack_button);
@@ -252,22 +245,22 @@
         private System.Windows.Forms.Label Accounts_Change;
         private System.Windows.Forms.Label Accounts_Alltotal;
         private System.Windows.Forms.Label Accounts_Staff;
-        private System.Windows.Forms.Label Accounts_Name;
         private System.Windows.Forms.Label Accounts_Date;
         private System.Windows.Forms.Label AccountsChange_label;
         private System.Windows.Forms.Label AccountsReceive_label;
         private System.Windows.Forms.Label AccountsTotal_label;
         private System.Windows.Forms.Label AccountsStaff_label;
-        private System.Windows.Forms.Label AccountsName_label;
         private System.Windows.Forms.Label AccountsDate_label;
         private System.Windows.Forms.Button AccountsOk_button;
         private System.Windows.Forms.Button AccountsBack_button;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox Accounts_Recieve;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Accounts_No;
         private System.Windows.Forms.DataGridViewTextBoxColumn Accounts_Type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Accounts_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Accounts_Value;
         private System.Windows.Forms.DataGridViewTextBoxColumn Accounts_Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn Accounts_Day;
         private System.Windows.Forms.DataGridViewTextBoxColumn Accounts_Total;
-        private System.Windows.Forms.TextBox Accounts_Recieve;
     }
 }

@@ -33,15 +33,15 @@ namespace Sample1
 
         private void StaffentryEntry_button_Click(object sender, EventArgs e)
         {
-                Staff_Class.NAME = Staffentry_Name.Text;
-                Staff_Class.KANA = Staffentry_Kana.Text;
-                Staff_Class.SEX = Staffentry_Sex.SelectedItem.ToString();
-                Staff_Class.AGE = Staffentry_Age.Text;
-                Staff_Class.POSITION = Staffentry_Position.Text;
-                Staff_Class.TEL = Staffentry_Tel.Text;
-                Staff_Class.MAIL = Staffentry_Mail.Text;
-                Staff_Class.DAY = Staffentry_Day.Text;
-                Staff_Class.ADDRESS = Staffentry_Address.Text;
+            Staff_Class.STAFF_NAME = Staffentry_Name.Text;
+            Staff_Class.STAFF_KANA = Staffentry_Kana.Text;
+            Staff_Class.STAFF_SEX = Staffentry_Sex.SelectedItem.ToString();
+            Staff_Class.STAFF_AGE = Staffentry_Age.Text;
+            Staff_Class.STAFF_POSITION = Staffentry_Position.Text;
+            Staff_Class.STAFF_TEL = Staffentry_Tel.Text;
+            Staff_Class.STAFF_MAIL = Staffentry_Mail.Text;
+            Staff_Class.STAFF_DAY = Staffentry_Day.Text;
+            Staff_Class.STAFF_ADDRESS = Staffentry_Address.Text;
 
             Staffcheck Scheck = new Staffcheck(this,"Staffentry");
             Scheck.Show();

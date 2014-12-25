@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Sample1
 {
@@ -39,56 +40,57 @@ namespace Sample1
 
         private void IOcheck_Load(object sender, EventArgs e)
         {
-            ////SQL SERVERを開いてるときにコメントアウト
-            ////データベースからの取得
-            //   System.Data.SqlClient.SqlConnection scn
-            //   = new System.Data.SqlClient.SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\b3316\Documents\globalDB.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+            //SQL SERVERを開いてるときにコメントアウト
+            //データベースからの取得
+            
+            DBconnection DBC = new DBconnection();
+            DBC.DB_connect();
 
-            //   try
-            //   {
-            //       //データベースファイルオープン
-            //       scn.Open();
-            //       SqlCommand client_command = new SqlCommand();
-            //       SqlCommand reservation_command = new SqlCommand();
-            //       SqlCommand room_command = new SqlCommand();
+            try
+            {
+                //データベースファイルオープン
+                
+                SqlCommand client_command = new SqlCommand();
+                SqlCommand reservation_command = new SqlCommand();
+                SqlCommand room_command = new SqlCommand();
 
-            //       //SQL文の入力
-            //       client_command.CommandText = "SELECT * FROM TBL_CLIENT WHERE CLIENT_NAME = @IO_c_name AND CLIENT_TEL = @IO_c_tel";
-            //       reservation_command.CommandText = "SELECT * FROM TBL_RESERVATION WHERE RESERVATION_CODE = @IO_r_code";
-            //       room_command.CommandText = "SELECT * FROM TBL_ROOM WHERE ROOM_CODE = @IO_r_no";
+                //SQL文の入力
+                client_command.CommandText = "SELECT * FROM TBL_CLIENT WHERE CLIENT_CODE = IO_Class.IO_CCODE";
+                reservation_command.CommandText = "SELECT * FROM TBL_RESERVATION WHERE RESERVATION_CODE = @IO_Class.IO_RCODE";
+                room_command.CommandText = "SELECT * FROM TBL_ROOM WHERE ROOM_CODE = @IO_Class.IO_NO";
 
-            //       // SQLを実行
-            //       SqlDataReader client_reader = client_command.ExecuteReader();
-            //       SqlDataReader reservation_reader = reservation_command.ExecuteReader();
-            //       SqlDataReader room_reader = reservation_command.ExecuteReader();
-            //       while (client_reader.Read() & reservation_reader.Read() & room_reader.Read())
-            //           {
-            //               Reservecheck_Date.Text = (string)reservation_reader.GetValue(1);
-            //               IOcheck_No.Text = (string)room_reader.GetValue(0);
-            //               IOcheck_Type.Text = (string)room_reader.GetValue(1);
-            //               IOcheck_Smoke.Text = (string)room_reader.GetValue(3);
-            //               IOcheck_Number.Text = (string)reservation_reader.GetValue(3);
-            //               IOcheck_Rate.Text = (string)room_reader.GetValue(2);
+                // SQLを実行
+                SqlDataReader client_reader = client_command.ExecuteReader();
+                SqlDataReader reservation_reader = reservation_command.ExecuteReader();
+                SqlDataReader room_reader = reservation_command.ExecuteReader();
+                while (client_reader.Read() & reservation_reader.Read() & room_reader.Read())
+                {
+                    
+                    IOcheck_No.Text = room_reader.GetValue(0).ToString();
+                    IOcheck_Type.Text = room_reader.GetValue(1).ToString();
+                    IOcheck_Smoke.Text = room_reader.GetValue(3).ToString();
+                    IOcheck_Number.Text = reservation_reader.GetValue(3).ToString();
+                    IOcheck_Rate.Text = room_reader.GetValue(2).ToString();
 
-            //               IOcheck_Name.Text = (string)client_reader.GetValue(1);
-            //               IOcheck_Kana.Text = (string)client_reader.GetValue(2);
-            //               IOcheck_Sex.Text = (string)client_reader.GetValue(3);
-            //               IOcheck_Tel.Text = (string)client_reader.GetValue(4);
-            //               IOcheck_Post.Text = (string)client_reader.GetValue(5);
-            //               IOcheck_Address.Text = (string)client_reader.GetValue(6);
-            //               IOcheck_Note.Text = (string)client_reader.GetValue(7);
+                    IOcheck_Name.Text = client_reader.GetValue(1).ToString();
+                    IOcheck_Kana.Text = client_reader.GetValue(2).ToString();
+                    IOcheck_Sex.Text = client_reader.GetValue(3).ToString();
+                    IOcheck_Tel.Text = client_reader.GetValue(4).ToString();
+                    IOcheck_Post.Text = client_reader.GetValue(5).ToString();
+                    IOcheck_Address.Text = client_reader.GetValue(6).ToString();
+                    IOcheck_Note.Text = client_reader.GetValue(7).ToString();
 
-            //               scn.Close();
-            //           }
+                    DBC.DB_DisConnect();
+                }
 
-            //   }
-            //       //できなかったらクローズしてエラー
-            //   catch (Exception ex)
-            //   {
-            //       //データベースファイルクローズ
-            //       scn.Close();
-            //       MessageBox.Show(ex.Message, "エラー");
-            //   }
+            }
+            //できなかったらクローズしてエラー
+            catch (Exception ex)
+            {
+                //データベースファイルクローズ
+                DBC.DB_DisConnect();
+                MessageBox.Show(ex.Message, "エラー");
+            }
                 
         }
 
