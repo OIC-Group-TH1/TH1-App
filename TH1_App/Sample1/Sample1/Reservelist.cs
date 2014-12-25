@@ -16,13 +16,14 @@ namespace Sample1
         public string c_name;
         public string c_tel;
         public string r_no;
-        public string r_date;
+        public string r_date; //指定日付格納変数
 
 
         public reservelist()
         {
             InitializeComponent();
         }
+        //表示日時キャスト　関数
         public reservelist(DateTime str)
         {
             InitializeComponent();
@@ -40,47 +41,55 @@ namespace Sample1
 
         public void reservelist_Load(object sender, EventArgs e)
         {
-            /*//セルを行として管理
+            //セルを行として管理
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
             //SQL Serverからリストを取得
             DBconnection DBC = new DBconnection();
             DBC.DB_connect();
             SqlCommand command = new SqlCommand();
-            command.CommandText = "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.RESERVATION_CODE FROM TBL_ROOM RO,TBL_RESERVATION RE,TBL_CLIENT CL WHERE RE.ROOM_CODE = RO.ROOM_CODE and RE.CLIENT_CODE = CL.CLIENT_CODE and RESERVATION_DATE =" + "'" + r_date + "'";
-            // SQLを実行
+            command.CommandText = "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.[CHECK],RE.RESERVATION_CODE FROM TBL_ROOM RO,TBL_RESERVATION RE,TBL_CLIENT CL WHERE RE.ROOM_CODE = RO.ROOM_CODE and RE.CLIENT_CODE = CL.CLIENT_CODE and RESERVATION_DATE =" + "'" + r_date + "'";
+            // SQLを実行　
             command.Connection = DBC.Get_scn();
             SqlDataReader reader = command.ExecuteReader();
             int m, n;
             for (m = 0; reader.Read(); m++)
             {
-                for (n = 0; n < 9; n++)
+                dataGridView1.Rows.Add();
+                if (!reader.IsDBNull(m))//データがある場合出力
                 {
-                    reader.GetValue(n);
-                    if (reader.GetValue(n) != DBNull.Value)
-                    {
-                        if (n == 0)
-                        {
-                            dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
-                        }
-                        else if (n == 8)
-                        {
-                            dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
-                        }
-                        else if (n == 7)
-                        {
-                            dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
-                        }
-                        
-                        else
-                        {
-                            dataGridView1.Rows[m].Cells[n].Value = (string)reader.GetValue(n);
-                        }
-                    }
+                    reader.GetValue(m);
+                }
+                //for (n = 0; n < 8; n++)
+                //{
+                //    if (!reader.IsDBNull(n))
+                //    {
+                //        reader.GetValue(n);
+                //        //if (n == 0)
+                //        //{
+                //        //    dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
+                //        //}
+                //        //else if (n == 8)
+                //        //{
+                //        //    dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
+                //        //}
+                //        //else if (n == 7)
+                //        //{
+                //        //    dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
+                //        //}
 
+                //        //else
+                //        //{
+                //        //    dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();//確認用
+                //        //}
+                //    }
+                //}
+                else
+                {
+                DBC.DB_DisConnect();//データ終了時　切断
                 }
             }
-            DBC.DB_DisConnect();*/
+            
         
                 //行の追加（TEST用）↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓★後で消す
                 // DataGridViewの行追加
@@ -125,22 +134,24 @@ namespace Sample1
 
         private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
         {
-            /*r_date = dateTimePicker1.Value.ToString("yyyy/MM/dd");
+            r_date = dateTimePicker1.Value.ToString("yyyy/MM/dd");
             DBconnection DBC = new DBconnection();
             DBC.DB_connect();
             SqlCommand command = new SqlCommand();
-            command.CommandText = "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.RESERVATION_CODE FROM TBL_ROOM RO,TBL_RESERVATION RE,TBL_CLIENT CL WHERE RE.ROOM_CODE = RO.ROOM_CODE and RE.CLIENT_CODE = CL.CLIENT_CODE and RESERVATION_DATE =" + "'" + r_date + "'";
+            command.CommandText = "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.[CHECK],RE.RESERVATION_CODE FROM TBL_ROOM RO,TBL_RESERVATION RE,TBL_CLIENT CL WHERE RE.ROOM_CODE = RO.ROOM_CODE and RE.CLIENT_CODE = CL.CLIENT_CODE and RESERVATION_DATE =" + "'" + r_date + "'";
             // SQLを実行
             command.Connection = DBC.Get_scn();
             SqlDataReader reader = command.ExecuteReader();
             int m, n;
             for (m = 0; reader.Read(); m++)
             {
+                dataGridView1.Rows.Add();
                 for (n = 0; n < 9; n++)
                 {
                     reader.GetValue(n);
                     if (reader.GetValue(n) != DBNull.Value)
                     {
+                        
                         if (n == 0)
                         {
                             dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
@@ -161,7 +172,7 @@ namespace Sample1
 
                 }
             }
-            DBC.DB_DisConnect();*/
+            DBC.DB_DisConnect();
         }
 
         private void dataGridView1_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)

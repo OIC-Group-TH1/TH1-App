@@ -33,7 +33,6 @@
             this.ReservelistBack_button = new System.Windows.Forms.Button();
             this.ReservelistTop_button = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.globalDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,13 +42,13 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.予約コード = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.globalDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.globalDBDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.globalDBDataSet = new Sample1.globalDBDataSet();
-            this.globalDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSetBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -96,10 +95,10 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 87);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(740, 183);
+            this.dataGridView1.Size = new System.Drawing.Size(858, 183);
             this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick_1);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick_1);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -165,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(752, 425);
+            this.ClientSize = new System.Drawing.Size(940, 425);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.ReservelistTop_button);
             this.Controls.Add(this.ReservelistBack_button);
@@ -174,9 +173,9 @@
             this.Text = "Reservelist";
             this.Load += new System.EventHandler(this.reservelist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
