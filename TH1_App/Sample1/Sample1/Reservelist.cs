@@ -60,34 +60,38 @@ namespace Sample1
                 {
                     reader.GetValue(m);
                 }
-                //for (n = 0; n < 8; n++)
-                //{
-                //    if (!reader.IsDBNull(n))
-                //    {
-                //        reader.GetValue(n);
-                //        //if (n == 0)
-                //        //{
-                //        //    dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
-                //        //}
-                //        //else if (n == 8)
-                //        //{
-                //        //    dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
-                //        //}
-                //        //else if (n == 7)
-                //        //{
-                //        //    dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
-                //        //}
-
-                //        //else
-                //        //{
-                //        //    dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();//確認用
-                //        //}
-                //    }
-                //}
-                else
+                for (m = 0; reader.Read(); m++)
                 {
-                DBC.DB_DisConnect();//データ終了時　切断
+                    dataGridView1.Rows.Add();
+                    for (n = 0; n < 9; n++)
+                    {
+                        reader.GetValue(n);
+                        if (reader.GetValue(n) != DBNull.Value)
+                        {
+
+                            if (n == 0)
+                            {
+                                dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
+                            }
+                            else if (n == 7)
+                            {
+                                dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
+                            }
+                            else if (n == 8)
+                            {
+                                dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
+                            }
+                            else
+                            {
+                                dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n);
+                            }
+
+                        }
+
+                    }
                 }
+                DBC.DB_DisConnect();
+
             }
             
         
@@ -132,7 +136,7 @@ namespace Sample1
             this.Close();
         }
 
-        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             r_date = dateTimePicker1.Value.ToString("yyyy/MM/dd");
             DBconnection DBC = new DBconnection();
@@ -164,10 +168,11 @@ namespace Sample1
                         {
                             dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
                         }
-                        else
+                        else 
                         {
-                            dataGridView1.Rows[m].Cells[n].Value = (string)reader.GetValue(n);
+                            dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n);   
                         }
+                        
                     }
 
                 }
@@ -175,7 +180,7 @@ namespace Sample1
             DBC.DB_DisConnect();
         }
 
-        private void dataGridView1_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             //宿泊者セルのデータがない場合
             if (dataGridView1.CurrentRow.Cells[3].Value == null)
@@ -198,12 +203,8 @@ namespace Sample1
                 this.Close();
             }
         }
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
