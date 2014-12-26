@@ -56,13 +56,6 @@ namespace Sample1
             for (m = 0; reader.Read(); m++)
             {
                 dataGridView1.Rows.Add();
-                if (!reader.IsDBNull(m))//データがある場合出力
-                {
-                    reader.GetValue(m);
-                }
-                for (m = 0; reader.Read(); m++)
-                {
-                    dataGridView1.Rows.Add();
                     for (n = 0; n < 9; n++)
                     {
                         reader.GetValue(n);
@@ -87,9 +80,7 @@ namespace Sample1
                             }
 
                         }
-
                     }
-                }
                 DBC.DB_DisConnect();
 
             }
