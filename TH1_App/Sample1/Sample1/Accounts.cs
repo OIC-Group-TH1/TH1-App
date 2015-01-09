@@ -57,8 +57,8 @@ namespace Sample1
                 MessageBox.Show(ex.Message, "エラー");
             }
             
-            Accountscheck Acheck = new Accountscheck();
-            Acheck.Show();
+            IOchecklist IOclist = new IOchecklist();
+            IOclist.Show();
             this.Close();
         }
 
@@ -82,13 +82,8 @@ namespace Sample1
             
             DBconnection DBC = new DBconnection();
             DBC.DB_connect();
-            try
-            {
-            
-            //予約コードの入った配列を変数strに","区切りで入れる
-            
-            
 
+            //予約コードの入った配列を変数strに","区切りで入れる
             for (int y = 0; y < Array.Length; y++)
             {
                 if (y == Array.Length - 1)
@@ -101,23 +96,26 @@ namespace Sample1
                 }
             }
 
-            
-
+            try
+            {
                 //データベースファイルオープン
 
                 SqlCommand client_command = new SqlCommand();
 
                 //SQL文の入力
-                client_command.CommandText = "select Re.ROOM_CODE,Ro.ROOM_NAME,Cl.CLIENT_NAME,Ro.ROOM_VALUE,Re.RESERVATION_NUM,Re.RESERVATION_DAY"
-                       + "from TBL_RESERVATION Re inner join TBL_ROOM Ro on Re.ROOM_CODE = Ro.ROOM_CODE"
-                       + "inner join TBL_CLIENT Cl on Re.CLIENT_CODE = Cl.CLIENT_CODE"
-                       + "where Re.RESERVATION_CODE in(" + A_Rcode + ")";
+                //client_command.CommandText = "select Re.ROOM_CODE,Ro.ROOM_NAME,Cl.CLIENT_NAME,Ro.ROOM_VALUE,Re.RESERVATION_NUM,Re.RESERVATION_DAY"
+                //       + "from TBL_RESERVATION Re inner join TBL_ROOM Ro on Re.ROOM_CODE = Ro.ROOM_CODE"
+                //       + "inner join TBL_CLIENT Cl on Re.CLIENT_CODE = Cl.CLIENT_CODE"
+                //       + "where Re.RESERVATION_CODE in(" + A_Rcode + ")";
+                client_command.CommandText = "SELECT Re.ROOM_CODE, Ro.ROOM_NAME, Cl.CLIENT_NAME, Ro.ROOM_VALUE, Re.RESERVATION_NUM, Re.RESERVATION_DAY FROM TBL_RESERVATION Re INNER JOIN TBL_ROOM Ro ON Re.ROOM_CODE = Ro.ROOM_CODE INNER JOIN TBL_CLIENT Cl ON Re.CLIENT_CODE = Cl.CLIENT_CODE WHERE (Re.RESERVATION_CODE IN ("+ A_Rcode + "))";
+
                 // SQLを実行
+                client_command.Connection = DBC.Get_scn();
                 SqlDataReader client_reader = client_command.ExecuteReader();
                 for(int x = 0; client_reader.Read(); x++)
                 {
                     dataGridView1.Rows.Add();
-                    for (int n = 0; n < 7; n++)
+                    for (int n = 0; n < 6; n++)
                     {
                         dataGridView1.Rows[x].Cells[n].Value = client_reader.GetValue(n);
                     }
@@ -132,16 +130,13 @@ namespace Sample1
                 MessageBox.Show(ex.Message, "エラー");
             }
 
-
-
-
             int i;
             int total = 0;
             int value;
             int date;
             int cnt = dataGridView1.Rows.Count;//表の行数を取得
 
-            for (i = 0; i < cnt - 1; i++)
+            for (i = 0; i < cnt -1; i++)
             {
                 value = int.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString());
                 date = int.Parse(dataGridView1.Rows[i].Cells[5].Value.ToString());

@@ -71,10 +71,8 @@ namespace Sample1
             DBconnection DBC = new DBconnection();
             DBC.DB_connect();
             SqlCommand command = new SqlCommand();
-            command.CommandText = "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.RESERVATION_CODE,CL.CLIENT_CODE,RE.[CHECK]"
-                                   + "FROM TBL_ROOM RO INNER JOIN TBL_RESERVATION RE ON RO.ROOM_CODE = RE.ROOM_CODE"
-                                   + "INNER JOIN TBL_CLIENT CL ON RE.CLIENT_CODE = CL.CLIENT_CODE"
-                                   + "WHERE RE.RESERVATION_DATE =" + "'" + IO_Class.IO_DATE + "'";
+            command.CommandText = "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.RESERVATION_CODE,CL.CLIENT_CODE,RE.[CHECK] FROM TBL_ROOM RO,TBL_RESERVATION RE,TBL_CLIENT CL WHERE RE.ROOM_CODE = RO.ROOM_CODE and RE.CLIENT_CODE = CL.CLIENT_CODE and RESERVATION_DATE =" + "'" + IO_Class.IO_DATE + "'";
+
             //// SQLを実行
             command.Connection = DBC.Get_scn();
             SqlDataReader reader = command.ExecuteReader();
@@ -117,18 +115,18 @@ namespace Sample1
 
             //チェックボックスの判定がうまくいかない！！！！！！！！！！
 
-            //for (int dRow = 0; dRow < dataGridView1.Rows.Count; dRow++)
-            //{
-            //    //チェックイン列がtrueならば会計列を使用不可に
-            //    if ((bool)dataGridView1.Rows[dRow].Cells[9].Value == true)
-            //    {
-            //        dataGridView1.Rows[dRow].Cells[10].ReadOnly = true;
-            //    }
-            //    else
-            //    {
-            //        dataGridView1.Rows[dRow].Cells[10].ReadOnly = false;
-            //    }
-            //}
+            for (int dRow = 0; dRow < dataGridView1.Rows.Count-1; dRow++)
+            {
+                //チェックイン列がtrueならば会計列を使用不可に
+                if (dataGridView1.Rows[dRow].Cells[9].Value.ToString() == "true")
+                {
+                    dataGridView1.Rows[dRow].Cells[10].ReadOnly = false;
+                }
+                else
+                {
+                    dataGridView1.Rows[dRow].Cells[10].ReadOnly = true;
+                }
+            }
         }
 
 
