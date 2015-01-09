@@ -107,7 +107,7 @@ namespace Sample1
                     SqlCommand command = new SqlCommand();
 
                     command.CommandText =
-                      "DELETE FROM TBL_CLIENT WHERE CLIENT_CODE =" + "'" + custmerlist_main.id.ToString() + "'";
+                      "DELETE FROM TBL_CLIENT WHERE CLIENT_CODE =" + "'" + Customer_Class._customer_id + "'";
                     command.Connection = DBC.Get_scn();
                     SqlDataReader reader = command.ExecuteReader();
                     //TOP画面へ
@@ -135,13 +135,13 @@ namespace Sample1
 
         private void Customer_Load(object sender, EventArgs e)
         {
-            Customer_Name.Text = custmerlist_main.name;
-            Customer_Kana.Text = custmerlist_main.kana;
-            Customer_Sex.Text = custmerlist_main.sex;
-            Customer_Tel.Text = custmerlist_main.tel;
-            Customer_Post.Text = custmerlist_main.post;
-            Customer_Address.Text = custmerlist_main.address;
-            Customer_Note.Text = custmerlist_main.note;
+            Customer_Name.Text = Customer_Class._customer_name;
+            Customer_Kana.Text = Customer_Class._customer_kana;
+            Customer_Sex.Text = Customer_Class._customer_sex;
+            Customer_Tel.Text = Customer_Class._customer_tel;
+            Customer_Post.Text = Customer_Class._customer_post;
+            Customer_Address.Text = Customer_Class._customer_address;
+            Customer_Note.Text = Customer_Class._customer_note;
 
         }
 

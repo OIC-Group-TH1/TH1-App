@@ -11,14 +11,7 @@ namespace Sample1
 {
     public partial class Customerlist : Form
     {
-        public int id;
-        public string name;
-        public string kana;
-        public string sex;
-        public string tel;
-        public string post;
-        public string address;
-        public string note;
+
 
         public Customerlist()
         {
@@ -50,16 +43,17 @@ namespace Sample1
                 Reserve_Class._Reserve_customer_id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
 
                 //顧客情報を表示
-                id = (int)dataGridView1.CurrentRow.Cells[0].Value;
-                name = (string)dataGridView1.CurrentRow.Cells[1].Value;
-                kana = (string)dataGridView1.CurrentRow.Cells[2].Value;
-                sex = (string)dataGridView1.CurrentRow.Cells[3].Value;
-                tel = (string)dataGridView1.CurrentRow.Cells[4].Value;
-                post = (string)dataGridView1.CurrentRow.Cells[5].Value;
-                address = (string)dataGridView1.CurrentRow.Cells[6].Value;
-                note = (string)dataGridView1.CurrentRow.Cells[7].Value;
+                Customer_Class._customer_id = (int)dataGridView1.CurrentRow.Cells[0].Value;
+                Customer_Class._customer_name = (string)dataGridView1.CurrentRow.Cells[1].Value;
+                Customer_Class._customer_kana = (string)dataGridView1.CurrentRow.Cells[2].Value;
+                Customer_Class._customer_sex = (string)dataGridView1.CurrentRow.Cells[3].Value;
+                Customer_Class._customer_tel = (string)dataGridView1.CurrentRow.Cells[4].Value;
+                Customer_Class._customer_post = (string)dataGridView1.CurrentRow.Cells[5].Value;
+                Customer_Class._customer_address = (string)dataGridView1.CurrentRow.Cells[6].Value;
+                Customer_Class._customer_note = (string)dataGridView1.CurrentRow.Cells[7].Value;
 
-                Customer Cust = new Customer(this);
+
+                Customer Cust = new Customer();
                 Cust.Show();
                 this.Close();
             }
