@@ -109,9 +109,9 @@ namespace Sample1
 
                 //SQL文の入力
                 client_command.CommandText = "select Re.ROOM_CODE,Ro.ROOM_NAME,Cl.CLIENT_NAME,Ro.ROOM_VALUE,Re.RESERVATION_NUM,Re.RESERVATION_DAY"
-                       + "from TBL_RESERVATION Re innner join TBL_ROOM Ro on Re.ROOM_CODE = Ro.ROOM_CODE"
+                       + "from TBL_RESERVATION Re inner join TBL_ROOM Ro on Re.ROOM_CODE = Ro.ROOM_CODE"
                        + "inner join TBL_CLIENT Cl on Re.CLIENT_CODE = Cl.CLIENT_CODE"
-                       + "where RESERVATION_CODE in(" + A_Rcode + ")";
+                       + "where Re.RESERVATION_CODE in(" + A_Rcode + ")";
                 // SQLを実行
                 SqlDataReader client_reader = client_command.ExecuteReader();
                 for(int x = 0; client_reader.Read(); x++)

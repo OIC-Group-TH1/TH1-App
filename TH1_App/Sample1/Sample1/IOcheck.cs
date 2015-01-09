@@ -42,22 +42,23 @@ namespace Sample1
         {
             //SQL SERVERを開いてるときにコメントアウト
             //データベースからの取得
-            
+
+
             DBconnection DBC = new DBconnection();
             DBC.DB_connect();
 
             try
             {
                 //データベースファイルオープン
-                
+
                 SqlCommand client_command = new SqlCommand();
                 SqlCommand reservation_command = new SqlCommand();
                 SqlCommand room_command = new SqlCommand();
 
                 //SQL文の入力
-                client_command.CommandText = "SELECT * FROM TBL_CLIENT WHERE CLIENT_CODE = IO_Class.IO_CCODE";
-                reservation_command.CommandText = "SELECT * FROM TBL_RESERVATION WHERE RESERVATION_CODE = @IO_Class.IO_RCODE";
-                room_command.CommandText = "SELECT * FROM TBL_ROOM WHERE ROOM_CODE = @IO_Class.IO_NO";
+                client_command.CommandText = "SELECT * FROM TBL_CLIENT WHERE CLIENT_CODE = " + IO_Class.IO_CCODE;
+                reservation_command.CommandText = "SELECT * FROM TBL_RESERVATION WHERE RESERVATION_CODE = " + IO_Class.IO_RCODE;
+                room_command.CommandText = "SELECT * FROM TBL_ROOM WHERE ROOM_CODE = " + IO_Class.IO_NO;
 
                 // SQLを実行
                 SqlDataReader client_reader = client_command.ExecuteReader();
@@ -65,7 +66,7 @@ namespace Sample1
                 SqlDataReader room_reader = reservation_command.ExecuteReader();
                 while (client_reader.Read() & reservation_reader.Read() & room_reader.Read())
                 {
-                    
+
                     IOcheck_No.Text = room_reader.GetValue(0).ToString();
                     IOcheck_Type.Text = room_reader.GetValue(1).ToString();
                     IOcheck_Smoke.Text = room_reader.GetValue(3).ToString();
