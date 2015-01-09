@@ -57,7 +57,7 @@ namespace Sample1
                       " SELECT    RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.[CHECK],RO.ROOM_CODE"
                     + " FROM      TBL_ROOM RO INNER JOIN TBL_RESERVATION RE ON RO.ROOM_CODE = RE.ROOM_CODE INNER JOIN"
                     + "           TBL_CLIENT CL ON RE.CLIENT_CODE = CL.CLIENT_CODE"
-                    +" WHERE     RE.RESERVATION_DATE =" + "'" + r_date + "'";
+                    + " WHERE     RE.RESERVATION_DATE =" + "'" + r_date + "'";
                 // SQLを実行
                 command.Connection = DBC.Get_scn();
                 SqlDataReader reader = command.ExecuteReader();
@@ -88,8 +88,8 @@ namespace Sample1
                             }
                         }
                     }
+                    DBC.DB_DisConnect();
                 }
-                DBC.DB_DisConnect();
             }
             catch (Exception ex)
             {
