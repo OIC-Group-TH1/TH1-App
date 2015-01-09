@@ -54,11 +54,9 @@
             this.ReservePost_linkLabel = new System.Windows.Forms.LinkLabel();
             this.ReserveAddress_linkLabel = new System.Windows.Forms.LinkLabel();
             this.ReserveMemo_linkLabel = new System.Windows.Forms.LinkLabel();
-            this.Reserve_dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.Reserve_NosmokeradioButton = new System.Windows.Forms.RadioButton();
-            this.Reserve_SmokeradioButton = new System.Windows.Forms.RadioButton();
-            this.Reserve_TcomboBox = new System.Windows.Forms.ComboBox();
-            this.Reserve_NcomboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Reserve_Date
@@ -66,9 +64,9 @@
             this.Reserve_Date.AutoSize = true;
             this.Reserve_Date.Location = new System.Drawing.Point(170, 44);
             this.Reserve_Date.Name = "Reserve_Date";
-            this.Reserve_Date.Size = new System.Drawing.Size(35, 12);
+            this.Reserve_Date.Size = new System.Drawing.Size(41, 12);
             this.Reserve_Date.TabIndex = 70;
-            this.Reserve_Date.Text = "label1";
+            this.Reserve_Date.Text = "label01";
             // 
             // ReserveDate_label
             // 
@@ -82,20 +80,20 @@
             // Reserve_Value
             // 
             this.Reserve_Value.AutoSize = true;
-            this.Reserve_Value.Location = new System.Drawing.Point(180, 260);
+            this.Reserve_Value.Location = new System.Drawing.Point(170, 260);
             this.Reserve_Value.Name = "Reserve_Value";
-            this.Reserve_Value.Size = new System.Drawing.Size(35, 12);
+            this.Reserve_Value.Size = new System.Drawing.Size(41, 12);
             this.Reserve_Value.TabIndex = 68;
-            this.Reserve_Value.Text = "label5";
+            this.Reserve_Value.Text = "label06";
             // 
             // Reserve_No
             // 
             this.Reserve_No.AutoSize = true;
-            this.Reserve_No.Location = new System.Drawing.Point(180, 86);
+            this.Reserve_No.Location = new System.Drawing.Point(170, 86);
             this.Reserve_No.Name = "Reserve_No";
-            this.Reserve_No.Size = new System.Drawing.Size(35, 12);
+            this.Reserve_No.Size = new System.Drawing.Size(41, 12);
             this.Reserve_No.TabIndex = 64;
-            this.Reserve_No.Text = "label1";
+            this.Reserve_No.Text = "label02";
             // 
             // ReserveValue_label
             // 
@@ -311,64 +309,41 @@
             this.ReserveMemo_linkLabel.Text = "備考";
             this.ReserveMemo_linkLabel.DoubleClick += new System.EventHandler(this.ReserveName_linkLabel_DoubleClick);
             // 
-            // Reserve_dateTimePicker
+            // label1
             // 
-            this.Reserve_dateTimePicker.Location = new System.Drawing.Point(133, 39);
-            this.Reserve_dateTimePicker.Name = "Reserve_dateTimePicker";
-            this.Reserve_dateTimePicker.Size = new System.Drawing.Size(137, 19);
-            this.Reserve_dateTimePicker.TabIndex = 82;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(170, 128);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.TabIndex = 82;
+            this.label1.Text = "label03";
             // 
-            // Reserve_NosmokeradioButton
+            // label2
             // 
-            this.Reserve_NosmokeradioButton.AutoSize = true;
-            this.Reserve_NosmokeradioButton.Location = new System.Drawing.Point(150, 174);
-            this.Reserve_NosmokeradioButton.Name = "Reserve_NosmokeradioButton";
-            this.Reserve_NosmokeradioButton.Size = new System.Drawing.Size(47, 16);
-            this.Reserve_NosmokeradioButton.TabIndex = 84;
-            this.Reserve_NosmokeradioButton.TabStop = true;
-            this.Reserve_NosmokeradioButton.Text = "禁煙";
-            this.Reserve_NosmokeradioButton.UseVisualStyleBackColor = true;
-            this.Reserve_NosmokeradioButton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(170, 218);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 12);
+            this.label2.TabIndex = 83;
+            this.label2.Text = "label05";
             // 
-            // Reserve_SmokeradioButton
+            // label3
             // 
-            this.Reserve_SmokeradioButton.AutoSize = true;
-            this.Reserve_SmokeradioButton.Location = new System.Drawing.Point(205, 174);
-            this.Reserve_SmokeradioButton.Name = "Reserve_SmokeradioButton";
-            this.Reserve_SmokeradioButton.Size = new System.Drawing.Size(47, 16);
-            this.Reserve_SmokeradioButton.TabIndex = 85;
-            this.Reserve_SmokeradioButton.TabStop = true;
-            this.Reserve_SmokeradioButton.Text = "喫煙";
-            this.Reserve_SmokeradioButton.UseVisualStyleBackColor = true;
-            // 
-            // Reserve_TcomboBox
-            // 
-            this.Reserve_TcomboBox.FormattingEnabled = true;
-            this.Reserve_TcomboBox.Location = new System.Drawing.Point(133, 125);
-            this.Reserve_TcomboBox.Name = "Reserve_TcomboBox";
-            this.Reserve_TcomboBox.Size = new System.Drawing.Size(137, 20);
-            this.Reserve_TcomboBox.TabIndex = 87;
-            this.Reserve_TcomboBox.Text = "＊指定された初期値を設定";
-            // 
-            // Reserve_NcomboBox
-            // 
-            this.Reserve_NcomboBox.FormattingEnabled = true;
-            this.Reserve_NcomboBox.Location = new System.Drawing.Point(133, 218);
-            this.Reserve_NcomboBox.Name = "Reserve_NcomboBox";
-            this.Reserve_NcomboBox.Size = new System.Drawing.Size(137, 20);
-            this.Reserve_NcomboBox.TabIndex = 88;
-            this.Reserve_NcomboBox.Text = "人数を選択してください";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(170, 172);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 12);
+            this.label3.TabIndex = 84;
+            this.label3.Text = "label04";
             // 
             // Reserve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 485);
-            this.Controls.Add(this.Reserve_NcomboBox);
-            this.Controls.Add(this.Reserve_TcomboBox);
-            this.Controls.Add(this.Reserve_SmokeradioButton);
-            this.Controls.Add(this.Reserve_NosmokeradioButton);
-            this.Controls.Add(this.Reserve_dateTimePicker);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ReserveMemo_linkLabel);
             this.Controls.Add(this.ReserveAddress_linkLabel);
             this.Controls.Add(this.ReservePost_linkLabel);
@@ -431,11 +406,9 @@
         private System.Windows.Forms.LinkLabel ReservePost_linkLabel;
         private System.Windows.Forms.LinkLabel ReserveAddress_linkLabel;
         private System.Windows.Forms.LinkLabel ReserveMemo_linkLabel;
-        private System.Windows.Forms.DateTimePicker Reserve_dateTimePicker;
-        private System.Windows.Forms.RadioButton Reserve_NosmokeradioButton;
-        private System.Windows.Forms.RadioButton Reserve_SmokeradioButton;
-        private System.Windows.Forms.ComboBox Reserve_TcomboBox;
-        private System.Windows.Forms.ComboBox Reserve_NcomboBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
 
     }
 }

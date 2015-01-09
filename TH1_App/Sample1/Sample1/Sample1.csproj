@@ -59,6 +59,7 @@
     <Compile Include="Accountscheck.Designer.cs">
       <DependentUpon>Accountscheck.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reserve_Class.cs" />
     <Compile Include="Custchangecheck.cs">
       <SubType>Form</SubType>
     </Compile>

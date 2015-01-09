@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Sample1
 {
@@ -16,17 +17,13 @@ namespace Sample1
         public Reserve()
         {
             InitializeComponent();
-            //宿泊人数コンボボックスへの値の設定
-            Reserve_NcomboBox.Items.AddRange(new String[] { "１人", "２人", "３人", "４人" });
-            
         }
 
         private void ReserveOk_button_Click(object sender, EventArgs e)
         {
 
            
-            if (Reserve_NcomboBox.SelectedIndex >= 0)//宿泊人数を指定しているか判定
-            {
+           
                 //予約確定メッセージ
                 MessageBox.Show("予約が登録されました","予約確定",
                 MessageBoxButtons.OK);
@@ -35,17 +32,7 @@ namespace Sample1
                 Top_page Top = new Top_page();
                 Top.Visible = true;
                 this.Close();
-            }
-            else　//宿泊人数が指定されていない場合
-            {
-                
-                MessageBox.Show("宿泊人数を選択してください", "エラー",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Error);
-            }
-
-
-        }
+         }
 
         private void ReserveNo_button_Click(object sender, EventArgs e)
         {
@@ -81,10 +68,39 @@ namespace Sample1
 
         private void Reserve_Load(object sender, EventArgs e)
         {
+            //SQL SERVERを開いてるときにコメントアウト
+            DBconnection DBC = new DBconnection();
+            try
+            {
+                //データベースファイルオープン
+                DBC.DB_connect();
+                SqlCommand command = new SqlCommand();
+                
+                //※SQL文発行時に使用するように！！
+                //Reserve_Class._Reserve_customer_id　カスタマーリスト選択時　IDの保持用変数
+                //Reserve_Class._Reserve_room_code　　リザーブリスト選択時　　ROOMID保持用変数
+                
+                
+                //作成途中
+                command.CommandText = "SELECT  RE.RESERVATION_DATE,RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,RE.RESERVATION_NUM,RO.ROOM_VALUE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_SEX,CL.CLIENT_TEL,CL.CLIENT_POST,CL.CLIENT_ADDRESS,CL.CLIENT_NOTE"
+                                     +"";
+                command.Connection = DBC.Get_scn();
+                SqlDataReader reader = command.ExecuteReader();
 
+                while (reader.Read())
+                {
+                    
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                DBC.DB_DisConnect();
+            }
         }
+       }
 
     
    
-    }
 }

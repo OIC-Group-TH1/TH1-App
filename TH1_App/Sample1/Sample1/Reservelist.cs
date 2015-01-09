@@ -54,10 +54,9 @@ namespace Sample1
                 DBC.DB_connect();
                 //command.CommandText = "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.[CHECK],RE.RESERVATION_CODE FROM TBL_ROOM RO,TBL_RESERVATION RE,TBL_CLIENT CL WHERE RE.ROOM_CODE = RO.ROOM_CODE and RE.CLIENT_CODE = CL.CLIENT_CODE and RESERVATION_DATE =" + "'" + r_date + "'";
                 command.CommandText =
-                      " SELECT    RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.[CHECK],RO.ROOM_CODE"
-                    + " FROM      TBL_ROOM RO INNER JOIN TBL_RESERVATION RE ON RO.ROOM_CODE = RE.ROOM_CODE INNER JOIN"
-                    + "           TBL_CLIENT CL ON RE.CLIENT_CODE = CL.CLIENT_CODE"
-                    + " WHERE     RE.RESERVATION_DATE =" + "'" + r_date + "'";
+                      " SELECT    RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.RESERVATION_CODE"
+                    + " FROM      TBL_ROOM RO LEFT OUTER JOIN (SELECT * FROM TBL_RESERVATION WHERE RESERVATION_DATE =" + "'" + r_date + "') RE ON (RE.ROOM_CODE = RO.ROOM_CODE) LEFT OUTER JOIN TBL_CLIENT CL ON (RE.CLIENT_CODE = CL.CLIENT_CODE)";
+                    
                 // SQLを実行
                 command.Connection = DBC.Get_scn();
                 SqlDataReader reader = command.ExecuteReader();
@@ -65,7 +64,7 @@ namespace Sample1
                 for (m = 0; reader.Read(); m++)
                 {
                     dataGridView1.Rows.Add();
-                    for (n = 0; n < 9; n++)
+                    for (n = 0; n < 8; n++)
                     {
                         reader.GetValue(n);
                         if (reader.GetValue(n) != DBNull.Value)
@@ -74,11 +73,11 @@ namespace Sample1
                             {
                                 dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
                             }
-                            else if (n == 7)
+                            else if (n == 6)
                             {
                                 dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
                             }
-                            else if (n == 8)
+                            else if (n == 7)
                             {
                                 dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
                             }
@@ -88,8 +87,8 @@ namespace Sample1
                             }
                         }
                     }
-                    DBC.DB_DisConnect();
                 }
+                    DBC.DB_DisConnect();
             }
             catch (Exception ex)
             {
@@ -126,6 +125,14 @@ namespace Sample1
             //宿泊者セルのデータがない場合
             if (dataGridView1.CurrentRow.Cells[3].Value == null)
             {
+                //部屋情報のセッティング（Reserve.cs)
+                Reserve_Class._Reserve_date         =   dateTimePicker1.Value.ToString("yyyy/MM/dd");
+                Reserve_Class._Reserve_room_code    =   int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                //Reserve_Class._Reserve_customer_id  =   dataGridView1.Rows[i].Cells[].Value.ToString();
+                //Reserve_Class._Reserve_date =   dataGridView1.Rows[].Cells[0].Value.ToString();
+                //Reserve_Class._Reserve_date =   dataGridView1.Rows[].Cells[1].Value.ToString();
+                //Reserve_Class._Reserve_date =   dataGridView1.Rows[].Cells[2].Value.ToString();
+
                 //顧客一覧を表示
                 Customerlist Clist = new Customerlist();
                 Clist.Show();
@@ -137,7 +144,7 @@ namespace Sample1
             {
 
                 //値の取得(これをselect文で検索し、情報をReservecheckで)
-                r_code = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+                r_code = dataGridView1.CurrentRow.Cells[7].Value.ToString();
 
                 //情報を持って予約情報を表示
                 Reservecheck Rcheck = new Reservecheck(this);
@@ -158,11 +165,9 @@ namespace Sample1
                 DBC.DB_connect();
                 //command.CommandText = "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.[CHECK],RE.RESERVATION_CODE FROM TBL_ROOM RO,TBL_RESERVATION RE,TBL_CLIENT CL WHERE RE.ROOM_CODE = RO.ROOM_CODE and RE.CLIENT_CODE = CL.CLIENT_CODE and RESERVATION_DATE =" + "'" + r_date + "'";
                 command.CommandText =
-                      " SELECT    RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.[CHECK],RO.ROOM_CODE"
-                    + " FROM      TBL_ROOM RO INNER JOIN TBL_RESERVATION RE ON RO.ROOM_CODE = RE.ROOM_CODE INNER JOIN"
-                    + "           TBL_CLIENT CL ON RE.CLIENT_CODE = CL.CLIENT_CODE"
-                    + " WHERE     RE.RESERVATION_DATE =" + "'" + r_date + "'";
-                
+                      " SELECT    RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.RESERVATION_CODE"
+                    + " FROM      TBL_ROOM RO LEFT OUTER JOIN (SELECT * FROM TBL_RESERVATION WHERE RESERVATION_DATE =" + "'" + r_date + "') RE ON (RE.ROOM_CODE = RO.ROOM_CODE) LEFT OUTER JOIN TBL_CLIENT CL ON (RE.CLIENT_CODE = CL.CLIENT_CODE)";
+
                 // SQLを実行
                 command.Connection = DBC.Get_scn();
                 SqlDataReader reader = command.ExecuteReader();
@@ -170,7 +175,7 @@ namespace Sample1
                 for (m = 0; reader.Read(); m++)
                 {
                     dataGridView1.Rows.Add();
-                    for (n = 0; n < 9; n++)
+                    for (n = 0; n < 8; n++)
                     {
                         reader.GetValue(n);
                         if (reader.GetValue(n) != DBNull.Value)
@@ -179,11 +184,11 @@ namespace Sample1
                             {
                                 dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
                             }
-                            else if (n == 7)
+                            else if (n == 6)
                             {
                                 dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
                             }
-                            else if (n == 8)
+                            else if (n == 7)
                             {
                                 dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
                             }
@@ -216,6 +221,11 @@ namespace Sample1
                         this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.Gold;
                 }
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

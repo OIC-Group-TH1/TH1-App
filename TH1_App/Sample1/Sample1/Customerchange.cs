@@ -30,5 +30,10 @@ namespace Sample1
             Custcheck.Show();
             this.Close();
         }
+
+        private void Customerchange_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

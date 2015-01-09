@@ -46,6 +46,9 @@ namespace Sample1
             //名前セルのデータ有無で判定
             if (dataGridView1.CurrentRow.Cells[1].Value != null)
             {
+                //Reserver 　使用時のIDの保持
+                Reserve_Class._Reserve_customer_id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+
                 //顧客情報を表示
                 id = (int)dataGridView1.CurrentRow.Cells[0].Value;
                 name = (string)dataGridView1.CurrentRow.Cells[1].Value;

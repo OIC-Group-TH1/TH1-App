@@ -201,6 +201,7 @@
             this.Controls.Add(this.CustomerchangeName_label);
             this.Name = "Customerchange";
             this.Text = "Customerchange";
+            this.Load += new System.EventHandler(this.Customerchange_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
