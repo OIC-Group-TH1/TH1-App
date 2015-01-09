@@ -30,29 +30,33 @@ namespace Sample1
                 //データベースファイルオープン
                 DBC.DB_connect();
                 SqlCommand command = new SqlCommand();
-                //SQL未完成！完成したらコメントを消して！
-                command.CommandText =
-                    "SELECT RE.RESERVATION_DATE,RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,RE.RESERVATION_NUM,RO.ROOM_VALUE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_SEX,CL.CLIENT_TEL,CL.CLIENT_POST,CL.CLIENT_ADDRESS,CL.CLIENT_NOTE FROM TBL_CLIENT CL,TBL_RESERVATION RE,TBL_ROOM RO WHERE RE.ROOM_CODE = RO.ROOM_CODE and RE.CLIENT_CODE = CL.CLIENT_CODE and RESERVATION_CODE = " + "'" + reservelist_main.r_code.ToString() + "'";
-                command.Connection = DBC.Get_scn();
-                SqlDataReader reader = command.ExecuteReader();
-                
-                while (reader.Read())
-                {
-                    Reservecheck_Date.Text = (string)reader.GetValue(0);
-                    Reservecheck_No.Text = (string)reader.GetValue(1);
-                    Reservecheck_Type.Text = (string)reader.GetValue(2);
-                    Reservecheck_Smoke.Text = (string)reader.GetValue(3);
-                    Reservecheck_Number.Text = (string)reader.GetValue(4);
-                    Reservecheck_Value.Text = (string)reader.GetValue(5);
 
-                    Reservecheck_Name.Text = (string)reader.GetValue(6);
-                    Reservecheck_Kana.Text = (string)reader.GetValue(7);
-                    Reservecheck_Sex.Text = (string)reader.GetValue(8);
-                    Reservecheck_Tel.Text = (string)reader.GetValue(9);
-                    Reservecheck_Post.Text = (string)reader.GetValue(10);
-                    Reservecheck_Address.Text = (string)reader.GetValue(11);
-                    Reservecheck_Note.Text = (string)reader.GetValue(12);
-                }
+                //command.CommandText =
+                    //*****************************SQLの構文エラーあります***********************************//
+
+                    //  "SELECT RE.RESERVATION_DATE,RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,RE.RESERVATION_NUM,RO.ROOM_VALUE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_SEX,CL.CLIENT_TEL,CL.CLIENT_POST,CL.CLIENT_ADDRESS,CL.CLIENT_NOTE"
+                    //+ "FROM TBL_CLIENT CL,TBL_RESERVATION RE,TBL_ROOM RO"
+                    //+ "WHERE RE.ROOM_CODE = RO.ROOM_CODE and RE.CLIENT_CODE = CL.CLIENT_CODE and RE.RESERVATION_CODE = " + "'" + reservelist_main.r_code.ToString() + "'";
+                //command.Connection = DBC.Get_scn();
+                //SqlDataReader reader = command.ExecuteReader();
+
+                //while (reader.Read())
+                //{
+                //    Reservecheck_Date.Text = reader.GetValue(0).ToString();
+                //    Reservecheck_No.Text = reader.GetValue(1).ToString();
+                //    Reservecheck_Type.Text = reader.GetValue(2).ToString();
+                //    Reservecheck_Smoke.Text = reader.GetValue(3).ToString();
+                //    Reservecheck_Number.Text = reader.GetValue(4).ToString();
+                //    Reservecheck_Value.Text = reader.GetValue(5).ToString();
+
+                //    Reservecheck_Name.Text  = reader.GetValue(6).ToString();
+                //    Reservecheck_Kana.Text  = reader.GetValue(7).ToString();
+                //    Reservecheck_Sex.Text   = reader.GetValue(8).ToString();
+                //    Reservecheck_Tel.Text   = reader.GetValue(9).ToString();
+                //    Reservecheck_Post.Text    = reader.GetValue(10).ToString();
+                //    Reservecheck_Address.Text = reader.GetValue(11).ToString();
+                //    Reservecheck_Note.Text = reader.GetValue(12).ToString();
+                //}
 
             }
             //できなかったらクローズしてエラー
@@ -60,7 +64,7 @@ namespace Sample1
             {
                 MessageBox.Show(ex.Message);
                 //データベースファイルクローズ
-                DBC.DB_DisConnect();              
+                DBC.DB_DisConnect();
             }
         }
 

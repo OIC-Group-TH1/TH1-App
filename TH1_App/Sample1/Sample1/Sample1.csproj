@@ -102,6 +102,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>globalDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="globalDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>globalDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="globalDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>globalDBDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="IO_Class.cs" />
     <Compile Include="test_GRID.cs">
       <SubType>Form</SubType>
@@ -262,6 +272,28 @@
     </None>
     <None Include="globalDBDataSet.xss">
       <DependentUpon>globalDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="globalDBDataSet1.xsc">
+      <DependentUpon>globalDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="globalDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>globalDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="globalDBDataSet1.xss">
+      <DependentUpon>globalDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="globalDBDataSet2.xsc">
+      <DependentUpon>globalDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="globalDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>globalDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="globalDBDataSet2.xss">
+      <DependentUpon>globalDBDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
