@@ -7,7 +7,7 @@ namespace Sample1
 {
     public static class IO_Class
     {
-        private static DateTime _IO_date;
+        private static string _IO_date;
         private static int _IO_no;
         private static int _IO_ccode;
         private static int _IO_rcode;
@@ -29,7 +29,7 @@ namespace Sample1
 
 
 
-        public static DateTime IO_DATE
+        public static string IO_DATE
         {
             set { _IO_date = value; }
             get { return _IO_date; }

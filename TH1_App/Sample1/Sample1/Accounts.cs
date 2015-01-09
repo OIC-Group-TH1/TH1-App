@@ -13,6 +13,7 @@ namespace Sample1
     public partial class Accounts : Form
     {
         public int[] Array;
+        public string A_Rcode = "";
 
         public Accounts()
         {
@@ -33,6 +34,29 @@ namespace Sample1
 
         private void AcountsOk_button_Click(object sender, EventArgs e)
         {
+            DBconnection DBC = new DBconnection();
+            DBC.DB_connect();
+
+            try
+            {
+                //予約コードを用いて、入退室状況にtrueを入れる
+                SqlCommand scm = new SqlCommand
+                ("update TBL_RESERVATION set [CHECK] = 'True' where RESERVATION_CODE in(" + A_Rcode + ")", DBC.Get_scn());
+
+                scm.ExecuteNonQuery();
+
+                DBC.DB_DisConnect();
+
+
+            }
+            catch (Exception ex)
+            {
+                //データベースファイルクローズ
+                DBC.DB_DisConnect();
+
+                MessageBox.Show(ex.Message, "エラー");
+            }
+            
             Accountscheck Acheck = new Accountscheck();
             Acheck.Show();
             this.Close();
@@ -40,38 +64,40 @@ namespace Sample1
 
         private void Accounts_Load(object sender, EventArgs e)
         {
-            //サンプルデータ
-            //一回書く事で項目が一行ずつ増える
-            dataGridView1.Rows.Add();
-            dataGridView1.Rows[0].Cells[3].Value = 2000;
-            dataGridView1.Rows[0].Cells[5].Value = 2;
-            dataGridView1.Rows.Add();
-            dataGridView1.Rows[1].Cells[3].Value = 3000;
-            dataGridView1.Rows[1].Cells[5].Value = 1;
-            dataGridView1.Rows.Add();
-            dataGridView1.Rows[2].Cells[3].Value = 4000;
-            dataGridView1.Rows[2].Cells[5].Value = 3;
+            
+            ////サンプルデータ
+            ////一回書く事で項目が一行ずつ増える
+            //dataGridView1.Rows.Add();
+            //dataGridView1.Rows[0].Cells[3].Value = 2000;
+            //dataGridView1.Rows[0].Cells[5].Value = 2;
+            //dataGridView1.Rows.Add();
+            //dataGridView1.Rows[1].Cells[3].Value = 3000;
+            //dataGridView1.Rows[1].Cells[5].Value = 1;
+            //dataGridView1.Rows.Add();
+            //dataGridView1.Rows[2].Cells[3].Value = 4000;
+            //dataGridView1.Rows[2].Cells[5].Value = 3;
 
             //SQL SERVERを開いてるときにコメントアウト
             //データベースからの取得
+            
             DBconnection DBC = new DBconnection();
             DBC.DB_connect();
             try
             {
             
-            //予約コードの入った配列を変数strに入れるサンプル
+            //予約コードの入った配列を変数strに","区切りで入れる
             
-            string str = "";
+            
 
             for (int y = 0; y < Array.Length; y++)
             {
                 if (y == Array.Length - 1)
                 {
-                    str += Array[y].ToString();
+                    A_Rcode += Array[y].ToString();
                 }
                 else
                 {
-                    str += Array[y].ToString() + ",";
+                    A_Rcode += Array[y].ToString() + ",";
                 }
             }
 
@@ -85,11 +111,12 @@ namespace Sample1
                 client_command.CommandText = "select Re.ROOM_CODE,Ro.ROOM_NAME,Cl.CLIENT_NAME,Ro.ROOM_VALUE,Re.RESERVATION_NUM,Re.RESERVATION_DAY"
                        + "from TBL_RESERVATION Re innner join TBL_ROOM Ro on Re.ROOM_CODE = Ro.ROOM_CODE"
                        + "inner join TBL_CLIENT Cl on Re.CLIENT_CODE = Cl.CLIENT_CODE"
-                       + "where RESERVATION_CODE in("+ str +")";
+                       + "where RESERVATION_CODE in(" + A_Rcode + ")";
                 // SQLを実行
                 SqlDataReader client_reader = client_command.ExecuteReader();
                 for(int x = 0; client_reader.Read(); x++)
                 {
+                    dataGridView1.Rows.Add();
                     for (int n = 0; n < 7; n++)
                     {
                         dataGridView1.Rows[x].Cells[n].Value = client_reader.GetValue(n);
