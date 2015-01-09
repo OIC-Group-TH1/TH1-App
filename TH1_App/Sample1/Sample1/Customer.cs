@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Sample1
 {
@@ -98,6 +99,29 @@ namespace Sample1
 
             if (result == DialogResult.Yes)
             {
+                DBconnection DBC = new DBconnection();
+                try
+                {
+                    //データベースファイルオープン
+                    DBC.DB_connect();
+                    SqlCommand command = new SqlCommand();
+
+                    command.CommandText =
+                      "DELETE FROM TBL_CLIENT WHERE CLIENT_CODE =" + "'" + custmerlist_main.id.ToString() + "'";
+                    command.Connection = DBC.Get_scn();
+                    SqlDataReader reader = command.ExecuteReader();
+                    //TOP画面へ
+                    Top_page Top = new Top_page();
+                    Top.Visible = true;
+                    this.Close();
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    //データベースファイルクローズ
+                    DBC.DB_DisConnect();
+                }
                 //「はい」が選択された時の処理を書く
                 Customerlist Custlist = new Customerlist();
                 Custlist.Show();
