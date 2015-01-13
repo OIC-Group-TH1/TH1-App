@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Sample1
 {
@@ -25,7 +26,6 @@ namespace Sample1
             InitializeComponent();
         }
 
-
         private void CustomerlistTop_button_Click(object sender, EventArgs e)
         {
             Top_page Top = new Top_page();
@@ -38,7 +38,6 @@ namespace Sample1
             Customerentry Centry = new Customerentry();
             Centry.Show();
             this.Close();
-
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -74,11 +73,6 @@ namespace Sample1
             //セルを行として管理
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
-            //DB接続
-            DBconnection dbc = new DBconnection();
-            dbc.DB_connect();
-
-
         }
 
         private void CustomerlistBack_button_Click(object sender, EventArgs e)
@@ -92,6 +86,49 @@ namespace Sample1
         private void CustomerlistSearch_button_Click(object sender, EventArgs e)
         {
             //検索ボタンの処理
+            //検索ボタンの処理　とりあえず作った、条件式はまだ
+            DBconnection DBC = new DBconnection();
+            DBC.DB_connect();
+
+            try
+            {
+                dataGridView1.Rows.Clear();
+                //データベースファイルオープン
+                SqlCommand command = new SqlCommand();
+
+                ///////////////////////////////////////////////////////////条件式がまだ（山野）
+                if (textBox1.Text != "" && textBox2.Text != "")
+                {
+                    command.CommandText = "SELECT CLIENT_CODE,CLIENT_NAME,CLIENT_KANA,CLIENT_SEX,CLIENT_TEL,CLIENT_POST,CLIENT_ADDRESS,CLIENT_NOTE FROM TBL_CLIENT WHERE CLIENT_NAME LIKE '%" + textBox1.Text + "%' AND CLIENT_TEL LIKE '%" + textBox2.Text + "%'";
+                }
+                else if (textBox1.Text != "")
+                {
+                    command.CommandText = "SELECT CLIENT_CODE,CLIENT_NAME,CLIENT_KANA,CLIENT_SEX,CLIENT_TEL,CLIENT_POST,CLIENT_ADDRESS,CLIENT_NOTE FROM TBL_CLIENT WHERE CLIENT_NAME LIKE '%" + textBox1.Text + "%'";
+                }
+                else if (textBox2.Text != "")
+                {
+                    command.CommandText = "SELECT CLIENT_CODE,CLIENT_NAME,CLIENT_KANA,CLIENT_SEX,CLIENT_TEL,CLIENT_POST,CLIENT_ADDRESS,CLIENT_NOTE FROM TBL_CLIENT WHERE CLIENT_TEL LIKE '%" + textBox2.Text + "%'";
+                }
+                command.Connection = DBC.Get_scn();
+                SqlDataReader reader = command.ExecuteReader();
+
+                for (int i = 0; reader.Read(); i++)
+                {
+                    dataGridView1.Rows.Add();
+                    for (int x = 0; x < 8; x++)
+                    {
+                        dataGridView1.Rows[i].Cells[x].Value = reader.GetSqlValue(x).ToString();
+                    }
+                }
+                DBC.DB_DisConnect();
+            }
+
+            catch (Exception ex)
+            {
+                //データベースファイルクローズ
+                MessageBox.Show(ex.Message);
+                DBC.DB_DisConnect();
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
