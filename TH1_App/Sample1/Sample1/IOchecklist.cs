@@ -45,7 +45,7 @@ namespace Sample1
             DBconnection DBC = new DBconnection();
             DBC.DB_connect();
             SqlCommand command = new SqlCommand();
-            command.CommandText = "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.RESERVATION_CODE,CL.CLIENT_CODE,RE.[CHECK] FROM TBL_ROOM RO,TBL_RESERVATION RE,TBL_CLIENT CL WHERE RE.ROOM_CODE = RO.ROOM_CODE and RE.CLIENT_CODE = CL.CLIENT_CODE and RESERVATION_DATE =" + "'" + IO_Class.IO_DATE + "'";
+            command.CommandText = "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.RESERVATION_CODE,CL.CLIENT_CODE,RE.[CHECK],RE.[CHECK2] FROM TBL_ROOM RO,TBL_RESERVATION RE,TBL_CLIENT CL WHERE RE.ROOM_CODE = RO.ROOM_CODE and RE.CLIENT_CODE = CL.CLIENT_CODE and RESERVATION_DATE =" + "'" + IO_Class.IO_DATE + "'";
 
             //// SQLを実行
             command.Connection = DBC.Get_scn();
@@ -106,7 +106,7 @@ namespace Sample1
             //このループで値の入っているデータだけカウントする
             for (int i = 0; i < cnt - 1; i++)
             {
-                if (dataGridView1.Rows[i].Cells[10].Value != null)
+                if (dataGridView1.Rows[i].Cells[11].Value != null)
                 {
                     m++;
                 }
@@ -118,7 +118,7 @@ namespace Sample1
             //IO_Rcodeに可変で値を入れるループ
             for (int i = 0; i < cnt - 1; i++)
             {
-                if (dataGridView1.Rows[i].Cells[10].Value != null)
+                if (dataGridView1.Rows[i].Cells[11].Value != null)
                 {
                     IO_Rcode[n] = int.Parse(dataGridView1.Rows[i].Cells[7].Value.ToString());
                     n++;

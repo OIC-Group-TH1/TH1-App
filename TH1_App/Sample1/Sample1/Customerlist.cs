@@ -84,7 +84,12 @@ namespace Sample1
                 dataGridView1.Rows.Clear();
                 //データベースファイルオープン
                 SqlCommand command = new SqlCommand();
-                if (textBox1.Text != "" && textBox2.Text != "")
+
+                if (textBox1.Text == "" && textBox2.Text == "")
+                {
+                    command.CommandText = "SELECT CLIENT_CODE,CLIENT_NAME,CLIENT_KANA,CLIENT_SEX,CLIENT_TEL,CLIENT_POST,CLIENT_ADDRESS,CLIENT_NOTE FROM TBL_CLIENT";
+                }
+                else if (textBox1.Text != "" && textBox2.Text != "")
                 {
                     command.CommandText = "SELECT CLIENT_CODE,CLIENT_NAME,CLIENT_KANA,CLIENT_SEX,CLIENT_TEL,CLIENT_POST,CLIENT_ADDRESS,CLIENT_NOTE FROM TBL_CLIENT WHERE CLIENT_NAME LIKE '%" + textBox1.Text + "%' AND CLIENT_TEL LIKE '%" + textBox2.Text + "%'";
                 }
@@ -116,11 +121,6 @@ namespace Sample1
                 MessageBox.Show(ex.Message);
                 DBC.DB_DisConnect();
             }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
