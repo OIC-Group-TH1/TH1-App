@@ -38,7 +38,7 @@ namespace Sample1
 
                 while (reader.Read())
                 {
-                    Reservecheck_Date.Text = reader.GetValue(0).ToString();
+                    Reservecheck_Date.Text = reservelist_main.r_date;
                     Reservecheck_No.Text = reader.GetValue(1).ToString();
                     Reservecheck_Type.Text = reader.GetValue(2).ToString();
                     Reservecheck_Smoke.Text = reader.GetValue(3).ToString();

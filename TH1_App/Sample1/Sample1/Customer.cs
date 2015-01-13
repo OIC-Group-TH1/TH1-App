@@ -24,55 +24,6 @@ namespace Sample1
             InitializeComponent();
             custmerlist_main = form;
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Name2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sex_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Tel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void address_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RoomType_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Smoke_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void CusomerChange_button_Click(object sender, EventArgs e)
         {

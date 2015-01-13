@@ -35,8 +35,6 @@ namespace Sample1
 
             try
             {
-                //データベースファイルオープン
-
                 SqlCommand scm = new SqlCommand
                    ("update TBL_CLIENT set "
                 + "CLIENT_NAME = '" + Customer_Class._customer_name + "',"
@@ -45,7 +43,7 @@ namespace Sample1
                 + "CLIENT_TEL = '" + Customer_Class._customer_tel + "',"
                 + "CLIENT_POST = '" + Customer_Class._customer_post + "',"
                 + "CLIENT_ADDRESS = '" + Customer_Class._customer_address + "',"
-                + "CLIENT_NOTE = '" + Customer_Class._customer_note + "',"
+                + "CLIENT_NOTE = '" + Customer_Class._customer_note + "'"
                 + "where CLIENT_CODE = '" + Customer_Class._customer_id + "'"
                 , DBC.Get_scn());
 

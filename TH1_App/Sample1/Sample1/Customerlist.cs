@@ -42,14 +42,14 @@ namespace Sample1
                 Reserve_Class._Reserve_customer_id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
 
                 //顧客情報を表示
-                Customer_Class._customer_id = (int)dataGridView1.CurrentRow.Cells[0].Value;
-                Customer_Class._customer_name = (string)dataGridView1.CurrentRow.Cells[1].Value;
-                Customer_Class._customer_kana = (string)dataGridView1.CurrentRow.Cells[2].Value;
-                Customer_Class._customer_sex = (string)dataGridView1.CurrentRow.Cells[3].Value;
-                Customer_Class._customer_tel = (string)dataGridView1.CurrentRow.Cells[4].Value;
-                Customer_Class._customer_post = (string)dataGridView1.CurrentRow.Cells[5].Value;
-                Customer_Class._customer_address = (string)dataGridView1.CurrentRow.Cells[6].Value;
-                Customer_Class._customer_note = (string)dataGridView1.CurrentRow.Cells[7].Value;
+                Customer_Class._customer_id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                Customer_Class._customer_name = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                Customer_Class._customer_kana = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                Customer_Class._customer_sex = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                Customer_Class._customer_tel = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                Customer_Class._customer_post = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                Customer_Class._customer_address = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                Customer_Class._customer_note = dataGridView1.CurrentRow.Cells[7].Value.ToString();
 
 
                 Customer Cust = new Customer();
@@ -61,9 +61,6 @@ namespace Sample1
 
         private void Customerlist_Load(object sender, EventArgs e)
         {
-            // TODO: このコード行はデータを 'globalDBDataSet.TBL_CLIENT' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            //this.tBL_CLIENTTableAdapter.Fill(this.globalDBDataSet.TBL_CLIENT);
-           
             //セルを行として管理
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
@@ -79,8 +76,6 @@ namespace Sample1
 
         private void CustomerlistSearch_button_Click(object sender, EventArgs e)
         {
-            //検索ボタンの処理
-            //検索ボタンの処理　とりあえず作った、条件式はまだ
             DBconnection DBC = new DBconnection();
             DBC.DB_connect();
 
@@ -89,8 +84,6 @@ namespace Sample1
                 dataGridView1.Rows.Clear();
                 //データベースファイルオープン
                 SqlCommand command = new SqlCommand();
-
-                ///////////////////////////////////////////////////////////条件式がまだ（山野）
                 if (textBox1.Text != "" && textBox2.Text != "")
                 {
                     command.CommandText = "SELECT CLIENT_CODE,CLIENT_NAME,CLIENT_KANA,CLIENT_SEX,CLIENT_TEL,CLIENT_POST,CLIENT_ADDRESS,CLIENT_NOTE FROM TBL_CLIENT WHERE CLIENT_NAME LIKE '%" + textBox1.Text + "%' AND CLIENT_TEL LIKE '%" + textBox2.Text + "%'";

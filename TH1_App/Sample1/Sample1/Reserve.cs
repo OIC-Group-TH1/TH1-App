@@ -113,29 +113,32 @@ namespace Sample1
                 command.CommandText =
                        "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,RO.ROOM_VALUE FROM TBL_ROOM RO WHERE RO.ROOM_CODE =" + "'" + Reserve_Class._Reserve_room_code + "'";
                 command.Connection = DBC.Get_scn();
-                SqlDataReader reader = command.ExecuteReader();
+                SqlDataReader reader1 = command.ExecuteReader();
 
-                while (reader.Read())
+                while (reader1.Read())
                 {
-                    Reserve_No.Text = reader.GetValue(0).ToString();
-                    ReserveType.Text = reader.GetValue(1).ToString();
-                    ReserveSmoke.Text = reader.GetValue(2).ToString();
-                    Reserve_Value.Text = reader.GetValue(3).ToString();
+                    Reserve_No.Text = reader1.GetValue(0).ToString();
+                    ReserveType.Text = reader1.GetValue(1).ToString();
+                    ReserveSmoke.Text = reader1.GetValue(2).ToString();
+                    Reserve_Value.Text = reader1.GetValue(3).ToString();
                 }
+                DBC.DB_DisConnect();
+                DBC.DB_connect();
                 //名前、フリガナ、性別、電話番号、郵便番号、住所、備考
                 command.CommandText =
                        "SELECT CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_SEX,CL.CLIENT_TEL,CL.CLIENT_POST,CL.CLIENT_ADDRESS,CL.CLIENT_NOTE FROM TBL_CLIENT CL WHERE CL.CLIENT_CODE =" + "'" + Reserve_Class._Reserve_customer_id + "'";
-                command.Connection = DBC.Get_scn();
-                while (reader.Read())
+                SqlDataReader reader2 = command.ExecuteReader();
+                while (reader2.Read())
                 {
-                    Reserve_Name.Text = reader.GetValue(0).ToString();
-                    Reserve_Kana.Text = reader.GetValue(1).ToString();
-                    Reserve_Sex.Text = reader.GetValue(2).ToString();
-                    Reserve_Tel.Text = reader.GetValue(3).ToString();
-                    Reserve_Post.Text = reader.GetValue(4).ToString();
-                    Reserve_Address.Text = reader.GetValue(5).ToString();
-                    Reserve_Note.Text = reader.GetValue(6).ToString();
+                    Reserve_Name.Text = reader2.GetValue(0).ToString();
+                    Reserve_Kana.Text = reader2.GetValue(1).ToString();
+                    Reserve_Sex.Text = reader2.GetValue(2).ToString();
+                    Reserve_Tel.Text = reader2.GetValue(3).ToString();
+                    Reserve_Post.Text = reader2.GetValue(4).ToString();
+                    Reserve_Address.Text = reader2.GetValue(5).ToString();
+                    Reserve_Note.Text = reader2.GetValue(6).ToString();
                 }
+                DBC.DB_DisConnect();
             }
             catch (Exception ex)
             {

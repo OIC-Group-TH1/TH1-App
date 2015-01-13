@@ -47,8 +47,6 @@
             this.ReservecheckSmoke_label = new System.Windows.Forms.Label();
             this.ReservecheckNumber_label = new System.Windows.Forms.Label();
             this.ReservecheckValue_label = new System.Windows.Forms.Label();
-            this.ReservecheckCchange_button = new System.Windows.Forms.Button();
-            this.ReservecheckRchange_button = new System.Windows.Forms.Button();
             this.ReservecheckDelete_button = new System.Windows.Forms.Button();
             this.ReservecheckBack_button = new System.Windows.Forms.Button();
             this.ReservecheckTop_button = new System.Windows.Forms.Button();
@@ -233,29 +231,9 @@
             this.ReservecheckValue_label.TabIndex = 32;
             this.ReservecheckValue_label.Text = "料金";
             // 
-            // ReservecheckCchange_button
-            // 
-            this.ReservecheckCchange_button.Location = new System.Drawing.Point(54, 413);
-            this.ReservecheckCchange_button.Name = "ReservecheckCchange_button";
-            this.ReservecheckCchange_button.Size = new System.Drawing.Size(113, 23);
-            this.ReservecheckCchange_button.TabIndex = 33;
-            this.ReservecheckCchange_button.Text = "顧客情報の変更";
-            this.ReservecheckCchange_button.UseVisualStyleBackColor = true;
-            this.ReservecheckCchange_button.Click += new System.EventHandler(this.ReservecheckCchange_button_Click);
-            // 
-            // ReservecheckRchange_button
-            // 
-            this.ReservecheckRchange_button.Location = new System.Drawing.Point(207, 413);
-            this.ReservecheckRchange_button.Name = "ReservecheckRchange_button";
-            this.ReservecheckRchange_button.Size = new System.Drawing.Size(112, 23);
-            this.ReservecheckRchange_button.TabIndex = 34;
-            this.ReservecheckRchange_button.Text = "部屋情報の変更";
-            this.ReservecheckRchange_button.UseVisualStyleBackColor = true;
-            this.ReservecheckRchange_button.Click += new System.EventHandler(this.ReservecheckRchange_button_Click);
-            // 
             // ReservecheckDelete_button
             // 
-            this.ReservecheckDelete_button.Location = new System.Drawing.Point(352, 413);
+            this.ReservecheckDelete_button.Location = new System.Drawing.Point(71, 456);
             this.ReservecheckDelete_button.Name = "ReservecheckDelete_button";
             this.ReservecheckDelete_button.Size = new System.Drawing.Size(106, 23);
             this.ReservecheckDelete_button.TabIndex = 35;
@@ -265,7 +243,7 @@
             // 
             // ReservecheckBack_button
             // 
-            this.ReservecheckBack_button.Location = new System.Drawing.Point(54, 456);
+            this.ReservecheckBack_button.Location = new System.Drawing.Point(280, 456);
             this.ReservecheckBack_button.Name = "ReservecheckBack_button";
             this.ReservecheckBack_button.Size = new System.Drawing.Size(75, 23);
             this.ReservecheckBack_button.TabIndex = 36;
@@ -361,8 +339,6 @@
             this.Controls.Add(this.ReservecheckTop_button);
             this.Controls.Add(this.ReservecheckBack_button);
             this.Controls.Add(this.ReservecheckDelete_button);
-            this.Controls.Add(this.ReservecheckRchange_button);
-            this.Controls.Add(this.ReservecheckCchange_button);
             this.Controls.Add(this.ReservecheckValue_label);
             this.Controls.Add(this.ReservecheckNumber_label);
             this.Controls.Add(this.ReservecheckSmoke_label);
@@ -411,8 +387,6 @@
         private System.Windows.Forms.Label ReservecheckSmoke_label;
         private System.Windows.Forms.Label ReservecheckNumber_label;
         private System.Windows.Forms.Label ReservecheckValue_label;
-        private System.Windows.Forms.Button ReservecheckCchange_button;
-        private System.Windows.Forms.Button ReservecheckRchange_button;
         private System.Windows.Forms.Button ReservecheckDelete_button;
         private System.Windows.Forms.Button ReservecheckBack_button;
         private System.Windows.Forms.Button ReservecheckTop_button;

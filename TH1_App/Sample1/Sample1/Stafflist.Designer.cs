@@ -30,11 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.StafflistEntry_button = new System.Windows.Forms.Button();
-            this.StafflistTop_button = new System.Windows.Forms.Button();
-            this.globalDBDataSet = new Sample1.globalDBDataSet();
-            this.tBLSTAFFBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tBL_STAFFTableAdapter = new Sample1.globalDBDataSetTableAdapters.TBL_STAFFTableAdapter();
             this.Stafflist_Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stafflist_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stafflist_Kana = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,9 +40,24 @@
             this.Stafflist_Mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stafflist_Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stafflist_Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tBLSTAFFBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.globalDBDataSet = new Sample1.globalDBDataSet();
+            this.StafflistEntry_button = new System.Windows.Forms.Button();
+            this.StafflistTop_button = new System.Windows.Forms.Button();
+            this.tBL_STAFFTableAdapter = new Sample1.globalDBDataSetTableAdapters.TBL_STAFFTableAdapter();
+            this.sTAFFCODEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTAFFNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTAFFKANADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTAFFSEXDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTAFFAGEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTAFFPOSITIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTAFFTELDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTAFFMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTAFFDAYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTAFFADDRESSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLSTAFFBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -64,7 +74,17 @@
             this.Stafflist_Tel,
             this.Stafflist_Mail,
             this.Stafflist_Day,
-            this.Stafflist_Address});
+            this.Stafflist_Address,
+            this.sTAFFCODEDataGridViewTextBoxColumn,
+            this.sTAFFNAMEDataGridViewTextBoxColumn,
+            this.sTAFFKANADataGridViewTextBoxColumn,
+            this.sTAFFSEXDataGridViewTextBoxColumn,
+            this.sTAFFAGEDataGridViewTextBoxColumn,
+            this.sTAFFPOSITIONDataGridViewTextBoxColumn,
+            this.sTAFFTELDataGridViewTextBoxColumn,
+            this.sTAFFMAILDataGridViewTextBoxColumn,
+            this.sTAFFDAYDataGridViewTextBoxColumn,
+            this.sTAFFADDRESSDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tBLSTAFFBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 77);
             this.dataGridView1.Name = "dataGridView1";
@@ -72,40 +92,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(940, 220);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // StafflistEntry_button
-            // 
-            this.StafflistEntry_button.Location = new System.Drawing.Point(700, 330);
-            this.StafflistEntry_button.Name = "StafflistEntry_button";
-            this.StafflistEntry_button.Size = new System.Drawing.Size(75, 23);
-            this.StafflistEntry_button.TabIndex = 1;
-            this.StafflistEntry_button.Text = "登録";
-            this.StafflistEntry_button.UseVisualStyleBackColor = true;
-            this.StafflistEntry_button.Click += new System.EventHandler(this.StafflistEntry_button_Click_1);
-            // 
-            // StafflistTop_button
-            // 
-            this.StafflistTop_button.Location = new System.Drawing.Point(865, 330);
-            this.StafflistTop_button.Name = "StafflistTop_button";
-            this.StafflistTop_button.Size = new System.Drawing.Size(75, 23);
-            this.StafflistTop_button.TabIndex = 2;
-            this.StafflistTop_button.Text = "Topへ";
-            this.StafflistTop_button.UseVisualStyleBackColor = true;
-            this.StafflistTop_button.Click += new System.EventHandler(this.StafflistTop_button_Click_1);
-            // 
-            // globalDBDataSet
-            // 
-            this.globalDBDataSet.DataSetName = "globalDBDataSet";
-            this.globalDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tBLSTAFFBindingSource
-            // 
-            this.tBLSTAFFBindingSource.DataMember = "TBL_STAFF";
-            this.tBLSTAFFBindingSource.DataSource = this.globalDBDataSet;
-            // 
-            // tBL_STAFFTableAdapter
-            // 
-            this.tBL_STAFFTableAdapter.ClearBeforeFill = true;
             // 
             // Stafflist_Code
             // 
@@ -182,6 +168,101 @@
             this.Stafflist_Address.Name = "Stafflist_Address";
             this.Stafflist_Address.ReadOnly = true;
             // 
+            // tBLSTAFFBindingSource
+            // 
+            this.tBLSTAFFBindingSource.DataMember = "TBL_STAFF";
+            this.tBLSTAFFBindingSource.DataSource = this.globalDBDataSet;
+            // 
+            // globalDBDataSet
+            // 
+            this.globalDBDataSet.DataSetName = "globalDBDataSet";
+            this.globalDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // StafflistEntry_button
+            // 
+            this.StafflistEntry_button.Location = new System.Drawing.Point(700, 330);
+            this.StafflistEntry_button.Name = "StafflistEntry_button";
+            this.StafflistEntry_button.Size = new System.Drawing.Size(75, 23);
+            this.StafflistEntry_button.TabIndex = 1;
+            this.StafflistEntry_button.Text = "登録";
+            this.StafflistEntry_button.UseVisualStyleBackColor = true;
+            this.StafflistEntry_button.Click += new System.EventHandler(this.StafflistEntry_button_Click_1);
+            // 
+            // StafflistTop_button
+            // 
+            this.StafflistTop_button.Location = new System.Drawing.Point(865, 330);
+            this.StafflistTop_button.Name = "StafflistTop_button";
+            this.StafflistTop_button.Size = new System.Drawing.Size(75, 23);
+            this.StafflistTop_button.TabIndex = 2;
+            this.StafflistTop_button.Text = "Topへ";
+            this.StafflistTop_button.UseVisualStyleBackColor = true;
+            this.StafflistTop_button.Click += new System.EventHandler(this.StafflistTop_button_Click_1);
+            // 
+            // tBL_STAFFTableAdapter
+            // 
+            this.tBL_STAFFTableAdapter.ClearBeforeFill = true;
+            // 
+            // sTAFFCODEDataGridViewTextBoxColumn
+            // 
+            this.sTAFFCODEDataGridViewTextBoxColumn.DataPropertyName = "STAFF_CODE";
+            this.sTAFFCODEDataGridViewTextBoxColumn.HeaderText = "STAFF_CODE";
+            this.sTAFFCODEDataGridViewTextBoxColumn.Name = "sTAFFCODEDataGridViewTextBoxColumn";
+            this.sTAFFCODEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sTAFFNAMEDataGridViewTextBoxColumn
+            // 
+            this.sTAFFNAMEDataGridViewTextBoxColumn.DataPropertyName = "STAFF_NAME";
+            this.sTAFFNAMEDataGridViewTextBoxColumn.HeaderText = "STAFF_NAME";
+            this.sTAFFNAMEDataGridViewTextBoxColumn.Name = "sTAFFNAMEDataGridViewTextBoxColumn";
+            // 
+            // sTAFFKANADataGridViewTextBoxColumn
+            // 
+            this.sTAFFKANADataGridViewTextBoxColumn.DataPropertyName = "STAFF_KANA";
+            this.sTAFFKANADataGridViewTextBoxColumn.HeaderText = "STAFF_KANA";
+            this.sTAFFKANADataGridViewTextBoxColumn.Name = "sTAFFKANADataGridViewTextBoxColumn";
+            // 
+            // sTAFFSEXDataGridViewTextBoxColumn
+            // 
+            this.sTAFFSEXDataGridViewTextBoxColumn.DataPropertyName = "STAFF_SEX";
+            this.sTAFFSEXDataGridViewTextBoxColumn.HeaderText = "STAFF_SEX";
+            this.sTAFFSEXDataGridViewTextBoxColumn.Name = "sTAFFSEXDataGridViewTextBoxColumn";
+            // 
+            // sTAFFAGEDataGridViewTextBoxColumn
+            // 
+            this.sTAFFAGEDataGridViewTextBoxColumn.DataPropertyName = "STAFF_AGE";
+            this.sTAFFAGEDataGridViewTextBoxColumn.HeaderText = "STAFF_AGE";
+            this.sTAFFAGEDataGridViewTextBoxColumn.Name = "sTAFFAGEDataGridViewTextBoxColumn";
+            // 
+            // sTAFFPOSITIONDataGridViewTextBoxColumn
+            // 
+            this.sTAFFPOSITIONDataGridViewTextBoxColumn.DataPropertyName = "STAFF_POSITION";
+            this.sTAFFPOSITIONDataGridViewTextBoxColumn.HeaderText = "STAFF_POSITION";
+            this.sTAFFPOSITIONDataGridViewTextBoxColumn.Name = "sTAFFPOSITIONDataGridViewTextBoxColumn";
+            // 
+            // sTAFFTELDataGridViewTextBoxColumn
+            // 
+            this.sTAFFTELDataGridViewTextBoxColumn.DataPropertyName = "STAFF_TEL";
+            this.sTAFFTELDataGridViewTextBoxColumn.HeaderText = "STAFF_TEL";
+            this.sTAFFTELDataGridViewTextBoxColumn.Name = "sTAFFTELDataGridViewTextBoxColumn";
+            // 
+            // sTAFFMAILDataGridViewTextBoxColumn
+            // 
+            this.sTAFFMAILDataGridViewTextBoxColumn.DataPropertyName = "STAFF_MAIL";
+            this.sTAFFMAILDataGridViewTextBoxColumn.HeaderText = "STAFF_MAIL";
+            this.sTAFFMAILDataGridViewTextBoxColumn.Name = "sTAFFMAILDataGridViewTextBoxColumn";
+            // 
+            // sTAFFDAYDataGridViewTextBoxColumn
+            // 
+            this.sTAFFDAYDataGridViewTextBoxColumn.DataPropertyName = "STAFF_DAY";
+            this.sTAFFDAYDataGridViewTextBoxColumn.HeaderText = "STAFF_DAY";
+            this.sTAFFDAYDataGridViewTextBoxColumn.Name = "sTAFFDAYDataGridViewTextBoxColumn";
+            // 
+            // sTAFFADDRESSDataGridViewTextBoxColumn
+            // 
+            this.sTAFFADDRESSDataGridViewTextBoxColumn.DataPropertyName = "STAFF_ADDRESS";
+            this.sTAFFADDRESSDataGridViewTextBoxColumn.HeaderText = "STAFF_ADDRESS";
+            this.sTAFFADDRESSDataGridViewTextBoxColumn.Name = "sTAFFADDRESSDataGridViewTextBoxColumn";
+            // 
             // Stafflist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -194,8 +275,8 @@
             this.Text = "Staflist";
             this.Load += new System.EventHandler(this.Stafflist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLSTAFFBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -218,5 +299,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Stafflist_Mail;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stafflist_Day;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stafflist_Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTAFFCODEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTAFFNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTAFFKANADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTAFFSEXDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTAFFAGEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTAFFPOSITIONDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTAFFTELDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTAFFMAILDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTAFFDAYDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTAFFADDRESSDataGridViewTextBoxColumn;
     }
 }
