@@ -77,8 +77,9 @@ namespace Sample1
                 SqlCommand command = new SqlCommand();
                 
                 //※SQL文発行時に使用するように！！
-                //Reserve_Class._Reserve_customer_id　カスタマーリスト選択時　IDの保持用変数
-                //Reserve_Class._Reserve_room_code　　リザーブリスト選択時　　ROOMID保持用変数
+                //Reserve_Class._Reserve_date         選択日の日時            日付保持済み変数
+                //Reserve_Class._Reserve_customer_id　カスタマーリスト選択時　IDの保持済み変数
+                //Reserve_Class._Reserve_room_code　　リザーブリスト選択時　　ROOMID保持済み変数
                 
                 
                 //作成途中
