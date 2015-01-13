@@ -54,9 +54,9 @@
             this.ReservePost_linkLabel = new System.Windows.Forms.LinkLabel();
             this.ReserveAddress_linkLabel = new System.Windows.Forms.LinkLabel();
             this.ReserveMemo_linkLabel = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.ReserveType = new System.Windows.Forms.Label();
+            this.ReserveSmoke = new System.Windows.Forms.Label();
+            this.ReserveNumber = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // Reserve_Date
@@ -76,6 +76,7 @@
             this.ReserveDate_label.Size = new System.Drawing.Size(29, 12);
             this.ReserveDate_label.TabIndex = 69;
             this.ReserveDate_label.Text = "日付";
+            this.ReserveDate_label.Click += new System.EventHandler(this.ReserveDate_label_Click);
             // 
             // Reserve_Value
             // 
@@ -309,41 +310,40 @@
             this.ReserveMemo_linkLabel.Text = "備考";
             this.ReserveMemo_linkLabel.DoubleClick += new System.EventHandler(this.ReserveName_linkLabel_DoubleClick);
             // 
-            // label1
+            // ReserveType
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(170, 128);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
-            this.label1.TabIndex = 82;
-            this.label1.Text = "label03";
+            this.ReserveType.AutoSize = true;
+            this.ReserveType.Location = new System.Drawing.Point(170, 128);
+            this.ReserveType.Name = "ReserveType";
+            this.ReserveType.Size = new System.Drawing.Size(41, 12);
+            this.ReserveType.TabIndex = 82;
+            this.ReserveType.Text = "label03";
             // 
-            // label2
+            // ReserveSmoke
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(170, 218);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 12);
-            this.label2.TabIndex = 83;
-            this.label2.Text = "label05";
+            this.ReserveSmoke.AutoSize = true;
+            this.ReserveSmoke.Location = new System.Drawing.Point(170, 172);
+            this.ReserveSmoke.Name = "ReserveSmoke";
+            this.ReserveSmoke.Size = new System.Drawing.Size(41, 12);
+            this.ReserveSmoke.TabIndex = 84;
+            this.ReserveSmoke.Text = "label04";
             // 
-            // label3
+            // ReserveNumber
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(170, 172);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 12);
-            this.label3.TabIndex = 84;
-            this.label3.Text = "label04";
+            this.ReserveNumber.FormattingEnabled = true;
+            this.ReserveNumber.Location = new System.Drawing.Point(166, 215);
+            this.ReserveNumber.Name = "ReserveNumber";
+            this.ReserveNumber.Size = new System.Drawing.Size(64, 20);
+            this.ReserveNumber.TabIndex = 85;
             // 
             // Reserve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 485);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ReserveNumber);
+            this.Controls.Add(this.ReserveSmoke);
+            this.Controls.Add(this.ReserveType);
             this.Controls.Add(this.ReserveMemo_linkLabel);
             this.Controls.Add(this.ReserveAddress_linkLabel);
             this.Controls.Add(this.ReservePost_linkLabel);
@@ -406,9 +406,9 @@
         private System.Windows.Forms.LinkLabel ReservePost_linkLabel;
         private System.Windows.Forms.LinkLabel ReserveAddress_linkLabel;
         private System.Windows.Forms.LinkLabel ReserveMemo_linkLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label ReserveType;
+        private System.Windows.Forms.Label ReserveSmoke;
+        private System.Windows.Forms.ComboBox ReserveNumber;
 
     }
 }
