@@ -52,10 +52,7 @@ namespace Sample1
             try
             {
                 DBC.DB_connect();
-                //command.CommandText = "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.[CHECK],RE.RESERVATION_CODE FROM TBL_ROOM RO,TBL_RESERVATION RE,TBL_CLIENT CL WHERE RE.ROOM_CODE = RO.ROOM_CODE and RE.CLIENT_CODE = CL.CLIENT_CODE and RESERVATION_DATE =" + "'" + r_date + "'";
-                command.CommandText =
-                      " SELECT    RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.RESERVATION_CODE"
-                    + " FROM      TBL_ROOM RO LEFT OUTER JOIN (SELECT * FROM TBL_RESERVATION WHERE RESERVATION_DATE =" + "'" + r_date + "') RE ON (RE.ROOM_CODE = RO.ROOM_CODE) LEFT OUTER JOIN TBL_CLIENT CL ON (RE.CLIENT_CODE = CL.CLIENT_CODE)";
+                command.CommandText = " SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.RESERVATION_CODE FROM TBL_ROOM RO LEFT OUTER JOIN (SELECT * FROM TBL_RESERVATION WHERE RESERVATION_DATE =" + "'" + r_date + "') RE ON (RE.ROOM_CODE = RO.ROOM_CODE) LEFT OUTER JOIN TBL_CLIENT CL ON (RE.CLIENT_CODE = CL.CLIENT_CODE)";
                     
                 // SQLを実行
                 command.Connection = DBC.Get_scn();
@@ -88,7 +85,7 @@ namespace Sample1
                         }
                     }
                 }
-                    DBC.DB_DisConnect();
+                DBC.DB_DisConnect();
             }
             catch (Exception ex)
             {
@@ -163,10 +160,7 @@ namespace Sample1
             try
             {
                 DBC.DB_connect();
-                //command.CommandText = "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.[CHECK],RE.RESERVATION_CODE FROM TBL_ROOM RO,TBL_RESERVATION RE,TBL_CLIENT CL WHERE RE.ROOM_CODE = RO.ROOM_CODE and RE.CLIENT_CODE = CL.CLIENT_CODE and RESERVATION_DATE =" + "'" + r_date + "'";
-                command.CommandText =
-                      " SELECT    RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.RESERVATION_CODE"
-                    + " FROM      TBL_ROOM RO LEFT OUTER JOIN (SELECT * FROM TBL_RESERVATION WHERE RESERVATION_DATE =" + "'" + r_date + "') RE ON (RE.ROOM_CODE = RO.ROOM_CODE) LEFT OUTER JOIN TBL_CLIENT CL ON (RE.CLIENT_CODE = CL.CLIENT_CODE)";
+                command.CommandText = "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.RESERVATION_CODE FROM TBL_ROOM RO LEFT OUTER JOIN (SELECT * FROM TBL_RESERVATION WHERE RESERVATION_DATE =" + "'" + r_date + "') RE ON (RE.ROOM_CODE = RO.ROOM_CODE) LEFT OUTER JOIN TBL_CLIENT CL ON (RE.CLIENT_CODE = CL.CLIENT_CODE)";
 
                 // SQLを実行
                 command.Connection = DBC.Get_scn();
@@ -221,11 +215,6 @@ namespace Sample1
                         this.dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.Gold;
                 }
             }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

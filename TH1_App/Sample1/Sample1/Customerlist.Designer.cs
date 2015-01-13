@@ -30,17 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.CustomerlistSearch_button = new System.Windows.Forms.Button();
-            this.CustomerlistEntry_button = new System.Windows.Forms.Button();
-            this.CustomerlistBack_button = new System.Windows.Forms.Button();
-            this.CustomerlistTop_button = new System.Windows.Forms.Button();
-            this.CustomerlistName_label = new System.Windows.Forms.Label();
-            this.CustomerlistTel_label = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.globalDBDataSet = new Sample1.globalDBDataSet();
-            this.tBLCLIENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tBL_CLIENTTableAdapter = new Sample1.globalDBDataSetTableAdapters.TBL_CLIENTTableAdapter();
             this.Customerlist_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Customerlist_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Customerlist_Kana = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,14 +38,24 @@
             this.Customerlist_Post = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Customerlist_Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Customerlist_note = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tBLCLIENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.globalDBDataSet = new Sample1.globalDBDataSet();
+            this.CustomerlistSearch_button = new System.Windows.Forms.Button();
+            this.CustomerlistEntry_button = new System.Windows.Forms.Button();
+            this.CustomerlistBack_button = new System.Windows.Forms.Button();
+            this.CustomerlistTop_button = new System.Windows.Forms.Button();
+            this.CustomerlistName_label = new System.Windows.Forms.Label();
+            this.CustomerlistTel_label = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tBL_CLIENTTableAdapter = new Sample1.globalDBDataSetTableAdapters.TBL_CLIENTTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLCLIENTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Customerlist_No,
@@ -67,7 +66,6 @@
             this.Customerlist_Post,
             this.Customerlist_Address,
             this.Customerlist_note});
-            this.dataGridView1.DataSource = this.tBLCLIENTBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 58);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
@@ -75,6 +73,75 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // Customerlist_No
+            // 
+            this.Customerlist_No.DataPropertyName = "CLIENT_CODE";
+            this.Customerlist_No.HeaderText = "No";
+            this.Customerlist_No.Name = "Customerlist_No";
+            this.Customerlist_No.ReadOnly = true;
+            this.Customerlist_No.Width = 50;
+            // 
+            // Customerlist_name
+            // 
+            this.Customerlist_name.DataPropertyName = "CLIENT_NAME";
+            this.Customerlist_name.HeaderText = "名前";
+            this.Customerlist_name.Name = "Customerlist_name";
+            this.Customerlist_name.ReadOnly = true;
+            // 
+            // Customerlist_Kana
+            // 
+            this.Customerlist_Kana.DataPropertyName = "CLIENT_KANA";
+            this.Customerlist_Kana.HeaderText = "ふりがな";
+            this.Customerlist_Kana.Name = "Customerlist_Kana";
+            this.Customerlist_Kana.ReadOnly = true;
+            // 
+            // Customerlist_Sex
+            // 
+            this.Customerlist_Sex.DataPropertyName = "CLIENT_SEX";
+            this.Customerlist_Sex.HeaderText = "性別";
+            this.Customerlist_Sex.Name = "Customerlist_Sex";
+            this.Customerlist_Sex.ReadOnly = true;
+            this.Customerlist_Sex.Width = 60;
+            // 
+            // Customerlist_Tel
+            // 
+            this.Customerlist_Tel.DataPropertyName = "CLIENT_TEL";
+            this.Customerlist_Tel.HeaderText = "電話番号";
+            this.Customerlist_Tel.Name = "Customerlist_Tel";
+            this.Customerlist_Tel.ReadOnly = true;
+            // 
+            // Customerlist_Post
+            // 
+            this.Customerlist_Post.DataPropertyName = "CLIENT_POST";
+            this.Customerlist_Post.HeaderText = "郵便番号";
+            this.Customerlist_Post.Name = "Customerlist_Post";
+            this.Customerlist_Post.ReadOnly = true;
+            // 
+            // Customerlist_Address
+            // 
+            this.Customerlist_Address.DataPropertyName = "CLIENT_ADDRESS";
+            this.Customerlist_Address.HeaderText = "住所";
+            this.Customerlist_Address.Name = "Customerlist_Address";
+            this.Customerlist_Address.ReadOnly = true;
+            this.Customerlist_Address.Width = 210;
+            // 
+            // Customerlist_note
+            // 
+            this.Customerlist_note.DataPropertyName = "CLIENT_NOTE";
+            this.Customerlist_note.HeaderText = "備考";
+            this.Customerlist_note.Name = "Customerlist_note";
+            this.Customerlist_note.ReadOnly = true;
+            // 
+            // tBLCLIENTBindingSource
+            // 
+            this.tBLCLIENTBindingSource.DataMember = "TBL_CLIENT";
+            this.tBLCLIENTBindingSource.DataSource = this.globalDBDataSet;
+            // 
+            // globalDBDataSet
+            // 
+            this.globalDBDataSet.DataSetName = "globalDBDataSet";
+            this.globalDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // CustomerlistSearch_button
             // 
@@ -148,78 +215,9 @@
             this.textBox2.Size = new System.Drawing.Size(100, 19);
             this.textBox2.TabIndex = 8;
             // 
-            // globalDBDataSet
-            // 
-            this.globalDBDataSet.DataSetName = "globalDBDataSet";
-            this.globalDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tBLCLIENTBindingSource
-            // 
-            this.tBLCLIENTBindingSource.DataMember = "TBL_CLIENT";
-            this.tBLCLIENTBindingSource.DataSource = this.globalDBDataSet;
-            // 
             // tBL_CLIENTTableAdapter
             // 
             this.tBL_CLIENTTableAdapter.ClearBeforeFill = true;
-            // 
-            // Customerlist_No
-            // 
-            this.Customerlist_No.DataPropertyName = "CLIENT_CODE";
-            this.Customerlist_No.HeaderText = "No";
-            this.Customerlist_No.Name = "Customerlist_No";
-            this.Customerlist_No.ReadOnly = true;
-            this.Customerlist_No.Width = 50;
-            // 
-            // Customerlist_name
-            // 
-            this.Customerlist_name.DataPropertyName = "CLIENT_NAME";
-            this.Customerlist_name.HeaderText = "名前";
-            this.Customerlist_name.Name = "Customerlist_name";
-            this.Customerlist_name.ReadOnly = true;
-            // 
-            // Customerlist_Kana
-            // 
-            this.Customerlist_Kana.DataPropertyName = "CLIENT_KANA";
-            this.Customerlist_Kana.HeaderText = "ふりがな";
-            this.Customerlist_Kana.Name = "Customerlist_Kana";
-            this.Customerlist_Kana.ReadOnly = true;
-            // 
-            // Customerlist_Sex
-            // 
-            this.Customerlist_Sex.DataPropertyName = "CLIENT_SEX";
-            this.Customerlist_Sex.HeaderText = "性別";
-            this.Customerlist_Sex.Name = "Customerlist_Sex";
-            this.Customerlist_Sex.ReadOnly = true;
-            this.Customerlist_Sex.Width = 60;
-            // 
-            // Customerlist_Tel
-            // 
-            this.Customerlist_Tel.DataPropertyName = "CLIENT_TEL";
-            this.Customerlist_Tel.HeaderText = "電話番号";
-            this.Customerlist_Tel.Name = "Customerlist_Tel";
-            this.Customerlist_Tel.ReadOnly = true;
-            // 
-            // Customerlist_Post
-            // 
-            this.Customerlist_Post.DataPropertyName = "CLIENT_POST";
-            this.Customerlist_Post.HeaderText = "郵便番号";
-            this.Customerlist_Post.Name = "Customerlist_Post";
-            this.Customerlist_Post.ReadOnly = true;
-            // 
-            // Customerlist_Address
-            // 
-            this.Customerlist_Address.DataPropertyName = "CLIENT_ADDRESS";
-            this.Customerlist_Address.HeaderText = "住所";
-            this.Customerlist_Address.Name = "Customerlist_Address";
-            this.Customerlist_Address.ReadOnly = true;
-            this.Customerlist_Address.Width = 210;
-            // 
-            // Customerlist_note
-            // 
-            this.Customerlist_note.DataPropertyName = "CLIENT_NOTE";
-            this.Customerlist_note.HeaderText = "備考";
-            this.Customerlist_note.Name = "Customerlist_note";
-            this.Customerlist_note.ReadOnly = true;
             // 
             // Customerlist
             // 
@@ -239,8 +237,8 @@
             this.Text = "Customerlist";
             this.Load += new System.EventHandler(this.Customerlist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLCLIENTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
