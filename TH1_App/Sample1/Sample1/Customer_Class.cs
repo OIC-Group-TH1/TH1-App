@@ -13,6 +13,7 @@ namespace Sample1
     class Customer_Class
     {
         //DataGridViewから取得したデータを保持する変数
+        public static int _customer_id;
         public static string _customer_name;
         public static string _customer_kana;
         public static string _customer_sex;
@@ -21,6 +22,11 @@ namespace Sample1
         public static string _customer_address;
         public static string _customer_note;
 
+        public static int CUSTOMER_ID
+        {
+            set { _customer_id = value; }
+            get { return _customer_id; }
+        }
         public static string CUSTOMER_NAME
         {
             set { _customer_name = value; }
