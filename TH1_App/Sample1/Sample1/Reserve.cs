@@ -103,13 +103,12 @@ namespace Sample1
                 SqlCommand command = new SqlCommand();
 
                 //※SQL文発行時に使用するように！！
-                //Reserve_Class._Reserve_customer_id　カスタマーリスト選択時　IDの保持用変数
-                //Reserve_Class._Reserve_room_code　　リザーブリスト選択時　　ROOMID保持用変数
-                //Reserve_Class._Reserve_date 日付
-
+                //Reserve_Class._Reserve_date         選択日の日時            日付保持済み変数
+                //Reserve_Class._Reserve_customer_id　カスタマーリスト選択時　IDの保持済み変数
+                //Reserve_Class._Reserve_room_code　　リザーブリスト選択時　　ROOMID保持済み変数
+                
                 //日付
                 Reserve_Date.Text = Reserve_Class._Reserve_date;
-                
                 //部屋NO、部屋の種類、タバコ、価格
                 command.CommandText =
                        "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,RO.ROOM_VALUE FROM TBL_ROOM RO WHERE RO.ROOM_CODE =" + "'" + Reserve_Class._Reserve_room_code + "'";

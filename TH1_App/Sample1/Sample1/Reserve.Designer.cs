@@ -333,7 +333,7 @@
             this.ReserveNumber.FormattingEnabled = true;
             this.ReserveNumber.Location = new System.Drawing.Point(166, 215);
             this.ReserveNumber.Name = "ReserveNumber";
-            this.ReserveNumber.Size = new System.Drawing.Size(60, 20);
+            this.ReserveNumber.Size = new System.Drawing.Size(64, 20);
             this.ReserveNumber.TabIndex = 85;
             // 
             // Reserve
