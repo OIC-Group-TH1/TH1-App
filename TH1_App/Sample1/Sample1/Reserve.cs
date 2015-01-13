@@ -12,7 +12,7 @@ namespace Sample1
 {
     public partial class Reserve : Form
     {
-      
+
 
         public Reserve()
         {
@@ -21,18 +21,48 @@ namespace Sample1
 
         private void ReserveOk_button_Click(object sender, EventArgs e)
         {
+            //ここでinsertを発行し、TBL_RESERVATIONに登録
+            DBconnection DBC = new DBconnection();
+            DBC.DB_connect();
+            try
+            {
+                //Datatime_Parce
+                //Reserve_Class._Reserve_customer_id　カスタマーリスト選択時　IDの保持用変数
+                //Reserve_Class._Reserve_room_code　　リザーブリスト選択時　　ROOMID保持用変数
+                //Reserve_Class._Reserve_date 日付
+                //日付取得
+                DateTime DATE = DateTime.Parse(Reserve_Class._Reserve_date);
+                //日数取得
+                string NUMBER = ReserveNumber.SelectedItem.ToString();
+                    //データベースファイルオープン
+                SqlCommand scm = new SqlCommand
+                    ("insert into TBL_RESERVATION (RESERVATION_DATE, RESERVATION_NUM, ROOM_CODE, CLIENT_CODE)values ("
+                        + "'" + DATE + "',"
+                        + "'" + NUMBER + "',"
+                        + "'" + Reserve_Class._Reserve_room_code + "',"
+                        + "'" + Reserve_Class._Reserve_customer_id + "'" + ")", DBC.Get_scn());
 
-           
-           
-                //予約確定メッセージ
-                MessageBox.Show("予約が登録されました","予約確定",
-                MessageBoxButtons.OK);
-                
-                //TOP画面へ
-                Top_page Top = new Top_page();
-                Top.Visible = true;
-                this.Close();
-         }
+                scm.ExecuteNonQuery();
+                DBC.DB_DisConnect();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                //データベースファイルクローズ
+                MessageBox.Show(ex.Message);
+                DBC.DB_DisConnect();
+            }
+
+            //予約確定メッセージ
+            MessageBox.Show("予約が登録されました", "予約確定",
+            MessageBoxButtons.OK);
+
+            //TOP画面へ
+            Top_page Top = new Top_page();
+            Top.Visible = true;
+            this.Close();
+        }
 
         private void ReserveNo_button_Click(object sender, EventArgs e)
         {
@@ -44,17 +74,6 @@ namespace Sample1
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-          /*
-            //ラジオボタンによる禁煙、喫煙の判定
-            if (radioButton1.Checked)　//禁煙
-            {
-               
-            }
-            else　//喫煙
-            {
-               
-            }
-          */
         }
 
         private void ReserveName_linkLabel_DoubleClick(object sender, EventArgs e)
@@ -68,6 +87,13 @@ namespace Sample1
 
         private void Reserve_Load(object sender, EventArgs e)
         {
+            ReserveNumber.Items.Add("１人");
+            ReserveNumber.Items.Add("２人");
+            ReserveNumber.Items.Add("３人");
+            ReserveNumber.Items.Add("４人");
+            this.Controls.Add(ReserveNumber);
+            ReserveNumber.SelectedIndex = 0;
+
             //SQL SERVERを開いてるときにコメントアウト
             DBconnection DBC = new DBconnection();
             try
@@ -75,32 +101,59 @@ namespace Sample1
                 //データベースファイルオープン
                 DBC.DB_connect();
                 SqlCommand command = new SqlCommand();
-                
+
                 //※SQL文発行時に使用するように！！
                 //Reserve_Class._Reserve_customer_id　カスタマーリスト選択時　IDの保持用変数
                 //Reserve_Class._Reserve_room_code　　リザーブリスト選択時　　ROOMID保持用変数
+                //Reserve_Class._Reserve_date 日付
+
+                //日付
+                Reserve_Date.Text = Reserve_Class._Reserve_date;
                 
-                
-                //作成途中
-                command.CommandText = "SELECT  RE.RESERVATION_DATE,RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,RE.RESERVATION_NUM,RO.ROOM_VALUE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_SEX,CL.CLIENT_TEL,CL.CLIENT_POST,CL.CLIENT_ADDRESS,CL.CLIENT_NOTE"
-                                     +"";
+                //部屋NO、部屋の種類、タバコ、価格
+                command.CommandText =
+                       "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,RO.ROOM_VALUE FROM TBL_ROOM RO WHERE RO.ROOM_CODE =" + "'" + Reserve_Class._Reserve_room_code + "'";
                 command.Connection = DBC.Get_scn();
                 SqlDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    
+                    Reserve_No.Text = reader.GetValue(0).ToString();
+                    ReserveType.Text = reader.GetValue(1).ToString();
+                    ReserveSmoke.Text = reader.GetValue(2).ToString();
+                    Reserve_Value.Text = reader.GetValue(3).ToString();
                 }
-
+                //名前、フリガナ、性別、電話番号、郵便番号、住所、備考
+                command.CommandText =
+                       "SELECT CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_SEX,CL.CLIENT_TEL,CL.CLIENT_POST,CL.CLIENT_ADDRESS,CL.CLIENT_NOTE FROM TBL_CLIENT CL WHERE CL.CLIENT_CODE =" + "'" + Reserve_Class._Reserve_customer_id + "'";
+                command.Connection = DBC.Get_scn();
+                while (reader.Read())
+                {
+                    Reserve_Name.Text = reader.GetValue(0).ToString();
+                    Reserve_Kana.Text = reader.GetValue(1).ToString();
+                    Reserve_Sex.Text = reader.GetValue(2).ToString();
+                    Reserve_Tel.Text = reader.GetValue(3).ToString();
+                    Reserve_Post.Text = reader.GetValue(4).ToString();
+                    Reserve_Address.Text = reader.GetValue(5).ToString();
+                    Reserve_Note.Text = reader.GetValue(6).ToString();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 DBC.DB_DisConnect();
             }
-        }
-       }
 
-    
-   
+        }
+
+        private void ReserveDate_label_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+
 }
+
+
+
+
