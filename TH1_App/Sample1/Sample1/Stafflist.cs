@@ -53,10 +53,6 @@ namespace Sample1
         {
             // TODO: このコード行はデータを 'globalDBDataSet.TBL_STAFF' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.tBL_STAFFTableAdapter.Fill(this.globalDBDataSet.TBL_STAFF);
-            // TODO: このコード行はデータを 'globalDBDataSet1.TBL_STAFF' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.tBL_STAFFTableAdapter.Fill(this.globalDBDataSet.TBL_STAFF);
-            // TODO: このコード行はデータを 'globalDBDataSet4.TBL_STAFF' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.tBL_STAFFTableAdapter.Fill(this.globalDBDataSet.TBL_STAFF);
             
             //セルを行として管理
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;

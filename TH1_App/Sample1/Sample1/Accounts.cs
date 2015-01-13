@@ -79,6 +79,7 @@ namespace Sample1
 
             //SQL SERVERを開いてるときにコメントアウト
             //データベースからの取得
+            Accounts_Date.Text = DateTime.Today.ToShortTimeString();
             
             DBconnection DBC = new DBconnection();
             DBC.DB_connect();
@@ -148,7 +149,15 @@ namespace Sample1
             
         }
 
-        private void Acounts_Recieve_TextChanged(object sender, EventArgs e)
+        private void Accounts_Recieve_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || '9' < e.KeyChar) && e.KeyChar != '\b') //数字とバックスペースのみ有効に
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void AccountsPay_button_Click(object sender, EventArgs e)
         {
             //預り金に入力された金額
             int recieve = int.Parse(Accounts_Recieve.Text);
@@ -156,14 +165,6 @@ namespace Sample1
             int total = int.Parse(Accounts_Alltotal.Text);
             //お釣りを表示
             Accounts_Change.Text = (recieve - total).ToString();
-        }
-
-        private void Accounts_Recieve_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((e.KeyChar < '0' || '9' < e.KeyChar) && e.KeyChar != '\b') //数字とバックスペースのみ有効に
-            {
-                e.Handled = true;
-            }
         }
     }
 }

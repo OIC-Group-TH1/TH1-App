@@ -53,6 +53,7 @@
             this.IOcheckKana_label = new System.Windows.Forms.Label();
             this.IOcheckName_label = new System.Windows.Forms.Label();
             this.IOcheckBack_button = new System.Windows.Forms.Button();
+            this.IOcheckOut_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // IOcheck_Rate
@@ -281,11 +282,22 @@
             this.IOcheckBack_button.UseVisualStyleBackColor = true;
             this.IOcheckBack_button.Click += new System.EventHandler(this.IOcheckBack_button_Click);
             // 
+            // IOcheckOut_button
+            // 
+            this.IOcheckOut_button.Location = new System.Drawing.Point(250, 401);
+            this.IOcheckOut_button.Name = "IOcheckOut_button";
+            this.IOcheckOut_button.Size = new System.Drawing.Size(75, 23);
+            this.IOcheckOut_button.TabIndex = 69;
+            this.IOcheckOut_button.Text = "チェックアウト";
+            this.IOcheckOut_button.UseVisualStyleBackColor = true;
+            this.IOcheckOut_button.Click += new System.EventHandler(this.IOcheckOut_button_Click);
+            // 
             // IOcheck
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(462, 495);
+            this.Controls.Add(this.IOcheckOut_button);
             this.Controls.Add(this.IOcheckBack_button);
             this.Controls.Add(this.IOcheck_Rate);
             this.Controls.Add(this.IOcheck_Number);
@@ -346,5 +358,6 @@
         private System.Windows.Forms.Label IOcheckKana_label;
         private System.Windows.Forms.Label IOcheckName_label;
         private System.Windows.Forms.Button IOcheckBack_button;
+        private System.Windows.Forms.Button IOcheckOut_button;
     }
 }

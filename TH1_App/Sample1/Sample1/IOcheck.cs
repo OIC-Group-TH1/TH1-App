@@ -71,5 +71,43 @@ namespace Sample1
                 MessageBox.Show(ex.Message, "エラー");
             }
         }
+
+        private void IOcheckOut_button_Click(object sender, EventArgs e)
+        {
+
+            //メッセージダイアログ(YES,NO)の表示
+            DialogResult result = MessageBox.Show("削除してもよろしいですか？", "",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Exclamation,
+                //デフォルトの選択ボタンは「いいえ」で設定
+                MessageBoxDefaultButton.Button2);
+
+            if (result == DialogResult.Yes)
+            {
+                //「はい」が選択された時の処理を書く
+                DBconnection DBC = new DBconnection();
+                DBC.DB_connect();
+
+                try
+                {
+                    //予約コードを用いて、入退室状況にtrueを入れる
+                    SqlCommand scm = new SqlCommand
+                    ("update TBL_RESERVATION set [CHECK2] = 'False' where RESERVATION_CODE = " + IO_Class.IO_RCODE, DBC.Get_scn());
+
+                    scm.ExecuteNonQuery();
+                    DBC.DB_DisConnect();
+                }
+                catch (Exception ex)
+                {
+                    //データベースファイルクローズ
+                    DBC.DB_DisConnect();
+                    MessageBox.Show(ex.Message, "エラー");
+                }
+            }
+            else if (result == DialogResult.No)
+            {
+                //「いいえ」が選択された時の処理を書く
+            }
+        }
     }
 }

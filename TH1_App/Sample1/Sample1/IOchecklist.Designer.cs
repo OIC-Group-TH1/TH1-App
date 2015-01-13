@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.IOchecklistTop_button = new System.Windows.Forms.Button();
-            this.IOchecklistAccounts_button = new System.Windows.Forms.Button();
             this.IOchecklist_No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IOchecklist_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IOchecklist_Smoke = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,7 +39,10 @@
             this.IOchecklist_Rcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IOchecklist_Ccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IOchecklist_In = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.IOchecklist_Out = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.IOchecklist_Accounts = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.IOchecklistTop_button = new System.Windows.Forms.Button();
+            this.IOchecklistAccounts_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,33 +60,14 @@
             this.IOchecklist_Rcode,
             this.IOchecklist_Ccode,
             this.IOchecklist_In,
+            this.IOchecklist_Out,
             this.IOchecklist_Accounts});
             this.dataGridView1.Location = new System.Drawing.Point(12, 69);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(763, 167);
+            this.dataGridView1.Size = new System.Drawing.Size(736, 167);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // IOchecklistTop_button
-            // 
-            this.IOchecklistTop_button.Location = new System.Drawing.Point(700, 285);
-            this.IOchecklistTop_button.Name = "IOchecklistTop_button";
-            this.IOchecklistTop_button.Size = new System.Drawing.Size(75, 23);
-            this.IOchecklistTop_button.TabIndex = 2;
-            this.IOchecklistTop_button.Text = "Topへ";
-            this.IOchecklistTop_button.UseVisualStyleBackColor = true;
-            this.IOchecklistTop_button.Click += new System.EventHandler(this.IOchecklistTop_button_Click);
-            // 
-            // IOchecklistAccounts_button
-            // 
-            this.IOchecklistAccounts_button.Location = new System.Drawing.Point(589, 285);
-            this.IOchecklistAccounts_button.Name = "IOchecklistAccounts_button";
-            this.IOchecklistAccounts_button.Size = new System.Drawing.Size(75, 23);
-            this.IOchecklistAccounts_button.TabIndex = 5;
-            this.IOchecklistAccounts_button.Text = "会計";
-            this.IOchecklistAccounts_button.UseVisualStyleBackColor = true;
-            this.IOchecklistAccounts_button.Click += new System.EventHandler(this.IOchecklistAccounts_button_Click);
             // 
             // IOchecklist_No
             // 
@@ -153,11 +135,38 @@
             this.IOchecklist_In.TrueValue = "";
             this.IOchecklist_In.Width = 70;
             // 
+            // IOchecklist_Out
+            // 
+            this.IOchecklist_Out.HeaderText = "C.O";
+            this.IOchecklist_Out.Name = "IOchecklist_Out";
+            this.IOchecklist_Out.ReadOnly = true;
+            this.IOchecklist_Out.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // IOchecklist_Accounts
             // 
             this.IOchecklist_Accounts.HeaderText = "会計";
             this.IOchecklist_Accounts.Name = "IOchecklist_Accounts";
             this.IOchecklist_Accounts.Width = 70;
+            // 
+            // IOchecklistTop_button
+            // 
+            this.IOchecklistTop_button.Location = new System.Drawing.Point(700, 285);
+            this.IOchecklistTop_button.Name = "IOchecklistTop_button";
+            this.IOchecklistTop_button.Size = new System.Drawing.Size(75, 23);
+            this.IOchecklistTop_button.TabIndex = 2;
+            this.IOchecklistTop_button.Text = "Topへ";
+            this.IOchecklistTop_button.UseVisualStyleBackColor = true;
+            this.IOchecklistTop_button.Click += new System.EventHandler(this.IOchecklistTop_button_Click);
+            // 
+            // IOchecklistAccounts_button
+            // 
+            this.IOchecklistAccounts_button.Location = new System.Drawing.Point(591, 285);
+            this.IOchecklistAccounts_button.Name = "IOchecklistAccounts_button";
+            this.IOchecklistAccounts_button.Size = new System.Drawing.Size(75, 23);
+            this.IOchecklistAccounts_button.TabIndex = 5;
+            this.IOchecklistAccounts_button.Text = "会計";
+            this.IOchecklistAccounts_button.UseVisualStyleBackColor = true;
+            this.IOchecklistAccounts_button.Click += new System.EventHandler(this.IOchecklistAccounts_button_Click);
             // 
             // IOchecklist
             // 
@@ -190,6 +199,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IOchecklist_Rcode;
         private System.Windows.Forms.DataGridViewTextBoxColumn IOchecklist_Ccode;
         private System.Windows.Forms.DataGridViewCheckBoxColumn IOchecklist_In;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn IOchecklist_Out;
         private System.Windows.Forms.DataGridViewCheckBoxColumn IOchecklist_Accounts;
     }
 }
