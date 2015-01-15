@@ -84,6 +84,7 @@
             this.Controls.Add(this.Kokyaku_button);
             this.Controls.Add(this.Yoyaku_button);
             this.Name = "Top_page";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ホテルOIC";
             this.ResumeLayout(false);
 

@@ -280,6 +280,7 @@
             this.Controls.Add(this.AcountscheckOk_button);
             this.Controls.Add(this.AcountscheckBack_button);
             this.Name = "Accountscheck";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accountscheck";
             this.ResumeLayout(false);
             this.PerformLayout();

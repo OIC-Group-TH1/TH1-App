@@ -27,8 +27,8 @@ namespace Sample1
 
         private void AcountsBack_button_Click(object sender, EventArgs e)
         {
-            IOcheck Back = new IOcheck();
-            Back.Show();
+            IOchecklist IOche = new IOchecklist();
+            IOche.Show();
             this.Close();
         }
 
@@ -79,7 +79,7 @@ namespace Sample1
 
             //SQL SERVERを開いてるときにコメントアウト
             //データベースからの取得
-            Accounts_Date.Text = DateTime.Today.ToShortTimeString();
+            Accounts_Date.Text = DateTime.Today.ToShortDateString();
             
             DBconnection DBC = new DBconnection();
             DBC.DB_connect();
@@ -108,7 +108,7 @@ namespace Sample1
                 //       + "from TBL_RESERVATION Re inner join TBL_ROOM Ro on Re.ROOM_CODE = Ro.ROOM_CODE"
                 //       + "inner join TBL_CLIENT Cl on Re.CLIENT_CODE = Cl.CLIENT_CODE"
                 //       + "where Re.RESERVATION_CODE in(" + A_Rcode + ")";
-                client_command.CommandText = "SELECT Re.ROOM_CODE, Ro.ROOM_NAME, Cl.CLIENT_NAME, Ro.ROOM_VALUE, Re.RESERVATION_NUM, Re.RESERVATION_DAY FROM TBL_RESERVATION Re INNER JOIN TBL_ROOM Ro ON Re.ROOM_CODE = Ro.ROOM_CODE INNER JOIN TBL_CLIENT Cl ON Re.CLIENT_CODE = Cl.CLIENT_CODE WHERE (Re.RESERVATION_CODE IN ("+ A_Rcode + "))";
+                client_command.CommandText = "SELECT Re.ROOM_CODE, Ro.ROOM_NAME, Cl.CLIENT_NAME, Ro.ROOM_VALUE, Re.RESERVATION_NUM FROM TBL_RESERVATION Re INNER JOIN TBL_ROOM Ro ON Re.ROOM_CODE = Ro.ROOM_CODE INNER JOIN TBL_CLIENT Cl ON Re.CLIENT_CODE = Cl.CLIENT_CODE WHERE (Re.RESERVATION_CODE IN ("+ A_Rcode + "))";
 
                 // SQLを実行
                 client_command.Connection = DBC.Get_scn();
@@ -116,7 +116,7 @@ namespace Sample1
                 for(int x = 0; client_reader.Read(); x++)
                 {
                     dataGridView1.Rows.Add();
-                    for (int n = 0; n < 6; n++)
+                    for (int n = 0; n < 5; n++)
                     {
                         dataGridView1.Rows[x].Cells[n].Value = client_reader.GetValue(n);
                     }
@@ -133,16 +133,12 @@ namespace Sample1
 
             int i;
             int total = 0;
-            int value;
-            int date;
             int cnt = dataGridView1.Rows.Count;//表の行数を取得
 
-            for (i = 0; i < cnt -1; i++)
+            for (i = 0; i < cnt-1; i++)
             {
-                value = int.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString());
-                date = int.Parse(dataGridView1.Rows[i].Cells[5].Value.ToString());
-                dataGridView1.Rows[i].Cells[6].Value = date * value;
-                total = total + int.Parse(dataGridView1.Rows[i].Cells[6].Value.ToString());
+                
+                total = total + int.Parse(dataGridView1.Rows[i].Cells[3].Value.ToString());
             }
 
             Accounts_Alltotal.Text = total.ToString();
@@ -159,12 +155,15 @@ namespace Sample1
 
         private void AccountsPay_button_Click(object sender, EventArgs e)
         {
-            //預り金に入力された金額
-            int recieve = int.Parse(Accounts_Recieve.Text);
-            //合計金額
-            int total = int.Parse(Accounts_Alltotal.Text);
-            //お釣りを表示
-            Accounts_Change.Text = (recieve - total).ToString();
+            if (Accounts_Recieve.Text != "")
+            {
+                //預り金に入力された金額
+                int recieve = int.Parse(Accounts_Recieve.Text);
+                //合計金額
+                int total = int.Parse(Accounts_Alltotal.Text);
+                //お釣りを表示
+                Accounts_Change.Text = (recieve - total).ToString();
+            }
         }
     }
 }

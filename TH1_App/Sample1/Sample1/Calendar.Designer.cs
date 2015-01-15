@@ -59,6 +59,7 @@
             this.Controls.Add(this.CalendarTop_button);
             this.Controls.Add(this.monthCalendar1);
             this.Name = "Calendar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "カレンダー";
             this.ResumeLayout(false);
 

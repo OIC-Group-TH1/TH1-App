@@ -269,6 +269,7 @@
             this.Controls.Add(this.StaffcheckSex_label);
             this.Controls.Add(this.StaffcheckName_label);
             this.Name = "Staffcheck";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Staffcheck";
             this.Load += new System.EventHandler(this.Staffcheck_Load);
             this.ResumeLayout(false);

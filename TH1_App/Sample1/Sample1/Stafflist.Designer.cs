@@ -40,11 +40,6 @@
             this.Stafflist_Mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stafflist_Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stafflist_Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tBLSTAFFBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.globalDBDataSet = new Sample1.globalDBDataSet();
-            this.StafflistEntry_button = new System.Windows.Forms.Button();
-            this.StafflistTop_button = new System.Windows.Forms.Button();
-            this.tBL_STAFFTableAdapter = new Sample1.globalDBDataSetTableAdapters.TBL_STAFFTableAdapter();
             this.sTAFFCODEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sTAFFNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sTAFFKANADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +50,11 @@
             this.sTAFFMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sTAFFDAYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sTAFFADDRESSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tBLSTAFFBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.globalDBDataSet = new Sample1.globalDBDataSet();
+            this.StafflistEntry_button = new System.Windows.Forms.Button();
+            this.StafflistTop_button = new System.Windows.Forms.Button();
+            this.tBL_STAFFTableAdapter = new Sample1.globalDBDataSetTableAdapters.TBL_STAFFTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLSTAFFBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.globalDBDataSet)).BeginInit();
@@ -62,6 +62,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Stafflist_Code,
@@ -167,40 +168,6 @@
             this.Stafflist_Address.Name = "Stafflist_Address";
             this.Stafflist_Address.ReadOnly = true;
             // 
-            // tBLSTAFFBindingSource
-            // 
-            this.tBLSTAFFBindingSource.DataMember = "TBL_STAFF";
-            this.tBLSTAFFBindingSource.DataSource = this.globalDBDataSet;
-            // 
-            // globalDBDataSet
-            // 
-            this.globalDBDataSet.DataSetName = "globalDBDataSet";
-            this.globalDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // StafflistEntry_button
-            // 
-            this.StafflistEntry_button.Location = new System.Drawing.Point(700, 330);
-            this.StafflistEntry_button.Name = "StafflistEntry_button";
-            this.StafflistEntry_button.Size = new System.Drawing.Size(75, 23);
-            this.StafflistEntry_button.TabIndex = 1;
-            this.StafflistEntry_button.Text = "登録";
-            this.StafflistEntry_button.UseVisualStyleBackColor = true;
-            this.StafflistEntry_button.Click += new System.EventHandler(this.StafflistEntry_button_Click_1);
-            // 
-            // StafflistTop_button
-            // 
-            this.StafflistTop_button.Location = new System.Drawing.Point(865, 330);
-            this.StafflistTop_button.Name = "StafflistTop_button";
-            this.StafflistTop_button.Size = new System.Drawing.Size(75, 23);
-            this.StafflistTop_button.TabIndex = 2;
-            this.StafflistTop_button.Text = "Topへ";
-            this.StafflistTop_button.UseVisualStyleBackColor = true;
-            this.StafflistTop_button.Click += new System.EventHandler(this.StafflistTop_button_Click_1);
-            // 
-            // tBL_STAFFTableAdapter
-            // 
-            this.tBL_STAFFTableAdapter.ClearBeforeFill = true;
-            // 
             // sTAFFCODEDataGridViewTextBoxColumn
             // 
             this.sTAFFCODEDataGridViewTextBoxColumn.DataPropertyName = "STAFF_CODE";
@@ -262,6 +229,40 @@
             this.sTAFFADDRESSDataGridViewTextBoxColumn.HeaderText = "STAFF_ADDRESS";
             this.sTAFFADDRESSDataGridViewTextBoxColumn.Name = "sTAFFADDRESSDataGridViewTextBoxColumn";
             // 
+            // tBLSTAFFBindingSource
+            // 
+            this.tBLSTAFFBindingSource.DataMember = "TBL_STAFF";
+            this.tBLSTAFFBindingSource.DataSource = this.globalDBDataSet;
+            // 
+            // globalDBDataSet
+            // 
+            this.globalDBDataSet.DataSetName = "globalDBDataSet";
+            this.globalDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // StafflistEntry_button
+            // 
+            this.StafflistEntry_button.Location = new System.Drawing.Point(700, 330);
+            this.StafflistEntry_button.Name = "StafflistEntry_button";
+            this.StafflistEntry_button.Size = new System.Drawing.Size(75, 23);
+            this.StafflistEntry_button.TabIndex = 1;
+            this.StafflistEntry_button.Text = "登録";
+            this.StafflistEntry_button.UseVisualStyleBackColor = true;
+            this.StafflistEntry_button.Click += new System.EventHandler(this.StafflistEntry_button_Click_1);
+            // 
+            // StafflistTop_button
+            // 
+            this.StafflistTop_button.Location = new System.Drawing.Point(865, 330);
+            this.StafflistTop_button.Name = "StafflistTop_button";
+            this.StafflistTop_button.Size = new System.Drawing.Size(75, 23);
+            this.StafflistTop_button.TabIndex = 2;
+            this.StafflistTop_button.Text = "Topへ";
+            this.StafflistTop_button.UseVisualStyleBackColor = true;
+            this.StafflistTop_button.Click += new System.EventHandler(this.StafflistTop_button_Click_1);
+            // 
+            // tBL_STAFFTableAdapter
+            // 
+            this.tBL_STAFFTableAdapter.ClearBeforeFill = true;
+            // 
             // Stafflist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -271,6 +272,7 @@
             this.Controls.Add(this.StafflistEntry_button);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Stafflist";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Staflist";
             this.Load += new System.EventHandler(this.Stafflist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

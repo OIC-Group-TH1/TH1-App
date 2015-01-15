@@ -200,6 +200,7 @@
             this.Controls.Add(this.CustomerchangeKana_label);
             this.Controls.Add(this.CustomerchangeName_label);
             this.Name = "Customerchange";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customerchange";
             this.Load += new System.EventHandler(this.Customerchange_Load);
             this.ResumeLayout(false);

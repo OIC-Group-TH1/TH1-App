@@ -225,6 +225,7 @@
             this.Controls.Add(this.CustomercheckKana_label);
             this.Controls.Add(this.CustomercheckName_label);
             this.Name = "Customerecheck";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customerecheck";
             this.Load += new System.EventHandler(this.Customerecheck_Load);
             this.ResumeLayout(false);

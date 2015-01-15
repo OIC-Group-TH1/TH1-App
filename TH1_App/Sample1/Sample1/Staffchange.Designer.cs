@@ -232,6 +232,7 @@
             this.Controls.Add(this.StaffchangeSex_label);
             this.Controls.Add(this.StaffchangeName_label);
             this.Name = "Staffchange";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Staffchange";
             this.Load += new System.EventHandler(this.Staffchange_Load);
             this.ResumeLayout(false);

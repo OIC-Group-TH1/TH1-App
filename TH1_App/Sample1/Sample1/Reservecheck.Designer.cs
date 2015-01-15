@@ -359,6 +359,7 @@
             this.Controls.Add(this.ReservecheckKana_label);
             this.Controls.Add(this.ReservecheckName_label);
             this.Name = "Reservecheck";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reservecheck";
             this.Load += new System.EventHandler(this.Reservecheck_Load);
             this.ResumeLayout(false);

@@ -43,6 +43,7 @@
             this.IOchecklist_Accounts = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.IOchecklistTop_button = new System.Windows.Forms.Button();
             this.IOchecklistAccounts_button = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +66,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 69);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(736, 167);
+            this.dataGridView1.Size = new System.Drawing.Size(834, 167);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
@@ -141,6 +142,7 @@
             this.IOchecklist_Out.Name = "IOchecklist_Out";
             this.IOchecklist_Out.ReadOnly = true;
             this.IOchecklist_Out.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.IOchecklist_Out.Width = 70;
             // 
             // IOchecklist_Accounts
             // 
@@ -168,15 +170,25 @@
             this.IOchecklistAccounts_button.UseVisualStyleBackColor = true;
             this.IOchecklistAccounts_button.Click += new System.EventHandler(this.IOchecklistAccounts_button_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(12, 28);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 19);
+            this.dateTimePicker1.TabIndex = 6;
+            this.dateTimePicker1.CloseUp += new System.EventHandler(this.dateTimePicker1_CloseUp_1);
+            // 
             // IOchecklist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 380);
+            this.ClientSize = new System.Drawing.Size(877, 387);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.IOchecklistAccounts_button);
             this.Controls.Add(this.IOchecklistTop_button);
             this.Controls.Add(this.dataGridView1);
             this.Name = "IOchecklist";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IOchecklist";
             this.Load += new System.EventHandler(this.IOchecklist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -189,6 +201,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button IOchecklistTop_button;
         private System.Windows.Forms.Button IOchecklistAccounts_button;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridViewTextBoxColumn IOchecklist_No;
         private System.Windows.Forms.DataGridViewTextBoxColumn IOchecklist_Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn IOchecklist_Smoke;

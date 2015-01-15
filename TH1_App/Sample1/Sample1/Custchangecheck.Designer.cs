@@ -225,6 +225,7 @@
             this.Controls.Add(this.CustchangecheckKana_label);
             this.Controls.Add(this.CustchangecheckName_label);
             this.Name = "Custchangecheck";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Custchangecheck";
             this.Load += new System.EventHandler(this.Custchangecheck_Load);
             this.ResumeLayout(false);

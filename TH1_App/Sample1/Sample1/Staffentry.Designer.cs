@@ -243,6 +243,7 @@
             this.Controls.Add(this.StaffentrySex_label);
             this.Controls.Add(this.StaffentryName_label);
             this.Name = "Staffentry";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Staffentry";
             this.Load += new System.EventHandler(this.Staffentry_Load);
             this.ResumeLayout(false);

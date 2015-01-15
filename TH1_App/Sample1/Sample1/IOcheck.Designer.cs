@@ -324,6 +324,7 @@
             this.Controls.Add(this.IOcheckKana_label);
             this.Controls.Add(this.IOcheckName_label);
             this.Name = "IOcheck";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IOcheck";
             this.Load += new System.EventHandler(this.IOcheck_Load);
             this.ResumeLayout(false);

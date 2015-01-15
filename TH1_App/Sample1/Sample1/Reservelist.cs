@@ -122,18 +122,22 @@ namespace Sample1
             //宿泊者セルのデータがない場合
             if (dataGridView1.CurrentRow.Cells[3].Value == null)
             {
-                //部屋情報のセッティング（Reserve.cs)
-                Reserve_Class._Reserve_date         =   dateTimePicker1.Value.ToString("yyyy/MM/dd");
-                Reserve_Class._Reserve_room_code    =   int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-                //Reserve_Class._Reserve_customer_id  =   dataGridView1.Rows[i].Cells[].Value.ToString();
-                //Reserve_Class._Reserve_date =   dataGridView1.Rows[].Cells[0].Value.ToString();
-                //Reserve_Class._Reserve_date =   dataGridView1.Rows[].Cells[1].Value.ToString();
-                //Reserve_Class._Reserve_date =   dataGridView1.Rows[].Cells[2].Value.ToString();
+                //ダブルクリックのnull選択のエラー対策
+                if (dataGridView1.CurrentRow.Cells[1].Value != null)
+                {
+                    //部屋情報のセッティング（Reserve.cs)
+                    Reserve_Class._Reserve_date = dateTimePicker1.Value.ToString("yyyy/MM/dd");
+                    Reserve_Class._Reserve_room_code = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                    //Reserve_Class._Reserve_customer_id  =   dataGridView1.Rows[i].Cells[].Value.ToString();
+                    //Reserve_Class._Reserve_date =   dataGridView1.Rows[].Cells[0].Value.ToString();
+                    //Reserve_Class._Reserve_date =   dataGridView1.Rows[].Cells[1].Value.ToString();
+                    //Reserve_Class._Reserve_date =   dataGridView1.Rows[].Cells[2].Value.ToString();
 
-                //顧客一覧を表示
-                Customerlist Clist = new Customerlist();
-                Clist.Show();
-                this.Close();
+                    //顧客一覧を表示
+                    Customerlist Clist = new Customerlist();
+                    Clist.Show();
+                    this.Close();
+                }
             }
 
             //宿泊者セルのデータがある場合

@@ -62,8 +62,8 @@ namespace Sample1
                     command.Connection = DBC.Get_scn();
                     SqlDataReader reader = command.ExecuteReader();
                     //TOP画面へ
-                    Top_page Top = new Top_page();
-                    Top.Visible = true;
+                    //Top_page Top = new Top_page();
+                    //Top.Visible = true;
                     this.Close();
                 }
 

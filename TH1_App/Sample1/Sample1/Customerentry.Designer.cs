@@ -214,6 +214,7 @@
             this.Controls.Add(this.CustomerentryKana_label);
             this.Controls.Add(this.CustomerentryName_label);
             this.Name = "Customerentry";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customerentry";
             this.Load += new System.EventHandler(this.Customerentry_Load);
             this.ResumeLayout(false);

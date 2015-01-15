@@ -41,7 +41,7 @@ namespace Sample1
                         + "'" + NUMBER + "',"
                         + "'" + Reserve_Class._Reserve_room_code + "',"
                         + "'" + Reserve_Class._Reserve_customer_id + "'" + ")", DBC.Get_scn());
-
+                Reserve_Class._Reserve_room_code = 0;
                 scm.ExecuteNonQuery();
                 DBC.DB_DisConnect();
             }
@@ -67,6 +67,7 @@ namespace Sample1
         private void ReserveNo_button_Click(object sender, EventArgs e)
         {
             //カレンダーを表示
+            Reserve_Class._Reserve_room_code = 0;
             Calendar Cal = new Calendar();
             Cal.Show();
             this.Close();
@@ -87,10 +88,10 @@ namespace Sample1
 
         private void Reserve_Load(object sender, EventArgs e)
         {
-            ReserveNumber.Items.Add("１人");
-            ReserveNumber.Items.Add("２人");
-            ReserveNumber.Items.Add("３人");
-            ReserveNumber.Items.Add("４人");
+            ReserveNumber.Items.Add("1");
+            ReserveNumber.Items.Add("2");
+            ReserveNumber.Items.Add("3");
+            ReserveNumber.Items.Add("4");
             this.Controls.Add(ReserveNumber);
             ReserveNumber.SelectedIndex = 0;
 

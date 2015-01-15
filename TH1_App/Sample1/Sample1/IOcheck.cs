@@ -76,7 +76,7 @@ namespace Sample1
         {
 
             //メッセージダイアログ(YES,NO)の表示
-            DialogResult result = MessageBox.Show("削除してもよろしいですか？", "",
+            DialogResult result = MessageBox.Show("チェックアウトしますか？", "",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Exclamation,
                 //デフォルトの選択ボタンは「いいえ」で設定
@@ -92,7 +92,7 @@ namespace Sample1
                 {
                     //予約コードを用いて、入退室状況にtrueを入れる
                     SqlCommand scm = new SqlCommand
-                    ("update TBL_RESERVATION set [CHECK2] = 'False' where RESERVATION_CODE = " + IO_Class.IO_RCODE, DBC.Get_scn());
+                    ("update TBL_RESERVATION set CHECK2 = 'True' where RESERVATION_CODE = " + IO_Class.IO_RCODE, DBC.Get_scn());
 
                     scm.ExecuteNonQuery();
                     DBC.DB_DisConnect();
@@ -103,6 +103,9 @@ namespace Sample1
                     DBC.DB_DisConnect();
                     MessageBox.Show(ex.Message, "エラー");
                 }
+                IOchecklist IOche = new IOchecklist();
+                IOche.Show();
+                this.Close();
             }
             else if (result == DialogResult.No)
             {

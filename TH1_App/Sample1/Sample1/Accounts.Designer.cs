@@ -43,8 +43,6 @@
             this.Accounts_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Accounts_Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Accounts_Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Accounts_Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Accounts_Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Accounts_Recieve = new System.Windows.Forms.TextBox();
             this.AccountsPay_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -55,9 +53,8 @@
             this.Accounts_Change.AutoSize = true;
             this.Accounts_Change.Location = new System.Drawing.Point(708, 350);
             this.Accounts_Change.Name = "Accounts_Change";
-            this.Accounts_Change.Size = new System.Drawing.Size(35, 12);
+            this.Accounts_Change.Size = new System.Drawing.Size(0, 12);
             this.Accounts_Change.TabIndex = 33;
-            this.Accounts_Change.Text = "label6";
             // 
             // Accounts_Alltotal
             // 
@@ -141,9 +138,7 @@
             this.Accounts_Type,
             this.Accounts_Name,
             this.Accounts_Value,
-            this.Accounts_Number,
-            this.Accounts_Day,
-            this.Accounts_Total});
+            this.Accounts_Number});
             this.dataGridView1.Location = new System.Drawing.Point(12, 94);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
@@ -174,16 +169,6 @@
             // 
             this.Accounts_Number.HeaderText = "人数";
             this.Accounts_Number.Name = "Accounts_Number";
-            // 
-            // Accounts_Day
-            // 
-            this.Accounts_Day.HeaderText = "利用日数";
-            this.Accounts_Day.Name = "Accounts_Day";
-            // 
-            // Accounts_Total
-            // 
-            this.Accounts_Total.HeaderText = "合計";
-            this.Accounts_Total.Name = "Accounts_Total";
             // 
             // Accounts_Recieve
             // 
@@ -221,6 +206,7 @@
             this.Controls.Add(this.AccountsBack_button);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Accounts";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accounts";
             this.Load += new System.EventHandler(this.Accounts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -242,13 +228,11 @@
         private System.Windows.Forms.Button AccountsBack_button;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox Accounts_Recieve;
+        private System.Windows.Forms.Button AccountsPay_button;
         private System.Windows.Forms.DataGridViewTextBoxColumn Accounts_No;
         private System.Windows.Forms.DataGridViewTextBoxColumn Accounts_Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn Accounts_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Accounts_Value;
         private System.Windows.Forms.DataGridViewTextBoxColumn Accounts_Number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Accounts_Day;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Accounts_Total;
-        private System.Windows.Forms.Button AccountsPay_button;
     }
 }

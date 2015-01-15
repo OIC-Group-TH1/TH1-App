@@ -27,15 +27,20 @@ namespace Sample1
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            //情報の取得(これをselect文で検索し、IOcheck情報をで)
-            IO_Class.IO_RCODE = int.Parse(dataGridView1.CurrentRow.Cells[7].Value.ToString());
-            IOcheck IOche = new IOcheck();
-            IOche.Show();
-            this.Close();
+            //ダブルクリックのnull選択のエラー対策
+            if (dataGridView1.CurrentRow.Cells[1].Value != null)
+            {
+                //情報の取得(これをselect文で検索し、IOcheck情報をで)
+                IO_Class.IO_RCODE = int.Parse(dataGridView1.CurrentRow.Cells[7].Value.ToString());
+                IOcheck IOche = new IOcheck();
+                IOche.Show();
+                this.Close();
+            }
         }
 
         private void IOchecklist_Load(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Clear();
             //セルを行として管理
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.MultiSelect = false;
@@ -45,7 +50,7 @@ namespace Sample1
             DBconnection DBC = new DBconnection();
             DBC.DB_connect();
             SqlCommand command = new SqlCommand();
-            command.CommandText = "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.RESERVATION_CODE,CL.CLIENT_CODE,RE.[CHECK],RE.[CHECK2] FROM TBL_ROOM RO,TBL_RESERVATION RE,TBL_CLIENT CL WHERE RE.ROOM_CODE = RO.ROOM_CODE and RE.CLIENT_CODE = CL.CLIENT_CODE and RESERVATION_DATE =" + "'" + IO_Class.IO_DATE + "'";
+            command.CommandText = "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.RESERVATION_CODE,CL.CLIENT_CODE,RE.[CHECK],RE.CHECK2 FROM TBL_ROOM RO,TBL_RESERVATION RE,TBL_CLIENT CL WHERE RE.ROOM_CODE = RO.ROOM_CODE and RE.CLIENT_CODE = CL.CLIENT_CODE and RESERVATION_DATE =" + "'" + IO_Class.IO_DATE + "'";
 
             //// SQLを実行
             command.Connection = DBC.Get_scn();
@@ -54,7 +59,7 @@ namespace Sample1
             for (m = 0; reader.Read(); m++)
             {
                 dataGridView1.Rows.Add();
-                for (n = 0; n < 10; n++)
+                for (n = 0; n < 11; n++)
                 {
                     reader.GetValue(n);
                     if (reader.GetValue(n) != DBNull.Value)
@@ -75,9 +80,13 @@ namespace Sample1
                         {
                             dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
                         }
+                        else if (n == 10)
+                        {
+                            dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
+                        }
                         else
                         {
-                            dataGridView1.Rows[m].Cells[n].Value = (string)reader.GetValue(n);
+                            dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n);
                         }
                     }
                 }
@@ -102,7 +111,7 @@ namespace Sample1
         {
             int cnt = dataGridView1.Rows.Count;
             int m = 0, n = 0;
-
+            
             //このループで値の入っているデータだけカウントする
             for (int i = 0; i < cnt - 1; i++)
             {
@@ -112,22 +121,76 @@ namespace Sample1
                 }
             }
 
-            //配列の範囲は上でカウントされた分だけ
-            int[] IO_Rcode = new int[m];
-
-            //IO_Rcodeに可変で値を入れるループ
-            for (int i = 0; i < cnt - 1; i++)
+            if (m != 0)
             {
-                if (dataGridView1.Rows[i].Cells[11].Value != null)
+                //配列の範囲は上でカウントされた分だけ
+                int[] IO_Rcode = new int[m];
+
+                //IO_Rcodeに可変で値を入れるループ
+                for (int i = 0; i < cnt - 1; i++)
                 {
-                    IO_Rcode[n] = int.Parse(dataGridView1.Rows[i].Cells[7].Value.ToString());
-                    n++;
+                    if (dataGridView1.Rows[i].Cells[11].Value != null)
+                    {
+                        IO_Rcode[n] = int.Parse(dataGridView1.Rows[i].Cells[7].Value.ToString());
+                        n++;
+                    }
+                }
+                Accounts IOaccounts = new Accounts(IO_Rcode);
+                IOaccounts.Show();
+                this.Close();
+            }
+        }
+
+        private void dateTimePicker1_CloseUp_1(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            IO_Class.IO_DATE = dateTimePicker1.Value.ToString("yyyy/MM/dd");
+            DBconnection DBC = new DBconnection();
+            DBC.DB_connect();
+            SqlCommand command = new SqlCommand();
+            command.CommandText = "SELECT RO.ROOM_CODE,RO.ROOM_NAME,RO.ROOM_CIGARETTE,CL.CLIENT_NAME,CL.CLIENT_KANA,CL.CLIENT_TEL,RE.RESERVATION_NUM,RE.RESERVATION_CODE,CL.CLIENT_CODE,RE.[CHECK],RE.CHECK2 FROM TBL_ROOM RO,TBL_RESERVATION RE,TBL_CLIENT CL WHERE RE.ROOM_CODE = RO.ROOM_CODE and RE.CLIENT_CODE = CL.CLIENT_CODE and RESERVATION_DATE =" + "'" + IO_Class.IO_DATE + "'";
+
+            //// SQLを実行
+            command.Connection = DBC.Get_scn();
+            SqlDataReader reader = command.ExecuteReader();
+            int m, n;
+            for (m = 0; reader.Read(); m++)
+            {
+                dataGridView1.Rows.Add();
+                for (n = 0; n < 11; n++)
+                {
+                    reader.GetValue(n);
+                    if (reader.GetValue(n) != DBNull.Value)
+                    {
+                        if (n == 0)
+                        {
+                            dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
+                        }
+                        else if (n == 7)
+                        {
+                            dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
+                        }
+                        else if (n == 8)
+                        {
+                            dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
+                        }
+                        else if (n == 9)
+                        {
+                            dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
+                        }
+                        else if (n == 10)
+                        {
+                            dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n).ToString();
+                        }
+                        else
+                        {
+                            dataGridView1.Rows[m].Cells[n].Value = reader.GetValue(n);
+                        }
+                    }
                 }
             }
+            DBC.DB_DisConnect();
 
-            Accounts IOaccounts = new Accounts(IO_Rcode);
-            IOaccounts.Show();
-            this.Close();
         }
     }
 }

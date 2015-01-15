@@ -233,6 +233,7 @@
             this.Controls.Add(this.CustomerlistSearch_button);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Customerlist";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customerlist";
             this.Load += new System.EventHandler(this.Customerlist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
